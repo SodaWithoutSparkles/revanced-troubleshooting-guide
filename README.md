@@ -138,6 +138,16 @@ You are probably using ARMv7. The supported architectures are ARMv8 or above.
 
 Please patch on an another device or on your PC.
 
+## 2.15. Revanced manager does not select APK
+
+Symptoms: after clicking "select an application" > "YouTube", nothing happened and it goes back to the patcher tab without selecting any apps
+
+You probably are not using the stable version of Revanced manager. Do the following to get it fixed: 
+1. Follow [section 2.4](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide#24-how-to-export-keystore) to export the keystore
+2. Delete existing Revanced manager
+3. Install the latest **stable** version of Revanced manager [here](https://github.com/revanced/revanced-manager/releases/latest)
+4. Follow [section 2.5](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide#25-how-to-import-keystore) to import the keystore
+
 # 3. Revanced Youtube
 
 ## 3.1. Unable to open/launch revanced youtube
