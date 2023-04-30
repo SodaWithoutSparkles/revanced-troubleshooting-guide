@@ -260,13 +260,13 @@ Sponsorblock is a community project. There might be no marked sponsors yet becau
 
 Or it might also be that the sponsorblock server is down. Wait a few minutes and try again. You can check the status at [here](https://status.sponsor.ajay.app/).
 
-## 3.24. Dislike button showed nothing
+## 3.24. Dislike button shows nothing
 
 Possible reasons include: 
 
 - Return Youtube Dislike server was down
 - API timeout, try again later
 
-## 3.25. Dislike button showed hidden
+## 3.25. Dislike button said hidden
 
 The YouTuber opted-out from the Return Youtube Dislike project
