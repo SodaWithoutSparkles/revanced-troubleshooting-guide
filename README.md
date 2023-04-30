@@ -167,7 +167,7 @@ Include the `spoof signature verification` and `client spoof` patch
 
 You can get a guide on that [here](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/add-patch.md)
 
-If you cannot find them, you probably patched an non-supported YT version.
+If you cannot find them, you probably patched an unsupported YT version.
 
 ## 3.3. App not installed / Installation is blocked
 
