@@ -69,13 +69,13 @@ Make sure you got the version marked APK and nodpi, **not the one marked BUNDLE*
 
 This is a new feature from version 0.1.0. Go to revanced manager > settings > scroll down to import & export > export keystore
 
-If you have an older version, you will need to go to `Android/data/app.revanced.manager.flutter/files` and get the keystore there
+If you have an older version (≤0.0.57), you will need to go to `Android/data/app.revanced.manager.flutter/files` and get the keystore there.
 
 ## 2.5. How to import keystore
 
 This is a new feature from version 0.1.0. Go to revanced manager > settings > scroll down to import & export > import keystore
 
-If you have an older version, you will need to go to `Android/data/app.revanced.manager.flutter/files` and dump your keystore there. This will only work on version ≤0.0.57
+If you have an older version (≤0.0.57), you will need to go to `Android/data/app.revanced.manager.flutter/files` and dump your keystore there.
 
 ## 2.6. Cannot update Revanced manager
 
