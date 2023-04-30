@@ -7,7 +7,7 @@ This is a guide on solving common issues when using revanced YT and revanved man
 
 ## 1.1. How to install Revanced YouTube?
 
-No. You don't download an APK and install it. This is to prevent distribution of copyrighted materials. Instead you "make" it yourself. Checkout [this guide](https://hokorayinphinempp.github.io/obsidian-git-sync/Revanced/1%20Start%20Here%21/Revanced%20Start/) or [this guide](https://www.reddit.com/r/revancedapp/comments/xlcny9/revanced_manager_guide_for_dummies/) for more detailed steps.
+No. You don't download an APK and install it. This is to prevent distribution of copyrighted materials. Instead you "make" it yourself. Checkout [this guide by Hokora Yinphine MPP#6969 on discord](https://hokorayinphinempp.github.io/obsidian-git-sync/Revanced/1%20Start%20Here%21/Revanced%20Start/) or [this guide](https://www.reddit.com/r/revancedapp/comments/xlcny9/revanced_manager_guide_for_dummies/) for more detailed steps.
 
 ## 1.2. Where can I get Revanced manager?
 
