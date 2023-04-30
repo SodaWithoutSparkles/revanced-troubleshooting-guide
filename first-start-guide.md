@@ -2,6 +2,8 @@
 
 This is a first start guide for starters to patch a copy of revanced YouTube.
 
+This guide is for non-root users, but is should still work for root users.
+
 Remember: There is **NO** way to *download* revanced. To prevent distrubution of copyrighted materials, you need to "make" revanced yourself. **ANY places where you can _download_ Revanced YouTube is either lying or contains malware**
 
 # Requirements
