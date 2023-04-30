@@ -137,7 +137,7 @@ Probably one of the following:
 - You exited revanced manager when patching
     - Don't do that. Repatch again.
 
-## 3.2. video playback issues / buffers / buggy
+## 3.2. Video playback issues / buffers / buggy
 
 Include the `spoof signature verification` and `client spoof` patch 
 
@@ -157,7 +157,7 @@ Probably one of the following reason
     - This could only happen if you have installed and uninstalled revanced previously
     - You will need to use ADB to fully remove the old install. Too long to describe here. Instead, wait for a new guide. The link would be edited here when the guide published.
 
-## 3.4. video turns very dark in fullscreen
+## 3.4. Video turns very dark in fullscreen
 
 Try swiping up on the left side of your screen. This feature is called swipe brightness control. Swipe down all the way and it would use auto-brightness. You can also swipe to control volume on the right.
 
@@ -195,7 +195,7 @@ If that does not work, then it is caused by a side effect of spoofing signatures
 
 Known issue. It would be fixed automatically when you watch the second video. 
 
-## 3.12. ambient mode / "glow around video" missing
+## 3.12. Ambient mode / "glow around video" missing
 
 Turn the function off and on again. Seriously, this fixed it.
 
@@ -241,7 +241,7 @@ https://github.com/revanced/revanced-patches/issues/387
 
 https://github.com/revanced/revanced-patches/issues/455
 
-## 3.22. casting to TV have ads
+## 3.22. Casting to TV have ads
 
 Casting to TV is different. Revanced YT does not handle the video stream, it basically tells the TV: go and play that video with this link. So you will need a ad-free youtube TV client. You can get one [here](https://github.com/yuliskov/SmartTubeNext). Note that SmartTubeNext is not developed and not affiliated in any way with the revanced team.
 
