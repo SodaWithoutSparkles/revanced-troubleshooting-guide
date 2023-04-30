@@ -124,11 +124,19 @@ If you don't know where to start but just want to remove some patches, you can s
 
 Click the "Selected Patches" box
 
-## 2.13 Import patches selection
+## 2.13. Import patches selection
 
 If you don't know what you should select, or want to use the same set of patches as mine, you can download the patches selection [here](https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/selected_patches_2023-04-30.json).
 
 Then go to revanced manager > settings > scroll down to import & export > Import patches selection. Select the downloaded JSON file just now. You now have the same set of patches mine.
+
+## 2.14. Revanced manager aborting / exit code 135 / exit code 139 / ARMv7 devices
+
+If you see the text "exit code = 135" or "exit code = 139", then your devices architecture is not supported. 
+
+You are probably using ARMv7. The supported architectures are ARMv8 or above.
+
+Please patch on an another device or on your PC.
 
 # 3. Revanced Youtube
 
