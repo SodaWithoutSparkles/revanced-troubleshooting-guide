@@ -93,7 +93,7 @@ TL;DR: that is a known harmless bug, ignore it and don't update
 
 ## 2.9. Non-root install not possible?
 
-Select vanced microG support patch. If you cannot find it, use the search function and search for "microg". If you still cannot find it, you are using a non-supported YT version.
+Select `vanced microG support` patch in the patches selection screen. If you cannot find it, use the search function and search for "microg". If you still cannot find it, you are using a non-supported YT version.
 
 ## 2.10. Cannot find patch \<insert patch name here\>?
 
