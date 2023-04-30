@@ -269,4 +269,4 @@ Possible reasons include:
 
 ## 3.25. Dislike button showed hidden
 
-The YouTuber opt-out from the Return Youtube Dislike project
+The YouTuber opted-out from the Return Youtube Dislike project
