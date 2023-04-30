@@ -124,6 +124,12 @@ If you don't know where to start but just want to remove some patches, you can s
 
 Click the "Selected Patches" box
 
+## 2.13 Import patches selection
+
+If you don't know what you should select, or want to use the same set of patches as mine, you can download the patches selection [here](https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/selected_patches_2023-04-30.json).
+
+Then go to revanced manager > settings > scroll down to import & export > Import patches selection. Select the downloaded JSON file just now. You now have the same set of patches mine.
+
 # 3. Revanced Youtube
 
 ## 3.1. Unable to open/launch revanced youtube
