@@ -205,9 +205,11 @@ Disable: Revanced YT settings > Revanced > Layout > Hide end screen cards
 
 If that does not work, then it is caused by a side effect of spoofing signatures. For more information, see [revanced-patches github issues #1752](https://github.com/revanced/revanced-patches/issues/1752)
 
-## 3.11. Captions in the wrong place
+## 3.11. Captions/subtitles in the wrong place
 
 Known issue. It would be fixed automatically when you watch the second video. 
+
+https://github.com/revanced/revanced-patches/issues/2003
 
 ## 3.12. Ambient mode / "glow around video" missing
 
