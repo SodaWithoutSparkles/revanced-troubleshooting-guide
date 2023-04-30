@@ -1,17 +1,17 @@
 # Preface
 
-This is a first start guide for starters to patch a copy of ReVanced YouTube.
+This is a first-start guide for starters to patch a copy of ReVanced YouTube.
 
 This guide is for non-root users, but it should still work for root users.
 
-Remember: There is **NO** way to *download* ReVanced. To prevent distribution of copyrighted materials, you need to "make" ReVanced yourself. **ANY places where you can _download_ ReVanced YouTube is either lying or contains malware**.
+Remember: There is **NO** way to *download* ReVanced. To prevent the distribution of copyrighted materials, you need to "make" ReVanced yourself. **ANY place where you can _download_ ReVanced YouTube is either lying or contains malware**.
 
 # Requirements
 
 You need to have the following to follow this guide:
 
 - An Android smartphone with
-    - android 8 or later
+    - Android 8 or later
     - 1GB or more storage space
 
 - About 15 minutes of time
@@ -23,7 +23,7 @@ Don't worry, we are going to check for them later in this guide
 
 # Terminology / short forms
 
-Here are some terminology that this guide may use:
+Here are some terminologies that this guide may use:
 
 - launch: click the icon on your phone's desktop and open the app
 
@@ -45,7 +45,7 @@ The latest supported YT version is:
 18.15.40 
 ```
 
-as of 2023-04-30T07:40 UTC. Remember that as we will use it very soon.
+as of 2023-04-30T07:40 UTC. Remember that, as we will use it very soon.
 
 ## Part 1: Getting the files ready
 
@@ -62,26 +62,26 @@ as of 2023-04-30T07:40 UTC. Remember that as we will use it very soon.
 
 ## Part 2: Checking compatibility
 
-1. launch RVM. Ignore any updates it claim it knew. You may not have the red shaded part, that's normal.
+1. launch RVM. Ignore any updates it claimed it knew. You may not have the red shaded part, that's normal.
 ![launch rvm](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/040-first_launch_manager.jpg?raw=true)
-2. Go to settings tab and scroll down until you find "About"
+2. Go to the settings tab and scroll down until you find "About"
 ![check about](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/050-check_about.jpg?raw=true)
 3. Check that `Arch` had at least 1 entry that looks like `arm64-v8a`
-4. If you only got something that said `armv7` or lower, you cannot patch it on your phone. Please patch on another device or on your PC.
+4. If you only got something that said `armv7` or lower, you cannot patch it on your phone. Please patch it on another device or your PC.
 5. If you got `armv8` or higher, you are probably fine
 6. Check that your Android version is at least 8
-7. If you only got something that said `7` or lower, you cannot patch it on your phone. Please patch on another device or on your PC.
+7. If you only got something that said `7` or lower, you cannot patch it on your phone. Please patch it on another device or your PC.
 8. If you made it here, you can probably patch on your phone with ReVanced manager
 
 ## Part 3: Patching
 
-1. Go to Patcher tab and click "Select an application"
+1. Go to the Patcher tab and click "Select an application"
 ![select app](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/060-select_application.jpg?raw=true)
 2. Select YT from the list as we are trying to make RYT
 ![select YT](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/070-select_YT.jpg?raw=true)
-3. A window should pop up asking you to select from storage. If no, you are using a older manager version. Use at least 0.1.0
+3. A window should pop up asking you to select from storage. If not, you are using an older manager version. Use at least 0.1.0
 ![feat not imp](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/080-select_from_storage.jpg?raw=true)
-4. Select the APK you just downloaded in part 1 step 6. It should have an recent date and have a size roughly 130MB.
+4. Select the APK you just downloaded in part 1 step 6. It should have a recent date and a size of roughly 130MB.
 ![storage view](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/090-select_YT_apk.jpg?raw=true)
 5. The green part should contain the date. I redacted it for privacy.
 6. Check that you have the suggested/recommended version of YT
@@ -90,10 +90,10 @@ as of 2023-04-30T07:40 UTC. Remember that as we will use it very soon.
 8. If yes, click "Select patches"
 9. In the select patches view, choose "Default" or "Recommended"
 ![default](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/110-select_default.jpg?raw=true)
-10. You can scroll around and disable some patch. BUT don't disable ones not that you don't know what it does.
+10. You can scroll around and disable some patches. BUT don't disable ones not that you don't know what it does.
 11. DO NOT ENABLE THE FOLLOWING PATCHES
     - Change package name
-    - Enable android debugging
+    - Enable Android debugging
     - Export all activities
     - Predictive back gesture
     - Remove screenshot restriction
@@ -101,12 +101,12 @@ as of 2023-04-30T07:40 UTC. Remember that as we will use it very soon.
 12. You can disable the following patches safely. I have tested them:
     - Disable auto captions
     - Hide player overlay
-    - Hide seekbar
+    - Hide 
     - Hide timestamp
     - Wide search bar
 13. When you have finished, click "Done" on the bottom right
 ![click done](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/120-click_done.jpg?raw=true)
-14. Click patch on bottom right
+14. Click patch on the bottom right
 ![click oatch](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/130-go_patch.jpg?raw=true)
 15. A new patch window should show up. Do **NOT** exit, switch to background, or force-stop ReVanced manager. 
 ![dont exit](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/140-dont_exit.jpg?raw=true)
@@ -116,4 +116,4 @@ as of 2023-04-30T07:40 UTC. Remember that as we will use it very soon.
 ![export and install](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/150-export_install.jpg?raw=true)
 19. Install the patched APK
 20. If that does not work, install [SAI](https://play.google.com/store/apps/details?id=com.aefyr.sai) and use that to install instead
-21. Keep calm, you don't need to patch again. Just use the exported one in step 18
+21. Keep calm, you don't need to patch again. Just use the exported one in Step 18
