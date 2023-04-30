@@ -95,7 +95,7 @@ TL;DR: that is a known harmless bug, ignore it and don't update
 
 select vanced microG support patch. If you cannot find it, use the search function and search for "microg". If you still cannot find it, you are using a non-supported YT version.
 
-## 2.10. Cannot find patch <insert patch name here>?
+## 2.10. Cannot find patch \<insert patch name here\>?
 
 Your selected app version was incompatible. Use the Suggested version.
 
@@ -215,7 +215,7 @@ Disable: Revanced YT settings > Revanced > Layout > Hide action buttons > Hide a
 4. Enable: Revanced YT settings > Revanced > Layout > Hide autoplay button
 5.  Restart Youtube revanced
 
-## 3.16. <insert name here> is missing
+## 3.16. \<insert name here\> is missing
 
 It is probably in Revanced YT settings > Revanced > Layout. Scroll a bit and see if you can find it.
 
