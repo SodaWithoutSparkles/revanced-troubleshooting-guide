@@ -29,9 +29,8 @@ Nope.
 
 If you can, donate to the Revanced team at either:
 
-- [Liberapay.](https://liberapay.com/ReVanced/donate)
-
-- [GitHub Sponsors.](https://github.com/sponsors/ReVanced)
+- [Liberapay](https://liberapay.com/ReVanced/donate)
+- [GitHub Sponsors](https://github.com/sponsors/ReVanced)
 
 If you can't donate, you can also contribute to the development by:
 
@@ -44,7 +43,6 @@ You can post your bug in [reddit](https://www.reddit.com/r/revancedapp) first to
 After that you can go to the relevant Github issues page to file a bug report.
 
 - [Revanced patches](https://github.com/revanced/revanced-patches/issues/new?template=bug-issue.yml)
-
 - [Revanced manager](https://github.com/revanced/revanced-manager/issues/new?template=bug-issue.yml)
 
 # 2. Revanced manager
@@ -108,27 +106,18 @@ Select the default/recommended ones. When you are in the select patches window, 
 DO NOT SELECT ANY OF THE FOLLOWING PATCHES OR YOU WILL RISK HAVING ISSUES: 
 
 - Change package name
-
 - enable **android** debugging
-
 - export all activities
-
 - Predictive back gesture
-
 - Remove screenshot restriction
-
 - Spoof wifi connections
 
 If you don't know where to start but just want to remove some patches, you can safely remove these. I did not select the following patches: 
 
 - Disable auto captions
-
 - Hide player overlay
-
 - Hide seekbar
-
 - Hide timestamp
-
 - Wide search bar
 
 ## 2.12 Cannot select patch?
@@ -141,9 +130,11 @@ Click the "Selected Patches" box
 
 Probably one of the following: 
 
-- split APK is used to patch, patch again using the full APK
+- split APK is used to patch
+    - patch again using the full APK
 
-- non-recommended patches, patch again with the default/recommended patches
+- non-recommended patches
+    - patch again with the default/recommended patches
 
 ## 3.2 video playback issues / buffers / buggy
 
@@ -154,21 +145,13 @@ Include the `spoof signature verification` and `client spoof` patch
 Probably one of the following reason
 
 - Signature mismatch between existing revanced install
-
     - Delete that existing install
-
 - Google play protect blocked it
-
     - when the play protect window popped up, click "learn more" and "install anyway"
-
 - Split APK used
-
     - repatch with non-split APK / full apk
-
 - Artifacts left from previous install / the uninstall was not done cleanly
-
     - This could only happen if you have installed and uninstalled revanced previously
-
     - You will need to use ADB to fully remove the old install. Too long to describe here. Instead, wait for a new guide. The link would be edited here when the guide published.
 
 ## 3.4 video turns very dark in fullscreen
@@ -224,13 +207,9 @@ Disable: Revanced YT settings > Revanced > Layout > Hide action buttons > Hide a
 ## 3.15 Youtube autoplays the next video
 
 1. Disable: Revanced YT settings > Revanced > Layout > Hide autoplay button
-
 2. Restart Youtube revanced
-
 3. Play any video, in the video player, turn off autoplay
-
 4. Enable: Revanced YT settings > Revanced > Layout > Hide autoplay button
-
 5.  Restart Youtube revanced
 
 ## 3.16 <insert name here> is missing
@@ -268,7 +247,6 @@ Casting to TV is different. Revanced YT does not handle the video stream, it bas
 Sponsorblock is a community project. There might be no marked sponsors yet because
 
 - The video was too new
-
 - Nobody uploaded/marked any segments
 
 Or it might also be that the sponsorblock server is down. Wait a few minutes and try again. You can check the status at [here](https://status.sponsor.ajay.app/).
@@ -278,7 +256,6 @@ Or it might also be that the sponsorblock server is down. Wait a few minutes and
 Possible reasons include: 
 
 - Return Youtube Dislike server was down
-
 - API timeout, try again later
 
 ## 3.25 Dislike button showed hidden
