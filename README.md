@@ -132,9 +132,10 @@ Probably one of the following:
 
 - split APK is used to patch
     - patch again using the full APK
-
 - non-recommended patches
     - patch again with the default/recommended patches
+- You exited revanced manager when patching
+    - Don't do that. Repatch again.
 
 ## 3.2 video playback issues / buffers / buggy
 
@@ -148,6 +149,8 @@ Probably one of the following reason
     - Delete that existing install
 - Google play protect blocked it
     - when the play protect window popped up, click "learn more" and "install anyway"
+- You exited revanced manager when patching
+    - Don't do that. Repatch again.
 - Split APK used
     - repatch with non-split APK / full apk
 - Artifacts left from previous install / the uninstall was not done cleanly
