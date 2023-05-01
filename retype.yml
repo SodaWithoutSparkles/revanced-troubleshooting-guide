@@ -1,0 +1,11 @@
+input: .
+output: .retype
+url: https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/
+branding:
+  title: "ReVanced troubleshooting"
+  label: Guide
+links:
+  - text: "Get ReVanced"
+    link: https://revanced.app
+footer:
+  copyright: "&copy; 2023 by SodaWithoutSparkles. GPLv3."
