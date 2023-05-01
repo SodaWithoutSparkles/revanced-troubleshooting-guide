@@ -148,6 +148,17 @@ You probably are not using the stable version of ReVanced manager. Do the follow
 3. Install the latest **stable** version of ReVanced manager [here](https://github.com/revanced/revanced-manager/releases/latest)
 4. Follow [section 2.5](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide#25-how-to-import-keystore) to import the keystore
 
+## 2.16 ReVanced manager patch failed / patch not applied
+
+DO NOT SELECT ANY OF THE FOLLOWING PATCHES OR YOU WILL RISK HAVING ISSUES: 
+
+- Change package name
+- enable **android** debugging
+- export all activities
+- Predictive back gesture
+- Remove screenshot restriction
+- Spoof wifi connections
+
 # 3. ReVanced Youtube
 
 ## 3.1. Unable to open/launch ReVanced youtube
