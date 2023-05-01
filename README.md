@@ -83,7 +83,7 @@ Delete existing ReVanced manager and install the new one. If you have manager ve
 
 ## 2.7. Cannot select youtube APK to patch
 
-Delete existing ReVanced manager and install the new one. If you have manager version ≥0.1.0, follow the above steps on exporting the keystore. Install the new version and import the keystore
+Delete existing ReVanced manager and install the new one. If you have manager version ≥0.1.0, follow the above steps on exporting the keystore. Then, install the new version and import the old keystore back in.
 
 ## 2.8. ReVanced manager still shows update available when I am on latest?
 
