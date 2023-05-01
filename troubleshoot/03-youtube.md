@@ -161,3 +161,7 @@ ReVanced setting > SponsorBlock > scroll down > Change segment behabior > select
 This is a side effect of removing a YT premium ad. Currently there is no known permanent solution.
 
 You can press the back buttom / use back gesture to close it temporarily. It should not come back too quickly
+
+## 3.28 Low contrast in player / does not lower brightness when controls are visible
+
+Repatch without the `hide player overlay` patch. This requires a repatch, you cannot fix it in settings.
