@@ -10,6 +10,8 @@ Probably one of the following:
     - patch again using the full APK
 - non-recommended patches/version
     - patch again with the default/recommended patches/version
+- vanced microG not installed
+    - install it [here](https://github.com/TeamVanced/VancedMicroG/releases/tag/v0.2.24.220220-220220001)
 - You exited ReVanced manager when patching
     - Don't do that. Repatch again.
 
