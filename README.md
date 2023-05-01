@@ -1,3 +1,7 @@
+---
+title: Home
+order: 100
+---
 # ReVanced Trouble-shooting Guide
 Troubleshooting guide for Revanced
 
