@@ -79,7 +79,7 @@ If you have an older version (≤0.0.57), you will need to go to `Android/data/a
 
 ## 2.6. Cannot update ReVanced manager
 
-Delete existing ReVanced manager and install the new one. If you have manager version ≥0.1.0, follow the above steps on exporting the keystore. Install the new version and import the keystore
+Delete existing ReVanced manager and install the new one. If you have manager version ≥0.1.0, follow the above steps on exporting the keystore. Then, install the new version and import the old keystore back in.
 
 ## 2.7. Cannot select youtube APK to patch
 
