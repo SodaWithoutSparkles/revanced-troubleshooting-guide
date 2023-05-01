@@ -11,7 +11,7 @@ Remember: There is **NO** way to *download* ReVanced. To prevent the distributio
 You need to have the following to follow this guide:
 
 - An Android smartphone with
-    - ARMv8 or above architecture *
+    - ARMv8 or x86 architecture *
     - Android 8 or later *
     - ≥1GB storage space
 
