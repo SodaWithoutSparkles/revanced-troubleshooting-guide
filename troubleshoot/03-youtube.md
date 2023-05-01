@@ -6,8 +6,8 @@ Probably one of the following:
 
 - split APK is used to patch
     - patch again using the full APK
-- non-recommended patches
-    - patch again with the default/recommended patches
+- non-recommended patches/version
+    - patch again with the default/recommended patches/version
 - You exited ReVanced manager when patching
     - Don't do that. Repatch again.
 
