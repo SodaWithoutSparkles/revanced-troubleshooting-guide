@@ -271,6 +271,12 @@ You can disable one or both under ReVanced YT settings > ReVanced > Interactions
 
 Install it at https://github.com/TeamNewPipe/NewPipe/releases/latest
 
+Or alternatively you can use Seal instead of newpipe. Go install Seal [here](https://github.com/JunkFood02/Seal/releases/latest), then change ReVanced > ReVanced settings > Interaction > Download settings > Downloader Package name to this:
+
+```
+com.junkfood.seal
+```
+
 ## 3.19. How can I download a video?
 
 Use the download button inside the video player
