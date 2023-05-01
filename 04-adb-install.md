@@ -87,6 +87,4 @@ If you don't know how to enable USB debugging, google "\<phone model\> enable us
 
 1. Then you can disconnect the phone, disable USB debugging and disable developer options on your phone. Close the shell by typing `exit` or the X button as usual.
 
-2. Install revanced again from revanced manager.
-
-3. Delete the zip file and the extracted files download at the first step.
+2. Delete the zip file and the extracted files download at the first step.
