@@ -221,7 +221,7 @@ If that does not work, then it is caused by a side effect of spoofing signatures
 
 ## 3.11. Captions/subtitles in the wrong place
 
-Known issue. It would be fixed automatically when you watch the second video. 
+Known issue. It would be fixed automatically when you watch the second video. If it still stays on the top, repatch and include the latest patches. Keep in mind that YouTubers can configure subtitle positions so it might be intended for the subtitles to be on the top.
 
 https://github.com/revanced/revanced-patches/issues/2003
 
