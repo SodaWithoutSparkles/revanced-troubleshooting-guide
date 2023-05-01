@@ -11,10 +11,11 @@ https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/
 
 Please use that page instead. You are not encouraged to browse the files in this repo directly. The links below are for compatibility with old existing links.
 
+
+<details><summary>Old links</summary>
 - [Step-by-step first start guide (recommended)](step-by-step/00-preface.md)
 - [Single-page first start guide](00-first-start.md)
 - [Trouble-shooting guide](01-trouble-shooting.md)
 - [Add patch guide](02-add-patch.md)
 - [`adb` remove guide](03-adb-remove.md)
-
-
+</details>
