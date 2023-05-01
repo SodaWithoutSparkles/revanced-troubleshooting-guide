@@ -7,5 +7,5 @@ This is a guide on solving common issues when using ReVanced YT and revanved man
 - [Single-page first start guide](00-first-start.md)
 - [Trouble-shooting guide](/troubleshoot/00-trouble-shooting.md)
 - [Add patch guide](02-add-patch.md)
+- [`adb` install guide](04-adb-install.md)
 - [`adb` remove guide](03-adb-remove.md)
-
