@@ -100,7 +100,7 @@ as of 2023-04-30T07:40 UTC. Remember that, as we will use it very soon.
 12. You can disable the following patches safely. I have tested them:
     - Disable auto captions
     - Hide player overlay
-    - Hide 
+    - Hide seekbar
     - Hide timestamp
     - Wide search bar
 13. When you have finished, click "Done" on the bottom right
