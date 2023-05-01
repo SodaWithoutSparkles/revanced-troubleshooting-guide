@@ -155,3 +155,9 @@ The YouTuber opted-out from the Return Youtube Dislike project
 ## 3.26. How to auto-skip sponsor segments?
 
 ReVanced setting > SponsorBlock > scroll down > Change segment behabior > select category > skip automatically
+
+## 3.27 Screen goes dark/dim and unable to control/swipe
+
+This is a side effect of removing a YT premium ad. Currently there is no known permanent solution.
+
+You can press the back buttom / use back gesture to close it temporarily. It should not come back too quickly
