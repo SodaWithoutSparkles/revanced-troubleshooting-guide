@@ -24,21 +24,24 @@ If you don't know how to enable USB debugging, google "\<phone model\> enable us
 
 4. A command window (shell) would pop up. In that window, type `adb devices`. Press enter. You may need to prepend `./` or `.\` in front of it, like `./adb devices`. Remember the one used, and prepend it before all `adb` commands from now on. Something like "List of devices attached" should appear. Something containing "daemon" might also appear, but you can safely ignore them.
 
-5. Connect your phone which USB debugging was already enabled to your computer. Allow USB debugging from the popup on the phone. You may need to unlock the device. If you dont see the popup, it is likely to be the following issues:
+5. Connect your phone which USB debugging enabled to your computer with a USB cable. 
 
-    - that is a power only cable, use one with both power and data
-    - USB debugging was not enabled
-    - something else that I dont know how to solve
+6. Allow USB debugging from the popup on the phone
+    - You may need to unlock the device. 
+    - If you dont see the popup, it might be caused by:
+        - the USB cable is a power only cable, use one with both power and data
+        - USB debugging was not enabled
+        - something else that I don't know how to solve
 
-6. Then, on the shell, enter `adb devices` again. There should be a new entry.
+7. Then, on the shell, enter `adb devices` again. There should be a new entry.
 
-7. Copy the apk to your phone's Download folder
+8. Copy the apk to your phone's Download folder
 
-8. On the shell, enter `adb shell`
+9. On the shell, enter `adb shell`
 
-9. You are now using the shell in your device
+10. You are now using the shell in your device
 
-10. Enter `whoami`. It should output `shell`. Note: you need to hit the \<Enter\> key.
+11. Enter `whoami`. It should output `shell`. Note: you need to hit the \<Enter\> key.
 
 ### Install via ADB
 
