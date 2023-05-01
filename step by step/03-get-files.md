@@ -1,6 +1,4 @@
-# First Start Guide
-
-### Part 1: Getting the files ready
+# Getting the files ready
 
 1. Download and install the latest stable [ReVanced manager (RVM)](https://github.com/ReVanced/ReVanced-manager/releases/latest)
 ![download manager](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/000-download_manager.jpg?raw=true)

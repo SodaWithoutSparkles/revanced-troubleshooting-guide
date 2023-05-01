@@ -1,6 +1,4 @@
-# First Start Guide
-
-## Preface
+# Preface
 
 This is a first-start guide for starters to patch a copy of ReVanced YouTube.
 

@@ -1,6 +1,4 @@
-# First Start Guide
-
-## Requirements
+# Requirements
 
 You need to have the following to follow this guide:
 

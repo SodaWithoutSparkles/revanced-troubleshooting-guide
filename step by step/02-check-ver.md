@@ -1,8 +1,6 @@
-# First Start Guide
+# Checking versions
 
-We are going to start patching now, but first:
-
-### Part 0: Checking versions
+We are going to start patching now, but first we need to check supported version of YouTube.
 
 The latest supported YT version is:
 
