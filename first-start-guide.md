@@ -11,15 +11,14 @@ Remember: There is **NO** way to *download* ReVanced. To prevent the distributio
 You need to have the following to follow this guide:
 
 - An Android smartphone with
-    - Android 8 or later
-    - 1GB or more storage space
+    - ARMv8 or above architecture *
+    - Android 8 or later *
+    - ≥1GB storage space
 
 - About 15 minutes of time
 
-You will need the following to patch and install ReVanced YT. Don't know what these are? 
-Don't worry, we are going to check for them later in this guide
+Don't know what these are? Don't worry, we will check for the ones marked with (*) later in this guide.
 
-- The device is ARMv8 or above
 
 # Terminology / short forms
 
@@ -32,7 +31,7 @@ To save time, this guide will use the following short forms
 - YT: YouTube
 - RV: ReVanced
 - RVM: ReVanced manager
-- RYT: ReVanced YouTube
+- RYT: YouTube ReVanced
 - microG: Vanced microG
 
 # Steps
