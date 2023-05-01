@@ -194,7 +194,8 @@ Probably one of the following reason
     - repatch with non-split APK / full apk
 - Artifacts left from previous install / the uninstall was not done cleanly
     - This could only happen if you have installed and uninstalled ReVanced previously
-    - You will need to use ADB to fully remove the old install. Too long to describe here. Instead, wait for a new guide. The link would be edited here when the guide published.
+    - You will need to use ADB to fully remove the old install.
+    - You can find a guide [here](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/adb_remove_guide.md)
 
 ## 3.4. Video turns very dark in fullscreen
 
