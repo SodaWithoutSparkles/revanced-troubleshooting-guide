@@ -2,7 +2,7 @@
 
 ## Preface
 
-This is a guide for non-root users to add patches ReVanced YouTube.
+This is a guide for non-root users to add patches to ReVanced YouTube.
 
 ## Requirements
 
