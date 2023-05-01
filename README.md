@@ -49,11 +49,11 @@ After that you can go to the relevant Github issues page to file a bug report.
 
 ## 2.1. ReVanced manager does not install
 
-- not enough storage space
+- Not enough storage space, check that you have ≥1GB to be on the safe side
 
-- bad APK, download again
+- Bad APK, download again
 
-- signature mismatch, delete old manager and install (WARNING: this deletes keystore, you may want to export it first)
+- Signature mismatch, delete old manager and install (WARNING: this deletes keystore, you may want to export it first)
 
 ## 2.2. What is the latest supported / suggested Youtube apk version?
 
