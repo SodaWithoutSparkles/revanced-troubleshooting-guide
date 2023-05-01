@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/revanced-troubleshooting-guide">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.736277282461">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.736278328566">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -31,11 +31,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/revanced-troubleshooting-guide/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=2.4.0.736277282461" rel="stylesheet" />
+    <link href="../resources/css/retype.css?v=2.4.0.736278328566" rel="stylesheet" />
 
-    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.736277282461" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.736278328566" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.736277282461" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.736278328566" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -213,11 +213,18 @@
 </li>
 <li><p>A command window (shell) would pop up. In that window, type <code v-pre>adb devices</code>. Press enter. You may need to prepend <code v-pre>./</code> or <code v-pre>.\</code> in front of it, like <code v-pre>./adb devices</code>. Remember the one used, and prepend it before all <code v-pre>adb</code> commands from now on. Something like &quot;List of devices attached&quot; should appear. Something containing &quot;daemon&quot; might also appear, but you can safely ignore them.</p>
 </li>
-<li><p>Connect your phone which USB debugging was already enabled to your computer. Allow USB debugging from the popup on the phone. You may need to unlock the device. If you dont see the popup, it is likely to be the following issues:</p>
+<li><p>Connect your phone which USB debugging enabled to your computer with a USB cable.</p>
+</li>
+<li><p>Allow USB debugging from the popup on the phone</p>
 <ul>
-<li>that is a power only cable, use one with both power and data</li>
+<li>You may need to unlock the device.</li>
+<li>If you dont see the popup, it might be caused by:
+<ul>
+<li>the USB cable is a power only cable, use one with both power and data</li>
 <li>USB debugging was not enabled</li>
-<li>something else that I dont know how to solve</li>
+<li>something else that I don&#x27;t know how to solve</li>
+</ul>
+</li>
 </ul>
 </li>
 <li><p>Then, on the shell, enter <code v-pre>adb devices</code> again. There should be a new entry.</p>
