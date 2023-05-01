@@ -1,8 +1,10 @@
-# Preface
+# ADB remove guide
+
+## Preface
 
 This guide is to use ADB (android debug bridge) to remove remains or artifacts from the last ReVanced install
 
-# Requirements
+## Requirements
 
 1. A windows computer
 2. An Android smartphone with USB debugging enabled
@@ -10,7 +12,7 @@ This guide is to use ADB (android debug bridge) to remove remains or artifacts f
 
 If you don't know how to enable USB debugging, google "\<phone model\> enable usb debugging" (obvious replacing \<phone model\> with your actual phone model)
 
-# Steps
+## Steps
 
 1. On the computer, download the latest [platform tools](https://developer.android.com/tools/releases/platform-tools)
 

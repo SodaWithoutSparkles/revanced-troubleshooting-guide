@@ -1,8 +1,10 @@
-# Preface
+# Add Patches Guide
+
+## Preface
 
 This is a guide for non-root users to add patches ReVanced YouTube.
 
-# Requirements
+## Requirements
 
 You need to have the following to follow this guide:
 
@@ -14,7 +16,7 @@ You need to have the following to follow this guide:
 
 - About 15 minutes of time
 
-# Terminology / short forms
+## Terminology / short forms
 
 Here are some terminology that this guide may use:
 
@@ -28,9 +30,9 @@ To save time, this guide will use the following short forms
 - RYT: ReVanced YouTube
 - microG: Vanced microG
 
-# Steps
+## Steps
 
-## Part 0: Checking versions
+### Part 0: Checking versions
 
 The latest supported YT version is: 
 
@@ -40,7 +42,7 @@ The latest supported YT version is:
 
 as of 2023-04-30T07:40 UTC. Remember that as we will use it very soon.
 
-## Part 1: Getting the files ready
+### Part 1: Getting the files ready
 
 1. Download and uodate to the latest stable [ReVanced manager (RVM)](https://github.com/ReVanced/ReVanced-manager/releases/latest) if not yet
 ![download manager](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/000-download_manager.jpg?raw=true)
@@ -51,7 +53,7 @@ as of 2023-04-30T07:40 UTC. Remember that as we will use it very soon.
 5. Download **but don't install** the YT APK
 ![download yt](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/030-download_YT_apk.jpg?raw=true)
 
-## Part 2: Adding the patches
+### Part 2: Adding the patches
 
 1. Go to Patcher tab and click "Select an application"
 ![select app](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/060-select_application.jpg?raw=true)

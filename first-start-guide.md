@@ -1,4 +1,6 @@
-# Preface
+# First Start Guide
+
+## Preface
 
 This is a first-start guide for starters to patch a copy of ReVanced YouTube.
 
@@ -6,7 +8,7 @@ This guide is for non-root users, but it should still work for root users.
 
 Remember: There is **NO** way to *download* ReVanced. To prevent the distribution of copyrighted materials, you need to "make" ReVanced yourself. **ANY place where you can _download_ ReVanced YouTube is either lying or contains malware**.
 
-# Requirements
+## Requirements
 
 You need to have the following to follow this guide:
 
@@ -20,7 +22,7 @@ You need to have the following to follow this guide:
 Don't know what these are? Don't worry, we will check for the ones marked with (*) later in this guide.
 
 
-# Terminology / short forms
+## Terminology / short forms
 
 Here are some terminologies that this guide may use:
 
@@ -34,9 +36,9 @@ To save time, this guide will use the following short forms
 - RYT: YouTube ReVanced
 - microG: Vanced microG
 
-# Steps
+## Steps
 
-## Part 0: Checking versions
+### Part 0: Checking versions
 
 The latest supported YT version is: 
 
@@ -46,7 +48,7 @@ The latest supported YT version is:
 
 as of 2023-04-30T07:40 UTC. Remember that, as we will use it very soon.
 
-## Part 1: Getting the files ready
+### Part 1: Getting the files ready
 
 1. Download and install the latest stable [ReVanced manager (RVM)](https://github.com/ReVanced/ReVanced-manager/releases/latest)
 ![download manager](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/000-download_manager.jpg?raw=true)
@@ -59,7 +61,7 @@ as of 2023-04-30T07:40 UTC. Remember that, as we will use it very soon.
 6. Download **but don't install** the YT APK
 ![download yt](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/030-download_YT_apk.jpg?raw=true)
 
-## Part 2: Checking compatibility
+### Part 2: Checking compatibility
 
 1. launch RVM. Ignore any updates it claimed it knew. You may not have the red shaded part, that's normal.
 ![launch rvm](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/040-first_launch_manager.jpg?raw=true)
@@ -72,7 +74,7 @@ as of 2023-04-30T07:40 UTC. Remember that, as we will use it very soon.
 7. If you only got something that said `7` or lower, you cannot patch it on your phone. Please patch it on another device or your PC.
 8. If you made it here, you can probably patch on your phone with ReVanced manager
 
-## Part 3: Patching
+### Part 3: Patching
 
 1. Go to the Patcher tab and click "Select an application"
 ![select app](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/060-select_application.jpg?raw=true)
