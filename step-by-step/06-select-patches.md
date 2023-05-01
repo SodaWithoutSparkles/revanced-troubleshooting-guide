@@ -1,4 +1,4 @@
-# 6. select patches
+# 6. Select patches
 
 1. Click "Select patches"
 2. In the select patches view, choose "Default" or "Recommended"
