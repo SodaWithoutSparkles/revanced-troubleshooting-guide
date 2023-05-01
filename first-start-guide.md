@@ -89,7 +89,7 @@ as of 2023-04-30T07:40 UTC. Remember that, as we will use it very soon.
 8. If yes, click "Select patches"
 9. In the select patches view, choose "Default" or "Recommended"
 ![default](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/110-select_default.jpg?raw=true)
-10. You can scroll around and disable some patches. BUT don't disable ones not that you don't know what it does.
+10. You can scroll around and disable some patches. BUT don't disable any which you don't know the purpose of.
 11. DO NOT ENABLE THE FOLLOWING PATCHES
     - Change package name
     - Enable Android debugging
