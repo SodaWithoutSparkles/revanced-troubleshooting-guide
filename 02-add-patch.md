@@ -98,7 +98,7 @@ as of 2023-04-30T07:40 UTC. Remember that as we will use it very soon.
 16. A new patch window should show up. Do **NOT** exit, switch to background, or force-stop ReVanced manager. 
 ![dont exit](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/140-dont_exit.jpg?raw=true)
 17. The process should take less than 5 minutes
-18. If you see any warnings, check out [the debug guide](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/README.md)
+18. If you see any warnings, check out [the debug guide](/troubleshoot/00-trouble-shooting.md)
 18. After patching is done, export the patched APK
 ![export and install](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/150-export_install.jpg?raw=true)
 20. Install the patched APK

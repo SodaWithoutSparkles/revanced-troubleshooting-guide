@@ -176,7 +176,7 @@ Probably one of the following:
 
 Include the `spoof signature verification` and `client spoof` patch
 
-You can get a guide on that [here](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/add-patch.md)
+You can get a guide on that [here](/02-add-patch.md)
 
 If you cannot find them, you probably patched an unsupported YT version.
 
@@ -195,7 +195,7 @@ Probably one of the following reason
 - Artifacts left from previous install / the uninstall was not done cleanly
     - This could only happen if you have installed and uninstalled ReVanced previously
     - You will need to use ADB to fully remove the old install.
-    - You can find a guide [here](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/adb_remove_guide.md)
+    - You can find a guide [here](/03-adb-remove.md)
 
 ### 3.4. Video turns very dark in fullscreen
 
