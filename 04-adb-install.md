@@ -1,4 +1,4 @@
-# ADB remove guide
+# ADB install guide
 
 ## Preface
 
@@ -60,7 +60,7 @@ If you don't know how to enable USB debugging, google "\<phone model\> enable us
 
 19. Now hit the arrow_up key on your keyboard (↑) until you see the command you entered in step 14. Don't hit enter yet.
 
-20. Use arrow keys (←→) to move the cursor.
+20. Use arrow keys (← →) to move the cursor.
 
 21. Add `/data/local/tmp/` before the APK name such that it looked like this:
     - `pm install /data/local/tmp/youtube-revanced_v18.15.40.apk`
