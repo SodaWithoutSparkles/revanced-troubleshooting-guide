@@ -2,7 +2,7 @@
 
 ## Preface
 
-This guide is to use ADB (android debug bridge) to install ReVanced. This has a higher chance of working, and provides more debug information if it does not work.
+This guide is to use ADB (android debug bridge) to install ReVanced (or any other apk). This has a higher chance of working, and provides more debug information if it does not work.
 
 ## Requirements
 
