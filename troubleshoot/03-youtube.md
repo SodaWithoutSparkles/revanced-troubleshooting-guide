@@ -1,5 +1,7 @@
 # 3. ReVanced YouTube
 
+Troubleshooting regarding YouTube ReVanced issues
+
 ## 3.1. Unable to open/launch ReVanced youtube / ReVanced crashing
 
 Probably one of the following: 

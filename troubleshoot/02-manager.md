@@ -1,5 +1,7 @@
 # 2. ReVanced manager
 
+Troubleshooting regarding ReVanced manager issues
+
 ## 2.1. ReVanced manager does not install
 
 - Not enough storage space, check that you have ≥1GB to be on the safe side
