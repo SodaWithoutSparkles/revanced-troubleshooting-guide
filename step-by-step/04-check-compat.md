@@ -1,4 +1,4 @@
-# Checking compatibility
+# 4. Checking compatibility
 
 1. launch RVM. Ignore any updates it claimed it knew. You may not have the red shaded part, that's normal.
 ![launch rvm](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/040-first_launch_manager.jpg?raw=true)

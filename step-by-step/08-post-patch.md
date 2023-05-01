@@ -1,4 +1,4 @@
-# Patching Done!
+# 8. Patching Done!
 
 1. After patching is done, export the patched APK
 ![export and install](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/150-export_install.jpg?raw=true)

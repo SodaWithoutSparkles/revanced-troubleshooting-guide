@@ -1,4 +1,4 @@
-# Requirements
+# 1. Requirements
 
 You need to have the following to follow this guide:
 

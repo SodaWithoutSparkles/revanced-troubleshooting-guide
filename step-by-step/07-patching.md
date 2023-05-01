@@ -1,4 +1,4 @@
-# Patching
+# 7. Patching
 
 1. Click patch on the bottom right
 ![click oatch](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/130-go_patch.jpg?raw=true)

@@ -1,4 +1,4 @@
-# Checking versions
+# 2. Checking versions
 
 We are going to start patching now, but first we need to check supported version of YouTube.
 

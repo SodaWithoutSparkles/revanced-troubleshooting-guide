@@ -1,4 +1,4 @@
-# Select APK
+# 5. Select APK
 
 1. Go to the Patcher tab and click "Select an application"
 ![select app](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/060-select_application.jpg?raw=true)
