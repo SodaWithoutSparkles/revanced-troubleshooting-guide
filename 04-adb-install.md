@@ -58,12 +58,12 @@ If you don't know how to enable USB debugging, google "\<phone model\> enable us
     - If no, ask for help
 
 6. If it said something like `Error: Unable to open file`
-    - It should showed you a suggestion, Example: Consider using a file under `/data/local/tmp`
+    - It should've shown you a suggestion, Example: Consider using a file under `/data/local/tmp`
     - Remember that path, we are going to use that later
 
 7. We are going to copy the APK to that path
 
-8. Enter `cp name_of_apk.apk /data/local/tmp/`, obviously replacing `name_of_apk.apk` to the actual name
+8. Enter `cp name_of_apk.apk /data/local/tmp/`, obviously replacing `name_of_apk.apk` with the actual name
 
 9. Now hit the arrow_up key on your keyboard (↑) until you see the command you entered in step 4 (`pm install ...`. Don't hit enter yet.
 
