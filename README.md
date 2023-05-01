@@ -312,3 +312,8 @@ Possible reasons include:
 ## 3.25. Dislike button said hidden
 
 The YouTuber opted-out from the Return Youtube Dislike project
+
+## 
+3.26. How to auto-skip sponsor segments?
+
+ReVanced setting > SponsorBlock > scroll down > Change segment behabior > select category > skip automatically
