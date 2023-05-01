@@ -14,6 +14,8 @@ If you don't know how to enable USB debugging, google "\<phone model\> enable us
 
 ## Steps
 
+### `adb setup`
+
 1. On the computer, download the latest [platform tools](https://developer.android.com/tools/releases/platform-tools)
 
 2. Unzip it. There should be an "adb.exe" inside. Don't double-click it to open tho, it won't work. 
@@ -38,42 +40,44 @@ If you don't know how to enable USB debugging, google "\<phone model\> enable us
 
 10. Enter `whoami`. It should output `shell`. Note: you need to hit the \<Enter\> key.
 
-11. Enter `cd /storage/emulated/0/Download`.
+### Install via ADB
 
-12. Enter `ls *.apk`. This would list all apks in Download
+1. Enter `cd /storage/emulated/0/Download`.
 
-13. Find the name of the apk you want to install from the list
+2. Enter `ls *.apk`. This would list all apks in Download
 
-14. Enter `pm install name_of_apk.apk`. Example: `pm install youtube-revanced_v18.15.40.apk`
+3. Find the name of the apk you want to install from the list
 
-15. If it said Success or showed nothing, check your phone to see if it actually insalled
+4. Enter `pm install name_of_apk.apk`. Example: `pm install youtube-revanced_v18.15.40.apk`
+
+5. If it said Success or showed nothing, check your phone to see if it actually insalled
     - If yes, you have installed ReVanced. Go to Cleanup section
     - If no, ask for help
 
-16. If it said something like `Error: Unable to open file`
+6. If it said something like `Error: Unable to open file`
     - It should showed you a suggestion, Example: Consider using a file under `/data/local/tmp`
     - Remember that path, we are going to use that later
 
-17. We are going to copy the APK to that path
+7. We are going to copy the APK to that path
 
-18. Enter `cp name_of_apk.apk /data/local/tmp/`, obviously replacing `name_of_apk.apk` to the actual name
+8. Enter `cp name_of_apk.apk /data/local/tmp/`, obviously replacing `name_of_apk.apk` to the actual name
 
-19. Now hit the arrow_up key on your keyboard (↑) until you see the command you entered in step 14. Don't hit enter yet.
+9. Now hit the arrow_up key on your keyboard (↑) until you see the command you entered in step 4 (`pm install ...`. Don't hit enter yet.
 
-20. Use arrow keys (← →) to move the cursor.
+10. Use arrow keys (← →) to move the cursor.
 
-21. Add `/data/local/tmp/` before the APK name such that it looked like this:
+11. Add `/data/local/tmp/` before the APK name such that it looked like this:
     - `pm install /data/local/tmp/youtube-revanced_v18.15.40.apk`
 
-22. Hit enter
+12. Hit enter
 
-23. If it showed an error ("Exception occurred while executing"):
+13. If it showed an error ("Exception occurred while executing"):
     - Check the reason given
     - "not enough space" then remove some things until you got the space
     - Google the reason given, for example: "adb pm install not enough space"
     - Or alternatively, ask for help
 
-24. If it said Success or showed nothing, check your phone to see if it actually insalled
+14. If it said Success or showed nothing, check your phone to see if it actually insalled
     - If yes, you have installed ReVanced. Go to pre-cleanup section
     - If no, ask for help
 
