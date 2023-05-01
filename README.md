@@ -161,7 +161,7 @@ Probably one of the following:
 - You exited ReVanced manager when patching
     - Don't do that. Repatch again.
 
-## 3.2. Video playback issues / buffers / buggy
+## 3.2. Video playback issues / buffers / buggy / content not available
 
 Include the `spoof signature verification` and `client spoof` patch
 
@@ -169,7 +169,7 @@ You can get a guide on that [here](https://github.com/SodaWithoutSparkles/revanc
 
 If you cannot find them, you probably patched an unsupported YT version.
 
-## 3.3. App not installed / Installation is blocked
+## 3.3. App not installed / Installation is blocked / `install_failed_verification_failure`
 
 Probably one of the following reason
 
@@ -255,7 +255,7 @@ One is for copy the video URL, another one does the same but adds a timestamp, s
 
 You can disable one or both under ReVanced YT settings > ReVanced > Interactions > Copy video URL settings
 
-## 3.18. `org.schabi.newpipe` is not installed
+## 3.18. `org.schabi.newpipe` is not installed / unable to download video
 
 Install it at https://github.com/TeamNewPipe/NewPipe/releases/latest
 
