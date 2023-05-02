@@ -4,6 +4,8 @@
 
 This is a guide for non-root users to add patches to ReVanced YouTube.
 
+Issues like this can be solved: ![content not available](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/screenshots/400-warn-new-ver-yt.jpg?raw=true)
+
 ## Requirements
 
 You need to have the following to follow this guide:
