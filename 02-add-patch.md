@@ -90,10 +90,8 @@ as of 2023-05-02T08:33 UTC. Remember that as we will use it very soon.
     - Wide search bar
 14. Make sure you enabled the following patches:
     - Vanced MicroG Support
-    - Spoof Signature Verification
     - Client Spoof
 ![microG](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/300-microg_support.jpg?raw=true)
-![spoof sig](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/301-spoof_sig.jpg?raw=true)
 ![client spoof](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/302-spoof_client.jpg?raw=true)
 14. When you have finished, click "Done" on the bottom right
 ![click done](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/120-click_done.jpg?raw=true)

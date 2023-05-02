@@ -17,7 +17,7 @@ Probably one of the following:
 
 ## 3.2. Video playback issues / buffers / buggy / content not available
 
-Include the `spoof signature verification` and `client spoof` patch
+Include `client spoof` patch. (_`spoof signature verification` was merged into `client spoof`_)
 
 You can get a guide on that [here](/02-add-patch.md)
 
