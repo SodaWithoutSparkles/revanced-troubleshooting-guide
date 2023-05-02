@@ -41,7 +41,7 @@ To save time, this guide will use the following short forms
 The latest supported YT version is: 
 
 ```
-18.15.40 
+18.16.37 
 ```
 
 as of 2023-04-30T07:40 UTC. Remember that as we will use it very soon.
