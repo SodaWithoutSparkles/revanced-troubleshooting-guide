@@ -8,7 +8,7 @@ if [[ "$1" == *"revanced-troubleshooting-guide"* ]]; then
     if [[ $REPLY =~ ^[Yy]$ ]]; then
         rm ../${PWD##*/}.md
         for i in *.md; do
-            cat "$i" >> ../${PWD##*/}.md;
+            cat -s "$i" >> ../${PWD##*/}.md;
             echo -n '#' >> ../${PWD##*/}.md;
         done
         truncate -s -1 ../${PWD##*/}.md
