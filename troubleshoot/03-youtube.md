@@ -19,11 +19,11 @@ Probably one of the following:
 
 Include `client spoof` patch. (_`spoof signature verification` was merged into `client spoof`_)
 
+![infinite loading](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/troubleshoot/03-youtube/02.png?raw=true)
+
 You can get a guide on that [here](/02-add-patch.md)
 
 If you cannot find them, you probably patched an unsupported YT version.
-
-![infinite loading](/troubleshoot/03-youtube/02.png?raw=true)
 
 ## 3.3. App not installed / Installation is blocked / `install_failed_verification_failure`
 
@@ -176,5 +176,5 @@ Repatch without the `hide player overlay` patch. This requires a repatch, you ca
 
 API Timed out. SB server did not respond in time. Either it is down or it is super busy right now. You can check the status of SB server [here](https://status.sponsor.ajay.app/).
 
-![toast](/troubleshoot/03-youtube/29.jpg?raw=true)
+![toast warning](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/troubleshoot/03-youtube/29.jpg?raw=true)
 
