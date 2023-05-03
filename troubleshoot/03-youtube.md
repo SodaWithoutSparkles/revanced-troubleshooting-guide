@@ -23,6 +23,8 @@ You can get a guide on that [here](/02-add-patch.md)
 
 If you cannot find them, you probably patched an unsupported YT version.
 
+![infinite loading](/troubleshoot/03-youtube/02.png?raw=true)
+
 ## 3.3. App not installed / Installation is blocked / `install_failed_verification_failure`
 
 Probably one of the following reason
@@ -169,3 +171,10 @@ You can press the back buttom / use back gesture to close it temporarily. It sho
 ## 3.28 Low contrast in player / does not lower brightness when controls are visible
 
 Repatch without the `hide player overlay` patch. This requires a repatch, you cannot fix it in settings.
+
+## 3.29 SponsorBlock temporarily not available
+
+API Timed out. SB server did not respond in time. Either it is down or it is super busy right now. You can check the status of SB server [here](https://status.sponsor.ajay.app/).
+
+![toast](/troubleshoot/03-youtube/29.jpg?raw=true)
+
