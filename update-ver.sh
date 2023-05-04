@@ -24,18 +24,25 @@ if [[ "$oldVer" != "$currVer" ]]; then
     # set local copy
     echo "$currVer"'@'"$now"'/'"$nowUnix" > .conf/version
     rebuild=true
+else
+    echo -e "Remote: $currVer\tLocal: $oldVer"
+    echo "No need to change"
 fi
 
 lessThanOneDay=86000
 
 if [[ "$(($nowUnix-$lastUnix))" > "$lessThanOneDay" ]] || [[ $EVENT == 'workflow_dispatch' ]]; then
-# not modified within 1 day, change last checked time anyway
+    if [[ $EVENT == 'workflow_dispatch' ]]; then
+        echo "Updating timestamp forcefully because of manual dispatch"
+    fi
+    # not modified within 1 day, change last checked time anyway to show that we are alive
     echo "Update last update timestamp from $lastUpdate to $now"
     find ./ -type f -name "*.md" -exec sed -i "s/$lastUpdate/$now/g" "{}" \;
     echo "$currVer"'@'"$now"'/'"$nowUnix" > .conf/version
     echo "bump=true" >> "$GITHUB_OUTPUT"
     rebuild=true
 else
+    echo "no need to update last update timestamp"
     echo "bump=false" >> "$GITHUB_OUTPUT"
 fi
 
