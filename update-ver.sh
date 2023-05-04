@@ -49,14 +49,18 @@ if [[ "$(($nowUnix - $lastUnix))" > "$lessThanOneDay" ]] || [[ $EVENT == 'workfl
     find ./ -type f -name "*.md" -exec sed -i "s/$lastUpdate/$now/g" "{}" \;
     echo "$currVer"'@'"$now"'/'"$nowUnix" >.conf/version
     echo "bump=true" >>"$GITHUB_OUTPUT"
+    echo "bump=true"
     rebuild=true
 else
     echo "no need to update last update timestamp"
     echo "bump=false" >>"$GITHUB_OUTPUT"
+    echo "bump=false"
 fi
 
-if [ $rebuild = true ]; then
+if [ "$rebuild" = true ]; then
     echo "rebuild=true" >>"$GITHUB_OUTPUT"
+    echo "rebuild=true"
 else
     echo "rebuild=false" >>"$GITHUB_OUTPUT"
+    echo "rebuild=false"
 fi
