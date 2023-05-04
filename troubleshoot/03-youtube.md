@@ -178,3 +178,9 @@ API Timed out. SB server did not respond in time. Either it is down or it is sup
 
 ![toast warning](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/troubleshoot/03-youtube/29.jpg?raw=true)
 
+## 3.30 Player controls won't disappear
+
+Go to YouTube settings > Accessibility and disable Accessibility player.
+
+![Accessibility player](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/troubleshoot/03-youtube/30.jpg?raw=true)
+
