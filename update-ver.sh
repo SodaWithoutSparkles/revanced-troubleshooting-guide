@@ -5,9 +5,11 @@ currVer=$(curl -X 'GET' -H 'accept: application/json' 'https://releases.revanced
 jq -r '.[] | .compatiblePackages| .[] | select(.name=="com.google.android.youtube") | .versions | .[-1] | select( . != null )' | \
 sort | uniq | head -1)
 now=$(date -u +"%Y-%m-%dT%H:%M")
+nowUnix=$(date +%s)
 
 oldVer=$(cut -f1 -d '@' .conf/version)
-lastUpdate=$(cut -f2 -d '@' .conf/version)
+lastUpdate=$(cut -f2 -d '@' .conf/version | cut -f1 -d '/')
+lastUnix=$(cut -f2 -d '/' .conf/version)
 
 if [ "$oldVer" != "$currVer" ]; then
     # update all md files
@@ -18,13 +20,16 @@ if [ "$oldVer" != "$currVer" ]; then
     find ./ -type f -name "*.md" -exec sed -i "s/$lastUpdate/$now/g" "{}" \;
 
     # set local copy
-    echo "$currVer"'@'"$now" > .conf/version
+    echo "$currVer"'@'"$now"'/'"$nowUnix" > .conf/version
 fi
 
-if [ $(find /path -mmin +1400 -type f -name ".conf/version" 2>/dev/null) ]; then
+lessThanOneDay=86000
+
+if [ "$(($nowUnix-$lastUnix))" -gt "$lessThanOneDay" ]; then
 # not modified within 1 day, change last checked time anyway
-    echo "Update last update timestamp from $oldVer to $currVer"
+    echo "Update last update timestamp from $lastUpdate to $now"
     find ./ -type f -name "*.md" -exec sed -i "s/$lastUpdate/$now/g" "{}" \;
-    echo "$currVer"'@'"$now" > .conf/version
+    echo "$currVer"'@'"$now"'/'"$nowUnix" > .conf/version
+    echo "bumpLastChecked=true" >> $GITHUB_ENV
 fi
 

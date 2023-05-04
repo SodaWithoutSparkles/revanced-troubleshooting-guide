@@ -1,0 +1,45 @@
+name: Bump version and last modified time
+
+on: 
+  workflow_dispatch:
+  schedule:
+    - cron:  '*/30 * * * *'
+  # pull_request:
+  #   branches:
+  #     - main
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Bump version and last modified time
+        run: ./update-ver.sh
+        shell: bash
+
+      - name: Rebuild general view
+        # run bc last update changed
+        run: ./generator-full.sh
+        shell: bash
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        if: env.bumpLastChecked
+        with: 
+          commit_author: ''
+          commit_options: '--no-verify --signoff'
+          commit_message: 'chore: Bump last update date'
+    
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        if: !env.bumpLastChecked 
+        with: 
+            commit_author: ''
+            commit_options: '--no-verify --signoff'
+            commit_message: 'chore: Bump supported version'
+            
+      
