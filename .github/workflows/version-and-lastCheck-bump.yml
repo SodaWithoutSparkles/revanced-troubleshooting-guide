@@ -50,6 +50,8 @@ jobs:
             commit_options: '--no-verify --signoff'
             commit_message: 'chore: Bump supported version'
   rebuildSite:
+    permissions:
+        contents: write
     uses: SodaWithoutSparkles/revanced-troubleshooting-guide/.github/workflows/retype-action.yml@main
     needs: bumpVer
     if: needs.bumpVer.outputs.needsRebuild
