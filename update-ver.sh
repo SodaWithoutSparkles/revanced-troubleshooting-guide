@@ -30,8 +30,7 @@ if [ "$(($nowUnix-$lastUnix))" -gt "$lessThanOneDay" ]; then
     echo "Update last update timestamp from $lastUpdate to $now"
     find ./ -type f -name "*.md" -exec sed -i "s/$lastUpdate/$now/g" "{}" \;
     echo "$currVer"'@'"$now"'/'"$nowUnix" > .conf/version
-    echo "bumpLastChecked=true" >> $GITHUB_ENV
+    echo "bump=true" >> "$GITHUB_OUTPUT"
 else
-    echo "bumpLastChecked=false" >> $GITHUB_ENV
+    echo "bump=false" >> "$GITHUB_OUTPUT"
 fi
-

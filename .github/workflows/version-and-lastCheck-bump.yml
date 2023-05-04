@@ -20,6 +20,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Bump version and last modified time
+        id: bump
         run: ./update-ver.sh
         shell: bash
 
@@ -29,14 +30,14 @@ jobs:
         shell: bash
 
       - uses: stefanzweifel/git-auto-commit-action@v4
-        if: env.bumpLastChecked
+        if: steps.bump.outputs.bump == 'true'
         with: 
           commit_author: ''
           commit_options: '--no-verify --signoff'
           commit_message: 'chore: Bump last update date'
     
       - uses: stefanzweifel/git-auto-commit-action@v4
-        if: env.bumpLastChecked != true
+        if: steps.bump.outputs.bump == 'false'
         with: 
             commit_author: ''
             commit_options: '--no-verify --signoff'
