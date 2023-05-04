@@ -9,4 +9,7 @@
 5. Select the FULL APK, **not BUNDLE or SPLIT APK**
 ![select apk](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/020-choose_YT_apk.jpg?raw=true)
 6. Download **but don't install** the YT APK
+!!!warning Warning
+**Do Not Install the Downloaded YouTube APK.**
+!!!
 ![download yt](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/030-download_YT_apk.jpg?raw=true)
