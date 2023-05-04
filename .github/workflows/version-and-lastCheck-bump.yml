@@ -38,7 +38,7 @@ jobs:
 
       - name: Bump last update date only
         uses: stefanzweifel/git-auto-commit-action@v4
-        if: steps.bump.outputs.bump == 'true' && steps.bump.outputs.rebuild == 'true
+        if: steps.bump.outputs.bump == 'true' && steps.bump.outputs.rebuild == 'true'
         with: 
           commit_author: ''
           commit_options: '--no-verify --signoff'
@@ -46,7 +46,7 @@ jobs:
     
       - name: Bump both supported version and date
         uses: stefanzweifel/git-auto-commit-action@v4
-        if: steps.bump.outputs.bump == 'false' && steps.bump.outputs.rebuild == 'true
+        if: steps.bump.outputs.bump == 'false' && steps.bump.outputs.rebuild == 'true'
         with: 
             commit_author: ''
             commit_options: '--no-verify --signoff'
