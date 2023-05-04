@@ -24,7 +24,7 @@ if [[ "$oldVer" != "$currVer" ]]; then
     echo "$currVer"'@'"$now"'/'"$nowUnix" >.conf/version
     rebuild=true
 else
-    echo -e "Remote: $currVer\tLocal: $oldVer"
+    echo "Remote: $currVer   Local: $oldVer"
     echo "No need to change"
 fi
 
@@ -33,6 +33,9 @@ lessThanOneDay=86000
 if [[ "$(($nowUnix - $lastUnix))" > "$lessThanOneDay" ]] || [[ $EVENT == 'workflow_dispatch' ]]; then
     if [[ $EVENT == 'workflow_dispatch' ]]; then
         echo "Updating timestamp forcefully because of manual dispatch"
+    else
+        echo "now: $nowUnix    last: $lastUnix"
+        echo "diff: $(($nowUnix - $lastUnix)) > $lessThanOneDay"
     fi
     # not modified within 1 day, change last checked time anyway to show that we are alive
     echo "Update last update timestamp from $lastUpdate to $now"
