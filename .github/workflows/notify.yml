@@ -51,7 +51,7 @@ jobs:
           URL: ${{ inputs.url }}
             
       - name: Webhook
-        uses: joelwmale/webhook-action@v2
+        uses: joelwmale/webhook-action@v2.3.2
         with:
           url: ${{ secrets.WEBHOOK_URL }}
           body: ${{ env.body }}
