@@ -27,8 +27,9 @@ jobs:
             EVENT: ${{ github.event_name }}
 
       - name: Rebuild site
-        if: steps.bump.outputs.rebuild == 'true'
         uses: SodaWithoutSparkles/revanced-troubleshooting-guide/.github/workflows/retype-action.yml@main
+        if: steps.bump.outputs.rebuild == 'true'
+        
         
 
       - uses: stefanzweifel/git-auto-commit-action@v4
