@@ -164,9 +164,9 @@ ReVanced setting > SponsorBlock > scroll down > Change segment behabior > select
 
 ## 3.27 Screen goes dark/dim and unable to control/swipe
 
-This is a side effect of removing a YT premium ad. Currently there is no known permanent solution.
+This is a side effect of removing a YT premium ad. Updating patches to version 2.172.0 **AND** including the `hide get premium` should fix it.
 
-You can press the back buttom / use back gesture to close it temporarily. It should not come back too quickly
+Or You could press the back buttom / use back gesture to close it temporarily. It should not come back too quickly.
 
 ## 3.28 Low contrast in player / does not lower brightness when controls are visible
 
