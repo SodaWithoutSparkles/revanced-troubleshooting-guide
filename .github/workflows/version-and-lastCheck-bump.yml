@@ -16,6 +16,8 @@ jobs:
       # Give the default GITHUB_TOKEN write permission to commit and push the
       # added or changed files to the repository.
       contents: write
+    outputs:
+        needsRebuild: ${{ steps.export.outputs.out }}
     steps:
       - uses: actions/checkout@v3
 
@@ -25,12 +27,14 @@ jobs:
         shell: bash
         env:
             EVENT: ${{ github.event_name }}
-
-      - name: Rebuild site
-        uses: SodaWithoutSparkles/revanced-troubleshooting-guide/.github/workflows/retype-action.yml@main
-        if: steps.bump.outputs.rebuild == 'true'
         
-        
+      - name: output rebuild status
+        id: export
+        run: echo "out=$REBUILD" >> "$GITHUB_OUTPUT"
+        shell: bash
+        env:
+            REBUILD: ${{ steps.bump.outputs.rebuild }}
+            
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         if: steps.bump.outputs.bump == 'true'
@@ -45,5 +49,8 @@ jobs:
             commit_author: ''
             commit_options: '--no-verify --signoff'
             commit_message: 'chore: Bump supported version'
-            
+  rebuildSite:
+    uses: SodaWithoutSparkles/revanced-troubleshooting-guide/.github/workflows/retype-action.yml@main
+    needs: bumpVer
+    if: needs.bumpVer.outputs.needsRebuild
       
