@@ -31,5 +31,7 @@ if [ "$(($nowUnix-$lastUnix))" -gt "$lessThanOneDay" ]; then
     find ./ -type f -name "*.md" -exec sed -i "s/$lastUpdate/$now/g" "{}" \;
     echo "$currVer"'@'"$now"'/'"$nowUnix" > .conf/version
     echo "bumpLastChecked=true" >> $GITHUB_ENV
+else
+    echo "bumpLastChecked=false" >> $GITHUB_ENV
 fi
 
