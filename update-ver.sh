@@ -11,6 +11,8 @@ oldVer=$(cut -f1 -d '@' .conf/version)
 lastUpdate=$(cut -f2 -d '@' .conf/version | cut -f1 -d '/')
 lastUnix=$(cut -f2 -d '/' .conf/version)
 
+rebuild=false
+
 if [ "$oldVer" != "$currVer" ]; then
     # update all md files
     echo "Update version from $oldVer to $currVer"
@@ -21,6 +23,7 @@ if [ "$oldVer" != "$currVer" ]; then
 
     # set local copy
     echo "$currVer"'@'"$now"'/'"$nowUnix" > .conf/version
+    rebuild=true
 fi
 
 lessThanOneDay=86000
@@ -31,6 +34,13 @@ if [ "$(($nowUnix-$lastUnix))" -gt "$lessThanOneDay" ]; then
     find ./ -type f -name "*.md" -exec sed -i "s/$lastUpdate/$now/g" "{}" \;
     echo "$currVer"'@'"$now"'/'"$nowUnix" > .conf/version
     echo "bump=true" >> "$GITHUB_OUTPUT"
+    rebuild=true
 else
     echo "bump=false" >> "$GITHUB_OUTPUT"
+fi
+
+if [ $rebuild = true ]; then
+    echo "rebuild=true" >> "$GITHUB_OUTPUT"
+else
+    echo "rebuild=false" >> "$GITHUB_OUTPUT"
 fi

@@ -25,6 +25,7 @@ jobs:
         shell: bash
 
       - name: Rebuild general view
+        if: steps.bump.outputs.rebuild == 'true'
         # run bc last update changed
         run: ./generator-full.sh
         shell: bash
