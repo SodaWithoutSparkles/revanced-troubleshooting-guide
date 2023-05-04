@@ -1,9 +1,8 @@
 #!/bin/bash
 
-
-currVer=$(curl -X 'GET' -H 'accept: application/json' 'https://releases.revanced.app/patches' | \
-jq -r '.[] | .compatiblePackages| .[] | select(.name=="com.google.android.youtube") | .versions | .[-1] | select( . != null )' | \
-sort | uniq | head -1)
+currVer=$(curl -X 'GET' -H 'accept: application/json' 'https://releases.revanced.app/patches' |
+    jq -r '.[] | .compatiblePackages| .[] | select(.name=="com.google.android.youtube") | .versions | .[-1] | select( . != null )' |
+    sort | uniq | head -1)
 now=$(date -u +"%Y-%m-%dT%H:%M")
 nowUnix=$(date +%s)
 
@@ -22,7 +21,7 @@ if [[ "$oldVer" != "$currVer" ]]; then
     find ./ -type f -name "*.md" -exec sed -i "s/$lastUpdate/$now/g" "{}" \;
 
     # set local copy
-    echo "$currVer"'@'"$now"'/'"$nowUnix" > .conf/version
+    echo "$currVer"'@'"$now"'/'"$nowUnix" >.conf/version
     rebuild=true
 else
     echo -e "Remote: $currVer\tLocal: $oldVer"
@@ -31,23 +30,23 @@ fi
 
 lessThanOneDay=86000
 
-if [[ "$(($nowUnix-$lastUnix))" > "$lessThanOneDay" ]] || [[ $EVENT == 'workflow_dispatch' ]]; then
+if [[ "$(($nowUnix - $lastUnix))" > "$lessThanOneDay" ]] || [[ $EVENT == 'workflow_dispatch' ]]; then
     if [[ $EVENT == 'workflow_dispatch' ]]; then
         echo "Updating timestamp forcefully because of manual dispatch"
     fi
     # not modified within 1 day, change last checked time anyway to show that we are alive
     echo "Update last update timestamp from $lastUpdate to $now"
     find ./ -type f -name "*.md" -exec sed -i "s/$lastUpdate/$now/g" "{}" \;
-    echo "$currVer"'@'"$now"'/'"$nowUnix" > .conf/version
-    echo "bump=true" >> "$GITHUB_OUTPUT"
+    echo "$currVer"'@'"$now"'/'"$nowUnix" >.conf/version
+    echo "bump=true" >>"$GITHUB_OUTPUT"
     rebuild=true
 else
     echo "no need to update last update timestamp"
-    echo "bump=false" >> "$GITHUB_OUTPUT"
+    echo "bump=false" >>"$GITHUB_OUTPUT"
 fi
 
 if [ $rebuild = true ]; then
-    echo "rebuild=true" >> "$GITHUB_OUTPUT"
+    echo "rebuild=true" >>"$GITHUB_OUTPUT"
 else
-    echo "rebuild=false" >> "$GITHUB_OUTPUT"
+    echo "rebuild=false" >>"$GITHUB_OUTPUT"
 fi
