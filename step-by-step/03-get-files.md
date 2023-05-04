@@ -8,8 +8,8 @@
 ==- Image for reference
 ![download microG](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/010-download_microg.jpg?raw=true)
 ===
-3. Visit [APK mirror for YouTube APK](https://www.apkmirror.com/apk/google-inc/youtube/)
-4. Scroll down and find the **latest supported version**
+3. Visit [APK mirror for YouTube APK](https://www.apkmirror.com/apk/google-inc/youtube/youtube-18-16-37-release/)
+4. Verify that the link actually links to the **latest supported version** (18.16.37)
 5. Select the FULL APK, **not BUNDLE or SPLIT APK**
 ==- Image for reference
 ![select apk](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/020-choose_YT_apk.jpg?raw=true)

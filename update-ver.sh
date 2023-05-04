@@ -10,18 +10,25 @@ oldVer=$(cut -f1 -d '@' .conf/version)
 lastUpdate=$(cut -f2 -d '@' .conf/version | cut -f1 -d '/')
 lastUnix=$(cut -f2 -d '/' .conf/version)
 
+dashOld=$(echo "$oldVer" | tr '.' '-')
+dashNew=$(echo "$currVer" | tr '.' '-')
+
+
 rebuild=false
 
 if [[ "$oldVer" != "$currVer" ]]; then
     # update all md files
     echo "Update version from $oldVer to $currVer"
     find ./ -type f -name "*.md" -exec sed -i "s/$oldVer/$currVer/g" "{}" \;
+    # modify 03-get-file.md's link too
+    find ./ -type f -name "*.md" -exec sed -i "s/$dashOld/$dashNew/g" "{}" \;
 
     echo "Update last update timestamp from $lastUpdate to $now"
     find ./ -type f -name "*.md" -exec sed -i "s/$lastUpdate/$now/g" "{}" \;
 
     # set local copy
     echo "$currVer"'@'"$now"'/'"$nowUnix" >.conf/version
+
     rebuild=true
 else
     echo "Remote: $currVer   Local: $oldVer"
