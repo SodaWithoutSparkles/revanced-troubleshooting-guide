@@ -36,7 +36,7 @@ jobs:
           commit_message: 'chore: Bump last update date'
     
       - uses: stefanzweifel/git-auto-commit-action@v4
-        if: !env.bumpLastChecked 
+        if: env.bumpLastChecked != true
         with: 
             commit_author: ''
             commit_options: '--no-verify --signoff'
