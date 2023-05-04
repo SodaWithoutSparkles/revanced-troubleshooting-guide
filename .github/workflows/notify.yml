@@ -1,4 +1,4 @@
-name: Bump version and last modified time
+name: Notify user
 
 on: 
   workflow_dispatch:
