@@ -10,7 +10,7 @@ on:
 
 
 jobs:
-  build:
+  bumpVer:
     runs-on: ubuntu-latest
     permissions:
       # Give the default GITHUB_TOKEN write permission to commit and push the
@@ -23,12 +23,13 @@ jobs:
         id: bump
         run: ./update-ver.sh
         shell: bash
+        env:
+            EVENT: ${{ github.event_name }}
 
-      - name: Rebuild general view
+      - name: Rebuild site
         if: steps.bump.outputs.rebuild == 'true'
-        # run bc last update changed
-        run: ./generator-full.sh
-        shell: bash
+        uses: SodaWithoutSparkles/revanced-troubleshooting-guide/.github/workflows/retype-action.yml@main
+        
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         if: steps.bump.outputs.bump == 'true'

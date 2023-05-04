@@ -13,7 +13,7 @@ lastUnix=$(cut -f2 -d '/' .conf/version)
 
 rebuild=false
 
-if [ "$oldVer" != "$currVer" ]; then
+if [[ "$oldVer" != "$currVer" ]]; then
     # update all md files
     echo "Update version from $oldVer to $currVer"
     find ./ -type f -name "*.md" -exec sed -i "s/$oldVer/$currVer/g" "{}" \;
@@ -28,7 +28,7 @@ fi
 
 lessThanOneDay=86000
 
-if [ "$(($nowUnix-$lastUnix))" -gt "$lessThanOneDay" ]; then
+if [[ "$(($nowUnix-$lastUnix))" > "$lessThanOneDay" ]] || [[ $EVENT == 'workflow_dispatch' ]]; then
 # not modified within 1 day, change last checked time anyway
     echo "Update last update timestamp from $lastUpdate to $now"
     find ./ -type f -name "*.md" -exec sed -i "s/$lastUpdate/$now/g" "{}" \;
