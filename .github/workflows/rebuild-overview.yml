@@ -1,0 +1,41 @@
+name: Rebuild troubleshoot general view
+
+on: 
+  push:
+    branches: 
+      - main
+  # pull_request:
+  #   branches:
+  #     - main
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: dorny/paths-filter@v2
+        id: changes
+        with:
+          filters: |
+            src:
+              - 'troubleshoot/**'
+
+      - name: rebuild general view
+        # run only if some file in 'troubleshoot' folder was changed
+        if: steps.changes.outputs.src == 'true'
+        run: ./generator-full.sh
+        shell: bash
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        if: steps.changes.outputs.src == 'true'
+        with: 
+          commit_options: '--no-verify --signoff'
+          commit_message: 'chore: Automated Rebuild of troubleshoot guides'
+          
+      
