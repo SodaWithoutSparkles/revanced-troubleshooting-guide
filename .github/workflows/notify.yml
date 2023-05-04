@@ -43,7 +43,8 @@ jobs:
     steps:
       - name: Prep payload
         id: prep
-        run: echo "body={\"value1\": $TITLE, \"value2\": $DESC, \"value3\": $URL}" >>"$GITHUB_ENV"
+        run: |
+          echo "body={\"value1\": $TITLE, \"value2\": $DESC, \"value3\": $URL}" >>"$GITHUB_ENV"
         env: 
           TITLE: ${{ inputs.title }}
           DESC: ${{ inputs.message }}
