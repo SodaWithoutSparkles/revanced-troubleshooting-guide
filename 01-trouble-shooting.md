@@ -19,7 +19,7 @@ https://github.com/TeamVanced/VancedMicroG/releases/tag/v0.2.24.220220-220220001
 
 ### 1.4. What is the latest youtube version supported? 
 
-18.16.37 as of 2023-05-04T07:33 UTC. You can check it in ReVanced manager
+18.16.37 as of 2023-05-04T08:00 UTC. You can check it in ReVanced manager
 
 ### 1.5. Is ReVanced related to Vanced?
 
