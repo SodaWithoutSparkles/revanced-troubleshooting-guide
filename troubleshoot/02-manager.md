@@ -48,7 +48,11 @@ TL;DR: that is a known harmless bug, ignore it and don't update
 
 ## 2.9. Non-root install not possible?
 
-Select `vanced microG support` patch in the patches selection screen. If you cannot find it, use the search function and search for "microg". If you still cannot find it, you are using a non-supported YT version.
+Select `vanced microG support` patch in the patches selection menu. 
+
+If you cannot find it, use the search function and search for "microg". If you still cannot find it, you are using a non-supported YT version.
+
+![non-root install not possible](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/troubleshoot/02-manager/09.jpg?raw=true)
 
 ## 2.10. Cannot find patch \<insert patch name here\>?
 
@@ -113,3 +117,4 @@ DO NOT SELECT ANY OF THE FOLLOWING PATCHES OR YOU WILL RISK HAVING ISSUES:
 - Predictive back gesture
 - Remove screenshot restriction
 - Spoof wifi connections
+
