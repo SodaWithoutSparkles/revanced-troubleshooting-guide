@@ -30,7 +30,7 @@ jobs:
         
       - name: output rebuild status
         id: export
-        run: echo "out=$REBUILD" >> "$GITHUB_OUTPUT"
+        run: echo "out=$REBUILD" >> "$GITHUB_OUTPUT" && echo "$REBUILD"
         shell: bash
         env:
             REBUILD: ${{ steps.bump.outputs.rebuild }}
@@ -38,7 +38,7 @@ jobs:
 
       - name: Bump last update date only
         uses: stefanzweifel/git-auto-commit-action@v4
-        if: steps.bump.outputs.bump == 'true'
+        if: steps.bump.outputs.bump == 'true' && steps.bump.outputs.rebuild == 'true
         with: 
           commit_author: ''
           commit_options: '--no-verify --signoff'
@@ -46,7 +46,7 @@ jobs:
     
       - name: Bump both supported version and date
         uses: stefanzweifel/git-auto-commit-action@v4
-        if: steps.bump.outputs.bump == 'false'
+        if: steps.bump.outputs.bump == 'false' && steps.bump.outputs.rebuild == 'true
         with: 
             commit_author: ''
             commit_options: '--no-verify --signoff'
@@ -55,7 +55,7 @@ jobs:
   rebuildSite:
     permissions:
         contents: write
-    uses: SodaWithoutSparkles/revanced-troubleshooting-guide/.github/workflows/retype-action.yml@main
+    uses: ./.github/workflows/retype-action.yml
     needs: bumpVer
-    if: needs.bumpVer.outputs.needsRebuild
+    if: needs.bumpVer.outputs.needsRebuild == 'true'
       
