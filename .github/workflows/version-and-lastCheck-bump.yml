@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Bump version and last modified time
+      - name: Bump version and last mtime
         id: bump
         run: ./update-ver.sh
         shell: bash
@@ -36,19 +36,22 @@ jobs:
             REBUILD: ${{ steps.bump.outputs.rebuild }}
             
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Bump last update date only
+        uses: stefanzweifel/git-auto-commit-action@v4
         if: steps.bump.outputs.bump == 'true'
         with: 
           commit_author: ''
           commit_options: '--no-verify --signoff'
           commit_message: 'chore: Bump last update date'
     
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Bump both supported version and date
+        uses: stefanzweifel/git-auto-commit-action@v4
         if: steps.bump.outputs.bump == 'false'
         with: 
             commit_author: ''
             commit_options: '--no-verify --signoff'
             commit_message: 'chore: Bump supported version'
+
   rebuildSite:
     permissions:
         contents: write
