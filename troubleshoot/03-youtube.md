@@ -186,3 +186,7 @@ Go to YouTube settings > Accessibility and disable Accessibility player.
 
 ![Accessibility player](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/troubleshoot/03-youtube/30.jpg?raw=true)
 
+## 3.31 Where is the hide-shorts-button patch?
+
+Merged with `navigation buttons` patch
+
