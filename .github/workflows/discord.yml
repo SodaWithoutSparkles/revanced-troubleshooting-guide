@@ -1,0 +1,54 @@
+name: Notify user
+
+on: 
+  workflow_dispatch:
+      title:
+        required: false
+        default: 'Notification from Github actions'
+        description: title of notification
+        type: string
+      message:
+        required: true
+        default: ''
+        description: description of notification
+        type: string
+      url:
+        required: true
+        default: ''
+        description: link of notification
+        type: string
+
+
+  workflow_call:
+    inputs:
+      title:
+        required: false
+        default: 'Notification from Github actions'
+        description: title of notification
+        type: string
+      message:
+        required: true
+        default: ''
+        description: description of notification
+        type: string
+      url:
+        required: true
+        default: ''
+        description: link of notification
+        type: string
+
+jobs:
+  message:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Discord Webhook Action
+      uses: tsickert/discord-webhook@v5.3.0
+      with:
+        webhook-url: ${{ secrets.WEBHOOK_URL }}
+        embed-title: ${{ inputs.title }}
+        embed-url: ${{ inputs.url }}
+        embed-description: ${{ inputs.message }}
+        embed-color: 3447003
+        username: "Github Actions"
+        avatar-url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+        content: "<@${{ secrets.DISCORD_ID  }}>, a new message from Github Actions!"
