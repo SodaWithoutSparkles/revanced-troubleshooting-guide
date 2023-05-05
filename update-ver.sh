@@ -13,7 +13,6 @@ lastUnix=$(cut -f2 -d '/' .conf/version)
 dashOld=$(echo "$oldVer" | tr '.' '-')
 dashNew=$(echo "$currVer" | tr '.' '-')
 
-
 rebuild=false
 
 if [[ "$oldVer" != "$currVer" ]]; then
@@ -36,16 +35,17 @@ fi
 
 echo "ver=$currVer" >>"$GITHUB_OUTPUT"
 
-lessThanOneDay=86000
+# 1 week
+keepAliveTime=604800
 
-if (( "$(($nowUnix - $lastUnix))" > "$lessThanOneDay" )) || [[ "$EVENT" == 'workflow_dispatch' ]]; then
+if (( "$(($nowUnix - $lastUnix))" > "$keepAliveTime" )) || [[ "$EVENT" == 'workflow_dispatch' ]]; then
     if [[ "$EVENT" == 'workflow_dispatch' ]]; then
         echo "Updating timestamp forcefully because of manual dispatch"
     else
         echo "now: $nowUnix    last: $lastUnix"
-        echo "diff: $(($nowUnix - $lastUnix)) > $lessThanOneDay"
+        echo "diff: $(($nowUnix - $lastUnix)) > $keepAliveTime"
     fi
-    # not modified within 1 day, change last checked time anyway to show that we are alive
+    # not modified within 1 week, change last checked time anyway to show that we are alive
     echo "Update last update timestamp from $lastUpdate to $now"
     find ./ -type f -name "*.md" -exec sed -i "s/$lastUpdate/$now/g" "{}" \;
     echo "$currVer"'@'"$now"'/'"$nowUnix" >.conf/version
