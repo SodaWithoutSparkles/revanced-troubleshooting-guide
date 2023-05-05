@@ -9,4 +9,4 @@
 4. Keep calm, you don't need to patch again. Just use the exported one in Step 1
 
 
-[![Star this repo if it helps you!](https://img.shields.io/github/stars/SodaWithoutSparkles/revanced-troubleshooting-guide?style=for-the-badge&logo=github)](ttps://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide)
+[![Star this repo if it helps you!](https://img.shields.io/github/stars/SodaWithoutSparkles/revanced-troubleshooting-guide?style=for-the-badge&logo=github)](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide)
