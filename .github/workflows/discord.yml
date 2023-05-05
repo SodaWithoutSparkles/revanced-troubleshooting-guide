@@ -52,4 +52,4 @@ jobs:
         embed-color: 3447003
         username: "Github Actions"
         avatar-url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-        content: "<@${{ secrets.DISCORD_ID  }}>, a new message from Github Actions!"
+        content: "<@${{ secrets.DISCORD_ID  }}>"
