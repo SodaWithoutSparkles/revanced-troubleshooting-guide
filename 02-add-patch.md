@@ -44,7 +44,7 @@ The latest supported YT version is:
 18.16.37 
 ```
 
-as of 2023-05-05T14:23 UTC. Remember that as we will use it very soon.
+as of 2023-05-05T14:29 UTC. Remember that as we will use it very soon.
 
 ### Part 1: Getting the files ready
 
