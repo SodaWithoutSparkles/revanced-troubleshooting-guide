@@ -13,6 +13,11 @@ lastUnix=$(cut -f2 -d '/' .conf/version)
 dashOld=$(echo "$oldVer" | tr '.' '-')
 dashNew=$(echo "$currVer" | tr '.' '-')
 
+if [[ "$GITHUB_ACTIONS" != "true" ]]; then
+    echo 'running locally, set $GITHUB_OUTPUT to /dev/null'
+    GITHUB_OUTPUT="/dev/null"
+fi
+
 rebuild=false
 
 if [[ "$oldVer" != "$currVer" ]]; then
