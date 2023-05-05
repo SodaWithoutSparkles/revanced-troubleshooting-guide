@@ -74,3 +74,4 @@ jobs:
       content: "Latest supported version is: ${{ needs.bumpVer.outputs.currVer }}"
       url: "https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/step-by-step/02-check-ver/"
       message: "Latest supported version is: ${{ needs.bumpVer.outputs.currVer }}. Update now!"
+    secrets: inherit
