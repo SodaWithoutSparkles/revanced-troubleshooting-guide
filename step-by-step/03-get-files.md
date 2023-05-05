@@ -23,7 +23,7 @@ Download the .apk, not the source code. Do not try to seek the manager version s
 ===
 6. Download **but don't install** the YT APK
 !!!warning Warning
-**Do Not Install the Downloaded YouTube APK.**
+**Do NOT install the downloaded YouTube APK.**
 !!!
 ==- Image for reference
 ![download yt](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/030-download_YT_apk.jpg?raw=true)
