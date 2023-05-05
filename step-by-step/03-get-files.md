@@ -1,6 +1,9 @@
 # 3. Getting the files ready
 
 1. Download and install the latest stable [ReVanced manager (RVM)](https://github.com/ReVanced/ReVanced-manager/releases/latest)
+!!!
+Download the .apk, not the source code. Do not try to seek the manager version shown in the image, it might be outdated
+!!!
 ==- Image for reference
 ![download manager](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/000-download_manager.jpg?raw=true)
 ===
