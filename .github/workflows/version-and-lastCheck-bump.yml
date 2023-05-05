@@ -68,7 +68,7 @@ jobs:
   notify:
     uses: ./.github/workflows/discord.yml
     needs: bumpVer
-    if: needs.bumpVer.outputs.bumpDateOnly == 'false'
+    if: needs.bumpVer.outputs.bumpDateOnly == 'false' && needs.bumpVer.outputs.needsRebuild == 'true'
     with:
       title: "Revanced supported version updated!"    
       content: "Latest supported version is: ${{ needs.bumpVer.outputs.currVer }}"
