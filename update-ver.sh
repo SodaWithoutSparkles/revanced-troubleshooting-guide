@@ -38,8 +38,8 @@ echo "ver=$currVer" >>"$GITHUB_OUTPUT"
 
 lessThanOneDay=86000
 
-if [[ "$(($nowUnix - $lastUnix))" > "$lessThanOneDay" ]] || [[ $EVENT == 'workflow_dispatch' ]]; then
-    if [[ $EVENT == 'workflow_dispatch' ]]; then
+if (( "$(($nowUnix - $lastUnix))" > "$lessThanOneDay" )) || [[ "$EVENT" == 'workflow_dispatch' ]]; then
+    if [[ "$EVENT" == 'workflow_dispatch' ]]; then
         echo "Updating timestamp forcefully because of manual dispatch"
     else
         echo "now: $nowUnix    last: $lastUnix"
