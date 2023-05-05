@@ -11,12 +11,10 @@ In this section, you can find the latest supported Revanced Manager, Vanced micr
 Download the .apk, not the source code. 
 The latest stable version may differ from the one shown below.
 !!!
-==- Image for reference
-![download manager](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/000-download_manager.jpg?raw=true)
+![download manager](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/000-download_manager.jpg?raw=true)-
 !!!
 Do **NOT** try to find the manager version shown in the image, it might be outdated.
 !!!
-===
 2. Download and install the latest stable [Vanced microG (microG)](https://github.com/TeamVanced/VancedMicroG/releases/tag/v0.2.24.220220-220220001)
 ==- Image for reference
 !!!
