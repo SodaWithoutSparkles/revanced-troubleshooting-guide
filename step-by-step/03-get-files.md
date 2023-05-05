@@ -33,6 +33,3 @@ The latest stable version may differ from the one shown below.
 !!!warning Warning
 **Do NOT install the downloaded YouTube APK.**
 !!!
-==- Image for reference
-![download yt](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/030-download_YT_apk.jpg?raw=true)
-===
