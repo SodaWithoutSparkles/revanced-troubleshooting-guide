@@ -2,6 +2,7 @@ name: Notify user
 
 on: 
   workflow_dispatch:
+    inputs:
       title:
         required: false
         default: 'Notification from Github actions'
