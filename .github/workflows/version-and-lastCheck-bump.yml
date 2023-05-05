@@ -63,7 +63,7 @@ jobs:
     if: needs.bumpVer.outputs.needsRebuild == 'true'
       
   notify:
-    used: ./.github/workflows/discord.yml
+    uses: ./.github/workflows/discord.yml
     needs: bumpVer
     if: needs.bumpVer.outputs.bumpDateOnly == 'false' || needs.bumpVer.outputs.bumpDateOnly == 'true'
     with:
