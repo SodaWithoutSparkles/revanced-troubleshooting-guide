@@ -18,6 +18,7 @@ jobs:
       contents: write
     outputs:
         needsRebuild: ${{ steps.export.outputs.out }}
+        bumpDateOnly: ${{ steps.export.outputs.out2 }}
     steps:
       - uses: actions/checkout@v3
 
@@ -30,11 +31,13 @@ jobs:
         
       - name: output rebuild status
         id: export
-        run: echo "out=$REBUILD" >> "$GITHUB_OUTPUT" && echo "$REBUILD"
+        run: |
+          echo "out=$REBUILD" >> "$GITHUB_OUTPUT" && echo "$REBUILD"
+          echo "out2=$BUMP" >> "$GITHUB_OUTPUT" && echo "$BUMP"
         shell: bash
         env:
             REBUILD: ${{ steps.bump.outputs.rebuild }}
-            
+            BUMP: ${{ steps.bump.outputs.bump }}
 
       - name: Bump last update date only
         uses: stefanzweifel/git-auto-commit-action@v4
@@ -59,3 +62,11 @@ jobs:
     needs: bumpVer
     if: needs.bumpVer.outputs.needsRebuild == 'true'
       
+  notify:
+    used: ./.github/workflows/discord.yml
+    needs: bumpVer
+    if: needs.bumpVer.outputs.bumpDateOnly == 'false' || needs.bumpVer.outputs.bumpDateOnly == 'true'
+    with:
+      title: "Revanced supported version updated!"    
+      url: "https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/step-by-step/02-check-ver/"
+      message: "Update now!"
