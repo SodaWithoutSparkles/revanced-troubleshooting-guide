@@ -29,6 +29,9 @@ The latest stable version may differ from the one shown below.
 !!!warning Warning
 **Do NOT install the downloaded YouTube APK.**
 !!!
+!!!warning Warning
+**The YouTube from Google Play will NOT work.** You CANNOT patch the one from Google Play. Download the one from APK mirror.
+!!!
 4. Verify that the link actually links to **version 18.16.37**
 !!!warning Warning
 **Do NOT install the downloaded YouTube APK.**
