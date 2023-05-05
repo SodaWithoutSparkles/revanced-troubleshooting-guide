@@ -1,6 +1,8 @@
 # 3. Getting the files ready
 
-![Preview](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/step-by-step/03.jpg?raw=true)
+In this section, you can find the latest supported Revanced Manager, Vanced microG and YouTube APK
+
+![](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/step-by-step/03.jpg?raw=true)
 
 1. Download and install the latest stable [ReVanced manager (RVM)](https://github.com/ReVanced/ReVanced-manager/releases/latest)
 !!!
