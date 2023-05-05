@@ -1,3 +1,5 @@
+![](https://img.shields.io/badge/Latest%20Supported%20Version-18.16.37-red?style=for-the-badge&logo=youtube)
+
 # 2. Checking versions
 
 We are going to start patching now, but first we need to check supported version of YouTube.
