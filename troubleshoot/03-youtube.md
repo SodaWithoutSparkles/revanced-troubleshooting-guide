@@ -86,7 +86,7 @@ https://github.com/revanced/revanced-patches/issues/2003
 
 Turn the function off and on again. Seriously, this fixed it.
 
-![Ambient mode settings](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/troubleshoot/03-youtube/12.jpg?raw=true)
+![Ambient mode settings](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/troubleshoot/03-youtube/12.png?raw=true)
 
 ## 3.13. Some buttons next to like/dislike missing 
 

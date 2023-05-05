@@ -13,7 +13,7 @@ Issues like this can be solved:
 You need to have the following to follow this guide:
 
 - An Android smartphone with
-    - android 8 or later
+    - Android 8 or later
     - 1GB or more storage space
     - Previous ReVanced version
     - Patched ReVanced on the phone before
