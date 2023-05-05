@@ -28,12 +28,13 @@ if [[ "$oldVer" != "$currVer" ]]; then
 
     # set local copy
     echo "$currVer"'@'"$now"'/'"$nowUnix" >.conf/version
-
     rebuild=true
 else
     echo "Remote: $currVer   Local: $oldVer"
     echo "No need to change"
 fi
+
+echo "ver=$currVer" >>"$GITHUB_OUTPUT"
 
 lessThanOneDay=86000
 

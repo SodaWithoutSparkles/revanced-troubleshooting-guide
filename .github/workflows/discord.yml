@@ -6,36 +6,45 @@ on:
       title:
         required: false
         default: 'Notification from Github actions'
-        description: title of notification
+        description: title of embed
         type: string
-      message:
+      content:
         required: true
         default: ''
-        description: description of notification
+        description: description of embed
         type: string
       url:
         required: true
         default: ''
-        description: link of notification
+        description: link when embed pressed
         type: string
-
+      message:
+        required: true
+        default: ''
+        description: discord message content
+        type: string
 
   workflow_call:
     inputs:
       title:
         required: false
         default: 'Notification from Github actions'
-        description: title of notification
+        description: title of embed
         type: string
-      message:
+      content:
         required: true
         default: ''
-        description: description of notification
+        description: description of embed
         type: string
       url:
         required: true
         default: ''
-        description: link of notification
+        description: link when embed pressed
+        type: string
+      message:
+        required: true
+        default: ''
+        description: discord message content
         type: string
 
 jobs:
@@ -48,8 +57,8 @@ jobs:
         webhook-url: ${{ secrets.WEBHOOK_URL }}
         embed-title: ${{ inputs.title }}
         embed-url: ${{ inputs.url }}
-        embed-description: ${{ inputs.message }}
+        embed-description: ${{ inputs.content }}
         embed-color: 3447003
         username: "Github Actions"
         avatar-url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-        content: "<@${{ secrets.DISCORD_ID  }}>"
+        content: "<@${{ secrets.DISCORD_ID  }}>, ${{ inputs.message }}"
