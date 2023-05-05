@@ -115,9 +115,15 @@ The latest stable version may differ from the one shown below.
 ![select YT](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/070-select_YT.jpg?raw=true)
 ===
 3. A window should pop up asking you to select from storage. If not, you are using an older manager version. Use at least 0.1.0
+!!!danger If the window did not pop up...
+You have a older manager version. **Click the storage button in bottom-right corner instead**
+!!!
 ==- Image for reference
 ![feat not imp](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/080-select_from_storage.jpg?raw=true)
 ===
+!!!warning 
+If you did not select from storage, patching would fail.
+!!!
 4. Select the APK you just downloaded in part 1 step 6. It should have a recent date and a size of roughly 130MB.
 ==- Image for reference
 ![storage view](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/090-select_YT_apk.jpg?raw=true)
