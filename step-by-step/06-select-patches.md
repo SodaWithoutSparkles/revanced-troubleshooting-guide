@@ -5,6 +5,12 @@
 ==- Image for reference
 ![default](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/110-select_default.jpg?raw=true)
 ===
+==- If you want to change the default patches
+!!!danger
+Do NOT change the default patches unless you know what you are doing, especially:
+- `Vanced MicroG Support`
+- `Client Spoof`
+!!!
 3. You can scroll around and disable some patches. BUT don't disable any which you don't know the purpose of.
 4. DO NOT ENABLE THE FOLLOWING PATCHES
     - Change package name
@@ -19,8 +25,11 @@
     - Hide seekbar
     - Hide timestamp
     - Wide search bar
+===
+
 6. When you have finished, click "Done" on the bottom right
 ==- Image for reference
 ![click done](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/120-click_done.jpg?raw=true)
 ===
-7. Continue to next page
+
+
