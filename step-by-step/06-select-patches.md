@@ -16,7 +16,7 @@ Click the "Default" button but **DON'T** disable the patches yourself unless you
 2. In the select patches view, choose "Default" or "Recommended"
 ![default](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/110-select_default.jpg?raw=true)
 !!!danger
-Do NOT change the default patches unless you know what you are doing, especially:
+Do NOT remove the default patches unless you know what you are doing, especially:
 - `Vanced MicroG Support`
 - `Client Spoof`
 !!!
