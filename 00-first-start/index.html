@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/revanced-troubleshooting-guide">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.736670696898">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.736672598417">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/revanced-troubleshooting-guide/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=2.4.0.736670696898" rel="stylesheet" />
+    <link href="../resources/css/retype.css?v=2.4.0.736672598417" rel="stylesheet" />
 
-    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.736670696898" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.736672598417" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.736670696898" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.736672598417" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -227,22 +227,15 @@
     </h2>
 </doc-anchor-target>
 <p>We are going to start patching now, but first we need to check supported version of YouTube.</p>
-<p><figure class="content-center">
-    <a href="https://www.apkmirror.com/apk/google-inc/youtube/youtube-18-16-37-release/youtube-18-16-37-2-android-apk-download/">
-        <img src="https://raster.shields.io/badge/Latest%20Supported%20Version-18.16.37-ff0000.png?style=for-the-badge&amp;logo=youtube" alt="It is 18.16.37" />
-    </a>
-    <figcaption class="caption">It is 18.16.37</figcaption>
-</figure>
-</p>
 <p>The latest supported YT version is:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">18.16.37</code></pre>
 </doc-codeblock></div>
 <p><figure class="content-center">
     <a href="https://www.apkmirror.com/apk/google-inc/youtube/youtube-18-16-37-release/youtube-18-16-37-2-android-apk-download/">
-        <img src="https://img.shields.io/badge/Latest%20Supported%20Version-18.16.37-ff0000?style=for-the-badge&amp;logo=youtube" alt="18.16.37" />
+        <img src="https://img.shields.io/badge/Latest%20Supported%20Version-18.16.37-ff0000?style=for-the-badge&amp;logo=youtube" alt="It is 18.16.37" />
     </a>
-    <figcaption class="caption">18.16.37</figcaption>
+    <figcaption class="caption">It is 18.16.37</figcaption>
 </figure>
 </p>
 <p>as of 2023-05-05T14:29 UTC. Remember that, as we will use it very soon.</p>
@@ -253,14 +246,6 @@
     </h2>
 </doc-anchor-target>
 <p>In this section, you can find the latest supported Revanced Manager, Vanced microG and YouTube APK</p>
-<doc-panel id="preview" collapsed>
-    <template #title>Preview</template>
-<p><figure class="content-center">
-    <img src="https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/step-by-step/03.jpg?raw=true" alt="" />
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-</doc-panel>
 <ol>
 <li>Download and install the latest <strong>stable</strong> <a href="https://github.com/ReVanced/ReVanced-manager/releases/latest">ReVanced manager (RVM)</a></li>
 </ol>
@@ -489,7 +474,7 @@ The latest stable version may differ from the one shown below.</p>
 </p>
 </doc-panel>
 <ol start="3">
-<li>A window should pop up asking you to select from storage. If not, you are using an older manager version. Use at least 0.1.0</li>
+<li>A window should pop up asking you to select from storage.</li>
 </ol>
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-red-500"></div>
@@ -504,7 +489,7 @@ The latest stable version may differ from the one shown below.</p>
         </div>
         <div class="pr-5 ml-3 w-full">
             <h5>If the window did not pop up...</h5>
-<p>You have a older manager version. <strong>Click the storage button in bottom-right corner instead</strong></p>
+<p>You have a older manager version. Update your manager to at least version v1.0.0.</p>
         </div>
     </div>
 </div>
@@ -533,7 +518,7 @@ The latest stable version may differ from the one shown below.</p>
     </div>
 </div>
 <ol start="4">
-<li>Select the APK you just downloaded in part 1 step 6. It should have a recent date and a size of roughly 130MB.</li>
+<li>Select the YouTube APK you just downloaded in section 3 step 3. It should have a recent date and a size of roughly 130MB.</li>
 </ol>
 <doc-panel id="image-for-reference" collapsed>
     <template #title>Image for reference</template>
@@ -556,7 +541,7 @@ The latest stable version may differ from the one shown below.</p>
 </p>
 </doc-panel>
 <ol start="7">
-<li>If no, go back to Part 1 step 3</li>
+<li>If no, go back to <doc-anchor-trigger to="#3-getting-the-files-ready">section 3</doc-anchor-trigger></li>
 <li>If yes, continue to the next section</li>
 </ol>
 <doc-anchor-target id="6-select-patches">
