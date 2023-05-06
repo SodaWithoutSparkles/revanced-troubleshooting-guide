@@ -149,6 +149,8 @@ SponsorBlock is a community project. There might be no marked sponsors yet becau
 
 Or it might also be that the SponsorBlock server is down. Wait a few minutes and try again. You can check the status at [here](https://status.sponsor.ajay.app/).
 
+Or, if it does not skip automatically, checkout [3.32](https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/troubleshoot/03-youtube/32/)
+
 ## 3.24. Dislike button shows nothing
 
 Possible reasons include: 
