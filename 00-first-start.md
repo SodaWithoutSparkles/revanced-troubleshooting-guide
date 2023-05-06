@@ -28,25 +28,19 @@ Don't know what these are? Don't worry, we will check for the ones marked with (
 
 We are going to start patching now, but first we need to check supported version of YouTube.
 
-[![It is 18.16.37](https://raster.shields.io/badge/Latest%20Supported%20Version-18.16.37-ff0000.png?style=for-the-badge&logo=youtube)](https://www.apkmirror.com/apk/google-inc/youtube/youtube-18-16-37-release/youtube-18-16-37-2-android-apk-download/)
-
 The latest supported YT version is:
 
 ```
 18.16.37
 ```
 
-[![18.16.37](https://img.shields.io/badge/Latest%20Supported%20Version-18.16.37-ff0000?style=for-the-badge&logo=youtube)](https://www.apkmirror.com/apk/google-inc/youtube/youtube-18-16-37-release/youtube-18-16-37-2-android-apk-download/)
+[![It is 18.16.37](https://img.shields.io/badge/Latest%20Supported%20Version-18.16.37-ff0000?style=for-the-badge&logo=youtube)](https://www.apkmirror.com/apk/google-inc/youtube/youtube-18-16-37-release/youtube-18-16-37-2-android-apk-download/)
 
 as of 2023-05-05T14:29 UTC. Remember that, as we will use it very soon.
 
 ## 3. Getting the files ready
 
 In this section, you can find the latest supported Revanced Manager, Vanced microG and YouTube APK
-
-==- Preview
-![](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/step-by-step/03.jpg?raw=true)
-===
 
 1. Download and install the latest **stable** [ReVanced manager (RVM)](https://github.com/ReVanced/ReVanced-manager/releases/latest)
 !!!
@@ -114,9 +108,9 @@ The latest stable version may differ from the one shown below.
 ==- Image for reference
 ![select YT](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/070-select_YT.jpg?raw=true)
 ===
-3. A window should pop up asking you to select from storage. If not, you are using an older manager version. Use at least 0.1.0
+3. A window should pop up asking you to select from storage.
 !!!danger If the window did not pop up...
-You have a older manager version. **Click the storage button in bottom-right corner instead**
+You have a older manager version. Update your manager to at least version v1.0.0.
 !!!
 ==- Image for reference
 ![feat not imp](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/080-select_from_storage.jpg?raw=true)
@@ -124,7 +118,7 @@ You have a older manager version. **Click the storage button in bottom-right cor
 !!!warning 
 If you did not select from storage, patching would fail.
 !!!
-4. Select the APK you just downloaded in part 1 step 6. It should have a recent date and a size of roughly 130MB.
+4. Select the YouTube APK you just downloaded in section 3 step 3. It should have a recent date and a size of roughly 130MB.
 ==- Image for reference
 ![storage view](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/090-select_YT_apk.jpg?raw=true)
 ===
@@ -133,7 +127,7 @@ If you did not select from storage, patching would fail.
 ==- Image for reference
 ![check ver](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/100-check_version.jpg?raw=true)
 ===
-7. If no, go back to Part 1 step 3
+7. If no, go back to [section 3](#3-getting-the-files-ready)
 8. If yes, continue to the next section
 
 ## 6. Select patches
