@@ -10,7 +10,7 @@
 ===
 3. A window should pop up asking you to select from storage.
 !!!danger If the window did not pop up...
-You have a older manager version. **Click the storage button in bottom-right corner instead**
+You have a older manager version. Update your manager to at least version v1.0.0.
 !!!
 ==- Image for reference
 ![feat not imp](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/080-select_from_storage.jpg?raw=true)
