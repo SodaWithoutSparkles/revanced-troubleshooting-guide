@@ -190,3 +190,9 @@ Go to YouTube settings > Accessibility and disable Accessibility player.
 
 Merged with `navigation buttons` patch
 
+## 3.32 How can I auto-skip sponsors with sponsorblock?
+
+Revanced Youtube > settings > Sponsorblock > scroll down > select category > skip automatically
+
+![different behaviours](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/troubleshoot/03-youtube/32.jpg?raw=true)
+
