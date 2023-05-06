@@ -100,7 +100,7 @@ The latest stable version may differ from the one shown below.
 
 ## 5. Select APK
 
-1. Go to the Patcher tab and click "Select an application"
+1. In ReVanced manager, go to the Patcher tab and click "Select an application"
 ==- Image for reference
 ![select app](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/060-select_application.jpg?raw=true)
 ===
