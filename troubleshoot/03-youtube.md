@@ -33,6 +33,10 @@ Probably one of the following reason
     - Delete that existing install
 - Google play protect blocked it
     - when the play protect window popped up, click "learn more" and "install anyway"
+- There were errors during patching
+    - Look at the patching log for `failed`
+    - It should be at the first word of the line
+    - if so, look at the [patch not applied guide](/troubleshoot/02-manager/16/)
 - You exited ReVanced manager when patching
     - Don't do that. Repatch again.
 - Split APK used
@@ -41,6 +45,8 @@ Probably one of the following reason
     - This could only happen if you have installed and uninstalled ReVanced previously
     - You will need to use ADB to fully remove the old install.
     - You can find a guide [here](/03-adb-remove.md)
+
+![App not installed](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/troubleshoot/03-youtube/03.jpg?raw=true)
 
 ## 3.4. Video turns very dark in fullscreen
 
