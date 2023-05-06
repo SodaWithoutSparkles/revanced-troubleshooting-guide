@@ -10,6 +10,6 @@ Special thanks to the following people:
 Images are sourced from:
 
 - XX11#3342 infinite loading 
-- rija~373#0428 Sponsorblock api timeout
+- rija~373#0428 SponsorBlock api timeout
 - Ashh#1401 non-root install
 - zemiro#3357 content not available

@@ -140,14 +140,14 @@ https://github.com/revanced/revanced-patches/issues/455
 
 Casting to TV is different. ReVanced YT does not handle the video stream, it basically tells the TV: go and play that video with this link. So you will need a ad-free YouTube TV client. You can get one [here](https://github.com/yuliskov/SmartTubeNext). Note that SmartTubeNext is not developed and not affiliated in any way with the ReVanced team.
 
-## 3.23. Sponsorblock does not work
+## 3.23. SponsorBlock does not work
 
-Sponsorblock is a community project. There might be no marked sponsors yet because
+SponsorBlock is a community project. There might be no marked sponsors yet because
 
 - The video was too new
 - Nobody uploaded/marked any segments
 
-Or it might also be that the sponsorblock server is down. Wait a few minutes and try again. You can check the status at [here](https://status.sponsor.ajay.app/).
+Or it might also be that the SponsorBlock server is down. Wait a few minutes and try again. You can check the status at [here](https://status.sponsor.ajay.app/).
 
 ## 3.24. Dislike button shows nothing
 
@@ -190,9 +190,9 @@ Go to YouTube settings > Accessibility and disable Accessibility player.
 
 Merged with `navigation buttons` patch
 
-## 3.32 How can I auto-skip sponsors with sponsorblock?
+## 3.32 How can I auto-skip sponsors with SponsorBlock?
 
-Revanced Youtube > settings > Sponsorblock > scroll down > select category > skip automatically
+Revanced Youtube > settings > SponsorBlock > scroll down > select category > skip automatically
 
 ![different behaviours](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/troubleshoot/03-youtube/32.jpg?raw=true)
 
