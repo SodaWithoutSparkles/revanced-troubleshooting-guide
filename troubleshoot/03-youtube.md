@@ -2,7 +2,7 @@
 
 Troubleshooting regarding YouTube ReVanced issues
 
-## 3.1. Unable to open/launch ReVanced youtube / ReVanced crashing
+## 3.1. Unable to open/launch ReVanced YouTube / ReVanced crashing
 
 Probably one of the following: 
 
@@ -138,7 +138,7 @@ https://github.com/revanced/revanced-patches/issues/455
 
 ## 3.22. Casting to TV have ads
 
-Casting to TV is different. ReVanced YT does not handle the video stream, it basically tells the TV: go and play that video with this link. So you will need a ad-free youtube TV client. You can get one [here](https://github.com/yuliskov/SmartTubeNext). Note that SmartTubeNext is not developed and not affiliated in any way with the ReVanced team.
+Casting to TV is different. ReVanced YT does not handle the video stream, it basically tells the TV: go and play that video with this link. So you will need a ad-free YouTube TV client. You can get one [here](https://github.com/yuliskov/SmartTubeNext). Note that SmartTubeNext is not developed and not affiliated in any way with the ReVanced team.
 
 ## 3.23. Sponsorblock does not work
 

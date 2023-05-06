@@ -15,7 +15,7 @@ https://github.com/revanced/revanced-manager/releases/latest
 
 https://github.com/TeamVanced/VancedMicroG/releases/tag/v0.2.24.220220-220220001
 
-## 1.4. What is the latest youtube version supported? 
+## 1.4. What is the latest YouTube version supported? 
 
 18.16.37 as of 2023-05-05T14:29 UTC. You can check it in ReVanced manager
 

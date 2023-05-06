@@ -12,9 +12,9 @@ Troubleshooting regarding ReVanced manager issues
 
 ## 2.2. What is the latest supported / suggested Youtube apk version?
 
-In ReVanced manager > patcher > select application, it tells you the latest supported / suggested youtube version to patch
+In ReVanced manager > patcher > select application, it tells you the latest supported / suggested YouTube version to patch
 
-## 2.3. Where can I get the youtube APK?
+## 2.3. Where can I get the YouTube APK?
 
 https://www.apkmirror.com/apk/google-inc/youtube/
 
@@ -36,7 +36,7 @@ If you have an older version (≤0.0.57), you will need to go to `Android/data/a
 
 Delete existing ReVanced manager and install the new one. If you have manager version ≥0.1.0, follow the above steps on exporting the keystore. Then, install the new version and import the old keystore back in.
 
-## 2.7. Cannot select youtube APK to patch
+## 2.7. Cannot select YouTube APK to patch
 
 Delete existing ReVanced manager and install the new one. If you have manager version ≥0.1.0, follow the above steps on exporting the keystore. Then, install the new version and import the old keystore back in.
 

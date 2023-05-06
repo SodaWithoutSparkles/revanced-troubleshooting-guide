@@ -17,7 +17,7 @@ https://github.com/revanced/revanced-manager/releases/latest
 
 https://github.com/TeamVanced/VancedMicroG/releases/tag/v0.2.24.220220-220220001
 
-### 1.4. What is the latest youtube version supported? 
+### 1.4. What is the latest YouTube version supported? 
 
 18.16.37 as of 2023-05-05T14:29 UTC. You can check it in ReVanced manager
 
@@ -57,9 +57,9 @@ After that you can go to the relevant Github issues page to file a bug report.
 
 ### 2.2. What is the latest supported / suggested Youtube apk version?
 
-In ReVanced manager > patcher > select application, it tells you the latest supported / suggested youtube version to patch
+In ReVanced manager > patcher > select application, it tells you the latest supported / suggested YouTube version to patch
 
-### 2.3. Where can I get the youtube APK?
+### 2.3. Where can I get the YouTube APK?
 
 https://www.apkmirror.com/apk/google-inc/youtube/
 
@@ -81,7 +81,7 @@ If you have an older version (≤0.0.57), you will need to go to `Android/data/a
 
 Delete existing ReVanced manager and install the new one. If you have manager version ≥0.1.0, follow the above steps on exporting the keystore. Then, install the new version and import the old keystore back in.
 
-### 2.7. Cannot select youtube APK to patch
+### 2.7. Cannot select YouTube APK to patch
 
 Delete existing ReVanced manager and install the new one. If you have manager version ≥0.1.0, follow the above steps on exporting the keystore. Then, install the new version and import the old keystore back in.
 
@@ -161,7 +161,7 @@ DO NOT SELECT ANY OF THE FOLLOWING PATCHES OR YOU WILL RISK HAVING ISSUES:
 
 ## 3. ReVanced Youtube
 
-### 3.1. Unable to open/launch ReVanced youtube
+### 3.1. Unable to open/launch ReVanced YouTube
 
 Probably one of the following: 
 
@@ -291,7 +291,7 @@ https://github.com/revanced/revanced-patches/issues/455
 
 ### 3.22. Casting to TV have ads
 
-Casting to TV is different. ReVanced YT does not handle the video stream, it basically tells the TV: go and play that video with this link. So you will need a ad-free youtube TV client. You can get one [here](https://github.com/yuliskov/SmartTubeNext). Note that SmartTubeNext is not developed and not affiliated in any way with the ReVanced team.
+Casting to TV is different. ReVanced YT does not handle the video stream, it basically tells the TV: go and play that video with this link. So you will need a ad-free YouTube TV client. You can get one [here](https://github.com/yuliskov/SmartTubeNext). Note that SmartTubeNext is not developed and not affiliated in any way with the ReVanced team.
 
 ### 3.23. Sponsorblock does not work
 
