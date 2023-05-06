@@ -143,10 +143,10 @@ Please patch on an another device or on your PC.
 Symptoms: after clicking "select an application" > "YouTube", nothing happened and it goes back to the patcher tab without selecting any apps
 
 You probably are not using the stable version of ReVanced manager. Do the following to get it fixed: 
-1. Follow [section 2.4](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide#24-how-to-export-keystore) to export the keystore
+1. Follow [section 2.4](https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/troubleshoot/02-manager/04/) to export the keystore
 2. Delete existing ReVanced manager
 3. Install the latest **stable** version of ReVanced manager [here](https://github.com/revanced/revanced-manager/releases/latest)
-4. Follow [section 2.5](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide#25-how-to-import-keystore) to import the keystore
+4. Follow [section 2.5](https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/troubleshoot/02-manager/05/) to import the keystore
 
 ### 2.16 ReVanced manager patch failed / patch not applied
 
