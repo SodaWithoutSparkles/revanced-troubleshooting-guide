@@ -1,6 +1,6 @@
 #!/bin/bash
 
-currVer=$(curl -X 'GET' -H 'accept: application/json' 'https://releases.revanced.app/patches' |
+currVer=$(curl --no-progress-meter -X 'GET' -H 'accept: application/json' 'https://releases.revanced.app/patches' |
     jq -r '.[] | .compatiblePackages| .[] | select(.name=="com.google.android.youtube") | .versions | .[-1] | select( . != null )' |
     sort | uniq | head -1)
 now=$(date -u +"%Y-%m-%dT%H:%M")
@@ -33,6 +33,10 @@ if [[ "$oldVer" != "$currVer" ]]; then
     # set local copy
     echo "$currVer"'@'"$now"'/'"$nowUnix" >.conf/version
     rebuild=true
+
+    # update badge
+    echo "Version changed, update badge"
+    curl --no-progress-meter -o ./step-by-step/02.png 'https://raster.shields.io/badge/Latest%20Supported%20Version-'"$currVer"'-ff0000.png?style=for-the-badge&logo=youtube'
 else
     echo "Remote: $currVer   Local: $oldVer"
     echo "No need to change"
