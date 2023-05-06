@@ -12,3 +12,11 @@ There is **NO** way to _download_ ReVanced. To prevent the distribution of copyr
 !!!
 
 All ok? click the next page button.
+
+==- Related Keywords
+- How to download revanced
+- download revanced
+- revanced download
+- get revanced
+- install revanced
+===
