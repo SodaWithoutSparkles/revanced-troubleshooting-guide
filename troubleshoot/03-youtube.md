@@ -50,7 +50,7 @@ You can disable this under ReVanced YT settings > ReVanced > Interaction > Swipe
 
 ## 3.5. No internet connection
 
-Did you change your google password? Anyway, go to system settings > accounts > **vanced microG** > delete/logout account. Don't worry, this will not remove your google account on your device, just remove the one used by microG (hence revanced). 
+Did you change your google password? Anyway, go to system settings > accounts > **vanced microG** > delete/logout account. Don't worry, this will not remove your google account on your device, just remove the one used by microG (hence ReVanced). 
 
 ## 3.6. Shorts button missing?
 
@@ -99,10 +99,10 @@ Disable: ReVanced YT settings > ReVanced > Layout > Hide action buttons > Hide a
 ## 3.15. Youtube autoplays the next video
 
 1. Disable: ReVanced YT settings > ReVanced > Layout > Hide autoplay button
-2. Restart Youtube revanced
+2. Restart Youtube ReVanced
 3. Play any video, in the video player, turn off autoplay
 4. Enable: ReVanced YT settings > ReVanced > Layout > Hide autoplay button
-5.  Restart Youtube revanced
+5.  Restart Youtube ReVanced
 
 ## 3.16. \<insert name here\> is missing
 

@@ -30,7 +30,7 @@ If you don't know how to enable USB debugging, google "\<phone model\> enable us
 
 6. Then, on the shell, enter `adb devices` again. There should be a new entry.
 
-7. Finally, just type the following, press enter, and revanced YT would be uninstalled, and all remains would be removed (if any). 
+7. Finally, just type the following, press enter, and ReVanced YT would be uninstalled, and all remains would be removed (if any). 
 
 ```
 adb uninstall app.revanced.android.youtube
@@ -44,6 +44,6 @@ adb shell pm uninstall app.revanced.android.youtube
 
 9. Then you can disconnect the phone, disable USB debugging and disable developer options on your phone. Close the shell by typing `exit` or the X button as usual.
 
-10. Install revanced again from revanced manager.
+10. Install ReVanced again from ReVanced manager.
 
 11. Delete the zip file and the extracted files download at the first step.
