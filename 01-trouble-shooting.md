@@ -1,7 +1,7 @@
 # ReVanced Trouble​shooting Guide
 Troubleshooting guide for Revanced
 
-This is a guide on solving common issues when using ReVanced YT and ReVanced manager. If you find something missing,  open a new issue and I would add it.
+This is a guide on solving common issues when using ReVanced YT and ReVanced Manager. If you find something missing,  open a new issue and I would add it.
 
 ## 1. General
 
@@ -13,7 +13,7 @@ No. You don't download an APK and install it. This is to prevent distribution of
 
 https://github.com/revanced/revanced-manager/releases/latest
 
-### 1.3. Where can I get vanced microG?
+### 1.3. Where can I get Vanced microG?
 
 https://github.com/TeamVanced/VancedMicroG/releases/tag/v0.2.24.220220-220220001
 
@@ -38,7 +38,7 @@ If you can't donate, you can also contribute to the development by:
 
 ### 1.7. I think I saw a bug
 
-You can post your bug in [reddit](https://www.reddit.com/r/revancedapp) first to confirm if this is indeed a bug and if anyone else has reported it. Or you can go to the [ReVanced discord](https://discord.gg/revanced) to ask there. The ReVanced development team regularly hangs out there. **DO NOT POST YOUR SUPPORT REQUEST IN CHAT.** Post them in \## general > support instead. Remember to add a tag. You can do so on the bottom left.
+You can post your bug on [Reddit](https://www.reddit.com/r/revancedapp) first to confirm if this is indeed a bug and if anyone else has reported it. Or you can go to the [ReVanced discord](https://discord.gg/revanced) to ask there. The ReVanced development team regularly hangs out there. **DO NOT POST YOUR SUPPORT REQUEST IN CHAT.** Post them in \## general > support instead. Remember to add a tag. You can do so on the bottom left.
 
 After that you can go to the relevant Github issues page to file a bug report.
 
