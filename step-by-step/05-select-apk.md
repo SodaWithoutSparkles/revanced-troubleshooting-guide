@@ -18,7 +18,7 @@ You have a older manager version. Update your manager to at least version v1.0.0
 !!!warning 
 If you did not select from storage, patching would fail.
 !!!
-4. Select the APK you just downloaded in part 1 step 6. It should have a recent date and a size of roughly 130MB.
+4. Select the YouTube APK you just downloaded in [Part 3](https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/step-by-step/03-get-files/). It should have a recent date and a size of roughly 130MB.
 ==- Image for reference
 ![storage view](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/090-select_YT_apk.jpg?raw=true)
 ===
@@ -27,5 +27,5 @@ If you did not select from storage, patching would fail.
 ==- Image for reference
 ![check ver](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/100-check_version.jpg?raw=true)
 ===
-7. If no, go back to Part 1 step 3
+7. If no, go back to [Part 3](https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/step-by-step/03-get-files/)
 8. If yes, continue to the next page
