@@ -1,5 +1,17 @@
 # 6. Select patches
 
+The manager now automatically select patches for you. Go to the next section. 
+
+!!!danger
+Changing the default patches may break things. It is NOT recommended for new users to change the default selection.
+!!!
+
+!!!
+If you are repatching, you may want to follow until step 2 to check for new and updated patches. 
+Click the "Default" button but **DON'T** disable the patches yourself unless you know absolutely what you are doing
+!!!
+
+==- I want to change the default selection
 1. Click "Select patches"
 2. In the select patches view, choose "Default" or "Recommended"
 ==- Image for reference
@@ -32,4 +44,4 @@ Do NOT change the default patches unless you know what you are doing, especially
 ![click done](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/120-click_done.jpg?raw=true)
 ===
 
-
+===
