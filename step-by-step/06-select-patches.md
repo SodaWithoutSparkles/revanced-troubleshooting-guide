@@ -14,10 +14,7 @@ Click the "Default" button but **DON'T** disable the patches yourself unless you
 ==- I want to change the default selection
 1. Click "Select patches"
 2. In the select patches view, choose "Default" or "Recommended"
-==- Image for reference
 ![default](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/110-select_default.jpg?raw=true)
-===
-==- If you want to change the default patches
 !!!danger
 Do NOT change the default patches unless you know what you are doing, especially:
 - `Vanced MicroG Support`
@@ -37,11 +34,8 @@ Do NOT change the default patches unless you know what you are doing, especially
     - Hide seekbar
     - Hide timestamp
     - Wide search bar
-===
 
 6. When you have finished, click "Done" on the bottom right
-==- Image for reference
 ![click done](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/120-click_done.jpg?raw=true)
-===
 
 ===
