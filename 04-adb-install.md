@@ -10,7 +10,7 @@ This guide is to use ADB (Android Debug Bridge) to install ReVanced (or any othe
 2. An Android smartphone with USB debugging enabled
 3. An USB cable capable of data transfer
 
-If you don't know how to enable USB debugging, google "\<phone model\> enable usb debugging" (obvious replacing \<phone model\> with your actual phone model)
+If you don't know how to enable USB debugging, google "\<phone model\> enable usb debugging" (obviously replacing \<phone model\> with your actual phone model)
 
 ## Steps
 
