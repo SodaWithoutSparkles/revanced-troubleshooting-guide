@@ -23,9 +23,10 @@ rebuild=false
 if [[ "$oldVer" != "$currVer" ]]; then
     # update all md files
     echo "Update version from $oldVer to $currVer"
-    find ./ -type f -name "*.md" -exec sed -i "s/$oldVer/$currVer/g" "{}" \;
-    # modify 03-get-file.md's link too
+    # modify 03-get-file.md's link first
     find ./ -type f -name "*.md" -exec sed -i "s/$dashOld/$dashNew/g" "{}" \;
+
+    find ./ -type f -name "*.md" -exec sed -i "s/$oldVer/$currVer/g" "{}" \;
 
     echo "Update last update timestamp from $lastUpdate to $now"
     find ./ -type f -name "*.md" -exec sed -i "s/$lastUpdate/$now/g" "{}" \;
