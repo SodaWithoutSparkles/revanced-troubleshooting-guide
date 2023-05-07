@@ -16,7 +16,8 @@ Do NOT disable the default patches unless you are instructed to do so. Especiall
 - `Client Spoof`
 !!!
 !!!warning
-Modifying (add/remove) the default patches may cause unintended consequences. Do **NOT** try to change them unless you are absolutely sure what you are doing.
+Modifying (add/remove) the default patches may cause unintended consequences. 
+Do **NOT** try to change them unless you know what you are doing.
 !!!
 3. Click "Done" on the bottom right, do **NOT** change the default patches unless instructed.
 ===
