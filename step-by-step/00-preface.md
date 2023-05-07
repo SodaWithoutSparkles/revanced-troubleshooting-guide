@@ -1,4 +1,4 @@
-# 0. Introductions on "Downloading" Revanced
+# 0. Introductions on &quot;Downloading&quot; Revanced
 
 This is a first-start guide for starters to patch a copy of ReVanced YouTube.
 
