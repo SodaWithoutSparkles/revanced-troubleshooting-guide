@@ -6,7 +6,7 @@ The manager now automatically select patches for first time users. Go to the nex
 Changing the default patches may break things. It is NOT recommended for first time users to change the default selection.
 !!!
 
-==- Last time I patched un-successfully / Re-patching / not patching for the first time / Instructed to go here
+==- Last time I patched un-successfully / Re-patching / not patching for the first time
 1. Click "Select patches" or "Selected patches"
 2. In the select patches view, choose "Default" or "Recommended"
 ![default](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/110-select_default.jpg?raw=true)
