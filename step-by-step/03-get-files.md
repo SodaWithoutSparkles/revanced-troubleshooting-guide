@@ -22,10 +22,10 @@ The latest stable version may differ from the one shown below.
 ![download microG](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/010-download_microg.jpg?raw=true)
 ===
 3. Visit [APK mirror for YouTube APK](https://www.apkmirror.com/apk/google-inc/youtube/youtube-18-16-37-release/youtube-18-16-37-2-android-apk-download/)
-!!!warning Warning
+!!!warning
 **Do NOT install the downloaded YouTube APK.**
 !!!
-!!!warning Warning
+!!!warning
 **The YouTube from Google Play will NOT work.** You CANNOT patch the one from Google Play. Download the one from APK mirror.
 !!!
 4. Verify that the link actually links to **version 18.16.37**
