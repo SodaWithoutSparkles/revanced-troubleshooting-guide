@@ -1,6 +1,8 @@
 # 4. Checking compatibility
 
-1. launch RVM. Ignore any updates it claimed it knew. You may not have the red shaded part, that's normal.
+We are going to check if this device is supported.
+
+1. launch RVM. Ignore any updates it claimed it knew.
 ==- Image for reference
 ![launch rvm](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/040-first_launch_manager.jpg?raw=true)
 ===
@@ -14,3 +16,9 @@
 6. Check that your Android version is at least 8
 7. If you only got something that said `7` or lower, you cannot patch it on your phone. Please patch it on another device or your PC.
 8. If you made it here, you can probably patch on your phone with ReVanced manager
+
+==- What does `arch` mean? Why is `armv7` not supported?
+`arch` is the architecture of your CPU. In layman terms, it is "the language of the CPU", if you don't know that language, you cannot communicate with that CPU. 
+
+`armv7` is not supported by `aapt2`, the software behind ReVanced patcher, therefore it can't be used. The ReVanced team is moving to `arsclib` soon™, which supports `armv7`. For now, you can patch on a computer with `revanced-cli` or `revanced-builder` instead.
+===
