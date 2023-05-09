@@ -20,5 +20,5 @@ We are going to check if this device is supported.
 ==- What does `arch` mean? Why is `armv7` not supported?
 `arch` is the architecture of your CPU. In layman terms, it is "the language of the CPU", if you don't know that language, you cannot communicate with that CPU. 
 
-`armv7` is not supported by `aapt2`, the software behind ReVanced patcher, therefore it can't be used. The ReVanced team is moving to `arsclib` soon™, which supports `armv7`. For now, you can patch on a computer with `revanced-cli` or `revanced-builder` instead.
+The ReVanced team will move to `arsclib` soon™, which supports `armv7`. For now, you can patch on a computer with `revanced-cli` or `revanced-builder` instead.
 ===
