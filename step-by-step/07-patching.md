@@ -8,5 +8,8 @@
 ==- Image for reference
 ![dont exit](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/140-dont_exit.jpg?raw=true)
 ===
-3. The process should take less than 5 minutes
+3. The process should take about 5 ~ 10 minutes
+!!!
+The speed of patching depends on phone performance. Some reported that it took 35 minutes with a very old phone.
+!!!
 4. If you see any warnings, check out [the debug guide](/troubleshoot/00-trouble-shooting.md)
