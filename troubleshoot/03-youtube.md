@@ -212,3 +212,7 @@ Revanced Youtube > settings > SponsorBlock > scroll down > select category > ski
 
 ![different behaviours](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/troubleshoot/03-youtube/32.jpg?raw=true)
 
+## 3.33 Cannot see comments/details when fullscreen
+
+Disable: Avatar > settings > ReVanced settings > layout > Hide fullscreen panels
+
