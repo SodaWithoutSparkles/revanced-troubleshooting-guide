@@ -122,6 +122,10 @@ You probably are not using the stable version of ReVanced manager. Do the follow
     - Remove screenshot restriction
     - Spoof wifi connections
     ===
+- "Work profile"
+    - ReVanced might not patch if there is a separate profile
+    - Solution: Try another phone
+    - Thanks bjhiltbrand#4379 for testing
 - ReVanced manager was confused
     - manager > settings > _scroll down_ > delete temporary files
     - If this did not work, try using the [generic debug methods](/troubleshoot/04-generic/) on ReVanced manager
