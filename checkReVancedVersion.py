@@ -151,7 +151,7 @@ def fillTemplate(lsv: list):
     table = []
     with open(LUT_FILE, 'r') as f:
         rawJson = json.loads(f.read())
-    table.append('| Package Name | Version | Common Name |\n')
+    table.append('| Common Name | Version | Package Name |\n')
     table.append('|---|---|---|\n')
     for item in lsv:
         try:
@@ -164,7 +164,7 @@ def fillTemplate(lsv: list):
         except Exception as e:
             logging.critical(e)
 
-        table.append(f"| {item['pkgName']} | {item['ver']} | {commonName} |\n")
+        table.append(f"| {commonName} | {item['ver']} | {item['pkgName']} |\n")
 
     with open(TEMPLATE_FILE, "r") as t:
         # contents = t.readlines()

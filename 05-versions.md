@@ -2,39 +2,39 @@
 
 This is a list of versions to use with ReVanced patches:
 
-| Package Name | Version | Common Name |
+| Common Name | Version | Package Name |
 |---|---|---|
-| com.google.android.youtube | 18.16.37 | YouTube |
-| com.google.android.apps.youtube.music | 5.39.52 | YouTube Music |
-| com.ss.android.ugc.trill | 27.8.3 | TikTok |
-| tv.twitch.android.app | 14.6.1 | Twitch |
-| com.twitter.android | 9.71.0-release.0 | Twitter |
-| com.reddit.frontpage | 2023.12.0 | Reddit |
-| com.spotify.music | ANY | Spotify |
-| at.gv.bmf.bmf2go | 2.2.0 | FinanzOnline |
-| at.gv.oe.app | ANY | Digitales Amt |
-| co.windyapp.android | ANY | Blue Windy |
-| com.awedea.nyx | ANY | Nyx Music Player |
-| com.backdrops.wallpapers | 4.52 | Backdrops - Wallpapers |
-| com.dci.dev.androidtwelvewidgets | ANY | Android 12 Widgets (Twelve) |
-| com.facebook.orca | ANY | Facebook Messenger |
-| com.instagram.android | ANY | Instagram |
-| com.ithebk.expensemanager | ANY | Money Manager - Expense, Budget |
-| com.microblink.photomath | 8.21.0 | Photomath |
-| com.myprog.hexedit | ANY | Hex Editor |
-| com.nis.app | ANY | Inshorts |
-| com.spotify.lite | ANY | Spotify lite |
-| com.teslacoilsw.launcher | ANY | Nova Launcher |
-| com.ticktick.task | ANY | TickTick: To-do list & Tasks |
-| com.vanced.android.youtube | ANY | old Vanced |
-| com.zombodroid.MemeGenerator | 4.6364 | Meme Generator |
-| de.dwd.warnapp | ANY | WarnWetter |
-| eu.faircode.netguard | ANY | NetGuard - no-root firewall |
-| ginlemon.iconpackstudio | ANY | Icon Pack Studio |
-| io.yuka.android | ANY | Yuka - Food & cosmetic scan |
-| net.binarymode.android.irplus | ANY | irplus - Infrared Remote |
-| net.dinglisch.android.taskerm | ANY | Tasker |
-| org.citra.citra_emu | ANY | Citra - Nintendo 3DS Emulator |
-| org.totschnig.myexpenses | 3.4.9 | My Expenses |
+| YouTube | 18.16.37 | com.google.android.youtube |
+| YouTube Music | 5.39.52 | com.google.android.apps.youtube.music |
+| TikTok | 27.8.3 | com.ss.android.ugc.trill |
+| Twitch | 14.6.1 | tv.twitch.android.app |
+| Twitter | 9.71.0-release.0 | com.twitter.android |
+| Reddit | 2023.12.0 | com.reddit.frontpage |
+| Spotify | ANY | com.spotify.music |
+| FinanzOnline | 2.2.0 | at.gv.bmf.bmf2go |
+| Digitales Amt | ANY | at.gv.oe.app |
+| Blue Windy | ANY | co.windyapp.android |
+| Nyx Music Player | ANY | com.awedea.nyx |
+| Backdrops - Wallpapers | 4.52 | com.backdrops.wallpapers |
+| Android 12 Widgets (Twelve) | ANY | com.dci.dev.androidtwelvewidgets |
+| Facebook Messenger | ANY | com.facebook.orca |
+| Instagram | ANY | com.instagram.android |
+| Money Manager - Expense, Budget | ANY | com.ithebk.expensemanager |
+| Photomath | 8.21.0 | com.microblink.photomath |
+| Hex Editor | ANY | com.myprog.hexedit |
+| Inshorts | ANY | com.nis.app |
+| Spotify lite | ANY | com.spotify.lite |
+| Nova Launcher | ANY | com.teslacoilsw.launcher |
+| TickTick: To-do list & Tasks | ANY | com.ticktick.task |
+| old Vanced | ANY | com.vanced.android.youtube |
+| Meme Generator | 4.6364 | com.zombodroid.MemeGenerator |
+| WarnWetter | ANY | de.dwd.warnapp |
+| NetGuard - no-root firewall | ANY | eu.faircode.netguard |
+| Icon Pack Studio | ANY | ginlemon.iconpackstudio |
+| Yuka - Food & cosmetic scan | ANY | io.yuka.android |
+| irplus - Infrared Remote | ANY | net.binarymode.android.irplus |
+| Tasker | ANY | net.dinglisch.android.taskerm |
+| Citra - Nintendo 3DS Emulator | ANY | org.citra.citra_emu |
+| My Expenses | 3.4.9 | org.totschnig.myexpenses |
 
-Last Update: 2023-05-18 13:13:11 UTC
+Last Update: 2023-05-18 14:26:24 UTC
