@@ -33,6 +33,10 @@ Probably one of the following reason
     - Delete that existing install
 - Google play protect blocked it
     - when the play protect window popped up, click "learn more" and "install anyway"
+- You forgot the microG patch
+    - Add the `Vanced microG support` patch and try again
+- You clicked the wrong apk
+    - Double-check that you selected the patched instead of the raw source apk
 - There were errors during patching
     - Look at the patching log for `failed`
     - It should be at the first word of the line

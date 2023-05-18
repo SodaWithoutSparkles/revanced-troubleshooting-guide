@@ -138,3 +138,7 @@ You probably are not using the stable version of ReVanced manager. Do the follow
 
 ![patch failed to apply](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/troubleshoot/02-manager/16.jpg?raw=true)
 
+## 2.17 Patched apk does not install
+
+Refer to [section 3.3](https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/troubleshoot/03-youtube/03/)
+
