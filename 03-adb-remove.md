@@ -12,6 +12,10 @@ This guide is to use ADB (Android Debug Bridge) to remove remains or artifacts f
 
 If you don't know how to enable USB debugging, google "\<phone model\> enable usb debugging" (obviously replacing \<phone model\> with your actual phone model)
 
+## Sanity Checks
+
+If you are trying to install ReVanced but failed, make sure that you have checked [section 3.3](https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/troubleshoot/03-youtube/03/) first to avoid wasting your time.
+
 ## Steps
 
 1. On the computer, download the latest [platform tools](https://developer.android.com/tools/releases/platform-tools)
