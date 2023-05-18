@@ -1,8 +1,8 @@
-# 0. Introductions on &quot;Downloading&quot; Revanced
+# 0. Introductions on Patching Revanced
 
 This is a first-start guide for starters to patch a copy of ReVanced YouTube.
 
-This guide is for non-root users, but it should still work for root users.
+This guide is for non-root users. For root users, visit the [other resources section](https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/#other-resources) for hokora's guide.
 
 ![Preview](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/step-by-step/00.png?raw=true)
 
