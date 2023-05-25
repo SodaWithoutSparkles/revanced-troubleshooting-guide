@@ -4,10 +4,6 @@ We are going to start patching now, but first we need to check supported version
 
 The latest supported YT version is:
 
-!!!warning
-A few issues were reported when using the latest patch version. The team is working on the issue. Unfortunately, manager cannot pin patches version. So there is no point continuing right now.
-!!!
-
 ```
 18.19.35
 ```
