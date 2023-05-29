@@ -13,7 +13,7 @@ The latest supported YT version is:
 as of 2023-05-24T19:33 UTC. Remember that, as we will use it very soon.
 
 ==- How to check manually
-1. Go to [Github page of revanced patches](https://github.com/revanced/revanced-patches)
+1. Go to [Github page of ReVanced patches](https://github.com/revanced/revanced-patches)
 2. Scroll down and expand the `com.google.android.youtube` section
 3. Look for the targeted version column, find the lowest supported version
 ===
