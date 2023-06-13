@@ -31,5 +31,11 @@
     "net.dinglisch.android.taskerm": ["Tasker"],
     "org.citra.citra_emu": ["Citra - Nintendo 3DS Emulator"],
     "org.totschnig.myexpenses": ["My Expenses"],
-    "com.laurencedawson.reddit_sync": ["Sync for Reddit"]
+    "com.laurencedawson.reddit_sync": ["Sync for Reddit"],
+    "com.sony.songpal.mdr": ["Sony Headphones Connect"],
+    "com.candylink.openvpn": ["CandyLink VPN"],
+    "com.scb.phone": ["SCB Easy"],
+    "com.vsco.cam": ["VSCO"],
+    "com.wakdev.apps.nfctools.se": ["NFC Tools SE"],
+    "tv.trakt.trakt": ["Trakt"]
 }
