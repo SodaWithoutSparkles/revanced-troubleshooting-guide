@@ -30,5 +30,6 @@
     "net.binarymode.android.irplus": ["irplus - Infrared Remote"],
     "net.dinglisch.android.taskerm": ["Tasker"],
     "org.citra.citra_emu": ["Citra - Nintendo 3DS Emulator"],
-    "org.totschnig.myexpenses": ["My Expenses"]
+    "org.totschnig.myexpenses": ["My Expenses"],
+    "com.laurencedawson.reddit_sync": ["Sync for Reddit"]
 }
