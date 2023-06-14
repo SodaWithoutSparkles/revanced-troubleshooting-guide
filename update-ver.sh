@@ -18,6 +18,11 @@ if [[ "$GITHUB_ACTIONS" != "true" ]]; then
     GITHUB_OUTPUT="/dev/null"
 fi
 
+if ! echo "${currVer}" | grep '[0-9]' >/dev/null; then
+    echo "currVer $currVer is invalid, exiting with status code 1..."
+    exit 1
+fi
+
 rebuild=false
 
 if [[ "$oldVer" != "$currVer" ]]; then
