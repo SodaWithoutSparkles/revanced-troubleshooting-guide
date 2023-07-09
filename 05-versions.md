@@ -43,10 +43,12 @@ This is a list of versions to use with ReVanced patches:
 | _unknown_ | ANY | free.reddit.news |
 | Icon Pack Studio | ANY | ginlemon.iconpackstudio |
 | Yuka - Food & cosmetic scan | ANY | io.yuka.android |
+| _unknown_ | ANY | jp.pxv.android |
+| _unknown_ | ANY | me.ccrama.redditslide |
 | _unknown_ | ANY | ml.docilealligator.infinityforreddit |
 | irplus - Infrared Remote | ANY | net.binarymode.android.irplus |
 | Tasker | ANY | net.dinglisch.android.taskerm |
 | My Expenses | 3.4.9 | org.totschnig.myexpenses |
 | Trakt | ANY | tv.trakt.trakt |
 
-Last Update: 2023-07-01 17:32:59 UTC
+Last Update: 2023-07-09 09:07:39 UTC
