@@ -21,7 +21,7 @@ The latest stable version may differ from the one shown below.
 !!!
 ![download microG](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/010-download_microg.jpg?raw=true)
 ===
-3. Visit [APK mirror for YouTube APK](https://www.apkmirror.com/apk/google-inc/youtube/youtube-18-23-35-release/youtube-18-23-35-android-apk-download/)
+3. Visit [APK mirror for YouTube APK](https://www.apkmirror.com/apk/google-inc/youtube/youtube-18-23-35-release/youtube-18-23-35-2-android-apk-download/)
 !!!warning
 **Do NOT install the downloaded YouTube APK.**
 !!!
