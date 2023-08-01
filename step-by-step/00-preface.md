@@ -1,4 +1,4 @@
-# 0. Introductions on Patching Revanced
+# ReVanced Setup Guide
 
 This is a first-start guide for starters to patch a copy of ReVanced YouTube.
 
