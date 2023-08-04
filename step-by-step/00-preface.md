@@ -4,7 +4,7 @@ This is a first-start guide for starters to patch a copy of ReVanced YouTube.
 
 This guide is for non-root users. For root users, visit the [other resources section](https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/#other-resources) for hokora's guide.
 
-![Preview](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/step-by-step/00.png?raw=true)
+![Preview](https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/step-by-step/00.jpg)
 
 In this guide, we will:
 
