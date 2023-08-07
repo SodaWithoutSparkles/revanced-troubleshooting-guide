@@ -37,5 +37,14 @@
     "com.scb.phone": ["SCB Easy"],
     "com.vsco.cam": ["VSCO"],
     "com.wakdev.apps.nfctools.se": ["NFC Tools SE"],
-    "tv.trakt.trakt": ["Trakt"]
+    "tv.trakt.trakt": ["Trakt"],
+    "o.o.joey": ["Joey for reddit"],
+    "com.andrewshu.android.reddit":["Reddit is Fun"],
+    "com.google.android.apps.recorder": ["Google Recorder"],
+    "com.onelouder.baconreader": ["BaconReader for Reddit"],
+    "com.rubenmayayo.reddit": ["Boost for Reddit"],
+    "jp.pxv.android": ["Pixiv"],
+    "me.ccrama.redditslide": ["Slide for Reddit"],
+    "ml.docilealligator.infinityforreddit": ["Infinity for Reddit"],
+    "free.reddit.news": ["Infinity for Reddit"]
 }
