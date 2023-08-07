@@ -12,6 +12,7 @@ In this guide, we are going to use ReVanced CLI on windows to patch instead of m
 2. Paste the following command in the terminal to install Azul JDK 11
 
 ```winget install "azul zulu jdk 11```
+
 3. Close the powershell window after it has completed
 
 ## 2. Get ReVanced related files
@@ -30,7 +31,7 @@ In this guide, we are going to use ReVanced CLI on windows to patch instead of m
 4. Rename the apk to a shorter name, preferably without spaces and special symbols (dots are fine)
 
 !!!warning
-Make sure you downloaded the full APK not APKs/split apk
+Make sure you downloaded the full APK, not .apks/.apkm/split apks
 !!!
 
 ## 4. Sanity checks
@@ -63,11 +64,12 @@ You may need to use single quotes (`'`) around the filenames to avoid issues, li
 | `out.apk` | the filename of the patched apk | `patched.apk` |
 
 Example: 
+
 ```java -jar revanced-cli-2.22.0-all.jar -a youtube.apk -b revanced-patches-2.187.0.jar -m revanced-integrations-0.115.1.apk -o patched.apk```
 
 
 ## 6. Update ReVanced
-1. Delete old `cli.jar`, `patches.jar`, `integration.jar`, `out.apk`, `input.apk`
+1. Delete the old `cli.jar`, `patches.jar`, `integration.jar`, `out.apk`, `input.apk`
 2. Repeat from section 2
 
 ## 7. Advanced uses
