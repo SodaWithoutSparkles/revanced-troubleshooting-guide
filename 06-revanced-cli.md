@@ -11,7 +11,9 @@ In this guide, we are going to use ReVanced CLI on Windows to patch instead of m
 1. Open a powershell terminal by hitting the windows key and typing "powershell"
 2. Paste the following command in the terminal to install Azul JDK 11
 
-```winget install "azul zulu jdk 11"```
+```bash
+winget install "azul zulu jdk 11"
+```
 
 !!!
 Remember to check the box for for adding JDK to PATH, set JAVA_HOME variable and register JavaSoft!
@@ -70,7 +72,9 @@ You can use the `tab` key to auto-complete
 You may need to use single quotes (`'`) around the filenames to avoid issues, like `'youtube v1.2.3.apk'`
 !!! 
 
-```java -jar cli.jar -a input.apk -b patches.jar -m integration.apk -o out.apk```
+```bash
+java -jar cli.jar -a input.apk -b patches.jar -m integration.apk -o out.apk
+```
 
 | placeholder | meaning | example |
 |---|---|---|
@@ -82,7 +86,9 @@ You may need to use single quotes (`'`) around the filenames to avoid issues, li
 
 Example: 
 
-```java -jar revanced-cli-2.22.0-all.jar -a youtube.apk -b revanced-patches-2.187.0.jar -m revanced-integrations-0.115.1.apk -o patched.apk```
+```bash
+java -jar revanced-cli-2.22.0-all.jar -a youtube.apk -b revanced-patches-2.187.0.jar -m revanced-integrations-0.115.1.apk -o patched.apk
+```
 
 ## 6. Installing Patched apk
 
@@ -104,17 +110,21 @@ You may need to install [Vanced microG]((https://github.com/TeamVanced/VancedMic
 
 ## 8. Advanced uses
 
-- Read the help page for revanced-cli
 
-```java -jar cli.jar -h```
-- Specify keystore file and password
+```bash Read the help page for revanced-cli
+java -jar cli.jar -h
+```
 
-```java -jar cli.jar --keystore='exported.keystore' --password='passwordOfKeystore' -a input.apk ...```
+```bash Specify keystore file and password
+java -jar cli.jar --keystore='exported.keystore' --password='passwordOfKeystore' -a input.apk ...
+```
 
-- List patches available
 
-```java -jar cli.jar -b patches.jar -a input.apk -l --with-packages```
+```bash List patches available
+java -jar cli.jar -b patches.jar -a input.apk -l --with-packages
+```
 
-- Include / Exclude patches
 
-```java -jar cli.jar -e exclude-1 -e exclude-2 -i include-1 -i include-2 ...```
+```bash Include / Exclude patches
+java -jar cli.jar -e exclude-1 -e exclude-2 -i include-1 -i include-2 ...
+```
