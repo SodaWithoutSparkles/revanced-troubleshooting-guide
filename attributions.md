@@ -3,7 +3,8 @@
 Special thanks to the following people:
 
 - The ReVanced team for creating the software
-- Discord user @Hokora Yinphine MPP#6969 for inspiration 
+- Discord user @hokorayinphine for inspiration, screenshots and grammar checks
+- Discord user @cotton.me for the beautiful embeds
 
 ## Images
 
