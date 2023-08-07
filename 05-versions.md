@@ -5,7 +5,7 @@ This is a list of versions to use with ReVanced patches:
 | Common Name | Version | Package Name |
 |---|---|---|
 | YouTube | 18.23.35 | com.google.android.youtube |
-| YouTube Music | ANY | com.google.android.apps.youtube.music |
+| YouTube Music | 6.10.52  | com.google.android.apps.youtube.music |
 | TikTok | ANY | com.ss.android.ugc.trill |
 | Twitch | 15.4.1 | tv.twitch.android.app |
 | Reddit | ANY | com.reddit.frontpage |
@@ -53,3 +53,6 @@ This is a list of versions to use with ReVanced patches:
 | Trakt | 1.1.1 | tv.trakt.trakt |
 
 Last Update: 2023-08-07 09:30:00 UTC
+
+Manual overrides:
+- YouTube Music at 6.10.52
