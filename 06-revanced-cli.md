@@ -17,6 +17,8 @@ In this guide, we are going to use ReVanced CLI on Windows to patch instead of m
 
 ## 2. Get ReVanced related files
 
+![Overview](https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/screenshots/501-cli-patch-embed.jpg)
+
 1. Get the following required files
     - [ReVanced patches](https://github.com/ReVanced/revanced-patches/releases/latest), you need the `.jar` file.
     - [ReVanced CLI](https://github.com/revanced/revanced-cli/releases/latest), you need the `.jar` file.
