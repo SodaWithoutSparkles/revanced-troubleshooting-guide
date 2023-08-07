@@ -15,6 +15,13 @@ In this guide, we are going to use ReVanced CLI on Windows to patch instead of m
 
 3. Close the powershell window after it has completed
 
+==- Alternative way to install Azul JDK 11
+1. Visit the [download page of Azul JDK](https://www.azul.com/downloads/?version=java-11-lts&package=jdk#zulu)
+2. Don't click on the big download button. It is for JDK 17 instead of the JDK 11 that we need.
+3. Scroll down a bit and find the version for Windows, and click download
+4. Your computer is most likely to be 64-bit.
+===
+
 ## 2. Get ReVanced related files
 
 ![Overview](https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/screenshots/501-cli-patch-embed.jpg)
