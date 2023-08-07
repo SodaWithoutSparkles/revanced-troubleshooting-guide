@@ -13,6 +13,10 @@ In this guide, we are going to use ReVanced CLI on Windows to patch instead of m
 
 ```winget install "azul zulu jdk 11"```
 
+!!!
+Remember to check the box for for adding JDK to PATH, set JAVA_HOME variable and register JavaSoft!
+!!!
+
 3. Close the powershell window after it has completed
 
 ==- Alternative way to install Azul JDK 11
