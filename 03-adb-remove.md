@@ -36,13 +36,13 @@ If you are trying to install ReVanced but failed, make sure that you have checke
 
 7. Finally, just type the following, press enter, and ReVanced YT would be uninstalled, and all remains would be removed (if any). 
 
-```
+```bash
 adb uninstall app.revanced.android.youtube
 ```
 
 8. If that did not work, use this instead:
 
-```
+```bash
 adb shell pm uninstall app.revanced.android.youtube
 ```
 
