@@ -43,6 +43,10 @@ Make sure you downloaded the full APK, not .apks/.apkm/split apks
 5. Type `java -version` and hit enter, you should see it is at major version 11
 6. Don't close the terminal window, continue to the next section
 
+==- Image for reference
+![Open powershell button in ribbon](https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/screenshots/500-open_pwsh.gif)
+===
+
 ## 5. Start patching
 Type the following command in the terminal window, replacing the placeholder filenames with the actual filename. 
 
