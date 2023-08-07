@@ -84,12 +84,26 @@ Example:
 
 ```java -jar revanced-cli-2.22.0-all.jar -a youtube.apk -b revanced-patches-2.187.0.jar -m revanced-integrations-0.115.1.apk -o patched.apk```
 
+## 6. Installing Patched apk
 
-## 6. Update ReVanced
+1. Copy the patched APK file to your phone
+!!!
+The easiest way would be to use a USB **data** cable and copy it over. Make sure to unlock your device and enable MTP mode.
+!!!
+2. Install the APK you just transfered
+3. Read the [troubleshooting section](/troubleshoot/00-trouble-shooting.md) if you have further issues
+
+!!!
+You may need to install [Vanced microG]((https://github.com/TeamVanced/VancedMicroG/releases/tag/v0.2.24.220220-220220001)) if you used the microG support patch, which is the default when patching YouTube related apks.
+!!!
+
+## 7. Update ReVanced
+
 1. Delete the old `cli.jar`, `patches.jar`, `integration.jar`, `out.apk`, `input.apk`
 2. Repeat from section 2
 
-## 7. Advanced uses
+## 8. Advanced uses
+
 - Read the help page for revanced-cli
 
 ```java -jar cli.jar -h```
