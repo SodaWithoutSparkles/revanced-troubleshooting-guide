@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/revanced-troubleshooting-guide">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744714685727">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744715083981">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.1.0">
@@ -22,20 +22,22 @@
     <meta property="og:url" content="https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/06-revanced-cli/">
     <meta property="og:title" content="ReVanced CLI patch guide">
     <meta property="og:description" content="In this guide, we are going to use ReVanced CLI on windows to patch instead of manager. This might be useful when you:">
+    <meta property="og:image" content="https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/screenshots/500-open_pwsh.gif">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/06-revanced-cli/">
     <meta property="twitter:title" content="ReVanced CLI patch guide">
     <meta property="twitter:description" content="In this guide, we are going to use ReVanced CLI on windows to patch instead of manager. This might be useful when you:">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/screenshots/500-open_pwsh.gif">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/revanced-troubleshooting-guide/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.1.0.744714685727" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.1.0.744715083981" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.1.0.744714685727" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.1.0.744715083981" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.1.0.744714685727" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.1.0.744715083981" data-turbo-eval="false" defer></script>
 
     <style>
         a.border-gray-300 {
@@ -206,8 +208,10 @@
 <li>Open a powershell terminal by hitting the windows key and typing &quot;powershell&quot;</li>
 <li>Paste the following command in the terminal to install Azul JDK 11</li>
 </ol>
-<p><code v-pre>winget install &quot;azul zulu jdk 11</code>
-3. Close the powershell window after it has completed</p>
+<p><code v-pre>winget install &quot;azul zulu jdk 11</code></p>
+<ol start="3">
+<li>Close the powershell window after it has completed</li>
+</ol>
 <doc-anchor-target id="2-get-revanced-related-files">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#2-get-revanced-related-files">#</doc-anchor-trigger>
@@ -248,7 +252,7 @@
             </svg>
         </div>
         <div class="pr-5 ml-3 w-full">
-<p>Make sure you downloaded the full APK not APKs/split apk</p>
+<p>Make sure you downloaded the full APK, not .apks/.apkm/split apks</p>
         </div>
     </div>
 </div>
@@ -266,6 +270,14 @@
 <li>Type <code v-pre>java -version</code> and hit enter, you should see it is at major version 11</li>
 <li>Don&#x27;t close the terminal window, continue to the next section</li>
 </ol>
+<doc-panel id="image-for-reference" collapsed>
+    <template #title>Image for reference</template>
+<p><figure class="content-center">
+    <img src="https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/screenshots/500-open_pwsh.gif" alt="Open powershell button in ribbon">
+    <figcaption class="caption">Open powershell button in ribbon</figcaption>
+</figure>
+</p>
+</doc-panel>
 <doc-anchor-target id="5-start-patching">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#5-start-patching">#</doc-anchor-trigger>
@@ -346,8 +358,8 @@
 </tbody>
 </table>
 </div>
-<p>Example:
-<code v-pre>java -jar revanced-cli-2.22.0-all.jar -a youtube.apk -b revanced-patches-2.187.0.jar -m revanced-integrations-0.115.1.apk -o patched.apk</code></p>
+<p>Example:</p>
+<p><code v-pre>java -jar revanced-cli-2.22.0-all.jar -a youtube.apk -b revanced-patches-2.187.0.jar -m revanced-integrations-0.115.1.apk -o patched.apk</code></p>
 <doc-anchor-target id="6-update-revanced">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#6-update-revanced">#</doc-anchor-trigger>
@@ -355,7 +367,7 @@
     </h2>
 </doc-anchor-target>
 <ol>
-<li>Delete old <code v-pre>cli.jar</code>, <code v-pre>patches.jar</code>, <code v-pre>integration.jar</code>, <code v-pre>out.apk</code>, <code v-pre>input.apk</code></li>
+<li>Delete the old <code v-pre>cli.jar</code>, <code v-pre>patches.jar</code>, <code v-pre>integration.jar</code>, <code v-pre>out.apk</code>, <code v-pre>input.apk</code></li>
 <li>Repeat from section 2</li>
 </ol>
 <doc-anchor-target id="7-advanced-uses">
