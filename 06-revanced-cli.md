@@ -1,9 +1,9 @@
 # ReVanced CLI patch guide
 
-In this guide, we are going to use ReVanced CLI on windows to patch instead of manager. This might be useful when you:
+In this guide, we are going to use ReVanced CLI on Windows to patch instead of manager. This might be useful when you:
 
 - Have `armv7` device
-- Wants to try latest beta builds
+- Want to try latest beta builds
 - etc.
 
 ## 1. Install Java Development Kit (JDK)
@@ -11,7 +11,7 @@ In this guide, we are going to use ReVanced CLI on windows to patch instead of m
 1. Open a powershell terminal by hitting the windows key and typing "powershell"
 2. Paste the following command in the terminal to install Azul JDK 11
 
-```winget install "azul zulu jdk 11```
+```winget install "azul zulu jdk 11"```
 
 3. Close the powershell window after it has completed
 
@@ -19,16 +19,16 @@ In this guide, we are going to use ReVanced CLI on windows to patch instead of m
 
 1. Get the following required files
     - [ReVanced patches](https://github.com/ReVanced/revanced-patches/releases/latest), you need the `.jar` file.
-    - [ReVanced cli](https://github.com/revanced/revanced-cli/releases/latest), you need the `.jar` file.
+    - [ReVanced CLI](https://github.com/revanced/revanced-cli/releases/latest), you need the `.jar` file.
     - [ReVanced integrations](https://github.com/revanced/revanced-integrations/releases/latest), you need the `.apk` file.
-2. Put all of the files in the a folder in `Downloads`. Lets call it `revanced` for now
+2. Put all of the files in a folder in `Downloads`. Lets call it `revanced` for now
 
-## 3. Get the apk you wanted to patch
+## 3. Get the APK you wanted to patch
 
-1. If you want YouTube APK, get the youtube apk link at [step by step guide](https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/step-by-step/03-get-files/)
+1. If you want YouTube APK, get the YouTube apk link at [step by step guide](https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/step-by-step/03-get-files/)
 2. If you want other APKs, find the supported version at [versions.md](https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/05-versions/)
-3. Put the apk you downloaded in the same folder with the 3 files you downloaded just now.
-4. Rename the apk to a shorter name, preferably without spaces and special symbols (dots are fine)
+3. Put the APK you downloaded in the same folder with the 3 files you downloaded just now.
+4. Rename the APK to a shorter name, preferably without spaces and special symbols (dots are fine)
 
 !!!warning
 Make sure you downloaded the full APK, not .apks/.apkm/split apks
@@ -38,7 +38,7 @@ Make sure you downloaded the full APK, not .apks/.apkm/split apks
 
 1. Go to the `revanced` folder you made just now
 2. Right-click the empty space and click "Open Terminal"/"Open Powershell"
-3. If you cant find the button, click the file button in the ribbon
+3. If you can't find the button, click the file button in the ribbon
 4. Type `dir` and hit enter, you should see the 4 files you downloaded just now
 5. Type `java -version` and hit enter, you should see it is at major version 11
 6. Don't close the terminal window, continue to the next section
