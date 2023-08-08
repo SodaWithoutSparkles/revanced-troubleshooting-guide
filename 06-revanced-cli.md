@@ -86,9 +86,11 @@ Example:
 ```bash
 java -jar revanced-cli-2.22.0-all.jar -a youtube.apk -b revanced-patches-2.187.0.jar -m revanced-integrations-0.115.1.apk -o patched.apk
 ```
+
 !!!
 Your anti-virus software might block cli from modifying some files. Allow it to do so.
 !!!
+
 ## 6. Installing Patched apk
 
 1. Copy the patched APK file to your phone
