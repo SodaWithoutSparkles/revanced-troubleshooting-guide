@@ -19,6 +19,10 @@ In this guide, we are going to use ReVanced CLI on Windows to patch instead of m
 Remember to check the box for for adding JDK to PATH, set JAVA_HOME variable and register JavaSoft!
 !!!
 
+==- Image for reference
+![Check all options](https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/screenshots/502-jdk_install.png)
+===
+
 7. Wait for it to finish
 
 ## 2. Get ReVanced related files
