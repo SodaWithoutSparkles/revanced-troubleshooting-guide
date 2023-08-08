@@ -8,25 +8,18 @@ In this guide, we are going to use ReVanced CLI on Windows to patch instead of m
 
 ## 1. Install Java Development Kit (JDK)
 
-1. Open a powershell terminal by hitting the windows key and typing "powershell"
-2. Paste the following command in the terminal to install Azul JDK 11
-
-```bash
-winget install "azul zulu jdk 11"
-```
+1. Visit the [download page of Azul JDK](https://www.azul.com/downloads/?version=java-11-lts&package=jdk#zulu)
+2. Don't click on the big download button. It is for JDK 17 instead of the JDK 11 that we need.
+3. Scroll down a bit and find the version for Windows, and click download. 
+4. Your computer is most likely to be 64-bit. Use the msi installer
+5. Click on the downloaded file to install
+6. Remember to check all the checkbocks
 
 !!!
 Remember to check the box for for adding JDK to PATH, set JAVA_HOME variable and register JavaSoft!
 !!!
 
-3. Close the powershell window after it has completed
-
-==- Alternative way to install Azul JDK 11
-1. Visit the [download page of Azul JDK](https://www.azul.com/downloads/?version=java-11-lts&package=jdk#zulu)
-2. Don't click on the big download button. It is for JDK 17 instead of the JDK 11 that we need.
-3. Scroll down a bit and find the version for Windows, and click download
-4. Your computer is most likely to be 64-bit.
-===
+7. Wait for it to finish
 
 ## 2. Get ReVanced related files
 
