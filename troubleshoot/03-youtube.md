@@ -229,3 +229,11 @@ Revanced Youtube > settings > SponsorBlock > scroll down > select category > ski
 
 Disable: Avatar > settings > ReVanced settings > layout > Hide fullscreen panels
 
+## 3.34 Shorts still shows in feed
+
+Enable: ReVanced Settings > Layout > _scroll to bottom_ > Shorts Components > Hide Shorts in feed
+
+Then restart the app.
+
+If you can't find the option, make sure you used default patches when patching YouTube.
+
