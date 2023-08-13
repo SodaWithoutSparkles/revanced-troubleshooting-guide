@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/revanced-troubleshooting-guide">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.745240046143">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.745248033317">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.1.0">
@@ -33,12 +33,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/revanced-troubleshooting-guide/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.1.0.745240046143" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.1.0.745248033317" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.1.0.745240046143" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.1.0.745248033317" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.1.0.745240046143" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.1.0.745240046143" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.1.0.745248033317" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.1.0.745248033317" defer></script>
 
     <style>
         a.border-gray-300 {
@@ -586,7 +586,7 @@ java -jar cli.jar --options=path-to-options-file ...</code></pre>
 <td>backgroundColor</td>
 <td>&quot;@android:color/black&quot;</td>
 <td>string</td>
-<td>&quot;@android:color/black&quot;</td>
+<td>&quot;@android:color/black&quot; <a id="fnref:3" href="#fn:3" class="footnote-ref"><sup>3</sup></a> <a id="fnref:6" href="#fn:4" class="footnote-ref"><sup>4</sup></a></td>
 </tr>
 <tr>
 <td>Spotify theme</td>
@@ -607,14 +607,14 @@ java -jar cli.jar --options=path-to-options-file ...</code></pre>
 <td>darkThemeBackgroundColor</td>
 <td>&quot;@android:color/black&quot;</td>
 <td>string</td>
-<td>&quot;@android:color/black&quot;</td>
+<td>&quot;@android:color/holo_purple&quot; <a id="fnref:4" href="#fn:3" class="footnote-ref"><sup>3</sup></a> <a id="fnref:7" href="#fn:4" class="footnote-ref"><sup>4</sup></a></td>
 </tr>
 <tr>
 <td>Theme</td>
 <td>lightThemeBackgroundColor</td>
 <td>&quot;@android:color/white&quot;</td>
 <td>string</td>
-<td>&quot;@android:color/white&quot;</td>
+<td>&quot;@android:color/holo_purple&quot; <a id="fnref:5" href="#fn:3" class="footnote-ref"><sup>3</sup></a> <a id="fnref:8" href="#fn:4" class="footnote-ref"><sup>4</sup></a></td>
 </tr>
 </tbody>
 </table>
@@ -627,6 +627,12 @@ java -jar cli.jar --options=path-to-options-file ...</code></pre>
 </li>
 <li id="fn:2">
 <p>This option is used when patching many apps, including (but not limited to) reddit, youtube and spotify<a href="#fnref:2" class="footnote-back-ref">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Color values can be found <a href="https://developer.android.com/reference/android/R.color#constants_1">here</a>, make sure you have a higher API level than when the color was added<a href="#fnref:3" class="footnote-back-ref">&#8617;</a><a href="#fnref:4" class="footnote-back-ref">&#8617;</a><a href="#fnref:5" class="footnote-back-ref">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>You can also use colors at <code v-pre>revanced-cache/res/values/colors.xml</code>, reference them by &quot;@color/color_name&quot;.<a href="#fnref:6" class="footnote-back-ref">&#8617;</a><a href="#fnref:7" class="footnote-back-ref">&#8617;</a><a href="#fnref:8" class="footnote-back-ref">&#8617;</a></p>
 </li>
 </ol>
 </div>
