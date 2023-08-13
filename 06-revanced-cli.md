@@ -153,7 +153,7 @@ When pasting the path, make sure to use absolute path and escape any `\` to avoi
 | Change package name | packageName | null | pkgName | "app.revanced.android.youtubealt" | 
 | Custom branding | appName | "YouTube ReVanced" | string | "new app name" | 
 | Custom branding | iconPath | null | path | `"C:\\Users\\test\\Desktop\\icon.png"` | 
-| Spoof client | client-id | null | string | "abcdef" [^1] [^2] |
+| Spoof client | client-id | null | string | "abcdef" [^1][^2] |
 | Spotify theme | backgroundColor | "@android:color/black" | string | "@android:color/black" |
 | Spotify theme | accentColor | "#ff1ed760" | AARRGGBB color code | "#ff1ed761" |
 | Spotify theme | accentPressedColor | "#ff169c46" | AARRGGBB color code | "#ff169c47" |
@@ -161,5 +161,4 @@ When pasting the path, make sure to use absolute path and escape any `\` to avoi
 | Theme | lightThemeBackgroundColor | "@android:color/white" | string | "@android:color/white" | 
 
 [^1]: Don't change this option unless absolutely necessary
-
 [^2]: This option is used when patching many apps, including (but not limited to) reddit, youtube and spotify
