@@ -129,3 +129,33 @@ java -jar cli.jar -b patches.jar -a input.apk -l --with-packages
 ```bash Include / Exclude patches
 java -jar cli.jar -e exclude-1 -e exclude-2 -i include-1 -i include-2 ...
 ```
+
+```bash Use Options file
+# You may need to patch once without option file for it to be generated
+java -jar cli.jar --options=path-to-options-file ...
+```
+
+## 9. Options file
+
+Some settings for patches has to be configured via the option file. Don't change them unless you know what you are doing. Don't modify more things than you need to. 
+
+!!!
+When pasting the path, make sure to use absolute path and escape any `\` to avoid issues. You can escape them by putting another `\` before it.
+!!!
+
+!!!
+**ALL** value entry should have quotes, except null. Example:
+"value": "YouTube ReVanced"
+!!!
+
+| Patch | Key | Default value | Type | Example |
+| --- | --- | --- | --- | --- |
+| Change package name | packageName | null | pkgName | "app.revanced.android.youtubealt" | 
+| Custom branding | appName | "YouTube ReVanced" | string | "new app name" | 
+| Custom branding | iconPath | null | path | "C:\\Users\\test\\Desktop\\icon.png" | 
+| Spoof client | client-id | null | string | "ABCDEF" |
+| Spotify theme | backgroundColor | "@android:color/black" | string | "@android:color/black" |
+| Spotify theme | accentColor | "#ff1ed760" | AARRGGBB color code | "#ff1ed761" |
+| Spotify theme | accentPressedColor | "#ff169c46" | AARRGGBB color code | "#ff169c47" |
+| Theme | darkThemeBackgroundColor | "@android:color/black" | string | "@android:color/black" | 
+| Theme | lightThemeBackgroundColor | "@android:color/white" | string | "@android:color/white" | 
