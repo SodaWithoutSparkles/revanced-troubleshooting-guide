@@ -9,6 +9,7 @@ This is a guide on solving common issues when using ReVanced YT and ReVanced man
 - [Add patch guide](02-add-patch.md)
 - [`adb` install guide](04-adb-install.md)
 - [`adb` remove guide](03-adb-remove.md)
+- [revanced-cli guide](06-revanced-cli.md)
 
 ### Other resources
 
