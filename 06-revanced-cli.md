@@ -154,11 +154,16 @@ When pasting the path, make sure to use absolute path and escape any `\` to avoi
 | Custom branding | appName | "YouTube ReVanced" | string | "new app name" | 
 | Custom branding | iconPath | null | path | `"C:\\Users\\test\\Desktop\\icon.png"` | 
 | Spoof client | client-id | null | string | "abcdef" [^1] [^2] |
-| Spotify theme | backgroundColor | "@android:color/black" | string | "@android:color/black" |
+| Spotify theme | backgroundColor | "@android:color/black" | string | "@android:color/black" [^3] [^4] |
 | Spotify theme | accentColor | "#ff1ed760" | AARRGGBB color code | "#ff1ed761" |
 | Spotify theme | accentPressedColor | "#ff169c46" | AARRGGBB color code | "#ff169c47" |
-| Theme | darkThemeBackgroundColor | "@android:color/black" | string | "@android:color/black" | 
-| Theme | lightThemeBackgroundColor | "@android:color/white" | string | "@android:color/white" | 
+| Theme | darkThemeBackgroundColor | "@android:color/black" | string | "@android:color/holo_purple" [^3] [^4] | 
+| Theme | lightThemeBackgroundColor | "@android:color/white" | string | "@android:color/holo_purple" [^3] [^4] | 
 
 [^1]: Don't change this option unless absolutely necessary
+
 [^2]: This option is used when patching many apps, including (but not limited to) reddit, youtube and spotify
+
+[^3]: Color values can be found [here](https://developer.android.com/reference/android/R.color#constants_1), make sure you have a higher API level than when the color was added
+
+[^4]: You can also use colors at `revanced-cache/res/values/colors.xml`, reference them by "@color/color_name".
