@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/revanced-troubleshooting-guide">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744904809575">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.745237605450">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.1.0">
@@ -33,12 +33,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/revanced-troubleshooting-guide/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.1.0.744904809575" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.1.0.745237605450" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.1.0.744904809575" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.1.0.745237605450" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.1.0.744904809575" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.1.0.744904809575" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.1.0.745237605450" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.1.0.745237605450" defer></script>
 
     <style>
         a.border-gray-300 {
@@ -494,6 +494,131 @@
 <div class="codeblock-title">Include / Exclude patches</div>
 <pre class="language-bash"><code v-pre class="language-bash">java -jar cli.jar -e exclude-1 -e exclude-2 -i include-1 -i include-2 ...</code></pre>
 </doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Use Options file</div>
+<pre class="language-bash"><code v-pre class="language-bash"># You may need to patch once without option file for it to be generated
+java -jar cli.jar --options=path-to-options-file ...</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="9-options-file">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#9-options-file">#</doc-anchor-trigger>
+        <span>9. Options file</span>
+    </h2>
+</doc-anchor-target>
+<p>Some settings for patches has to be configured via the option file. Don&#x27;t change them unless you know what you are doing. Don&#x27;t modify more things than you need to.</p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>When pasting the path, make sure to use absolute path and escape any <code v-pre>\</code> to avoid issues. You can escape them by putting another <code v-pre>\</code> before it.</p>
+        </div>
+    </div>
+</div>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p><strong>ALL</strong> value entry should have quotes, except null. Example:
+&quot;value&quot;: &quot;YouTube ReVanced&quot;</p>
+        </div>
+    </div>
+</div>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Patch</th>
+<th>Key</th>
+<th>Default value</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Change package name</td>
+<td>packageName</td>
+<td>null</td>
+<td>pkgName</td>
+<td>&quot;app.revanced.android.youtubealt&quot;</td>
+</tr>
+<tr>
+<td>Custom branding</td>
+<td>appName</td>
+<td>&quot;YouTube ReVanced&quot;</td>
+<td>string</td>
+<td>&quot;new app name&quot;</td>
+</tr>
+<tr>
+<td>Custom branding</td>
+<td>iconPath</td>
+<td>null</td>
+<td>path</td>
+<td>&quot;C:\Users\test\Desktop\icon.png&quot;</td>
+</tr>
+<tr>
+<td>Spoof client</td>
+<td>client-id</td>
+<td>null</td>
+<td>string</td>
+<td>&quot;ABCDEF&quot;</td>
+</tr>
+<tr>
+<td>Spotify theme</td>
+<td>backgroundColor</td>
+<td>&quot;@android:color/black&quot;</td>
+<td>string</td>
+<td>&quot;@android:color/black&quot;</td>
+</tr>
+<tr>
+<td>Spotify theme</td>
+<td>accentColor</td>
+<td>&quot;#ff1ed760&quot;</td>
+<td>AARRGGBB color code</td>
+<td>&quot;#ff1ed761&quot;</td>
+</tr>
+<tr>
+<td>Spotify theme</td>
+<td>accentPressedColor</td>
+<td>&quot;#ff169c46&quot;</td>
+<td>AARRGGBB color code</td>
+<td>&quot;#ff169c47&quot;</td>
+</tr>
+<tr>
+<td>Theme</td>
+<td>darkThemeBackgroundColor</td>
+<td>&quot;@android:color/black&quot;</td>
+<td>string</td>
+<td>&quot;@android:color/black&quot;</td>
+</tr>
+<tr>
+<td>Theme</td>
+<td>lightThemeBackgroundColor</td>
+<td>&quot;@android:color/white&quot;</td>
+<td>string</td>
+<td>&quot;@android:color/white&quot;</td>
+</tr>
+</tbody>
+</table>
+</div>
 
                                 
                                 <!-- Required only on API pages -->
