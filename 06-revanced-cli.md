@@ -166,4 +166,6 @@ When pasting the path, make sure to use absolute path and escape any `\` to avoi
 
 [^3]: Color values can be found [here](https://developer.android.com/reference/android/R.color#constants_1), make sure you have a higher API level than when the color was added
 
-[^4]: You can also use colors at `revanced-cache/res/values/colors.xml`, reference them by "@color/color_name".
+[^4]: You can also use colors at `revanced-cache/res/values/colors.xml` [^5], reference them by "@color/color_name"
+
+[^5]: You can also edit that file after revanced deleted the cache to include custom colors
