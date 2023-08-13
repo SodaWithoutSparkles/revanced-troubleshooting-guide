@@ -157,7 +157,7 @@ When pasting the path, make sure to use absolute path and escape any `\` to avoi
 | Spotify theme | backgroundColor | "@android:color/black" | string | "@android:color/black" [^3] [^4] |
 | Spotify theme | accentColor | "#ff1ed760" | AARRGGBB color code | "#ff1ed761" |
 | Spotify theme | accentPressedColor | "#ff169c46" | AARRGGBB color code | "#ff169c47" |
-| Theme | darkThemeBackgroundColor | "@android:color/black" | string | "@android:color/holo_purple" [^3] [^4] | 
+| Theme | darkThemeBackgroundColor | "@android:color/black" | string | "@android:color/holo_blue_dark" [^3] [^4] | 
 | Theme | lightThemeBackgroundColor | "@android:color/white" | string | "@android:color/holo_purple" [^3] [^4] | 
 
 [^1]: Don't change this option unless absolutely necessary
