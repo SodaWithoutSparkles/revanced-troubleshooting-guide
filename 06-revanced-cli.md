@@ -152,7 +152,7 @@ When pasting the path, make sure to use absolute path and escape any `\` to avoi
 | --- | --- | --- | --- | --- |
 | Change package name | packageName | null | pkgName | "app.revanced.android.youtubealt" | 
 | Custom branding | appName | "YouTube ReVanced" | string | "new app name" | 
-| Custom branding | iconPath | null | path | "C:\\Users\\test\\Desktop\\icon.png" | 
+| Custom branding | iconPath | null | path | `"C:\\Users\\test\\Desktop\\icon.png"` | 
 | Spoof client | client-id | null | string | "ABCDEF" |
 | Spotify theme | backgroundColor | "@android:color/black" | string | "@android:color/black" |
 | Spotify theme | accentColor | "#ff1ed760" | AARRGGBB color code | "#ff1ed761" |
