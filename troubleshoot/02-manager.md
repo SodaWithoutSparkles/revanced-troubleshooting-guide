@@ -125,6 +125,8 @@ You probably are not using the stable version of ReVanced manager. Do the follow
 - Split-apk used
     - Follow the [guide](https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/step-by-step/00-preface/) again
     - It will guide you on how to differentiate between split and non-split
+- Non-official patch sources
+    - Read more about that [here](/troubleshoot/18.md)
 - "Work profile"
     - ReVanced might not patch if there is a separate profile
     - Solution: Try another phone
