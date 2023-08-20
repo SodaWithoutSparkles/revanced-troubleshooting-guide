@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/revanced-troubleshooting-guide">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.745852292681">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.745858039965">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.1.0">
@@ -33,11 +33,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/revanced-troubleshooting-guide/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.1.0.745852292681" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.1.0.745858039965" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.1.0.745852292681" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.1.0.745858039965" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.1.0.745852292681" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.1.0.745858039965" data-turbo-eval="false" defer></script>
 
     <style>
         a.border-gray-300 {
@@ -194,7 +194,7 @@
 </doc-anchor-target>
 <p>We are going to check if this device is supported.</p>
 <ol>
-<li>launch RVM. Ignore any updates it claimed it knew.</li>
+<li>launch ReVanced Manager.</li>
 </ol>
 <doc-panel id="image-for-reference" collapsed>
     <template #title>Image for reference</template>
@@ -218,15 +218,15 @@
 <ol start="3">
 <li>Check that <code v-pre>Arch</code> had at least 1 entry that looks like <code v-pre>arm64-v8a</code></li>
 <li>If you only got something that said <code v-pre>armv7</code> or lower, you cannot patch it on your phone. Please patch it on another device or your PC.</li>
-<li>If you got <code v-pre>armv8</code> or higher, you are probably fine</li>
+<li>If you got <code v-pre>armv8</code>, you are probably fine</li>
 <li>Check that your Android version is at least 8</li>
-<li>If you only got something that said <code v-pre>7</code> or lower, you nay not be able to patch on your phone. You can patch it on another device or a computer with <a href="../../06-revanced-cli/">cli</a>.</li>
-<li>If you made it here, you can probably patch on your phone with ReVanced manager</li>
+<li>If you only got something that said <code v-pre>armv7</code> or lower, you may not be able to patch on your phone. You can patch it on another device or a computer with <a href="../../06-revanced-cli/">ReVanced CLI</a>.</li>
+<li>If you made it here, you can probably patch on your phone with ReVanced Manager</li>
 </ol>
 <doc-panel id="what-does-arch-mean-why-is-armv7-not-supported" collapsed>
     <template #title>What does <code v-pre>arch</code> mean? Why is <code v-pre>armv7</code> not supported?</template>
 <p><code v-pre>arch</code> is the architecture of your CPU. In layman terms, it is &quot;the language of the CPU&quot;, if you don&#x27;t know that language, you cannot communicate with that CPU.</p>
-<p>The ReVanced team will move to <code v-pre>arsclib</code> soon™, which supports <code v-pre>armv7</code>. For now, you can patch on a computer with <a href="../../06-revanced-cli/"><code v-pre>revanced-cli</code></a> instead.</p>
+<p>The ReVanced team will move to <code v-pre>arsclib</code> soon™, which supports <code v-pre>armv7</code>. For now, you can patch on a computer with <a href="../../06-revanced-cli/">ReVanced CLI</a> instead.</p>
 </doc-panel>
 
                                 
