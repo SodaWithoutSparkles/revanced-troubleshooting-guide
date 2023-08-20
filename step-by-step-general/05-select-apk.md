@@ -1,6 +1,6 @@
 # 5. Select APK
 
-1. In ReVanced manager, go to the Patcher tab and click "Select an application"
+1. In ReVanced Manager, go to the Patcher tab and click "Select an application"
 ==- Image for reference
 ![select app](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/060-select_application.jpg?raw=true)
 ===
@@ -15,11 +15,10 @@ If you did not select from storage, patching would fail.
 ==- Image for reference
 ![storage view](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/090-select_YT_apk.jpg?raw=true)
 ===
-4. The green part should contain the date. I redacted it for privacy.
-5. Check that you have the suggested/recommended version.
+4. Check that you have the suggested/recommended version.
 ==- Image for reference
 This is just an example.
 ![check ver](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/100-check_version.jpg?raw=true)
 ===
-6. If no, go back to [Part 3](/step-by-step-general/03-get-files.md)
-7. If yes, continue to the next page
+5. If no, go back to [Part 3](/step-by-step-general/03-get-files.md)
+6. If yes, continue to the next page

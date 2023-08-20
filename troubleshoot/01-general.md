@@ -17,7 +17,7 @@ https://github.com/TeamVanced/VancedMicroG/releases/tag/v0.2.24.220220-220220001
 
 ## 1.4. What is the latest YouTube version supported? 
 
-18.23.35 as of 2023-08-20T11:07 UTC. You can check it in ReVanced manager
+You can check it in ReVanced Manager, or in the [guide](/step-by-step/02-check-ver.md)
 
 ## 1.5. Is ReVanced related to Vanced?
 
@@ -25,20 +25,19 @@ Nope.
 
 ## 1.6. How can I support Revanced?
 
-If you can, donate to the ReVanced team at either:
+If you can, donate to the ReVanced team at:
 
-- [Liberapay](https://liberapay.com/ReVanced/donate)
-- [GitHub Sponsors](https://github.com/sponsors/ReVanced)
+- [ReVanced · Donate](https://revanced.app/donate)
 
 If you can't donate, you can also contribute to the development by:
 
-- [Translating Revanced](https://crowdin.com/project/revanced)
+- [Translating ReVanced](https://crowdin.com/project/revanced)
 
 ## 1.7. I think I saw a bug
 
-You can post your bug in [reddit](https://www.reddit.com/r/revancedapp) first to confirm if this is indeed a bug and if anyone else has reported it. Or you can go to the [ReVanced discord](https://discord.gg/revanced) to ask there. The ReVanced development team regularly hangs out there. **DO NOT POST YOUR SUPPORT REQUEST IN CHAT.** Post them in \# general > support instead. Remember to add a tag. You can do so on the bottom left.
+You can post your bug in [reddit](https://www.reddit.com/r/revancedapp) first to confirm if this is indeed a bug and if anyone else has reported it. Or you can go to the [ReVanced discord](https://discord.gg/revanced) to ask there. The ReVanced development team regularly hangs out there. **DO NOT POST YOUR SUPPORT REQUEST IN CHAT.** Post them in \# support instead..
 
 After that you can go to the relevant Github issues page to file a bug report.
 
-- [ReVanced patches](https://github.com/revanced/revanced-patches/issues/new?template=bug-issue.yml)
-- [ReVanced manager](https://github.com/revanced/revanced-manager/issues/new?template=bug-issue.yml)
+- [ReVanced Patches](https://github.com/revanced/revanced-patches/issues/new?template=bug-issue.yml)
+- [ReVanced Manager](https://github.com/revanced/revanced-manager/issues/new?template=bug-issue.yml)

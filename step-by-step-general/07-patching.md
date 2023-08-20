@@ -10,6 +10,6 @@
 ===
 3. The process should take about 5 ~ 10 minutes
 !!!
-The speed of patching depends on phone performance. Some reported that it took 35 minutes with a very old phone.
+The speed of patching depends on phone performance. Some reported that it took 35 minutes with a very slow phone.
 !!!
-4. If you see any warnings, check out [the debug guide](/troubleshoot/00-trouble-shooting.md)
+4. If you see any errors, check out [the troubleshooting guide](/troubleshoot/00-trouble-shooting.md)

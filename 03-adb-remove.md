@@ -2,7 +2,7 @@
 
 ## Preface
 
-This guide is to use ADB (Android Debug Bridge) to remove remains or artifacts from the last ReVanced install
+This guide is to use ADB (Android Debug Bridge) to remove remains or artifacts from the last ReVanced YouTube install
 
 ## Requirements
 
