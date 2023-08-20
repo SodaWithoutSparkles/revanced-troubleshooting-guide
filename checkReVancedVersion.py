@@ -9,7 +9,8 @@ import logging
 
 JSON_FILE = '.conf/python/update.ver.json'
 STATE_FILE = '.conf/python/update.state'  # for last update
-LUT_FILE = '.conf/python/update.lut.json'  # lookup table, pkgname to common name
+# lookup table, pkgname to common name
+LUT_FILE = '.conf/python/update.lut.json'
 TEMPLATE_FILE = '.conf/python/update.template'
 OUT_FILE = '05-versions.md'
 
@@ -34,6 +35,7 @@ logging.basicConfig(level=logging.INFO,
                     datefmt='%d-%b-%y %H:%M:%S')
 
 modified = False
+
 
 def compVer(ver1: str, ver2: str):
     # 1 if ver1 > ver2
@@ -154,6 +156,7 @@ def fillTemplate(lsv: list):
     table.append('| Common Name | Version | Package Name |\n')
     table.append('|---|---|---|\n')
     for item in lsv:
+        # Handle common name column
         try:
             commonName = rawJson[item['pkgName']][0]
         except KeyError:
@@ -163,8 +166,21 @@ def fillTemplate(lsv: list):
             )
         except Exception as e:
             logging.critical(e)
+        # Handle version override
+        try:
+            versionToUse = rawJson[item['pkgName']][1]
+            logging.warning(
+                f"Version override for {item['pkgName']} to {versionToUse}"
+            )
+            versionToUse += ' [^1]'
+        except IndexError:
+            versionToUse = item['ver']
+        except Exception as e:
+            print(e)
+            logging.critical(e)
 
-        table.append(f"| {commonName} | {item['ver']} | {item['pkgName']} |\n")
+        table.append(
+            f"| {commonName} | {versionToUse} | {item['pkgName']} |\n")
 
     with open(TEMPLATE_FILE, "r") as t:
         # contents = t.readlines()
@@ -177,12 +193,13 @@ def fillTemplate(lsv: list):
                         sep=" ", timespec="seconds") + ' UTC'
                     logging.info(f'Set last update timestamp to {timestring}')
                     f.write(f'Last Update: {timestring}\n')
+                elif line == '{footnote}\n':
+                    f.write('[^1]: Version override is used')
                 else:
                     f.write(line)
 
 
-
-def exportOutput(key:str, value:str):
+def exportOutput(key: str, value: str):
     # export the key:value pair to gh action output
     if EXPORT != None:
         print(f'{key}={value}', file=EXPORT)
@@ -202,7 +219,7 @@ def main():
                     key=lambda d: d['count'],
                     reverse=True)
     timeNow = int(datetime.utcnow().strftime('%s'))
-    
+
     if str(result) != lastResult:
         modified = True
         logging.info('Patches info updated, modifing state file')
@@ -223,6 +240,7 @@ def main():
         exportOutput('modified', 'false')
         logging.info('No changes made, no need to update')
     logging.info('Done')
+
 
 if __name__ == '__main__':
     main()
