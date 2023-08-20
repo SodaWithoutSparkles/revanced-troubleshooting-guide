@@ -48,7 +48,7 @@ Do NOT disable the default patches unless you know what you are doing. Especiall
     - `Hide seekbar`
     - `Hide timestamp`
     - `Wide search bar`
-6. DO **enable** the following patches. They are critical.
+6. **Enable** the following patches. They are critical.
     - `Vanced MicroG Support` (unless your phone is rooted)
         - _if you don't know what root is, you are probably not rooted_
     - `Client Spoof` (must enable)
