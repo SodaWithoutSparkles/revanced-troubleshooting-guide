@@ -14,3 +14,9 @@ Images are sourced from:
 - rija~373#0428 SponsorBlock api timeout
 - Ashh#1401 non-root install
 - zemiro#3357 content not available
+
+## Icons
+
+Special thanks to them for creating the icons
+
+- [Android icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/android)
