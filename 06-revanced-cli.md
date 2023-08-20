@@ -1,10 +1,6 @@
 # ReVanced CLI patch guide
 
-In this guide, we are going to use ReVanced CLI on Windows to patch instead of manager. This might be useful when you:
-
-- Have `armv7` device
-- Want to try latest beta builds
-- etc.
+In this guide, we are going to use ReVanced CLI on Windows to patch instead of manager. 
 
 ## 1. Install Java Development Kit (JDK)
 
@@ -30,9 +26,9 @@ Remember to check the box for for adding JDK to PATH, set JAVA_HOME variable and
 ![Overview](https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/screenshots/501-cli-patch-embed.jpg)
 
 1. Get the following required files
-    - [ReVanced patches](https://github.com/ReVanced/revanced-patches/releases/latest), you need the `.jar` file.
+    - [ReVanced Patches](https://github.com/ReVanced/revanced-patches/releases/latest), you need the `.jar` file.
     - [ReVanced CLI](https://github.com/revanced/revanced-cli/releases/latest), you need the `.jar` file.
-    - [ReVanced integrations](https://github.com/revanced/revanced-integrations/releases/latest), you need the `.apk` file.
+    - [ReVanced Integrations](https://github.com/revanced/revanced-integrations/releases/latest), you need the `.apk` file.
 2. Put all of the files in a folder in `Downloads`. Lets call it `revanced` for now
 
 ## 3. Get the APK you wanted to patch
