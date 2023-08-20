@@ -9,7 +9,7 @@ This guide is for non-root users. For root users, visit the [other resources sec
 In this guide, we will:
 
 - Check requirements and latest supported versions
-- Get the tools we need to "make" revanced yourself
+- Get the tools we need to "make" ReVanced yourself
 - Guide you step-by-step on how to select the right "features"
 - Provide solution on what to do when it does not work
 
