@@ -14,7 +14,7 @@ We are going to check if this device is supported.
 4. If you only got something that said `armv7` or lower, you cannot patch it on your phone. Please patch it on another device or your PC.
 5. If you got `armv8` or higher, you are probably fine
 6. Check that your Android version is at least 8
-7. If you only got something that said `7` or lower, you cannot patch it on your phone. Please patch it on another device or your PC.
+7. If you only got something that said `7` or lower, you nay not be able to patch on your phone. You can patch it on another device or a computer with [cli](/06-revanced-cli.md).
 8. If you made it here, you can probably patch on your phone with ReVanced manager
 
 ==- What does `arch` mean? Why is `armv7` not supported?

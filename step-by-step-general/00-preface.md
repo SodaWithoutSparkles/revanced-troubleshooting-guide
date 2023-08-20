@@ -15,7 +15,7 @@ In this guide, we will:
 
 !!! Remember
 There is **NO** way to _download_ ReVanced. To prevent the distribution of copyrighted materials, you need to "make" ReVanced yourself. 
-**ANY place where you can _download_ YouTube ReVanced is either lying or contains malware.**
+**ANY place where you can _download_ patched apps are either lying or contains malware.**
 !!!
 
 All ok? click the next page button.

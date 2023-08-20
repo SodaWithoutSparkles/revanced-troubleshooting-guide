@@ -6,7 +6,7 @@
 ===
 2. Click the "Storage" button at the bottom right
 ==- Image for reference
-![select YT](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/081-select_from_storage.jpg?raw=true)
+![Click storage icon](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/081-select_from_storage.jpg?raw=true)
 ===
 !!!warning 
 If you did not select from storage, patching would fail.
