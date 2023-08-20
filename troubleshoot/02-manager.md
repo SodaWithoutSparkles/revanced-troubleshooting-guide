@@ -8,8 +8,6 @@ Troubleshooting regarding ReVanced manager issues
 
 - Bad APK, download again
 
-- Signature mismatch, delete old manager and install (WARNING: this deletes keystore, you may want to export it first)
-
 ## 2.2. What is the latest supported / suggested Youtube apk version?
 
 In ReVanced manager > patcher > select application, it tells you the latest supported / suggested YouTube version to patch
@@ -34,27 +32,35 @@ If you have an older version (≤0.0.57), you will need to go to `Android/data/a
 
 ## 2.6. Cannot update ReVanced manager
 
-Delete existing ReVanced manager and install the new one. If you have manager version ≥0.1.0, follow the above steps on exporting the keystore. Then, install the new version and import the old keystore back in.
+If you have manager version ≥0.1.0, follow the above steps on exporting the keystore. Then, install the new version and import the old keystore back in.
+
+Delete existing ReVanced manager and install the new one.
 
 ## 2.7. Cannot select YouTube APK to patch
 
-Delete existing ReVanced manager and install the new one. If you have manager version ≥0.1.0, follow the above steps on exporting the keystore. Then, install the new version and import the old keystore back in.
+If you have manager version ≥0.1.0, follow the above steps on exporting the keystore. Then, install the new version and import the old keystore back in.
+
+Delete existing ReVanced manager and install the new one.
 
 ## 2.8. ReVanced manager still shows update available when I am on latest?
 
+*Deleted as outdated*
+
+==- Orginal answer
 https://github.com/revanced/revanced-manager/issues/805
 
 TL;DR: that is a known harmless bug, ignore it and don't update
+===
 
 ## 2.9. Non-root install not possible?
 
 Select `vanced microG support` patch in the patches selection menu. 
 
-If you cannot find it, use the search function and search for "microg". If you still cannot find it, you are using a non-supported YT version.
+If you cannot find it, use the search function and search for "microg". If it is greyed out, it means that you have used an incompatible version.
 
 ![non-root install not possible](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/troubleshoot/02-manager/09.jpg?raw=true)
 
-## 2.10. Cannot find patch \<insert patch name here\>?
+## 2.10. Cannot find/select patch \<insert patch name here\>?
 
 Your selected app version was incompatible. Use the Suggested version.
 
@@ -85,9 +91,7 @@ Click the "Selected Patches" box
 
 ## 2.13. Import patches selection
 
-If you don't know what you should select, or want to use the same set of patches as mine, you can download the patches selection. [!file Patches Selection](https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/selected_patches_2023-04-30.json).
-
-Then go to ReVanced manager > settings > scroll down to import & export > Import patches selection. Select the downloaded JSON file just now. You now have the same set of patches mine.
+Go to ReVanced manager > settings > scroll down to import & export > Import patches selection. Select the downloaded JSON file just now. You now have the same set of patches mine.
 
 ## 2.14. ReVanced manager aborting / exit code 135 / exit code 139 / ARMv7 devices
 
@@ -110,18 +114,7 @@ You probably are not using the stable version of ReVanced manager. Do the follow
 ## 2.16 ReVanced manager patch failed / patch not applied
 
 - Non-recommended / non-default patches used
-    - Don't use them and repatch
-    ==- List of such patches
-    !!!warning WARNING
-    DO NOT SELECT ANY OF THE FOLLOWING PATCHES OR YOU WILL RISK HAVING ISSUES: 
-    !!!
-    - Change package name
-    - enable **android** debugging
-    - export all activities
-    - Predictive back gesture
-    - Remove screenshot restriction
-    - Spoof wifi connections
-    ===
+    - Reset to default patches
 - Split-apk used
     - Follow the [guide](https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/step-by-step/00-preface/) again
     - It will guide you on how to differentiate between split and non-split
