@@ -8,7 +8,7 @@ Changing the default patches may break things. It is NOT recommended for first t
 
 ==- Last time I patched un-successfully / Re-patching / not patching for the first time
 1. Click "Select patches" or "Selected patches"
-2. In the select patches view, choose "Default" or "Recommended"
+2. In the select patches view, choose "Default"
 ![default](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/110-select_default.jpg?raw=true)
 !!!danger
 Do NOT disable the default patches unless you are instructed to do so. Especially, do **NOT** disable these two:
@@ -27,7 +27,7 @@ Do **NOT** try to change them unless you know what you are doing.
 Modifying the default patches (add/remove) may cause unintended consequences. Do **NOT** try to change them unless you are absolutely sure what you are doing.
 !!!
 1. Click "Select patches"
-2. In the select patches view, choose "Default" or "Recommended"
+2. In the select patches view, choose "Default"
 ![default](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/110-select_default.jpg?raw=true)
 !!!danger
 Do NOT disable the default patches unless you know what you are doing. Especially, do **NOT** disable these two:
