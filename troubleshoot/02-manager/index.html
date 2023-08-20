@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/revanced-troubleshooting-guide">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.745858039965">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.745858435185">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.1.0">
@@ -33,11 +33,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/revanced-troubleshooting-guide/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.1.0.745858039965" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.1.0.745858435185" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.1.0.745858039965" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.1.0.745858435185" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.1.0.745858039965" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.1.0.745858435185" data-turbo-eval="false" defer></script>
 
     <style>
         a.border-gray-300 {
@@ -204,8 +204,6 @@
 </li>
 <li><p>Bad APK, download again</p>
 </li>
-<li><p>Signature mismatch, delete old manager and install (WARNING: this deletes keystore, you may want to export it first)</p>
-</li>
 </ul>
 <doc-anchor-target id="22-what-is-the-latest-supported--suggested-youtube-apk-version">
     <h2>
@@ -244,22 +242,28 @@
         <span>2.6. Cannot update ReVanced manager</span>
     </h2>
 </doc-anchor-target>
-<p>Delete existing ReVanced manager and install the new one. If you have manager version ≥0.1.0, follow the above steps on exporting the keystore. Then, install the new version and import the old keystore back in.</p>
+<p>If you have manager version ≥0.1.0, follow the above steps on exporting the keystore. Then, install the new version and import the old keystore back in.</p>
+<p>Delete existing ReVanced manager and install the new one.</p>
 <doc-anchor-target id="27-cannot-select-youtube-apk-to-patch">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#27-cannot-select-youtube-apk-to-patch">#</doc-anchor-trigger>
         <span>2.7. Cannot select YouTube APK to patch</span>
     </h2>
 </doc-anchor-target>
-<p>Delete existing ReVanced manager and install the new one. If you have manager version ≥0.1.0, follow the above steps on exporting the keystore. Then, install the new version and import the old keystore back in.</p>
+<p>If you have manager version ≥0.1.0, follow the above steps on exporting the keystore. Then, install the new version and import the old keystore back in.</p>
+<p>Delete existing ReVanced manager and install the new one.</p>
 <doc-anchor-target id="28-revanced-manager-still-shows-update-available-when-i-am-on-latest">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#28-revanced-manager-still-shows-update-available-when-i-am-on-latest">#</doc-anchor-trigger>
         <span>2.8. ReVanced manager still shows update available when I am on latest?</span>
     </h2>
 </doc-anchor-target>
+<p><em>Deleted as outdated</em></p>
+<doc-panel id="orginal-answer" collapsed>
+    <template #title>Orginal answer</template>
 <p><a href="https://github.com/revanced/revanced-manager/issues/805">https://github.com/revanced/revanced-manager/issues/805</a></p>
 <p>TL;DR: that is a known harmless bug, ignore it and don&#x27;t update</p>
+</doc-panel>
 <doc-anchor-target id="29-non-root-install-not-possible">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#29-non-root-install-not-possible">#</doc-anchor-trigger>
@@ -267,16 +271,16 @@
     </h2>
 </doc-anchor-target>
 <p>Select <code v-pre>vanced microG support</code> patch in the patches selection menu.</p>
-<p>If you cannot find it, use the search function and search for &quot;microg&quot;. If you still cannot find it, you are using a non-supported YT version.</p>
+<p>If you cannot find it, use the search function and search for &quot;microg&quot;. If it is greyed out, it means that you have used an incompatible version.</p>
 <p><figure class="content-center">
     <img src="https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/troubleshoot/02-manager/09.jpg?raw=true" alt="non-root install not possible">
     <figcaption class="caption">non-root install not possible</figcaption>
 </figure>
 </p>
-<doc-anchor-target id="210-cannot-find-patch-insert-patch-name-here">
+<doc-anchor-target id="210-cannot-findselect-patch-insert-patch-name-here">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#210-cannot-find-patch-insert-patch-name-here">#</doc-anchor-trigger>
-        <span>2.10. Cannot find patch &lt;insert patch name here&gt;?</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#210-cannot-findselect-patch-insert-patch-name-here">#</doc-anchor-trigger>
+        <span>2.10. Cannot find/select patch &lt;insert patch name here&gt;?</span>
     </h2>
 </doc-anchor-target>
 <p>Your selected app version was incompatible. Use the Suggested version.</p>
@@ -317,21 +321,7 @@
         <span>2.13. Import patches selection</span>
     </h2>
 </doc-anchor-target>
-<p>If you don&#x27;t know what you should select, or want to use the same set of patches as mine, you can download the patches selection. 
-<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
-    <div class="flex items-center text-blue-500 dark:text-blue-400">
-        <span class="inline-block mb-px">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M21 14c-.55 0-1 .45-1 1v4c0 .55-.45 1-1 1H5c-.55 0-1-.45-1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-4c0-.55-.45-1-1-1z"/><path d="M11.29 15.71c.09.09.2.17.33.22.12.04.25.07.38.07s.26-.03.38-.08.23-.12.33-.22l5-5a.996.996 0 10-1.41-1.41l-3.3 3.3V3c0-.55-.45-1-1-1s-1 .45-1 1v9.59l-3.29-3.3A.996.996 0 106.3 10.7l4.99 5.01z"/></svg>
-        </span>
-        <span class="inline-block font-medium ml-2">Patches Selection</span>
-    </div>
-    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>selected_patches_2023-04-30.json</span>
-    </div>
-    <a href="https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/selected_patches_2023-04-30.json" class="absolute block inset-0"></a>
-</div>
-.</p>
-<p>Then go to ReVanced manager &gt; settings &gt; scroll down to import &amp; export &gt; Import patches selection. Select the downloaded JSON file just now. You now have the same set of patches mine.</p>
+<p>Go to ReVanced manager &gt; settings &gt; scroll down to import &amp; export &gt; Import patches selection. Select the downloaded JSON file just now. You now have the same set of patches mine.</p>
 <doc-anchor-target id="214-revanced-manager-aborting--exit-code-135--exit-code-139--armv7-devices">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#214-revanced-manager-aborting--exit-code-135--exit-code-139--armv7-devices">#</doc-anchor-trigger>
@@ -364,36 +354,8 @@
 <ul>
 <li>Non-recommended / non-default patches used
 <ul>
-<li>Don&#x27;t use them and repatch</li>
+<li>Reset to default patches</li>
 </ul>
-<doc-panel id="list-of-such-patches" collapsed>
-    <template #title>List of such patches</template>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
-                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-            <h5>WARNING</h5>
-DO NOT SELECT ANY OF THE FOLLOWING PATCHES OR YOU WILL RISK HAVING ISSUES:
-        </div>
-    </div>
-</div>
-<ul>
-<li>Change package name</li>
-<li>enable <strong>android</strong> debugging</li>
-<li>export all activities</li>
-<li>Predictive back gesture</li>
-<li>Remove screenshot restriction</li>
-<li>Spoof wifi connections</li>
-</ul>
-</doc-panel>
 </li>
 <li>Split-apk used
 <ul>
