@@ -6,6 +6,11 @@ The manager now automatically select patches for first time users. Go to the nex
 Changing the default patches may break things. It is NOT recommended for first time users to change the default selection.
 !!!
 
+!!!
+You may want to check if `custom branding` patch is ENABLED. Enable it if you want a different icon and app name than stock YouTube one.
+_This is moved to non-default patch in patch version `2.188.0`._
+!!!
+
 ==- Last time I patched un-successfully / Re-patching / not patching for the first time
 1. Click "Select patches" or "Selected patches"
 2. In the select patches view, choose "Default"
