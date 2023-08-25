@@ -240,3 +240,9 @@ Then restart the app.
 
 If you can't find the option, make sure you used default patches when patching YouTube.
 
+## 3.35. Why did the logo/name change?
+
+The YouTube ReVanced logo and the name is changed by the `custom branding` patch. Since patch version `2.188.0` this is a non-default patch.
+
+If you want the new logo, manually add the patch. Exclude it otherwise.
+
