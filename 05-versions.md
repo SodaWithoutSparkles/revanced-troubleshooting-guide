@@ -4,7 +4,7 @@ This is a list of versions to use with ReVanced patches:
 
 | Common Name | Version | Package Name |
 |---|---|---|
-| YouTube | 18.23.35 | com.google.android.youtube |
+| YouTube | 18.32.39 | com.google.android.youtube |
 | YouTube Music | 6.10.52 [^1] | com.google.android.apps.youtube.music |
 | TikTok | ANY | com.ss.android.ugc.trill |
 | Twitch | 15.4.1 | tv.twitch.android.app |
@@ -33,7 +33,6 @@ This is a list of versions to use with ReVanced patches:
 | Boost for Reddit | ANY | com.rubenmayayo.reddit |
 | SCB Easy | ANY | com.scb.phone |
 | Spotify lite | ANY | com.spotify.lite |
-| Nova Launcher | ANY | com.teslacoilsw.launcher |
 | TickTick: To-do list & Tasks | ANY | com.ticktick.task |
 | old Vanced | ANY | com.vanced.android.youtube |
 | VSCO | ANY | com.vsco.cam |
@@ -48,10 +47,9 @@ This is a list of versions to use with ReVanced patches:
 | Slide for Reddit | ANY | me.ccrama.redditslide |
 | Infinity for Reddit | ANY | ml.docilealligator.infinityforreddit |
 | irplus - Infrared Remote | ANY | net.binarymode.android.irplus |
-| Tasker | ANY | net.dinglisch.android.taskerm |
 | My Expenses | 3.4.9 | org.totschnig.myexpenses |
 | Trakt | 1.1.1 | tv.trakt.trakt |
 
-Last Update: 2023-08-20 11:39:44 UTC
+Last Update: 2023-08-27 06:17:21 UTC
 
 [^1]: Version override is used

@@ -1,8 +1,11 @@
 #!/bin/bash
 
-currVer=$(curl --no-progress-meter -X 'GET' -H 'accept: application/json' 'https://releases.revanced.app/patches' |
-    jq -r '.[] | .compatiblePackages| .[] | select(.name=="com.google.android.youtube") | .versions | .[-1] | select( . != null )' |
-    sort | uniq | head -1)
+# TODO: fix get curr ver method by extracting from Git repo instead of api
+
+#currVer=$(curl --no-progress-meter -X 'GET' -H 'accept: application/json' 'https://releases.revanced.app/patches' |
+#    jq -r '.[] | .compatiblePackages| .[] | select(.name=="com.google.android.youtube") | .versions | .[-1] | select( . != null )' |
+#    sort | uniq | head -1)
+currVer='18.32.39'
 now=$(date -u +"%Y-%m-%dT%H:%M")
 nowUnix=$(date +%s)
 

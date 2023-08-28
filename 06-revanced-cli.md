@@ -45,7 +45,7 @@ Make sure you downloaded the full APK, not .apks/.apkm/split apks
 ## 4. Sanity checks
 
 1. Go to the `revanced` folder you made just now
-2. Right-click the empty space and click "Open Terminal"/"Open Powershell"
+2. Right-click the empty space and click "Open Terminal"/"Open Powershell", you may need to shift-right-click
 3. If you can't find the button, click the file button in the ribbon
 4. Type `dir` and hit enter, you should see the 4 files you downloaded just now
 5. Type `java -version` and hit enter, you should see it is at major version 11
