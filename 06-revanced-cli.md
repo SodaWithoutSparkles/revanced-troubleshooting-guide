@@ -25,10 +25,14 @@ Remember to check the box for for adding JDK to PATH, set JAVA_HOME variable and
 
 ![Overview](https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/screenshots/501-cli-patch-embed.jpg)
 
+!!!warning
+ReVanced CLI version 3.0.0 has a major bug where you can't select additional patches. Use the linked resources instead of the latest.
+!!!
+
 1. Get the following required files
-    - [ReVanced Patches](https://github.com/ReVanced/revanced-patches/releases/latest), you need the `.jar` file.
-    - [ReVanced CLI](https://github.com/revanced/revanced-cli/releases/latest), you need the `.jar` file.
-    - [ReVanced Integrations](https://github.com/revanced/revanced-integrations/releases/latest), you need the `.apk` file.
+    - [ReVanced Patches](https://github.com/ReVanced/revanced-patches/releases/tag/v2.188.0), you need the `.jar` file.
+    - [ReVanced CLI](https://github.com/revanced/revanced-cli/releases/tag/v2.22.0), you need the `.jar` file.
+    - [ReVanced Integrations](https://github.com/revanced/revanced-integrations/releases/tag/v0.116.0), you need the `.apk` file.
 2. Put all of the files in a folder in `Downloads`. Lets call it `revanced` for now
 
 ## 3. Get the APK you wanted to patch
