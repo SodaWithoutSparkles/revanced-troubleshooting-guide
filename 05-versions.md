@@ -14,6 +14,7 @@ This is a list of versions to use with ReVanced patches:
 | Twitter | ANY | com.twitter.android |
 | FinanzOnline | ANY | at.gv.bmf.bmf2go |
 | Digitales Amt | ANY | at.gv.oe.app |
+| Lightroom mobile | ANY | com.adobe.lrmobile |
 | Sony Headphones Connect | ANY | com.sony.songpal.mdr |
 | Spotify | ANY | com.spotify.music |
 | Joey for reddit | ANY | o.o.joey |
@@ -23,6 +24,7 @@ This is a list of versions to use with ReVanced patches:
 | Backdrops - Wallpapers | 4.52 | com.backdrops.wallpapers |
 | CandyLink VPN | ANY | com.candylink.openvpn |
 | Android 12 Widgets (Twelve) | ANY | com.dci.dev.androidtwelvewidgets |
+| Duolingo | ANY | com.duolingo |
 | Google Recorder | ANY | com.google.android.apps.recorder |
 | Instagram | 275.0.0.27.98 | com.instagram.android |
 | Money Manager - Expense, Budget | ANY | com.ithebk.expensemanager |
@@ -33,6 +35,7 @@ This is a list of versions to use with ReVanced patches:
 | Boost for Reddit | ANY | com.rubenmayayo.reddit |
 | SCB Easy | ANY | com.scb.phone |
 | Spotify lite | ANY | com.spotify.lite |
+| Strava | 320.12 | com.strava |
 | TickTick: To-do list & Tasks | ANY | com.ticktick.task |
 | old Vanced | ANY | com.vanced.android.youtube |
 | VSCO | ANY | com.vsco.cam |
@@ -48,8 +51,9 @@ This is a list of versions to use with ReVanced patches:
 | Infinity for Reddit | ANY | ml.docilealligator.infinityforreddit |
 | irplus - Infrared Remote | ANY | net.binarymode.android.irplus |
 | My Expenses | 3.4.9 | org.totschnig.myexpenses |
+| Solid Explorer | ANY | pl.solidexplorer2 |
 | Trakt | 1.1.1 | tv.trakt.trakt |
 
-Last Update: 2023-08-27 06:17:21 UTC
+Last Update: 2023-08-28 06:46:30 UTC
 
 [^1]: Version override is used

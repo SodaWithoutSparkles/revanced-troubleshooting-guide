@@ -46,5 +46,9 @@
     "jp.pxv.android": ["Pixiv"],
     "me.ccrama.redditslide": ["Slide for Reddit"],
     "ml.docilealligator.infinityforreddit": ["Infinity for Reddit"],
-    "free.reddit.news": ["Infinity for Reddit"]
+    "free.reddit.news": ["Infinity for Reddit"],
+    "com.duolingo": ["Duolingo"],
+    "com.adobe.lrmobile": ["Lightroom mobile"],
+    "com.strava": ["Strava"],
+    "pl.solidexplorer2": ["Solid Explorer"]
 }

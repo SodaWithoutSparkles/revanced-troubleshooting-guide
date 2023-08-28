@@ -28,7 +28,7 @@ else:
     else:
         FORCED = False
 
-API = 'https://releases.revanced.app/patches'
+API = 'https://api.revanced.app/v2/patches/latest'
 
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s.%(msecs)03d: [%(levelname)s] %(message)s',
@@ -125,7 +125,7 @@ def parseJson():
     logging.info('Parsing response...')
     rawJson = ''
     with open(JSON_FILE, 'r') as f:
-        rawJson = json.loads(f.read())
+        rawJson = json.loads(f.read())['patches']
     out = []
     for item in rawJson:
         try:
