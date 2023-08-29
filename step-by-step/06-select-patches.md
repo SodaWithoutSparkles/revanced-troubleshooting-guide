@@ -11,6 +11,10 @@ You may want to check if `custom branding` patch is ENABLED. Enable it if you wa
 _This is moved to non-default patch in patch version `2.188.0`._
 !!!
 
+!!!
+If you WANT to change the default selection, turn on the option at ReVanced Manager settings > Enable changing selection. It is right below "Auto update patches" option.
+!!!
+
 ==- Last time I patched un-successfully / Re-patching / not patching for the first time
 1. Click "Select patches" or "Selected patches"
 2. In the select patches view, choose "Default"
