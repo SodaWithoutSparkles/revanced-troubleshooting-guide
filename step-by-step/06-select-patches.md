@@ -8,7 +8,7 @@ Changing the default patches may break things. It is NOT recommended for first t
 
 !!!
 You may want to check if `custom branding` patch is ENABLED. Enable it if you want a different icon and app name than stock YouTube one.
-_This is moved to non-default patch in patch version `2.188.0`._
+_This is moved to non-default patch since patch version `2.188.0`._
 !!!
 
 !!!
