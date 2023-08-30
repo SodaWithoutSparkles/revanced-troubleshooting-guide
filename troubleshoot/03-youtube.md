@@ -82,7 +82,7 @@ Did you change your google password? Anyway, go to system settings > accounts > 
 
 ## 3.6. Shorts button missing?
 
-Disable: ReVanced YT settings > ReVanced > Layout > Hide Shorts, Hide Shorts button
+Disable: ReVanced YT settings > ReVanced > Layout > Navigation buttons > Hide Shorts button
 
 ## 3.7. Video UI looks strange when watching playlist
 
