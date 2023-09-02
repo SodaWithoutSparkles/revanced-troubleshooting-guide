@@ -246,3 +246,9 @@ The YouTube ReVanced logo and the name is changed by the `custom branding` patch
 
 If you want the new logo, manually add the patch. Exclude it otherwise.
 
+## 3.36 Why is the audio track selection missing?
+
+Enable it at: revanced settings > layout > player flyout menu items > audio track
+
+Credit: leadedmegabyte on discord
+
