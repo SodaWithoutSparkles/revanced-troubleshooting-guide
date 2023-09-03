@@ -15,6 +15,7 @@ This is a list of versions to use with ReVanced patches:
 | FinanzOnline | ANY | at.gv.bmf.bmf2go |
 | Digitales Amt | ANY | at.gv.oe.app |
 | Lightroom mobile | ANY | com.adobe.lrmobile |
+| Photomath | ANY | com.microblink.photomath |
 | Sony Headphones Connect | ANY | com.sony.songpal.mdr |
 | Spotify | ANY | com.spotify.music |
 | Joey for reddit | ANY | o.o.joey |
@@ -28,7 +29,6 @@ This is a list of versions to use with ReVanced patches:
 | Google Recorder | ANY | com.google.android.apps.recorder |
 | Instagram | 275.0.0.27.98 | com.instagram.android |
 | Money Manager - Expense, Budget | ANY | com.ithebk.expensemanager |
-| Photomath | 8.20.0 | com.microblink.photomath |
 | Hex Editor | ANY | com.myprog.hexedit |
 | Inshorts | ANY | com.nis.app |
 | BaconReader for Reddit | ANY | com.onelouder.baconreader |
@@ -54,6 +54,6 @@ This is a list of versions to use with ReVanced patches:
 | Solid Explorer | ANY | pl.solidexplorer2 |
 | Trakt | 1.1.1 | tv.trakt.trakt |
 
-Last Update: 2023-08-28 06:52:41 UTC
+Last Update: 2023-09-03 09:12:24 UTC
 
 [^1]: Version override is used
