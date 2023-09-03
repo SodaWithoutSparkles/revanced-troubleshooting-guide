@@ -5,6 +5,7 @@ Special thanks to the following people:
 - The ReVanced team for creating the software
 - Discord user @hokorayinphine for inspiration, screenshots and grammar checks
 - Discord user @cotton.me for the beautiful embeds
+- Discord user @leadedmegabyte for the change icons guide
 
 ## Images
 

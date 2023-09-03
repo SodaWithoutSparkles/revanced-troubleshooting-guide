@@ -58,3 +58,7 @@ Examples can be found [here](/06-revanced-cli.md#9-options-file)
 
 Follow the standard procedure to patch with the options file
 
+
+## Credits
+
+This guide is modified from @leadedmegabyte's change icons guide
