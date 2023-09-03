@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/revanced-troubleshooting-guide">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.3.0.747046495572">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.3.0.747046832872">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.3.0">
@@ -33,12 +33,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/revanced-troubleshooting-guide/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.3.0.747046495572" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.3.0.747046832872" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.3.0.747046495572" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.3.0.747046832872" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.3.0.747046495572" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.3.0.747046495572" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.3.0.747046832872" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.3.0.747046832872" defer></script>
 
     <style>
         a.border-gray-300 {
@@ -200,12 +200,10 @@
     </h2>
 </doc-anchor-target>
 <ol>
-<li>Visit the <a href="https://www.azul.com/downloads/?version=java-11-lts&amp;package=jdk#zulu">download page of Azul JDK</a></li>
-<li>Don&#x27;t click on the big download button. It is for JDK 17 instead of the JDK 11 that we need.</li>
-<li>Scroll down a bit and find the version for Windows, and click download.</li>
-<li>Your computer is most likely to be 64-bit. Use the msi installer</li>
-<li>Click on the downloaded file to install</li>
-<li>Remember to check all the checkbocks</li>
+<li>Visit the <a href="https://www.azul.com/downloads/?package=jdk#zulu">download page of Azul JDK</a></li>
+<li>JDK versions 11, <strong>17</strong> and 20 are all compatible. Download the <code v-pre>.msi</code> installer for the platform you need</li>
+<li>Your computer is most likely to be 64-bit.</li>
+<li>Remember to check all the checkboxes, especially the JAVA_HOME one.</li>
 </ol>
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
@@ -232,8 +230,8 @@
 </figure>
 </p>
 </doc-panel>
-<ol start="7">
-<li>Wait for it to finish</li>
+<ol start="5">
+<li>Wait for it to finish installing</li>
 </ol>
 <doc-anchor-target id="2-get-revanced-related-files">
     <h2>
