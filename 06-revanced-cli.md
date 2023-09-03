@@ -4,12 +4,10 @@ In this guide, we are going to use ReVanced CLI on Windows to patch instead of m
 
 ## 1. Install Java Development Kit (JDK)
 
-1. Visit the [download page of Azul JDK](https://www.azul.com/downloads/?version=java-11-lts&package=jdk#zulu)
-2. Don't click on the big download button. It is for JDK 17 instead of the JDK 11 that we need.
-3. Scroll down a bit and find the version for Windows, and click download. 
-4. Your computer is most likely to be 64-bit. Use the msi installer
-5. Click on the downloaded file to install
-6. Remember to check all the checkbocks
+1. Visit the [download page of Azul JDK](https://www.azul.com/downloads/?package=jdk#zulu)
+2. JDK versions 11, **17** and 20 are all compatible. Download the `.msi` installer for the platform you need
+3. Your computer is most likely to be 64-bit.
+4. Remember to check all the checkboxes, especially the JAVA_HOME one.
 
 !!!
 Remember to check the box for for adding JDK to PATH, set JAVA_HOME variable and register JavaSoft!
@@ -19,7 +17,7 @@ Remember to check the box for for adding JDK to PATH, set JAVA_HOME variable and
 ![Check all options](https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/screenshots/502-jdk_install.png)
 ===
 
-7. Wait for it to finish
+5. Wait for it to finish installing
 
 ## 2. Get ReVanced related files
 
