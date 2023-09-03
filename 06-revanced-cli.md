@@ -25,14 +25,10 @@ Remember to check the box for for adding JDK to PATH, set JAVA_HOME variable and
 
 ![Overview](https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/screenshots/501-cli-patch-embed.jpg)
 
-!!!warning
-ReVanced CLI version 3.0.0 has a major bug where you can't select additional patches. Use the linked resources instead of the latest.
-!!!
-
 1. Get the following required files
-    - [ReVanced Patches](https://github.com/ReVanced/revanced-patches/releases/tag/v2.188.0), you need the `.jar` file.
-    - [ReVanced CLI](https://github.com/revanced/revanced-cli/releases/tag/v2.22.0), you need the `.jar` file.
-    - [ReVanced Integrations](https://github.com/revanced/revanced-integrations/releases/tag/v0.116.0), you need the `.apk` file.
+    - [ReVanced Patches](https://github.com/ReVanced/revanced-patches/releases/latest), you need the `.jar` file.
+    - [ReVanced CLI](https://github.com/revanced/revanced-cli/releases/latest), you need the `.jar` file.
+    - [ReVanced Integrations](https://github.com/revanced/revanced-integrations/releases/latest), you need the `.apk` file.
 2. Put all of the files in a folder in `Downloads`. Lets call it `revanced` for now
 
 ## 3. Get the APK you wanted to patch
@@ -49,7 +45,7 @@ Make sure you downloaded the full APK, not .apks/.apkm/split apks
 ## 4. Sanity checks
 
 1. Go to the `revanced` folder you made just now
-2. Right-click the empty space and click "Open Terminal"/"Open Powershell", you may need to shift-right-click
+2. Right-click/Shift-right-click the empty space and click "Open Terminal"/"Open Powershell"
 3. If you can't find the button, click the file button in the ribbon
 4. Type `dir` and hit enter, you should see the 4 files you downloaded just now
 5. Type `java -version` and hit enter, you should see it is at major version 11
@@ -70,7 +66,7 @@ You may need to use single quotes (`'`) around the filenames to avoid issues, li
 !!! 
 
 ```bash
-java -jar cli.jar -a input.apk -b patches.jar -m integration.apk -o out.apk
+java -jar cli.jar patch -b patches.jar -m integrations.apk -o out.apk input.apk
 ```
 
 | placeholder | meaning | example |
@@ -84,7 +80,7 @@ java -jar cli.jar -a input.apk -b patches.jar -m integration.apk -o out.apk
 Example: 
 
 ```bash
-java -jar revanced-cli-2.22.0-all.jar -a youtube.apk -b revanced-patches-2.187.0.jar -m revanced-integrations-0.115.1.apk -o patched.apk
+java -jar revanced-cli-3.1.0-all.jar patch -b revanced-patches-2.190.0.jar -m revanced-integrations-0.117.1.apk -o out.apk youtube.apk
 ```
 
 !!!
@@ -97,7 +93,7 @@ Your anti-virus software might block cli from modifying some files. Allow it to 
 !!!
 The easiest way would be to use a USB **data** cable and copy it over. Make sure to unlock your device and enable MTP mode.
 !!!
-2. Install the APK you just transfered
+2. Install the APK you just transferred
 3. Read the [troubleshooting section](/troubleshoot/00-trouble-shooting.md) if you have further issues
 
 !!!
@@ -116,23 +112,33 @@ You may need to install [Vanced microG]((https://github.com/TeamVanced/VancedMic
 java -jar cli.jar -h
 ```
 
+```bash Read the help page for each sub-commands (example: patch sub-command)
+java -jar cli.jar patch
+```
+
 ```bash Specify keystore file and password
-java -jar cli.jar --keystore='exported.keystore' --password='passwordOfKeystore' -a input.apk ...
+java -jar cli.jar patch --keystore='exported.keystore' --password='passwordOfKeystore' -b patches.jar ...
 ```
 
 
-```bash List patches available
-java -jar cli.jar -b patches.jar -a input.apk -l --with-packages
+```bash List patches available (with descriptions, options, packages and versions compatible)
+java -jar cli.jar list-patches -dopv patches.jar
 ```
 
 
 ```bash Include / Exclude patches
-java -jar cli.jar -e exclude-1 -e exclude-2 -i include-1 -i include-2 ...
+java -jar cli.jar patch -e exclude-1 -e exclude-2 -i include-1 -i include-2 ...
+```
+
+```bash Generate Options file
+# This will overwrite the existing file
+# Use -u instead of -o if you want to update existing file
+java -jar cli.jar options -o patches.jar
 ```
 
 ```bash Use Options file
-# You may need to patch once without option file for it to be generated
-java -jar cli.jar --options=path-to-options-file ...
+# You need to generate options file first
+java -jar cli.jar patch --options=path-to-options-file ...
 ```
 
 ## 9. Options file
@@ -152,20 +158,22 @@ When pasting the path, make sure to use absolute path and escape any `\` to avoi
 | --- | --- | --- | --- | --- |
 | Change package name | packageName | null | pkgName | "app.revanced.android.youtubealt" | 
 | Custom branding | appName | "YouTube ReVanced" | string | "new app name" | 
-| Custom branding | iconPath | null | path | `"C:\\Users\\test\\Desktop\\icon.png"` | 
-| Spoof client | client-id | null | string | "abcdef" [^1] [^2] |
-| Spotify theme | backgroundColor | "@android:color/black" | string | "@android:color/black" [^3] [^4] |
+| Custom branding | iconPath | null | path | `"C:\\Users\\test\\Downloads\\res\\"` [^1] | 
+| Spoof client | client-id | null | string | "abcdef" [^2] [^3] |
+| Spotify theme | backgroundColor | "@android:color/black" | string | "@android:color/black" [^4] [^5] |
 | Spotify theme | accentColor | "#ff1ed760" | AARRGGBB color code | "#ff1ed761" |
 | Spotify theme | accentPressedColor | "#ff169c46" | AARRGGBB color code | "#ff169c47" |
-| Theme | darkThemeBackgroundColor | "@android:color/black" | string | "@android:color/holo_blue_dark" [^3] [^4] | 
-| Theme | lightThemeBackgroundColor | "@android:color/white" | string | "@android:color/holo_purple" [^3] [^4] | 
+| Theme | darkThemeBackgroundColor | "@android:color/black" | string | "@android:color/holo_blue_dark" [^4] [^5] | 
+| Theme | lightThemeBackgroundColor | "@android:color/white" | string | "@android:color/holo_purple" [^4] [^5] | 
 
-[^1]: Don't change this option unless absolutely necessary
+[^1]: Detailed instructions can be found [here](/08-change-icons.md)
 
-[^2]: This option is used when patching many apps, including (but not limited to) reddit, youtube and spotify
+[^2]: Don't change this option unless absolutely necessary
 
-[^3]: Color values can be found [here](https://developer.android.com/reference/android/R.color#constants_1), make sure you have a higher API level than when the color was added
+[^3]: This option is used when patching many apps, including (but not limited to) reddit, youtube and spotify
 
-[^4]: You can also use colors at `revanced-cache/res/values/colors.xml` [^5], reference them by "@color/color_name"
+[^4]: Color values can be found [here](https://developer.android.com/reference/android/R.color#constants_1), make sure you have a higher API level than when the color was added
 
-[^5]: You can also edit that file after revanced deleted the cache to include custom colors
+[^5]: You can also use colors at `revanced-cache/res/values/colors.xml` [^6], reference them by "@color/color_name"
+
+[^6]: You can also edit that file after revanced deleted the cache to include custom colors
