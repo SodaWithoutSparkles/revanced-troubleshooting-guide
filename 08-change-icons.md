@@ -28,8 +28,10 @@ You need to ENABLE file extensions for this to work
 
 1. Go into the `res` folder
 2. In **EACH** of the `mipmap-*` folders that have images in them, do the following
-    - rename `ic_launcher_adaptive_fore.png` to `adaptiveproduct_youtube_foreground_color_108.png`
-    - rename `ic_launcher_adaptive_back.png` to `adaptiveproduct_youtube_background_color_108.png`
+    - rename `ic_launcher_adaptive_fore.png` to 
+      - `adaptiveproduct_youtube_foreground_color_108.png`
+    - rename `ic_launcher_adaptive_back.png` to 
+      - `adaptiveproduct_youtube_background_color_108.png`
     - copy `ic_launcher.png` and rename the copy to `ic_launcher_round.png`
 
 ## Rename the files (Generally)
@@ -49,7 +51,7 @@ You need to ENABLE file extensions for this to work. [Instructions for Windows](
 
 !!! Hint
 Examples can be found [here](/06-revanced-cli.md#9-options-file)
-
+!!!
 
 1. Generate the options file if it doesn't exist
 2. Edit the `iconPath` key to include the path to the res folder
