@@ -6,7 +6,7 @@ This is a list of versions to use with ReVanced patches:
 |---|---|---|
 | YouTube | 18.32.39 | com.google.android.youtube |
 | YouTube Music | ANY | com.google.android.apps.youtube.music |
-| TikTok | ANY | com.ss.android.ugc.trill |
+| TikTok | 30.8.4 [^1] | com.ss.android.ugc.trill |
 | Twitch | 15.4.1 | tv.twitch.android.app |
 | Reddit | ANY | com.reddit.frontpage |
 | Facebook Messenger | ANY | com.facebook.orca |
@@ -54,6 +54,6 @@ This is a list of versions to use with ReVanced patches:
 | Solid Explorer | ANY | pl.solidexplorer2 |
 | Trakt | 1.1.1 | tv.trakt.trakt |
 
-Last Update: 2023-09-03 09:12:24 UTC
+Last Update: 2023-09-04 19:27:32 UTC
 
 [^1]: Version override is used
