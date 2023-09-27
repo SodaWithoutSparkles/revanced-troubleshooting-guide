@@ -54,6 +54,6 @@ This is a list of versions to use with ReVanced patches:
 | Solid Explorer | ANY | pl.solidexplorer2 |
 | Trakt | 1.1.1 | tv.trakt.trakt |
 
-Last Update: 2023-09-04 19:27:32 UTC
+Last Update: 2023-09-27 03:02:18 UTC
 
 [^1]: Version override is used
