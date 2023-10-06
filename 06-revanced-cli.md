@@ -46,7 +46,7 @@ Make sure you downloaded the full APK, not .apks/.apkm/split apks
 2. Right-click/Shift-right-click the empty space and click "Open Terminal"/"Open Powershell"
 3. If you can't find the button, click the file button in the ribbon
 4. Type `dir` and hit enter, you should see the 4 files you downloaded just now
-5. Type `java -version` and hit enter, you should see it is at major version 11
+5. Type `java -version` and hit enter. The version of JDK you installed in Part 1 should appear.
 6. Don't close the terminal window, continue to the next section
 
 ==- Image for reference
