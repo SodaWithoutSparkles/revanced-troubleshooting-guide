@@ -4,7 +4,7 @@ This is a list of versions to use with ReVanced patches:
 
 | Common Name | Version | Package Name |
 |---|---|---|
-| YouTube | 18.32.39 | com.google.android.youtube |
+| YouTube | 18.38.44 | com.google.android.youtube |
 | YouTube Music | ANY | com.google.android.apps.youtube.music |
 | TikTok | 30.8.4 [^1] | com.ss.android.ugc.trill |
 | Twitch | 16.1.0 | tv.twitch.android.app |
