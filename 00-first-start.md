@@ -55,7 +55,7 @@ The latest supported YT version is:
 18.38.44
 ```
 
-[![It is 18.38.44](https://img.shields.io/badge/Latest%20Supported%20Version-18.38.44-ff0000?style=for-the-badge&logo=youtube)](https://www.apkmirror.com/apk/google-inc/youtube/youtube-18-38-44-release/youtube-18-38-44-android-apk-download/)
+[![It is 18.38.44](https://img.shields.io/badge/Latest%20Supported%20Version-18.38.44-ff0000?style=for-the-badge&logo=youtube)](https://www.apkmirror.com/apk/google-inc/youtube/youtube-18-38-44-release/youtube-18-38-44-2-android-apk-download/)
 
 as of 2023-10-08T01:51 UTC. Remember that, as we will use it very soon.
 
@@ -89,7 +89,7 @@ The latest stable version may differ from the one shown below.
 !!!
 ![download microG](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/010-download_microg.jpg?raw=true)
 ===
-3. Visit [APK mirror for YouTube APK](https://www.apkmirror.com/apk/google-inc/youtube/youtube-18-38-44-release/youtube-18-38-44-android-apk-download/)
+3. Visit [APK mirror for YouTube APK](https://www.apkmirror.com/apk/google-inc/youtube/youtube-18-38-44-release/youtube-18-38-44-2-android-apk-download/)
 !!!warning
 **Do NOT install the downloaded YouTube APK.**
 !!!
