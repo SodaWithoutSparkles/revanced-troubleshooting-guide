@@ -57,7 +57,7 @@ The latest supported YT version is:
 
 [![It is 18.38.44](https://img.shields.io/badge/Latest%20Supported%20Version-18.38.44-ff0000?style=for-the-badge&logo=youtube)](https://www.apkmirror.com/apk/google-inc/youtube/youtube-18-38-44-release/youtube-18-38-44-2-android-apk-download/)
 
-as of 2023-10-15T01:51 UTC. Remember that, as we will use it very soon.
+as of 2023-10-22T02:20 UTC. Remember that, as we will use it very soon.
 
 ==- How to check manually
 1. Go to the official [ReVanced patches website](https://revanced.app/patches?pkg=com.google.android.youtube)
