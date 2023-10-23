@@ -1,4 +1,4 @@
-# ReVanced CLI patch guide
+# ReVanced CLI patch guide for linux
 
 In this guide, we are going to use ReVanced CLI on Linux to patch instead of manager. This guide mainly centers around debian-based distros, but you can adapt them to fit arch-based ones. Also, If you are using Linux, we expect you know how to use Google and the command line interface, such as quoting/escaping parameters and using tab to auto-complete.
 
