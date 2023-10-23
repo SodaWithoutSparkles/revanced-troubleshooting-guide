@@ -11,7 +11,7 @@ This is a guide on solving common issues when using ReVanced YT and ReVanced man
 - [`adb` remove guide](03-adb-remove.md)
 - [revanced-cli guide](06-revanced-cli.md)
 
-### Other resources
+## Other resources
 
-- [Guide by my friend Hokora Yinphine MPP#6969 on discord](https://hokorayinphinempp.github.io/obsidian-git-sync/Revanced/1%20Start%20Here%21/Revanced%20Start/)
+<!-- - [Guide by my friend Hokora Yinphine MPP#6969 on discord](https://hokorayinphinempp.github.io/obsidian-git-sync/Revanced/1%20Start%20Here%21/Revanced%20Start/) -->
 - [Dummies guide on reddit](https://www.reddit.com/r/revancedapp/comments/xlcny9/revanced_manager_guide_for_dummies/)
