@@ -44,7 +44,10 @@ Make sure you downloaded the full APK, not .apks/.apkm/split apks
 Run the following commands, replacing the placeholder filenames with the actual filename.
 
 ```bash
-java -jar cli.jar patch -b patches.jar -m integrations.apk -o out.apk input.apk
+java -jar cli.jar \
+  patch -b patches.jar \
+  -m integrations.apk \
+  -o out.apk input.apk
 ```
 
 | placeholder | meaning | example |
@@ -58,7 +61,10 @@ java -jar cli.jar patch -b patches.jar -m integrations.apk -o out.apk input.apk
 Example:
 
 ```bash
-java -jar revanced-cli-3.1.0-all.jar patch -b revanced-patches-2.190.0.jar -m revanced-integrations-0.117.1.apk -o out.apk youtube.apk
+java -jar revanced-cli-3.1.0-all.jar \
+  patch -b revanced-patches-2.190.0.jar \
+  -m revanced-integrations-0.117.1.apk \
+  -o out.apk youtube.apk
 ```
 
 ## 6. Installing Patched apk
