@@ -7,18 +7,18 @@ Troubleshooting regarding YouTube ReVanced issues
 Probably one of the following: 
 
 - split APK is used to patch
-  - Patch again using the full APK
+    - Patch again using the full APK
 - non-recommended patches/version
-  - Patch again with the default/recommended patches/version
-  - [Refer to section 2.11 (What patch should I select?)](/troubleshoot/02-manager/11/)
+    - Patch again with the default/recommended patches/version
+    - [Refer to section 2.11 (What patch should I select?)](/troubleshoot/02-manager/11/)
 - vanced microG not installed
-  - Install it [here](https://github.com/TeamVanced/VancedMicroG/releases/tag/v0.2.24.220220-220220001)
+    - Install it [here](https://github.com/TeamVanced/VancedMicroG/releases/tag/v0.2.24.220220-220220001)
 - You exited ReVanced manager when patching
-  - Don't do that. Repatch again.
+    - Don't do that. Repatch again.
 - There were errors during patching
-  - Look at the patching log for `failed`
-  - It should be at the first word of the line
-  - if so, look at the [patch not applied guide](/troubleshoot/02-manager/16/)
+    - Look at the patching log for `failed`
+    - It should be at the first word of the line
+    - if so, look at the [patch not applied guide](/troubleshoot/02-manager/16/)
 
 ## 3.2. Video playback issues / buffers / buggy / content not available
 
@@ -31,10 +31,8 @@ The process is the same as updating ReVanced, which you can find a guide [here](
 If you cannot find them, you probably patched an unsupported YT version or used non-default patch sources
 
 keyword: 
-
 - video stops at spectific time
 - video stops at 1 minute
-
 ## 3.3. App not installed / Installation is blocked / `install_failed_verification_failure`
 
 Probably one of the following reason
@@ -61,10 +59,10 @@ Probably one of the following reason
   - If so, delete the install there and try again
 - Some unknown reasons
   - We need more information to know what went wrong
-  - Install SAI ([Play store](https://play.google.com/store/apps/details?id=com.aefyr.sai), [apkmirror](https://www.apkmirror.com/apk/polychromaticfox/split-apks-installer-sai/)) on your phone
+  - Install [SAI](https://play.google.com/store/apps/details?id=com.aefyr.sai) on your phone
   - After patching again, click the three-dots menu and export the APK
   - Go into SAI and select the APK you just exported
-  - Look at the install failure message and search it on Google
+    - Look at the install failure message and search it on Google
 - Artifacts left from previous install / the uninstall was not done cleanly
   - This could only happen if you have installed and uninstalled ReVanced previously
   - You will need to use ADB to fully remove the old install.
@@ -134,7 +132,7 @@ Disable: ReVanced YT settings > ReVanced > Layout > Hide action buttons > Hide a
 2. Restart Youtube ReVanced
 3. Play any video, in the video player, turn off autoplay
 4. Enable: ReVanced YT settings > ReVanced > Layout > Hide autoplay button
-5. Restart Youtube ReVanced
+5.  Restart Youtube ReVanced
 
 ## 3.16. \<insert name here\> is missing
 
@@ -253,3 +251,4 @@ If you want the new logo, manually add the patch. Exclude it otherwise.
 Enable it at: revanced settings > layout > player flyout menu items > audio track
 
 Credit: leadedmegabyte on discord
+
