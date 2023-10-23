@@ -54,7 +54,7 @@ You need to ENABLE file extensions for this to work. [Instructions for Windows](
 ## Modify the Options file
 
 !!! Hint
-Examples can be found [here](/06-revanced-cli.md#9-options-file)
+Examples can be found [here](/06-revanced-cli.md#6-options-file)
 !!!
 
 1. Generate the options file if it doesn't exist

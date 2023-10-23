@@ -174,9 +174,7 @@ Probably one of the following:
 
 ### 3.2. Video playback issues / buffers / buggy / content not available
 
-Include `client spoof` patch. (_`spoof signature verification` was merged into `client spoof`_)
-
-You can get a guide on that [here](/02-add-patch.md)
+Include `client spoof` patch and patch again. (_`spoof signature verification` was merged into `client spoof`_)
 
 If you cannot find them, you probably patched an unsupported YT version.
 

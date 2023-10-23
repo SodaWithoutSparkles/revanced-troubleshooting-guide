@@ -2,8 +2,9 @@
 
 ## 1. Initialize/update environment
 
-For Windows users, visit [ReVanced CLI Initialize Guide (Windows)](/10-cli-init-windows.md).
-For Linux users, visit [ReVanced CLI Initialize Guide (Linux)](/09-cli-init-linux.md).
+For Windows users, visit [ReVanced CLI Initialize Guide (Windows)](/cli%20init/01-cli-init-windows.md).
+
+For Linux users, visit [ReVanced CLI Initialize Guide (Linux)](/cli%20init/02-cli-init-linux.md).
 
 ## 2. Start patching
 

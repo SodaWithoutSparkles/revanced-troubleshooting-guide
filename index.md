@@ -6,7 +6,7 @@ This is a guide on solving common issues when using ReVanced YT and ReVanced man
 - [Step-by-step first start guide (recommended)](step-by-step/00-preface.md)
 - [Single-page first start guide](00-first-start.md)
 - [Trouble​shooting guide](/troubleshoot/00-trouble-shooting.md)
-- [Add patch guide](02-add-patch.md)
+<!-- - [Add patch guide](02-add-patch.md) -->
 - [`adb` install guide](04-adb-install.md)
 - [`adb` remove guide](03-adb-remove.md)
 - [revanced-cli guide](06-revanced-cli.md)
