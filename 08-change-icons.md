@@ -1,4 +1,4 @@
-# ReVanced CLI Custom Icon Guide 
+# ReVanced CLI Custom Icon Guide
 
 ## Prepare the icon
 
@@ -14,11 +14,15 @@ If any of the above requirements are not met, use tools like [Photopea](https://
 ## Generate the file structure
 
 1. Go to [this site](https://icon.kitchen/)
-2. Select your Image under Foreground (or use the generic Clipart if you wish)
+2. Select your Image tab under Icon (or use the generic Clipart)
 3. Set the background color to whatever color you like (Example: white)
 4. Set the shape and effects
 5. Hit the download button on the right top corner. It will download `ic_launcher.zip`.
 6. Extract just the res folder from `ic_launcher.zip`
+
+==- Image for reference
+![Icon kitchen](https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/screenshots/601-icon-kitchen.png)
+===
 
 ## Rename the files (For YouTube Only)
 
@@ -59,7 +63,6 @@ Examples can be found [here](/06-revanced-cli.md#9-options-file)
 ## Patch
 
 Follow the standard procedure to patch with the options file
-
 
 ## Credits
 
