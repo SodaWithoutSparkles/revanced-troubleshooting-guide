@@ -8,7 +8,7 @@
 !!!
 Install it in the patching complete screen. You don't need to install the exported one.
 !!!
-3. If that does not work, install [SAI](https://play.google.com/store/apps/details?id=com.aefyr.sai) and use that to install instead
+3. If that does not work, install SAI ([Play store](https://play.google.com/store/apps/details?id=com.aefyr.sai), [apkmirror](https://www.apkmirror.com/apk/polychromaticfox/split-apks-installer-sai/)) and use that to install instead
 4. Keep calm, you don't need to patch again. Just use the exported one in Step 1
 
 
