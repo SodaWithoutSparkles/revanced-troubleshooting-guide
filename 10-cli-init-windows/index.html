@@ -10,32 +10,34 @@
     <meta name="generator" content="Retype 3.5.0">
 
     <!-- Primary Meta Tags -->
-    <title>1. Requirements</title>
-    <meta name="title" content="1. Requirements">
-    <meta name="description" content="You need to have the following to follow this guide:">
+    <title>ReVanced CLI Initialize Guide (Windows)</title>
+    <meta name="title" content="ReVanced CLI Initialize Guide (Windows)">
+    <meta name="description" content="In this guide, we are going to use ReVanced CLI on Windows to patch instead of manager.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/step-by-step-general/01-requirements/">
+    <link rel="canonical" href="https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/10-cli-init-windows/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/step-by-step-general/01-requirements/">
-    <meta property="og:title" content="1. Requirements">
-    <meta property="og:description" content="You need to have the following to follow this guide:">
+    <meta property="og:url" content="https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/10-cli-init-windows/">
+    <meta property="og:title" content="ReVanced CLI Initialize Guide (Windows)">
+    <meta property="og:description" content="In this guide, we are going to use ReVanced CLI on Windows to patch instead of manager.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/screenshots/502-jdk_install.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/step-by-step-general/01-requirements/">
-    <meta property="twitter:title" content="1. Requirements">
-    <meta property="twitter:description" content="You need to have the following to follow this guide:">
+    <meta property="twitter:url" content="https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/10-cli-init-windows/">
+    <meta property="twitter:title" content="ReVanced CLI Initialize Guide (Windows)">
+    <meta property="twitter:description" content="In this guide, we are going to use ReVanced CLI on Windows to patch instead of manager.">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/screenshots/502-jdk_install.png">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.5.0.751364957095" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.5.0.751364957095" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.751364957095" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.751364957095" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.751364957095" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.751364957095" data-turbo-eval="false" defer></script>
 
     <style>
         a.border-gray-300 {
@@ -69,7 +71,7 @@
                 <!-- Logo -->
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
-                        <a id="docs-site-logo" href="../../" class="flex items-center leading-snug text-xl">
+                        <a id="docs-site-logo" href="../" class="flex items-center leading-snug text-xl">
                             <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">ReVanced troubleshooting</span>
                         </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Guide</span>
                     </div>
@@ -183,31 +185,131 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="1-requirements" class="break-words">
+<doc-anchor-target id="revanced-cli-initialize-guide-windows" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#1-requirements">#</doc-anchor-trigger>
-        <span>1. Requirements</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#revanced-cli-initialize-guide-windows">#</doc-anchor-trigger>
+        <span>ReVanced CLI Initialize Guide (Windows)</span>
     </h1>
 </doc-anchor-target>
-<p>You need to have the following to follow this guide:</p>
+<p>In this guide, we are going to use ReVanced CLI on Windows to patch instead of manager.</p>
+<doc-anchor-target id="1-install-java-development-kit-jdk">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-install-java-development-kit-jdk">#</doc-anchor-trigger>
+        <span>1. Install Java Development Kit (JDK)</span>
+    </h2>
+</doc-anchor-target>
+<ol>
+<li>Visit the <a href="https://www.azul.com/downloads/?package=jdk#zulu">download page of Azul JDK</a></li>
+<li>JDK versions 11, <strong>17</strong> and 20 are all compatible. Download the <code v-pre>.msi</code> installer for the platform you need</li>
+<li>Your computer is most likely to be 64-bit.</li>
+<li>Remember to check all the checkboxes, especially the JAVA_HOME one.</li>
+</ol>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>Remember to check the box for for adding JDK to PATH, set JAVA_HOME variable and register JavaSoft!</p>
+        </div>
+    </div>
+</div>
+<doc-panel id="image-for-reference" collapsed>
+    <template #title>Image for reference</template>
+<p><figure class="content-center">
+    <img src="https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/screenshots/502-jdk_install.png" alt="Check all options">
+    <figcaption class="caption">Check all options</figcaption>
+</figure>
+</p>
+</doc-panel>
+<ol start="5">
+<li>Wait for it to finish installing</li>
+</ol>
+<doc-anchor-target id="2-get-revanced-related-files">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-get-revanced-related-files">#</doc-anchor-trigger>
+        <span>2. Get ReVanced related files</span>
+    </h2>
+</doc-anchor-target>
+<p><figure class="content-center">
+    <img src="https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/screenshots/501-cli-patch-embed.jpg" alt="Overview">
+    <figcaption class="caption">Overview</figcaption>
+</figure>
+</p>
+<ol>
+<li>Get the following required files
 <ul>
-<li><p>An Android smartphone with</p>
-<ul>
-<li>ARMv8 or x86 architecture *</li>
-<li>Android 8 or later *</li>
-<li>≥1GB storage space</li>
+<li><a href="https://github.com/ReVanced/revanced-patches/releases/latest">ReVanced Patches</a>, you need the <code v-pre>.jar</code> file.</li>
+<li><a href="https://github.com/revanced/revanced-cli/releases/latest">ReVanced CLI</a>, you need the <code v-pre>.jar</code> file.</li>
+<li><a href="https://github.com/revanced/revanced-integrations/releases/latest">ReVanced Integrations</a>, you need the <code v-pre>.apk</code> file.</li>
 </ul>
 </li>
-<li><p>About 15 minutes of time (depends on your device)</p>
-<ul>
-<li>speedrun current record: 4:15</li>
-<li>flagship: estimated 5 ~ 10 min</li>
-<li>mid-tier: estimated 10 ~ 15 min</li>
-<li>low-tier: estimated 15 ~ 35 min</li>
-</ul>
-</li>
-</ul>
-<p>Don&#x27;t know what these are? Don&#x27;t worry, we will check for the ones marked with (*) later in this guide.</p>
+<li>Put all of the files in a folder in <code v-pre>Downloads</code>. Lets call it <code v-pre>revanced</code> for now</li>
+</ol>
+<doc-anchor-target id="3-get-the-apk-you-wanted-to-patch">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-get-the-apk-you-wanted-to-patch">#</doc-anchor-trigger>
+        <span>3. Get the APK you wanted to patch</span>
+    </h2>
+</doc-anchor-target>
+<ol>
+<li>If you want YouTube APK, get the YouTube apk link at <a href="https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/step-by-step/03-get-files/">step by step guide</a></li>
+<li>If you want other APKs, find the supported version at <a href="https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/05-versions/">versions.md</a></li>
+<li>Put the APK you downloaded in the same folder with the 3 files you downloaded just now.</li>
+<li>Rename the APK to a shorter name, preferably without spaces and special symbols (dots are fine)</li>
+</ol>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
+                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>Make sure you downloaded the full APK, not .apks/.apkm/split apks</p>
+        </div>
+    </div>
+</div>
+<doc-anchor-target id="4-sanity-checks">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4-sanity-checks">#</doc-anchor-trigger>
+        <span>4. Sanity checks</span>
+    </h2>
+</doc-anchor-target>
+<ol>
+<li>Go to the <code v-pre>revanced</code> folder you made just now</li>
+<li>Right-click/Shift-right-click the empty space and click &quot;Open Terminal&quot;/&quot;Open Powershell&quot;</li>
+<li>If you can&#x27;t find the button, click the file button in the ribbon</li>
+<li>Type <code v-pre>dir</code> and hit enter, you should see the 4 files you downloaded just now</li>
+<li>Type <code v-pre>java -version</code> and hit enter. The version of JDK you installed in Part 1 should appear.</li>
+<li>Don&#x27;t close the terminal window, continue to the next section</li>
+</ol>
+<doc-panel id="image-for-reference" collapsed>
+    <template #title>Image for reference</template>
+<p><figure class="content-center">
+    <img src="https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/screenshots/500-open_pwsh.gif" alt="Open powershell button in ribbon">
+    <figcaption class="caption">Open powershell button in ribbon</figcaption>
+</figure>
+</p>
+</doc-panel>
+<doc-anchor-target id="5-continue">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#5-continue">#</doc-anchor-trigger>
+        <span>5. Continue</span>
+    </h2>
+</doc-anchor-target>
+<p>This section has been completed. Go back to the <a href="../06-revanced-cli/">main cli guide</a>.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -217,20 +319,20 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../step-by-step-general/00-preface/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../09-cli-init-linux/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Re​Vanced Setup Guide</span>
+                                                <span class="block mt-1">Re​Vanced CLI Initialize Guide (Linux)</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../step-by-step-general/02-check-ver/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../06-revanced-cli/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">2. Checking versions</span>
+                                                <span class="block mt-1">Re​Vanced CLI patch guide</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -274,6 +376,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "1. Requirements", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "ReVanced CLI Initialize Guide (Windows)", level: 1, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
