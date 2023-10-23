@@ -4,41 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/revanced-troubleshooting-guide">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.751364957095">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.751365879968">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
 
     <!-- Primary Meta Tags -->
-    <title>ReVanced CLI Initialize Guide (Linux)</title>
-    <meta name="title" content="ReVanced CLI Initialize Guide (Linux)">
-    <meta name="description" content="In this guide, we are going to use ReVanced CLI on Linux to patch instead of manager.">
+    <title>ReVanced CLI Initialize Guide (Windows)</title>
+    <meta name="title" content="ReVanced CLI Initialize Guide (Windows)">
+    <meta name="description" content="In this guide, we are going to use ReVanced CLI on Windows to patch instead of manager.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/09-cli-init-linux/">
+    <link rel="canonical" href="https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/cli-init/01-cli-init-windows/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/09-cli-init-linux/">
-    <meta property="og:title" content="ReVanced CLI Initialize Guide (Linux)">
-    <meta property="og:description" content="In this guide, we are going to use ReVanced CLI on Linux to patch instead of manager.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/screenshots/501-cli-patch-embed.jpg">
+    <meta property="og:url" content="https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/cli-init/01-cli-init-windows/">
+    <meta property="og:title" content="ReVanced CLI Initialize Guide (Windows)">
+    <meta property="og:description" content="In this guide, we are going to use ReVanced CLI on Windows to patch instead of manager.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/screenshots/502-jdk_install.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/09-cli-init-linux/">
-    <meta property="twitter:title" content="ReVanced CLI Initialize Guide (Linux)">
-    <meta property="twitter:description" content="In this guide, we are going to use ReVanced CLI on Linux to patch instead of manager.">
-    <meta property="twitter:image" content="https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/screenshots/501-cli-patch-embed.jpg">
+    <meta property="twitter:url" content="https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/cli-init/01-cli-init-windows/">
+    <meta property="twitter:title" content="ReVanced CLI Initialize Guide (Windows)">
+    <meta property="twitter:description" content="In this guide, we are going to use ReVanced CLI on Windows to patch instead of manager.">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/screenshots/502-jdk_install.png">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.5.0.751364957095" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.751365879968" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.751364957095" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.751364957095" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.5.0.751364957095" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.751365879968" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.751365879968" data-turbo-eval="false" defer></script>
 
     <style>
         a.border-gray-300 {
@@ -72,7 +71,7 @@
                 <!-- Logo -->
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
-                        <a id="docs-site-logo" href="../" class="flex items-center leading-snug text-xl">
+                        <a id="docs-site-logo" href="../../" class="flex items-center leading-snug text-xl">
                             <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">ReVanced troubleshooting</span>
                         </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Guide</span>
                     </div>
@@ -186,24 +185,53 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="revanced-cli-initialize-guide-linux" class="break-words">
+<doc-anchor-target id="revanced-cli-initialize-guide-windows" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#revanced-cli-initialize-guide-linux">#</doc-anchor-trigger>
-        <span>ReVanced CLI Initialize Guide (Linux)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#revanced-cli-initialize-guide-windows">#</doc-anchor-trigger>
+        <span>ReVanced CLI Initialize Guide (Windows)</span>
     </h1>
 </doc-anchor-target>
-<p>In this guide, we are going to use ReVanced CLI on Linux to patch instead of manager. This guide mainly centers around debian-based distros, but you can adapt them to fit arch-based ones. Also, If you are using Linux, we expect you know how to use Google and the command line interface, such as quoting/escaping parameters and using tab to auto-complete.</p>
+<p>In this guide, we are going to use ReVanced CLI on Windows to patch instead of manager.</p>
 <doc-anchor-target id="1-install-java-development-kit-jdk">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#1-install-java-development-kit-jdk">#</doc-anchor-trigger>
         <span>1. Install Java Development Kit (JDK)</span>
     </h2>
 </doc-anchor-target>
-<p>We can use JDK version 11, <strong>17</strong> or 20. Change the number to install different versions.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<div class="codeblock-title">Install openjdk 17</div>
-<pre class="language-bash"><code v-pre class="language-bash">sudo apt install openjdk-17-jdk</code></pre>
-</doc-codeblock></div>
+<ol>
+<li>Visit the <a href="https://www.azul.com/downloads/?package=jdk#zulu">download page of Azul JDK</a></li>
+<li>JDK versions 11, <strong>17</strong> and 20 are all compatible. Download the <code v-pre>.msi</code> installer for the platform you need</li>
+<li>Your computer is most likely to be 64-bit.</li>
+<li>Remember to check all the checkboxes, especially the JAVA_HOME one.</li>
+</ol>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>Remember to check the box for for adding JDK to PATH, set JAVA_HOME variable and register JavaSoft!</p>
+        </div>
+    </div>
+</div>
+<doc-panel id="image-for-reference" collapsed>
+    <template #title>Image for reference</template>
+<p><figure class="content-center">
+    <img src="https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/screenshots/502-jdk_install.png" alt="Check all options">
+    <figcaption class="caption">Check all options</figcaption>
+</figure>
+</p>
+</doc-panel>
+<ol start="5">
+<li>Wait for it to finish installing</li>
+</ol>
 <doc-anchor-target id="2-get-revanced-related-files">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#2-get-revanced-related-files">#</doc-anchor-trigger>
@@ -223,7 +251,7 @@
 <li><a href="https://github.com/revanced/revanced-integrations/releases/latest">ReVanced Integrations</a>, you need the <code v-pre>.apk</code> file.</li>
 </ul>
 </li>
-<li>Put all of the files in a directory. Lets call it <code v-pre>revanced</code> for now.</li>
+<li>Put all of the files in a folder in <code v-pre>Downloads</code>. Lets call it <code v-pre>revanced</code> for now</li>
 </ol>
 <doc-anchor-target id="3-get-the-apk-you-wanted-to-patch">
     <h2>
@@ -234,8 +262,8 @@
 <ol>
 <li>If you want YouTube APK, get the YouTube apk link at <a href="https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/step-by-step/03-get-files/">step by step guide</a></li>
 <li>If you want other APKs, find the supported version at <a href="https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/05-versions/">versions.md</a></li>
-<li>Put the APK you downloaded in the same directory with the 3 files you downloaded just now.</li>
-<li>Rename the APK to a shorter name, preferably without spaces and special symbols</li>
+<li>Put the APK you downloaded in the same folder with the 3 files you downloaded just now.</li>
+<li>Rename the APK to a shorter name, preferably without spaces and special symbols (dots are fine)</li>
 </ol>
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
@@ -260,19 +288,28 @@
     </h2>
 </doc-anchor-target>
 <ol>
-<li>Go to the <code v-pre>revanced</code> directory you made just now</li>
-<li>Open a terminal if you haven&#x27;t already</li>
-<li>Run <code v-pre>ls</code>, you should see the 4 files you downloaded just now</li>
-<li>Run <code v-pre>java -version</code>. The version of JDK you installed in Part 1 should appear</li>
-<li>Don&#x27;t close the terminal, continue to the next section</li>
+<li>Go to the <code v-pre>revanced</code> folder you made just now</li>
+<li>Right-click/Shift-right-click the empty space and click &quot;Open Terminal&quot;/&quot;Open Powershell&quot;</li>
+<li>If you can&#x27;t find the button, click the file button in the ribbon</li>
+<li>Type <code v-pre>dir</code> and hit enter, you should see the 4 files you downloaded just now</li>
+<li>Type <code v-pre>java -version</code> and hit enter. The version of JDK you installed in Part 1 should appear.</li>
+<li>Don&#x27;t close the terminal window, continue to the next section</li>
 </ol>
+<doc-panel id="image-for-reference" collapsed>
+    <template #title>Image for reference</template>
+<p><figure class="content-center">
+    <img src="https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/screenshots/500-open_pwsh.gif" alt="Open powershell button in ribbon">
+    <figcaption class="caption">Open powershell button in ribbon</figcaption>
+</figure>
+</p>
+</doc-panel>
 <doc-anchor-target id="5-continue">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#5-continue">#</doc-anchor-trigger>
         <span>5. Continue</span>
     </h2>
 </doc-anchor-target>
-<p>This section has been completed. Go back to the <a href="../06-revanced-cli/">main cli guide</a>.</p>
+<p>This section has been completed. Go back to the <a href="../../06-revanced-cli/">main cli guide</a>.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -282,20 +319,20 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../08-change-icons/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../cli-init/02-cli-init-linux/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Re​Vanced CLI Custom Icon Guide</span>
+                                                <span class="block mt-1">Re​Vanced CLI Initialize Guide (Linux)</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../10-cli-init-windows/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../08-change-icons/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Re​Vanced CLI Initialize Guide (Windows)</span>
+                                                <span class="block mt-1">Re​Vanced CLI Custom Icon Guide</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -339,6 +376,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "ReVanced CLI Initialize Guide (Linux)", level: 1, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "ReVanced CLI Initialize Guide (Windows)", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
