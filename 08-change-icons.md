@@ -13,7 +13,7 @@ If any of the above requirements are not met, use tools like [Photopea](https://
 
 ## Generate the file structure
 
-1. Go to [this site](https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html)
+1. Go to [this site](https://icon.kitchen/)
 2. Select your Image under Foreground (or use the generic Clipart if you wish)
 3. Set the background color to whatever color you like (Example: white)
 4. Set the shape and effects
