@@ -10,6 +10,10 @@ We can use JDK version 11, **17** or 20. Change the number to install different 
 sudo apt install openjdk-17-jdk
 ```
 
+!!!
+Don't use `sudo` if you are doing this with termux.
+!!!
+
 ## 2. Get ReVanced related files
 
 ![Overview](https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/screenshots/501-cli-patch-embed.jpg)
