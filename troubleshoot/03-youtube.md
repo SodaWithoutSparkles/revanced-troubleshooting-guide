@@ -59,7 +59,7 @@ Probably one of the following reason
   - If so, delete the install there and try again
 - Some unknown reasons
   - We need more information to know what went wrong
-  - Install [SAI](https://play.google.com/store/apps/details?id=com.aefyr.sai) on your phone
+  - Install SAI ([Play store](https://play.google.com/store/apps/details?id=com.aefyr.sai), [apkmirror](https://www.apkmirror.com/apk/polychromaticfox/split-apks-installer-sai/)) on your phone
   - After patching again, click the three-dots menu and export the APK
   - Go into SAI and select the APK you just exported
     - Look at the install failure message and search it on Google
