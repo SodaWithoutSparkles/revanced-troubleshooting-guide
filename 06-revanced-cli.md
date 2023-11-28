@@ -41,7 +41,7 @@ java -jar revanced-cli-3.1.0-all.jar \
 3. Read the [troubleshooting section](/troubleshoot/00-trouble-shooting.md) if you have further issues
 
 !!!
-You may need to install [Vanced microG]((https://github.com/TeamVanced/VancedMicroG/releases/tag/v0.2.24.220220-220220001)) if you used the microG support patch, which is the default when patching YouTube related apps.
+You may need to install [Vanced microG](https://github.com/TeamVanced/VancedMicroG/releases/tag/v0.2.24.220220-220220001) if you used the microG support patch, which is the default when patching YouTube related apps.
 !!!
 
 ## 4. Update ReVanced
@@ -61,16 +61,17 @@ java -jar cli.jar patch
 
 ```bash Specify keystore file and password
 java -jar cli.jar patch \
-  --keystore='exported.keystore' --password='passwordOfKeystore' \
+  --keystore='exported.keystore' --keystore-password='passwordOfKeystore' \
+  --alias='alias' --keystore-entry-password='passwordOfKeystoreEntry' \
   -b patches.jar ...
 ```
 
-```bash List patches available (with [d]escriptions, [o]ptions, [p]ackages and [v]ersions compatible)
-java -jar cli.jar list-patches -dopv patches.jar
+```bash List patches available (with [o]ptions, [p]ackages and [v]ersions compatible)
+java -jar cli.jar list-patches -opv patches.jar
 ```
 
 ```bash Include / Exclude patches
-java -jar cli.jar patch -e exclude-1 -e exclude-2 -i include-1 -i include-2 ...
+java -jar cli.jar patch -e 'Exclude patch 1' -e 'Exclude patch 2' -i 'Include patch 1' -i 'Include patch 2' ...
 ```
 
 ```bash Generate Options file
