@@ -6,7 +6,7 @@ This is a list of versions to use with ReVanced patches:
 |---|---|---|
 | YouTube | 18.45.43 | com.google.android.youtube |
 | YouTube Music | ANY | com.google.android.apps.youtube.music |
-| TikTok | 30.8.4 [^1] | com.ss.android.ugc.trill |
+| TikTok | 32.5.3 | com.ss.android.ugc.trill |
 | Twitch | 16.9.1 | tv.twitch.android.app |
 | _unknown_ | 16.9.1 | com.tumblr |
 | Reddit | ANY | com.reddit.frontpage |
@@ -59,4 +59,3 @@ This is a list of versions to use with ReVanced patches:
 
 Last Update: 2023-12-21 18:09:56 UTC
 
-[^1]: Version override is used
