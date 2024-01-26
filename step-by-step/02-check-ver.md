@@ -12,6 +12,9 @@ The latest supported YT version is:
 
 as of 2024-01-20T16:12 UTC. Remember that, as we will use it very soon.
 
+==- You can also see the version in ReVanced Manager
+![Check version with manager](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/101-check_ver_manager.jpg?raw=true)
+===
 ==- How to check manually
 1. Go to the official [ReVanced patches website](https://revanced.app/patches?pkg=com.google.android.youtube)
 2. Select `com.google.android.youtube` if not already selected
