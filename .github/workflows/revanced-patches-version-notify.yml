@@ -39,6 +39,7 @@ jobs:
         if: steps.patches.outputs.release != env.CURR_PATCHES_VER
         run: |
           curl -L   \
+          -X PATCH \
           -H "Accept: application/vnd.github+json"  \
           -H "Authorization: Bearer ${{ secrets.ENV_VAR_UPDATE_TOKEN }}" \
           -H "X-GitHub-Api-Version: 2022-11-28"   \
