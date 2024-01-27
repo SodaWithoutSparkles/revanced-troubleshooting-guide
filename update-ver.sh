@@ -38,6 +38,8 @@ if [[ "$oldVer" != "$currVer" ]]; then
 
     echo "Update last update timestamp from $lastUpdate to $now"
     find ./ -type f -name "*.md" -exec sed -i "s/$lastUpdate/$now/g" "{}" \;
+    # modify unix timestamp
+    find ./ -type f -name "*.md" -exec sed -i "s/$lastUnix/$nowUnix/g" "{}" \;
 
     # set local copy
     echo "$currVer"'@'"$now"'/'"$nowUnix" >.conf/version
