@@ -55,11 +55,11 @@ jobs:
 
   notify:
     uses: ./.github/workflows/discord.yml
-    needs: updateCurrVar
-    if: needs.updateCurrVar.outputs.needs_notify == 'TURE'
+    needs: updateCurrVer
+    if: needs.updateCurrVer.outputs.needs_notify == 'TURE'
     with:
       title: "ReVanced Patches updated!"
-      content: "Current version is: ${{ needs.updateCurrVar.outputs.version }}"
+      content: "Current version is: ${{ needs.updateCurrVer.outputs.version }}"
       url: "https://github.com/ReVanced/revanced-patches/releases/latest"
-      message: "Current version is: ${{ needs.updateCurrVar.outputs.version }}, Update now!"
+      message: "Current version is: ${{ needs.updateCurrVer.outputs.version }}, Update now!"
     secrets: inherit
