@@ -4,6 +4,10 @@ Troubleshooting guide for Revanced
 
 This is a guide on solving common issues when using ReVanced YT and ReVanced manager. If you find something missing, [open a new issue](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/issues/new) and I would add it.
 
+## (Experimental) Discord server for update notifications
+
+[Join here](https://discord.com/invite/V99zH9KURc)
+
 ## Links
 
 The guide is available at:
