@@ -15,8 +15,8 @@ If you did not select from storage, patching would fail.
 ==- Image for reference
 ![storage view](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/090-select_YT_apk.jpg?raw=true)
 ===
-4. The green part should contain the date. I redacted it for privacy.
-5. Check that you have the suggested/recommended version of YT
+4. The green part should contain the date.
+5. Check that you have the suggested version of YT
 ==- Image for reference
 ![check ver](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/100-check_version.jpg?raw=true)
 ===
