@@ -5,12 +5,12 @@ We are going to start patching now, but first we need to check supported version
 The latest supported YT version is:
 
 ```
-18.45.43
+19.03.35
 ```
 
-[![It is 18.45.43](https://img.shields.io/badge/Latest%20Supported%20Version-18.45.43-ff0000?style=for-the-badge&logo=youtube)](https://www.apkmirror.com/apk/google-inc/youtube/youtube-18-45-43-release/youtube-18-45-43-android-apk-download/)
+[![It is 19.03.35](https://img.shields.io/badge/Latest%20Supported%20Version-19.03.35-ff0000?style=for-the-badge&logo=youtube)](https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-03-35-release/youtube-19-03-35-android-apk-download/)
 
-as of 2024-01-27T03:10 UTC. Remember that, as we will use it very soon.
+as of 2024-01-27T03:33 UTC. Remember that, as we will use it very soon.
 
 === You can also see the version in ReVanced Manager
 ![Check version with manager](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/101-check_ver_manager.jpg?raw=true)
