@@ -62,3 +62,17 @@ jobs:
         username: "Github Actions"
         avatar-url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
         content: "<@${{ secrets.DISCORD_ID  }}>, ${{ inputs.message }}"
+  announcement:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Discord Webhook Action
+      uses: tsickert/discord-webhook@v5.3.0
+      with:
+        webhook-url: "${{ secrets.DISCORD_REVANCED_UPDATE_WEBHOOK_URL }}"
+        embed-title: "${{ inputs.title }}"
+        embed-url: "${{ inputs.url }}"
+        embed-description: "${{ inputs.content }}"
+        embed-color: 3447003
+        username: "Github Actions"
+        avatar-url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+        content: "${{ inputs.message }}"
