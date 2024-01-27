@@ -63,10 +63,10 @@ jobs:
     needs: bumpVer
     if: needs.bumpVer.outputs.bumpDateOnly == 'false' && needs.bumpVer.outputs.needsRebuild == 'true'
     with:
-      title: "Revanced supported version updated!"
-      content: "Latest supported version is: ${{ needs.bumpVer.outputs.currVer }}"
+      title: "ReVanced supported version updated!"
+      content: "Latest supported YouTube version is: ${{ needs.bumpVer.outputs.currVer }}"
       url: "https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/step-by-step/02-check-ver/"
-      message: "Latest supported version is: ${{ needs.bumpVer.outputs.currVer }}. Update now!"
+      message: "You can now patch with v${{ needs.bumpVer.outputs.currVer }} YouTube."
     secrets: inherit
 
   sleep:
