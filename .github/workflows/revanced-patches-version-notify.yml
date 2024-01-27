@@ -57,7 +57,7 @@ jobs:
   notify:
     uses: ./.github/workflows/discord.yml
     needs: updateCurrVer
-    if: needs.updateCurrVer.outputs.needs_notify == 'TURE'
+    if: needs.updateCurrVer.outputs.needs_notify == 'TRUE'
     with:
       title: "ReVanced Patches updated!"
       content: "Current version is: ${{ needs.updateCurrVer.outputs.version }}"
