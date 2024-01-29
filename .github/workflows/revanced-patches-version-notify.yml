@@ -61,6 +61,6 @@ jobs:
     with:
       title: "ReVanced Patches updated!"
       content: "Current version is: ${{ needs.updateCurrVer.outputs.version }}"
-      url: "https://github.com/ReVanced/revanced-patches/releases/latest"
-      message: "Current ReVanced Patches version is: ${{ needs.updateCurrVer.outputs.version }}."
+      url: "https://github.com/ReVanced/revanced-patches/releases/tag/${{ needs.updateCurrVer.outputs.version }}"
+      message: "💉 The latest ReVanced Patches version is ${{ needs.updateCurrVer.outputs.version }} now."
     secrets: inherit
