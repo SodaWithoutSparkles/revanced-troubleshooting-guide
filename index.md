@@ -14,5 +14,6 @@ This is a guide on solving common issues when using ReVanced YT and ReVanced man
 
 ## Other resources
 
+- [Get notified for ReVanced Updates](https://discord.com/invite/cHHX7PSPux)
 <!-- - [Guide by my friend Hokora Yinphine MPP#6969 on discord](https://hokorayinphinempp.github.io/obsidian-git-sync/Revanced/1%20Start%20Here%21/Revanced%20Start/) -->
 - [Dummies guide on reddit](https://www.reddit.com/r/revancedapp/comments/xlcny9/revanced_manager_guide_for_dummies/)
