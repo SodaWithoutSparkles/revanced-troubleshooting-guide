@@ -38,6 +38,7 @@ jobs:
       - name: Update variable
         if: steps.patches.outputs.release != env.CURR_PATCHES_VER
         run: |
+          echo "old ${{ env.CURR_PATCHES_VER }} not equal new ${{ steps.patches.outputs.release }}"
           curl -L   \
           -X PATCH \
           -H "Accept: application/vnd.github+json"  \
