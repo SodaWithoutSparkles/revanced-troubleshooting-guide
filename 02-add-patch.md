@@ -33,7 +33,7 @@ The latest supported YT version is:
 
 [![It is 19.04.37](https://img.shields.io/badge/Latest%20Supported%20Version-19.04.37-ff0000?style=for-the-badge&logo=youtube)](https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-04-37-release/youtube-19-04-37-2-android-apk-download/)
 
-as of 2024-03-18T21:33 UTC. Remember that, as we will use it very soon.
+as of 2024-03-25T21:33 UTC. Remember that, as we will use it very soon.
 
 ## 3. Getting the files ready
 
