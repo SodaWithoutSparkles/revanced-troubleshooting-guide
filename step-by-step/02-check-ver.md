@@ -3,18 +3,18 @@
 We are going to start patching now, but first we need to check the suggested version of YouTube.
 
 === You can see the version in ReVanced Manager
-![The suggested version should be 19.04.37 now](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/101-check_ver_manager.jpg?raw=true)
+![The suggested version should be 19.09.37 now](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/101-check_ver_manager.jpg?raw=true)
 ===
 
 The suggested YT version is:
 
 ```
-19.04.37
+19.09.37
 ```
 
-[![It is 19.04.37](https://img.shields.io/badge/Suggested%20Version-19.04.37-ff0000?style=for-the-badge&logo=youtube)](https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-04-37-release/youtube-19-04-37-android-apk-download/)
+[![It is 19.09.37](https://img.shields.io/badge/Suggested%20Version-19.09.37-ff0000?style=for-the-badge&logo=youtube)](https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-09-37-release/youtube-19-09-37-android-apk-download/)
 
-as of 2024-03-25T21:33 UTC. Remember that, as we will use it very soon.
+as of 2024-03-27T19:08 UTC. Remember that, as we will use it very soon.
 
 ==- How to check manually
 1. Go to the official [ReVanced patches website](https://revanced.app/patches?pkg=com.google.android.youtube)

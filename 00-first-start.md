@@ -52,12 +52,12 @@ We are going to start patching now, but first we need to check supported version
 The latest supported YT version is:
 
 ```
-19.04.37
+19.09.37
 ```
 
-[![It is 19.04.37](https://img.shields.io/badge/Latest%20Supported%20Version-19.04.37-ff0000?style=for-the-badge&logo=youtube)](https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-04-37-release/youtube-19-04-37-2-android-apk-download/)
+[![It is 19.09.37](https://img.shields.io/badge/Latest%20Supported%20Version-19.09.37-ff0000?style=for-the-badge&logo=youtube)](https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-09-37-release/youtube-19-09-37-2-android-apk-download/)
 
-as of 2024-03-25T21:33 UTC. Remember that, as we will use it very soon.
+as of 2024-03-27T19:08 UTC. Remember that, as we will use it very soon.
 
 ==- How to check manually
 1. Go to the official [ReVanced patches website](https://revanced.app/patches?pkg=com.google.android.youtube)
@@ -89,14 +89,14 @@ The latest stable version may differ from the one shown below.
 !!!
 ![download microG](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/010-download_microg.jpg?raw=true)
 ===
-3. Visit [APK mirror for YouTube APK](https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-04-37-release/youtube-19-04-37-2-android-apk-download/)
+3. Visit [APK mirror for YouTube APK](https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-09-37-release/youtube-19-09-37-2-android-apk-download/)
 !!!warning
 **Do NOT install the downloaded YouTube APK.**
 !!!
 !!!warning
 **The YouTube from Google Play will NOT work.** You CANNOT patch the one from Google Play. Download the one from APK mirror.
 !!!
-4. Verify that the link actually links to **version 19.04.37**
+4. Verify that the link actually links to **version 19.09.37**
 5. Verify that it said "DOWNLOAD APK" not "DOWNLOAD APK BUNDLE"
 === Image for reference
 ![The one marked with a blue :icon-check: is the correct one](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/021-verify-apk-not-bundle.jpg?raw=true)

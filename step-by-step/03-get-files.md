@@ -21,14 +21,14 @@ The latest stable version may differ from the one shown below.
 !!!
 ![download microG](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/010-download_microg.jpg?raw=true)
 ===
-3. Visit [APK mirror for YouTube APK](https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-04-37-release/youtube-19-04-37-android-apk-download/)
+3. Visit [APK mirror for YouTube APK](https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-09-37-release/youtube-19-09-37-android-apk-download/)
 !!!warning
 **Do NOT install the downloaded YouTube APK.**
 !!!
 !!!warning
 **The YouTube from Google Play will NOT work.** You CANNOT patch the one from Google Play. Download the one from APK mirror.
 !!!
-4. Verify that the link actually links to **version 19.04.37**
+4. Verify that the link actually links to **version 19.09.37**
 5. Verify that it said "DOWNLOAD APK" not "DOWNLOAD APK BUNDLE"
 === Image for reference
 ![The one marked with a blue :icon-check: is the correct one](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/021-verify-apk-not-bundle.jpg?raw=true)
