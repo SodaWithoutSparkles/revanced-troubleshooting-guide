@@ -74,9 +74,9 @@ jobs:
     if: needs.bumpVer.outputs.needsRebuild == 'true'
     needs: bumpVer
     steps:
-      - name: Sleep for 2 minutes
-        id: sleep-2m
-        run: sleep 120s
+      - name: Sleep for 5 minutes
+        id: sleep-5m
+        run: sleep 300s
         shell: bash
 
   rebuildSite:
