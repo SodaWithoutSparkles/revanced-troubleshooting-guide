@@ -252,3 +252,9 @@ Enable it at: revanced settings > layout > player flyout menu items > audio trac
 
 Credit: leadedmegabyte on discord
 
+## 3.37 Video not available
+
+Re-patch ReVanced Youtube and use `GmsCore` instead of `vanced microG` at `GmsCore support` patch.
+
+![Error example](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/troubleshoot/03-youtube/37.jpg?raw=true)
+
