@@ -22,6 +22,16 @@ Probably one of the following:
 
 ## 3.2. Video playback issues / buffers / buggy / content not available
 
+==- I have `client spoof` patch already
+First reboot your phone to see if this issue resolves itself. If not...
+
+1. Reboot your device again
+2. Disable battery optimization for GmsCore and Youtube ReVanced
+3. Clear cache for YouTube Revanced
+4. Check if issue persists
+5. If so, clear data of YouTube ReVanced, reboot, and try again
+
+===
 Patch again with the `client spoof` patch. (_`spoof signature verification` was merged into `client spoof`_)
 
 ![infinite loading](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/troubleshoot/03-youtube/02.png?raw=true)
@@ -33,6 +43,7 @@ If you cannot find them, you probably patched an unsupported YT version or used 
 keyword: 
 - video stops at spectific time
 - video stops at 1 minute
+- video stops at 30 seconds
 ## 3.3. App not installed / Installation is blocked / `install_failed_verification_failure`
 
 Probably one of the following reason
