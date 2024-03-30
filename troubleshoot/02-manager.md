@@ -54,7 +54,7 @@ TL;DR: that is a known harmless bug, ignore it and don't update
 
 ## 2.9. Non-root install not possible?
 
-Select `vanced microG support` patch in the patches selection menu. 
+Select `GmsCore support` patch in the patches selection menu. 
 
 If you cannot find it, use the search function and search for "microg". If it is greyed out, it means that you have used an incompatible version.
 

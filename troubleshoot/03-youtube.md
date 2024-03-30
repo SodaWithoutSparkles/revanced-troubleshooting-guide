@@ -11,7 +11,7 @@ Probably one of the following:
 - non-recommended patches/version
     - Patch again with the default/recommended patches/version
     - [Refer to section 2.11 (What patch should I select?)](/troubleshoot/02-manager/11/)
-- vanced microG not installed
+- GmsCore not installed
     - Install it [here](https://github.com/ReVanced/GmsCore/releases/latest)
 - You exited ReVanced manager when patching
     - Don't do that. Repatch again.
@@ -42,7 +42,7 @@ Probably one of the following reason
 - Google play protect blocked it
   - when the play protect window popped up, click "learn more" and "install anyway"
 - You forgot the microG patch
-  - Add the `Vanced microG support` patch and try again
+  - Add the `GmsCore support` patch and try again
 - You clicked the wrong apk
   - Double-check that you selected the patched instead of the raw source apk
 - There were errors during patching
@@ -78,7 +78,7 @@ You can disable this under ReVanced YT settings > ReVanced > Interaction > Swipe
 
 ## 3.5. No internet connection
 
-Did you change your google password? Anyway, go to system settings > accounts > **vanced microG** > delete/logout account. Don't worry, this will not remove your google account on your device, just remove the one used by microG (hence ReVanced). 
+Did you change your google password? Anyway, go to system settings > accounts > Google (blue icon with lowercase g) > delete/logout account. Don't worry, this will not remove your google account on your device, just remove the one used by microG (hence ReVanced). 
 
 ## 3.6. Shorts button missing?
 

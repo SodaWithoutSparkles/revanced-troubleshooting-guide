@@ -1,6 +1,6 @@
 # 3. Getting the files ready
 
-In this section, you can find the latest supported Revanced Manager, Vanced microG and YouTube APK.
+In this section, you can find the latest supported Revanced Manager, GmsCore and YouTube APK.
 
 1. Download and install the latest **stable** [ReVanced Manager](https://github.com/ReVanced/ReVanced-manager/releases/latest) to your phone
 !!!

@@ -68,7 +68,7 @@ as of 2024-03-27T19:08 UTC. Remember that, as we will use it very soon.
 
 ## 3. Getting the files ready
 
-In this section, you can find the latest supported Revanced Manager, Vanced microG and YouTube APK.
+In this section, you can find the latest supported Revanced Manager, GmsCore and YouTube APK.
 
 1. Download and install the latest **stable** [ReVanced manager (RVM)](https://github.com/ReVanced/ReVanced-manager/releases/latest) to your phone
 !!!
@@ -81,7 +81,7 @@ The latest stable version may differ from the one shown below.
 Do **NOT** try to find the manager version shown in the image, it might be outdated.
 !!!
 ===
-2. Download and install the latest stable [Vanced microG (microG)](https://github.com/ReVanced/GmsCore/releases/latest) to your phone
+2. Download and install the latest stable [GmsCore](https://github.com/ReVanced/GmsCore/releases/latest) to your phone
 ==- Image for reference
 !!!
 Download the .apk, not the source code. 
@@ -167,7 +167,7 @@ Changing the default patches may break things. It is NOT recommended for first t
 ![default](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/110-select_default.jpg?raw=true)
 !!!danger
 Do NOT disable the default patches unless you are instructed to do so. Especially, do **NOT** disable these two:
-- `Vanced MicroG Support`
+- `GmsCore Support`
 - `Client Spoof`
 !!!
 !!!warning
@@ -186,7 +186,7 @@ Modifying the default patches (add/remove) may cause unintended consequences. Do
 ![default](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/110-select_default.jpg?raw=true)
 !!!danger
 Do NOT disable the default patches unless you know what you are doing. Especially, do **NOT** disable these two:
-- `Vanced MicroG Support`
+- `GmsCore Support`
 - `Client Spoof`
 !!!
 3. You can scroll around and disable some patches. BUT don't disable any which you don't know the purpose of.
@@ -204,7 +204,7 @@ Do NOT disable the default patches unless you know what you are doing. Especiall
     - `Hide timestamp`
     - `Wide search bar`
 6. DO **enable** the following patches. They are critical.
-    - `Vanced MicroG Support` (unless your phone is rooted)
+    - `GmsCore Support` (unless your phone is rooted)
         - _if you don't know what root is, you are probably not rooted_
     - `Client Spoof` (must enable)
 6. When you have finished, click "Done" on the bottom right

@@ -11,7 +11,7 @@ No. You don't download an APK and install it. This is to prevent distribution of
 
 https://github.com/revanced/revanced-manager/releases/latest
 
-## 1.3. Where can I get vanced microG?
+## 1.3. Where can I get GmsCore?
 
 https://github.com/ReVanced/GmsCore/releases/latest
 

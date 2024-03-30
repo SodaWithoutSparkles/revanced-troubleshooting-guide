@@ -13,7 +13,7 @@ No. You don't download an APK and install it. This is to prevent distribution of
 
 https://github.com/revanced/revanced-manager/releases/latest
 
-### 1.3. Where can I get Vanced microG?
+### 1.3. Where can I get GmsCore?
 
 https://github.com/ReVanced/GmsCore/releases/latest
 
@@ -93,7 +93,7 @@ TL;DR: that is a known harmless bug, ignore it and don't update
 
 ### 2.9. Non-root install not possible?
 
-Select `vanced microG support` patch in the patches selection screen. If you cannot find it, use the search function and search for "microg". If you still cannot find it, you are using a non-supported YT version.
+Select `GmsCore support` patch in the patches selection screen. If you cannot find it, use the search function and search for "microg". If you still cannot find it, you are using a non-supported YT version.
 
 ### 2.10. Cannot find patch \<insert patch name here\>?
 
@@ -203,7 +203,7 @@ You can disable this under ReVanced YT settings > ReVanced > Interaction > Swipe
 
 ### 3.5. No internet connection
 
-Did you change your google password? Anyway, go to system settings > accounts > **vanced microG** > delete/logout account. Don't worry, this will not remove your google account on your device, just remove the one used by microG (hence ReVanced). 
+Did you change your google password? Anyway, go to system settings > accounts > Google (blue icon with lowercase g) > delete/logout account. Don't worry, this will not remove your google account on your device, just remove the one used by microG (hence ReVanced). 
 
 ### 3.6. Shorts button missing?
 

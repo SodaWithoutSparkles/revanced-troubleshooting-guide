@@ -37,7 +37,7 @@ as of 2024-03-27T19:08 UTC. Remember that, as we will use it very soon.
 
 ## 3. Getting the files ready
 
-In this section, you can find the latest supported Revanced Manager, Vanced microG and YouTube APK
+In this section, you can find the latest supported Revanced Manager, GmsCore and YouTube APK
 
 1. Download and install the latest **stable** [ReVanced manager (RVM)](https://github.com/ReVanced/ReVanced-manager/releases/latest)
 !!!
@@ -50,7 +50,7 @@ The latest stable version may differ from the one shown below.
 Do **NOT** try to find the manager version shown in the image, it might be outdated.
 !!!
 ===
-2. Download and install the latest stable [Vanced microG (microG)](https://github.com/ReVanced/GmsCore/releases/latest)
+2. Download and install the latest stable [GmsCore](https://github.com/ReVanced/GmsCore/releases/latest)
 ==- Image for reference
 !!!
 Download the .apk, not the source code. 
@@ -149,7 +149,7 @@ If you did not select from storage, patching would fail.
     - Hide timestamp
     - Wide search bar
 6. Make sure you enabled the following patches:
-    - Vanced MicroG Support
+    - GmsCore Support
     - Client Spoof
 === Image for reference
 ![microG](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/300-microg_support.jpg?raw=true)

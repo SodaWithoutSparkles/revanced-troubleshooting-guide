@@ -21,7 +21,7 @@ If you WANT to change the default selection, turn on the option at ReVanced Mana
 ![default](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/110-select_default.jpg?raw=true)
 !!!danger
 Do NOT disable the default patches unless you are instructed to do so. Especially, do **NOT** disable these two:
-- `Vanced MicroG Support`
+- `GmsCore Support`
 - `Client Spoof`
 !!!
 !!!warning
@@ -40,7 +40,7 @@ Modifying the default patches (add/remove) may cause unintended consequences. Do
 ![default](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/110-select_default.jpg?raw=true)
 !!!danger
 Do NOT disable the default patches unless you know what you are doing. Especially, do **NOT** disable these two:
-- `Vanced MicroG Support`
+- `GmsCore Support`
 - `Client Spoof`
 !!!
 3. You can scroll around and disable some patches. BUT don't disable any which you don't know the purpose of.
@@ -58,7 +58,7 @@ Do NOT disable the default patches unless you know what you are doing. Especiall
     - `Hide timestamp`
     - `Wide search bar`
 6. **Enable** the following patches. They are critical.
-    - `Vanced MicroG Support` (unless your phone is rooted)
+    - `GmsCore Support` (unless your phone is rooted)
         - _if you don't know what root is, you are probably not rooted_
     - `Client Spoof` (must enable)
 6. When you have finished, click "Done" on the bottom right
