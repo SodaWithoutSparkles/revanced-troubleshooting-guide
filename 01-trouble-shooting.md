@@ -93,7 +93,7 @@ TL;DR: that is a known harmless bug, ignore it and don't update
 
 ### 2.9. Non-root install not possible?
 
-Select `GmsCore support` patch in the patches selection screen. If you cannot find it, use the search function and search for "microg". If you still cannot find it, you are using a non-supported YT version.
+Select `GmsCore support` patch in the patches selection screen. If you cannot find it, use the search function and search for "GmsCore". If you still cannot find it, you are using a non-supported YT version.
 
 ### 2.10. Cannot find patch \<insert patch name here\>?
 
@@ -203,7 +203,7 @@ You can disable this under ReVanced YT settings > ReVanced > Interaction > Swipe
 
 ### 3.5. No internet connection
 
-Did you change your google password? Anyway, go to system settings > accounts > Google (blue icon with lowercase g) > delete/logout account. Don't worry, this will not remove your google account on your device, just remove the one used by microG (hence ReVanced). 
+Did you change your google password? Anyway, go to system settings > accounts > Google (blue icon with lowercase g) > delete/logout account. Don't worry, this will not remove your google account on your device, just remove the one used by GmsCore (hence ReVanced). 
 
 ### 3.6. Shorts button missing?
 

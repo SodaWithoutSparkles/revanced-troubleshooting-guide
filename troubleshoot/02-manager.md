@@ -56,7 +56,7 @@ TL;DR: that is a known harmless bug, ignore it and don't update
 
 Select `GmsCore support` patch in the patches selection menu. 
 
-If you cannot find it, use the search function and search for "microg". If it is greyed out, it means that you have used an incompatible version.
+If you cannot find it, use the search function and search for "GmsCore". If it is greyed out, it means that you have used an incompatible version.
 
 ![non-root install not possible](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/troubleshoot/02-manager/09.jpg?raw=true)
 

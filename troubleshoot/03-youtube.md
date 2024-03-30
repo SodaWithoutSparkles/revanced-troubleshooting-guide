@@ -41,7 +41,7 @@ Probably one of the following reason
   - Delete that existing install
 - Google play protect blocked it
   - when the play protect window popped up, click "learn more" and "install anyway"
-- You forgot the microG patch
+- You forgot the GmsCore patch
   - Add the `GmsCore support` patch and try again
 - You clicked the wrong apk
   - Double-check that you selected the patched instead of the raw source apk
@@ -78,7 +78,7 @@ You can disable this under ReVanced YT settings > ReVanced > Interaction > Swipe
 
 ## 3.5. No internet connection
 
-Did you change your google password? Anyway, go to system settings > accounts > Google (blue icon with lowercase g) > delete/logout account. Don't worry, this will not remove your google account on your device, just remove the one used by microG (hence ReVanced). 
+Did you change your google password? Anyway, go to system settings > accounts > Google (blue icon with lowercase g) > delete/logout account. Don't worry, this will not remove your google account on your device, just remove the one used by GmsCore (hence ReVanced). 
 
 ## 3.6. Shorts button missing?
 

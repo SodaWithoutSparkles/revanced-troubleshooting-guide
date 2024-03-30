@@ -19,7 +19,7 @@ Do **NOT** try to find the manager version shown in the image, it might be outda
 Download the .apk, not the source code. 
 The latest stable version may differ from the one shown below.
 !!!
-![download microG](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/010-download_microg.jpg?raw=true)
+![download GmsCore](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/010-download_GmsCore.jpg?raw=true)
 ===
 3. Visit [APK mirror for YouTube APK](https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-09-37-release/youtube-19-09-37-android-apk-download/)
 !!!warning
