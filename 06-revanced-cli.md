@@ -41,7 +41,7 @@ java -jar revanced-cli-3.1.0-all.jar \
 3. Read the [troubleshooting section](/troubleshoot/00-trouble-shooting.md) if you have further issues
 
 !!!
-You may need to install [Vanced microG](https://github.com/TeamVanced/VancedMicroG/releases/tag/v0.2.24.220220-220220001) if you used the microG support patch, which is the default when patching YouTube related apps.
+You may need to install [Vanced microG](https://github.com/ReVanced/GmsCore/releases/latest) if you used the microG support patch, which is the default when patching YouTube related apps.
 !!!
 
 ## 4. Update ReVanced

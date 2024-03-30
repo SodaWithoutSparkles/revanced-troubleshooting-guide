@@ -13,7 +13,7 @@ https://github.com/revanced/revanced-manager/releases/latest
 
 ## 1.3. Where can I get vanced microG?
 
-https://github.com/TeamVanced/VancedMicroG/releases/tag/v0.2.24.220220-220220001
+https://github.com/ReVanced/GmsCore/releases/latest
 
 ## 1.4. What is the latest YouTube version supported? 
 

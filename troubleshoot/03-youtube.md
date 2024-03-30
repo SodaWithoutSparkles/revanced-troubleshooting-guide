@@ -12,7 +12,7 @@ Probably one of the following:
     - Patch again with the default/recommended patches/version
     - [Refer to section 2.11 (What patch should I select?)](/troubleshoot/02-manager/11/)
 - vanced microG not installed
-    - Install it [here](https://github.com/TeamVanced/VancedMicroG/releases/tag/v0.2.24.220220-220220001)
+    - Install it [here](https://github.com/ReVanced/GmsCore/releases/latest)
 - You exited ReVanced manager when patching
     - Don't do that. Repatch again.
 - There were errors during patching
