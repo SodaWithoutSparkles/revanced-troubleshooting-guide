@@ -55,7 +55,7 @@ The latest supported YT version is:
 19.09.37
 ```
 
-[![It is 19.09.37](https://img.shields.io/badge/Latest%20Supported%20Version-19.09.37-ff0000?style=for-the-badge&logo=youtube)](https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-09-37-release/youtube-19-09-37-2-android-apk-download/)
+[![It is 19.09.37](https://img.shields.io/badge/Latest%20Supported%20Version-19.09.37-ff0000?style=for-the-badge&logo=youtube)](https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-09-37-release/youtube-19-09-37-android-apk-download/)
 
 as of 2024-03-27T19:08 UTC. Remember that, as we will use it very soon.
 
@@ -89,7 +89,7 @@ The latest stable version may differ from the one shown below.
 !!!
 ![download GmsCore](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/010-download_GmsCore.jpg?raw=true)
 ===
-3. Visit [APK mirror for YouTube APK](https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-09-37-release/youtube-19-09-37-2-android-apk-download/)
+3. Visit [APK mirror for YouTube APK](https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-09-37-release/youtube-19-09-37-android-apk-download/)
 !!!warning
 **Do NOT install the downloaded YouTube APK.**
 !!!
