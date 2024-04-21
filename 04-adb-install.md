@@ -51,7 +51,7 @@ If you don't know how to enable USB debugging, google "\<phone model\> enable us
 
 3. Find the name of the apk you want to install from the list
 
-4. Enter `pm install name_of_apk.apk`. Example: `pm install youtube-revanced_v19.09.37.apk`
+4. Enter `pm install name_of_apk.apk`. Example: `pm install youtube-revanced_v19.11.43.apk`
 
 5. If it said Success or showed nothing, check your phone to see if it actually insalled
     - If yes, you have installed ReVanced. Go to Cleanup section
@@ -70,7 +70,7 @@ If you don't know how to enable USB debugging, google "\<phone model\> enable us
 10. Use arrow keys (← →) to move the cursor.
 
 11. Add `/data/local/tmp/` before the APK name such that it looked like this:
-    - `pm install /data/local/tmp/youtube-revanced_v19.09.37.apk`
+    - `pm install /data/local/tmp/youtube-revanced_v19.11.43.apk`
 
 12. Hit enter
 
