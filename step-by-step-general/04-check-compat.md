@@ -13,7 +13,7 @@ We are going to check if this device is supported.
 3. Check that `Arch` says `arm64-v8a`
 4. If it does not say `arm64-v8a` you cannot patch YouTube on your device. Please patch it on another device or your PC.
 
-==- What does `arch` mean? Why is `armv7` not supported?
+==- What does `arch` mean? Why is `armeabi-v7a` not supported?
 `arch` is the architecture of your CPU. In layman terms, it is "the language of the CPU", if you don't know that language, you cannot communicate with that CPU. 
 
 The ReVanced team will move to `arsclib` soon™, which supports `armv7`. For now, you can patch on a computer with [ReVanced CLI](/06-revanced-cli.md) instead.
