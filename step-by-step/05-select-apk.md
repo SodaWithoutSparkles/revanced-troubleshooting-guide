@@ -11,7 +11,7 @@
 !!!warning 
 If you did not select from storage, patching would fail.
 !!!
-3. Select the YouTube APK you just downloaded in [Part 3](https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/step-by-step/03-get-files/). It should have a recent date and a size of roughly 130MB.
+3. Select the YouTube APK you just downloaded in [Part 3](https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/step-by-step/03-get-files/). It should have a recent date and a size of roughly 140MB.
 ==- Image for reference
 ![storage view](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/090-select_YT_apk.jpg?raw=true)
 ===
