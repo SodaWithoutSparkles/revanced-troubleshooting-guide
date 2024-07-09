@@ -22,8 +22,8 @@ You can also find the package name for an app by searching "\<app name\> package
 
 If you are certain that you have the app installed, using the search bar may help.
 !!!
-5. The suggested version of the app would be shown. 
-!!! If it said "Any version"
+5. The suggested version of the app will be shown. 
+!!! If it says "Any version"
 This means that nobody has reported a version that did not work *yet*.
 It means that you can *try* the latest version of apk available.
 In case it doesn't work, go back a few versions and check if it works, and repeat if it doesn't.
