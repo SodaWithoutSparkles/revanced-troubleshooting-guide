@@ -18,6 +18,7 @@ Do **NOT** try to find the manager version shown in the image, it might be outda
 !!!
 Download the .apk, not the source code. 
 The latest stable version may differ from the one shown below.
+Use the **Default** one. Only use the "Huawei" one if you can't login on the other.
 !!!
 ![download GmsCore](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/010-download_GmsCore.jpg?raw=true)
 ===
