@@ -1,4 +1,4 @@
-# 3. Getting the files ready
+# 2. Getting the files ready
 
 In this section, you can find the latest supported Revanced Manager, GmsCore and YouTube APK.
 
