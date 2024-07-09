@@ -32,7 +32,7 @@ You can also report back the version that works for you at [Discord](https://dis
 5. You can tap the version shown to open an online search result of the suggested apk. You can also just google it.
 6. If there are multiple variants, you most likely need the one marked `arm64-v8a` and `APK` (not bundle).
 === Image for reference
-![This variant is both `arm-v8a` and is an apk](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/021-verify-apk-not-bundle.jpg?raw=true)
+![This variant is both `arm-v8a` and is an apk](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/022-verify-apk-correct-arch?raw=true)
 ===
 7. Verify that it said "DOWNLOAD APK" not "DOWNLOAD APK BUNDLE". The file should end with `.apk` not `.apks` or `.apkm`.
 === Image for reference
