@@ -30,7 +30,7 @@ In case it doesn't work, go back a few versions and check if it works, and repea
 You can also report back the version that works for you at [Discord](https://discord.gg/revanced) or [Github (if nobody else has reported)](https://github.com/ReVanced/revanced-patches/issues)
 !!!
 5. You can tap the version shown to open an online search result of the suggested apk. You can also just google it.
-6. If there are multiple variants, you most likely need the one marked `arm64-v8a` and `APK` (not bundle).
+6. If there are multiple variants, choose the one marked `APK` (not bundle) with the "arch" marked as universal. If no universal arch is available, you most likely need the `arm64-v8a` or `armeabi-v7a` one.
 === Image for reference
 ![This variant is both `arm-v8a` and is an apk](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/022-verify-apk-correct-arch.jpg?raw=true)
 ===
