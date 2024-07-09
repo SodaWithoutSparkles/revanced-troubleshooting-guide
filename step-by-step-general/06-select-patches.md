@@ -1,6 +1,6 @@
 # 6. Select patches
 
-The manager now automatically select patches for first time users. Go to the next section IF you are patching for the first time.
+The manager now automatically select patches for first time users. Skip to the next section IF you are patching for the first time.
 
 !!!danger
 Changing the default patches may break things. It is NOT recommended for first time users to change the default selection.

@@ -2,15 +2,13 @@
 
 You need to have the following to follow this guide:
 
-- An Android smartphone with
+- An Android device with
     - ARMv8 or x86 architecture *
-    - Android 8 or later *
+    - Android 8 or newer *
     - ≥1GB storage space
 
-- About 15 minutes of time (depends on your device)
-    - speedrun current record: 4:15
+- About 10 minutes of time (depends on your device)
     - flagship: estimated 5 ~ 10 min
-    - mid-tier: estimated 10 ~ 15 min
-    - low-tier: estimated 15 ~ 35 min
+    - mid to low tier: estimated 10 ~ 15 min
 
 Don't know what these are? Don't worry, we will check for the ones marked with (*) later in this guide.

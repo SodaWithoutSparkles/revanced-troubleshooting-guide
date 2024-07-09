@@ -2,7 +2,7 @@
 
 In this section, you can find the latest supported Revanced Manager, GmsCore and YouTube APK.
 
-1. Download and install the latest **stable** [ReVanced Manager](https://github.com/ReVanced/ReVanced-manager/releases/latest) to your phone
+1. Download and install the latest **stable** [ReVanced Manager](https://github.com/ReVanced/ReVanced-manager/releases/latest) to your device
 !!!
 Download the .apk, not the source code. 
 The latest stable version may differ from the one shown below.
