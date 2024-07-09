@@ -70,20 +70,25 @@ Select the default/recommended ones. When you are in the select patches window, 
 
 DO NOT SELECT ANY OF THE FOLLOWING PATCHES OR YOU WILL RISK HAVING ISSUES: 
 
-- Change package name
-- enable **android** debugging
-- export all activities
-- Predictive back gesture
-- Remove screenshot restriction
-- Spoof wifi connections
+- `Change package name`
+- `Change version code`
+- `Enable Android debugging`
+- `Export all activities`
+- `Hex`
+- `Override certificate pinning`
+- `Predictive back gesture`
+- `Remove screen capture restriction`
+- `Remove screenshot restriction`
+- `Spoof wifi connections`
+- `Spoof SIM country`
+- `Spoof Wi-Fi connection`
 
-If you don't know where to start but just want to remove some patches, you can safely remove these. I did not select the following patches: 
-
-- Disable auto captions
-- Hide player overlay
-- Hide seekbar
-- Hide timestamp
-- Wide search bar
+You can disable the following patches safely. I have tested them:
+- `Disable auto captions`
+- `Hide player overlay`
+- `Hide seekbar`
+- `Hide timestamp`
+- `Wide search bar`
 
 ## 2.12. Cannot select patch?
 
@@ -99,8 +104,7 @@ If you see the text "exit code = 135" or "exit code = 139", then your devices ar
 
 You are probably using ARMv7. The supported architectures are ARMv8 or above.
 
-Please patch on an another device or on your PC.
-
+You can patch on a computer with the [`revanced-cli` (official)](/06-revanced-cli.md), [`Taku's auto-cli` (**Very Easy**)](https://github.com/taku-nm/auto-cli) or [`revanced-builder`](https://github.com/reisxd/revanced-builder).
 ## 2.15. ReVanced manager does not select APK
 
 Symptoms: after clicking select an application > YouTube, nothing happened and it goes back to the patcher tab without selecting any apps
