@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/revanced-troubleshooting-guide">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.773696443927">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.773849340777">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -33,11 +33,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.5.0.773696443927" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.773849340777" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.773696443927" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.773849340777" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.773696443927" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.773849340777" data-turbo-eval="false" defer></script>
 
     <style>
         a.border-gray-300 {
@@ -193,7 +193,7 @@
 </doc-anchor-target>
 <p>We are going to check if this device is supported.</p>
 <ol>
-<li>launch ReVanced Manager.</li>
+<li>Launch ReVanced Manager. Ignore any updates it claimed it knew.</li>
 </ol>
 <doc-panel id="image-for-reference" collapsed>
     <template #title>Image for reference</template>
@@ -215,17 +215,12 @@
 </p>
 </doc-panel>
 <ol start="3">
-<li>Check that <code v-pre>Arch</code> had at least 1 entry that looks like <code v-pre>arm64-v8a</code></li>
-<li>If you only got something that said <code v-pre>armv7</code> or lower, you cannot patch it on your phone. Please patch it on another device or your PC.</li>
-<li>If you got <code v-pre>armv8</code>, you are probably fine</li>
-<li>Check that your Android version is at least 8</li>
-<li>If you only got something that said <code v-pre>armv7</code> or lower, you may not be able to patch on your phone. You can patch it on another device or a computer with <a href="../../06-revanced-cli/">ReVanced CLI</a>.</li>
-<li>If you made it here, you can probably patch on your phone with ReVanced Manager</li>
+<li>Check that <code v-pre>Arch</code> says <code v-pre>arm64-v8a</code></li>
+<li>If it does not say <code v-pre>arm64-v8a</code> you cannot patch YouTube on your device. Please patch it on another device or your PC.</li>
 </ol>
-<doc-panel id="what-does-arch-mean-why-is-armv7-not-supported" collapsed>
-    <template #title>What does <code v-pre>arch</code> mean? Why is <code v-pre>armv7</code> not supported?</template>
-<p><code v-pre>arch</code> is the architecture of your CPU. In layman terms, it is &quot;the language of the CPU&quot;, if you don&#x27;t know that language, you cannot communicate with that CPU.</p>
-<p>The ReVanced team will move to <code v-pre>arsclib</code> soon™, which supports <code v-pre>armv7</code>. For now, you can patch on a computer with <a href="../../06-revanced-cli/">ReVanced CLI</a> instead.</p>
+<doc-panel id="what-does-arch-mean-why-is-arm64-v8a-required" collapsed>
+    <template #title>What does <code v-pre>arch</code> mean? Why is <code v-pre>arm64-v8a</code> required?</template>
+<p><code v-pre>arch</code> is the architecture of your CPU. In layman terms, it is &quot;the language of the CPU&quot;. If you don&#x27;t know that language, you cannot communicate with that CPU. If your device does not support <code v-pre>arm64-v8a</code> you can patch on a computer with the <a href="../../06-revanced-cli/"><code v-pre>revanced-cli</code></a>, <a href="https://github.com/taku-nm/auto-cli"><code v-pre>Taku's auto-cli</code></a> or <a href="https://github.com/reisxd/revanced-builder"><code v-pre>revanced-builder</code></a>.</p>
 </doc-panel>
 
                                 
