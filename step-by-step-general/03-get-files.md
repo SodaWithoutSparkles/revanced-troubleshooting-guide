@@ -34,7 +34,7 @@ You can also report back the version that works for you at [Discord](https://dis
 === Image for reference
 ![This variant is both `arm-v8a` and is an apk](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/022-verify-apk-correct-arch.jpg?raw=true)
 ===
-8. Verify that it said "DOWNLOAD APK" not "DOWNLOAD APK BUNDLE". The file should end with `.apk` not `.apks` or `.apkm`.
+8. Verify that it says "DOWNLOAD APK" and not "DOWNLOAD APK BUNDLE". The file should end with `.apk` not `.apks` or `.apkm`.
 === Image for reference
 ![The one marked with a blue :icon-check: is the correct one](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/021-verify-apk-not-bundle.jpg?raw=true)
 ===
