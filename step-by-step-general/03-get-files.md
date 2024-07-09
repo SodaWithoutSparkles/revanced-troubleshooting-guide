@@ -29,7 +29,7 @@ It means that you can *try* the latest version of apk available.
 In case it doesn't work, go back a few versions and check if it works, and repeat if it doesn't.
 You can also report back the version that works for you at [Discord](https://discord.gg/revanced) or [Github (if nobody else has reported)](https://github.com/ReVanced/revanced-patches/issues)
 !!!
-6. You can tap the version shown to open an online search result of the suggested apk. APKMirror usually has them. You can also just google it.
+6. You can tap the version shown to open an online search result of the suggested apk. Or you can google it. APKMirror will usually have the apk.
 7. If there are multiple variants, choose the one marked `APK` (not bundle) with the "arch" marked as universal. If no universal arch is available, you most likely need the `arm64-v8a` or `armeabi-v7a` one.
 === Image for reference
 ![This variant is both `arm-v8a` and is an apk](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/022-verify-apk-correct-arch.jpg?raw=true)
