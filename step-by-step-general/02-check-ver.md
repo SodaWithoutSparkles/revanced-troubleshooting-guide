@@ -1,5 +1,6 @@
 ---
 redirect: /step-by-step-general/03-get-files.md
+visibility: hidden
 ---
 
 # 2. Please skip to next page
