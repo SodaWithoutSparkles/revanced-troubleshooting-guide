@@ -1,6 +1,8 @@
-# 2. Checking versions
+---
+redirect: /step-by-step-general/03-get-files.md
+---
 
-We are going to start patching now, but first we need to check the latest version to patch. You can find the information [here](/05-versions.md).
+# 2. Please skip to next page
 
 ==- How to check manually (with manager)
 1. Launch ReVanced manager

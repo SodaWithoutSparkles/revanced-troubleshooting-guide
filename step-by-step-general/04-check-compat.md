@@ -1,4 +1,4 @@
-# 4. Checking compatibility
+# 3. Checking compatibility
 
 We are going to check if this device is supported.
 
