@@ -1,3 +1,8 @@
+---
+redirect: /step-by-step/05-select-apk.md
+visibility: hidden
+---
+
 # 3. Checking compatibility
 
 We are going to check if this device is supported.

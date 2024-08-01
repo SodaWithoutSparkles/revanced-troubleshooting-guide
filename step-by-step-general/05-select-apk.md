@@ -1,4 +1,4 @@
-# 4. Select APK
+# 3. Select APK
 
 1. In ReVanced Manager, go to the Patcher tab and click "Select an application"
 ==- Image for reference

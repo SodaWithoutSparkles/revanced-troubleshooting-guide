@@ -1,4 +1,4 @@
-# 7. Patching
+# 6. Patching
 
 1. Click patch on the bottom right
 ==- Image for reference

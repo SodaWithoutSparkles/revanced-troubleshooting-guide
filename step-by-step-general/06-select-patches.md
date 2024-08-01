@@ -1,4 +1,4 @@
-# 5. Select patches
+# 4. Select patches
 
 The manager now automatically select patches for first time users. Skip to the next section IF you are patching for the first time.
 

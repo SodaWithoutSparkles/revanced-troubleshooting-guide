@@ -2,9 +2,9 @@
 
 You need to have the following to follow this guide:
 
-- An Android smartphone with
-    - ARMv8 or x86 architecture *
-    - Android 8 or later *
+- An Android device with
+    - ARMv8 or ARMv7 or x86 architecture (basically all modern devices)
+    - Android 8 or newer
     - ≥1GB storage space
 
 - About 10 minutes of time (depends on your device)
