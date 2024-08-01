@@ -134,9 +134,9 @@ Then go to ReVanced manager > settings > scroll down to import & export > Import
 
 If you see the text "exit code = 135" or "exit code = 139", then your devices architecture is not supported. 
 
-You are probably using ARMv7. The supported architectures are ARMv8 or above.
+You are probably using ARMv7. ReVanced Manager has support for ARMv7 since `v1.21.0`. [Update ReVanced Manager](https://github.com/ReVanced/ReVanced-manager/releases/latest) and try again.
 
-Please patch on an another device or on your PC.
+If that doesn't work, you can patch on a computer with the [`revanced-cli` (official)](/06-revanced-cli.md), [`Taku's auto-cli` (**Very Easy**)](https://github.com/taku-nm/auto-cli) or [`revanced-builder`](https://github.com/reisxd/revanced-builder).
 
 ### 2.15. ReVanced manager does not select APK
 
