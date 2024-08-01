@@ -17,4 +17,5 @@ This is a guide on solving common issues when using ReVanced YT and ReVanced man
 - [Get notified for ReVanced Updates](https://discord.com/invite/cHHX7PSPux)
 - [Dummies guide on reddit](https://www.reddit.com/r/revancedapp/comments/xlcny9/revanced_manager_guide_for_dummies/)
 - [Taku's auto CLI to patch on computer](https://github.com/taku-nm/auto-cli)
+- [Reddit Client ID guide by KobeW50](https://github.com/KobeW50/ReVanced-Documentation/blob/main/Reddit-Client-ID-Guide.md#info)
 <!-- - [Guide by my friend Hokora Yinphine MPP#6969 on discord](https://hokorayinphinempp.github.io/obsidian-git-sync/Revanced/1%20Start%20Here%21/Revanced%20Start/) -->
