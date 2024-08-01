@@ -1,5 +1,10 @@
 # ReVanced Setup Guide
 
+!!!
+This guide is deprecated and the information might not be updated.
+Visit the [step by step guide](/step-by-step/00-preface.md)
+!!!
+
 This is a first-start guide for starters to patch a copy of ReVanced YouTube.
 
 This guide is for non-root users. For root users, visit the [other resources section](https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/#other-resources) for hokora's guide.
@@ -103,32 +108,7 @@ The latest stable version may differ from the one shown below.
 ===
 6. Download **but don't install** the YT APK
 
-## 4. Checking compatibility
-
-We are going to check if this device is supported.
-
-1. launch RVM. Ignore any updates it claimed it knew.
-==- Image for reference
-![launch rvm](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/040-first_launch_manager.jpg?raw=true)
-===
-2. Go to the settings tab and scroll down until you find "About"
-==- Image for reference
-![check about](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/050-check_about.jpg?raw=true)
-===
-3. Check that `Arch` had at least 1 entry that looks like `arm64-v8a`
-4. If you only got something that said `armv7` or lower, you cannot patch it on your phone. Please patch it on another device or your PC.
-5. If you got `armv8` or higher, you are probably fine
-6. Check that your Android version is at least 8
-7. If you only got something that said `7` or lower, you cannot patch it on your phone. Please patch it on another device or your PC.
-8. If you made it here, you can probably patch on your phone with ReVanced manager
-
-==- What does `arch` mean? Why is `armv7` not supported?
-`arch` is the architecture of your CPU. In layman terms, it is "the language of the CPU", if you don't know that language, you cannot communicate with that CPU. 
-
-The ReVanced team will move to `arsclib` soon™, which supports `armv7`. For now, you can patch on a computer with `revanced-cli` or `revanced-builder` instead.
-===
-
-## 5. Select APK
+## 4. Select APK
 
 1. In ReVanced manager, go to the Patcher tab and click "Select an application"
 ==- Image for reference
@@ -153,7 +133,7 @@ If you did not select from storage, patching would fail.
 6. If no, go back to [Part 3](https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/step-by-step/03-get-files/)
 7. If yes, continue to the next page
 
-## 6. Select patches
+## 5. Select patches
 
 The manager now automatically select patches for first time users. Go to the next section IF you are patching for the first time.
 
@@ -212,7 +192,7 @@ Do NOT disable the default patches unless you know what you are doing. Especiall
 
 ===
 
-## 7. Patching
+## 6. Patching
 
 1. Click patch on the bottom right
 ==- Image for reference
@@ -228,7 +208,7 @@ The speed of patching depends on phone performance. Some reported that it took 3
 !!!
 4. If you see any warnings, check out [the debug guide](/troubleshoot/00-trouble-shooting.md)
 
-## 8. Patching Done!
+## 7. Patching Done!
 
 1. After patching is done, export the patched APK for backup.
 ==- Image for reference

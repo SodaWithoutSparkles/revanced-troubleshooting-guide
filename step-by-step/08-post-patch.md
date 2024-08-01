@@ -1,4 +1,4 @@
-# 8. Patching Done!
+# 7. Patching Done!
 
 1. After patching is done, export the patched APK for backup.
 ==- Image for reference
