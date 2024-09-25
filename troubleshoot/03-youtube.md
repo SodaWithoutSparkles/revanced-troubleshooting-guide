@@ -22,7 +22,7 @@ Probably one of the following:
 
 ## 3.2. Video playback issues / buffers / buggy / content not available
 
-==- I have `client spoof` patch already
+==- I have `Spoof Video Streams` patch already
 First reboot your phone to see if this issue resolves itself. If not...
 
 1. Reboot your device again
@@ -32,7 +32,7 @@ First reboot your phone to see if this issue resolves itself. If not...
 5. If so, clear data of YouTube ReVanced, reboot, and try again
 
 ===
-Patch again with the `client spoof` patch. (_`spoof signature verification` was merged into `client spoof`_)
+Patch again with the `Spoof Video Streams` patch. (_`spoof signature verification` was merged into `Spoof Video Streams`_)
 
 ![infinite loading](https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide/blob/main/troubleshoot/03-youtube/02.png?raw=true)
 
