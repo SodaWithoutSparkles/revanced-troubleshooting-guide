@@ -150,10 +150,10 @@ If you did not select from storage, patching would fail.
     - Wide search bar
 6. Make sure you enabled the following patches:
     - GmsCore Support
-    - Client Spoof
+    - Spoof Video Streams
 === Image for reference
 ![GmsCore](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/300-GmsCore_support.jpg?raw=true)
-![client spoof](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/302-spoof_client.jpg?raw=true)
+![Spoof Video Streams](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/302-spoof_client.jpg?raw=true)
 ===
 7. When you have finished, click "Done" on the bottom right
 ==- Image for reference

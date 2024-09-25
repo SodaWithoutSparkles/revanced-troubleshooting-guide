@@ -148,7 +148,7 @@ Changing the default patches may break things. It is NOT recommended for first t
 !!!danger
 Do NOT disable the default patches unless you are instructed to do so. Especially, do **NOT** disable these two:
 - `GmsCore Support`
-- `Client Spoof`
+- `Spoof Video Streams`
 !!!
 !!!warning
 Modifying (add/remove) the default patches may cause unintended consequences. 
@@ -167,7 +167,7 @@ Modifying the default patches (add/remove) may cause unintended consequences. Do
 !!!danger
 Do NOT disable the default patches unless you know what you are doing. Especially, do **NOT** disable these two:
 - `GmsCore Support`
-- `Client Spoof`
+- `Spoof Video Streams`
 !!!
 3. You can scroll around and disable some patches. BUT don't disable any which you don't know the purpose of.
 4. DO NOT ENABLE THE FOLLOWING PATCHES
@@ -186,7 +186,7 @@ Do NOT disable the default patches unless you know what you are doing. Especiall
 6. DO **enable** the following patches. They are critical.
     - `GmsCore Support` (unless your phone is rooted)
         - _if you don't know what root is, you are probably not rooted_
-    - `Client Spoof` (must enable)
+    - `Spoof Video Streams` (must enable)
 6. When you have finished, click "Done" on the bottom right
 ![click done](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/120-click_done.jpg?raw=true)
 
