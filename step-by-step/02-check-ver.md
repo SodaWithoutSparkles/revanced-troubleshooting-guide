@@ -14,7 +14,7 @@ The suggested YT version is:
 
 [![It is 19.43.41](https://img.shields.io/badge/Suggested%20Version-19.43.41-ff0000?style=for-the-badge&logo=youtube)](https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-43-41-release/youtube-19-43-41-android-apk-download/)
 
-as of 2025-05-05T11:12 UTC. Remember that, as we will use it very soon.
+as of 2025-05-12T11:12 UTC. Remember that, as we will use it very soon.
 
 ==- How to check manually
 1. Go to the official [ReVanced patches website](https://revanced.app/patches?pkg=com.google.android.youtube)
