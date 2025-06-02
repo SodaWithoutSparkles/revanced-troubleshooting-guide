@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/revanced-troubleshooting-guide">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.8.1.801574889310">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.9.0.802179725508">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.8.1">
+    <meta name="generator" content="Retype 3.9.0">
 
     <!-- Primary Meta Tags -->
     <title>ReVanced Setup Guide</title>
@@ -31,13 +31,13 @@
     <meta property="twitter:description" content="This guide is deprecated and the information might not be updated. Visit the step by step guide">
     <meta property="twitter:image" content="https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/step-by-step/00.jpg">
 
-    <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../resources/css/retype.css?v=3.8.1.801574889310" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.9.0.802179725508" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.8.1.801574889310" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../resources/js/retype.js?v=3.8.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.8.1.801574889310" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.9.0.802179725508" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/retype.js?v=3.9.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.9.0.802179725508" data-turbo-eval="false" defer></script>
 
     <style>
         a.border-gray-300 {
@@ -73,7 +73,7 @@
                     <div class="flex items-center px-2 md:px-6">
                         <a id="docs-site-logo" href="../" class="flex items-center leading-snug text-xl">
                             <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">ReVanced troubleshooting</span>
-                        </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Guide</span>
+                        </a><span class="hidden mt-1 px-2 py-1 ml-4 text-xs font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-md md:inline-block">Guide</span>
                     </div>
         
                     <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
@@ -191,8 +191,8 @@
     </h1>
 </doc-anchor-target>
 <div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr-lg rounded-br-lg doc-callout bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
         <div class="flex items-center ml-4 h-7">
             <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
                 <g fill="currentColor"><g>
@@ -211,7 +211,7 @@ Visit the <a href="../step-by-step/00-preface/">step by step guide</a></p>
 <p>This is a first-start guide for starters to patch a copy of ReVanced YouTube.</p>
 <p>This guide is for non-root users. For root users, visit the <a href="https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/#other-resources">other resources section</a> for hokora&#x27;s guide.</p>
 <p><figure class="content-center">
-    <img src="https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/step-by-step/00.jpg" alt="Preview">
+    <img src="https://raw.githubusercontent.com/SodaWithoutSparkles/revanced-troubleshooting-guide/main/step-by-step/00.jpg" alt="Preview" />
     <figcaption class="caption">Preview</figcaption>
 </figure>
 </p>
@@ -223,8 +223,8 @@ Visit the <a href="../step-by-step/00-preface/">step by step guide</a></p>
 <li>Provide solution on what to do when it does not work</li>
 </ul>
 <div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr-lg rounded-br-lg doc-callout bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
         <div class="flex items-center ml-4 h-7">
             <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
                 <g fill="currentColor"><g>
@@ -290,12 +290,12 @@ Visit the <a href="../step-by-step/00-preface/">step by step guide</a></p>
 </doc-codeblock></div>
 <p><figure class="content-center">
     <a href="https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-43-41-release/youtube-19-43-41-android-apk-download/">
-        <img src="https://img.shields.io/badge/Latest%20Supported%20Version-19.43.41-ff0000?style=for-the-badge&amp;logo=youtube" alt="It is 19.43.41">
+        <img src="https://img.shields.io/badge/Latest%20Supported%20Version-19.43.41-ff0000?style=for-the-badge&amp;logo=youtube" alt="It is 19.43.41" />
     </a>
     <figcaption class="caption">It is 19.43.41</figcaption>
 </figure>
 </p>
-<p>as of 2025-05-19T11:13 UTC. Remember that, as we will use it very soon.</p>
+<p>as of 2025-05-26T11:36 UTC. Remember that, as we will use it very soon.</p>
 <doc-panel id="how-to-check-manually" collapsed>
     <template #title>How to check manually</template>
 <ol>
@@ -316,8 +316,8 @@ Visit the <a href="../step-by-step/00-preface/">step by step guide</a></p>
 <li>Download and install the latest <strong>stable</strong> <a href="https://github.com/ReVanced/ReVanced-manager/releases/latest">ReVanced manager (RVM)</a> to your phone</li>
 </ol>
 <div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr-lg rounded-br-lg doc-callout bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
         <div class="flex items-center ml-4 h-7">
             <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
                 <g fill="currentColor"><g>
@@ -336,13 +336,13 @@ The latest stable version may differ from the one shown below.</p>
 <doc-panel id="image-for-reference" collapsed>
     <template #title>Image for reference</template>
 <p><figure class="content-center">
-    <img src="https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/000-download_manager.jpg?raw=true" alt="download manager">
+    <img src="https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/000-download_manager.jpg?raw=true" alt="download manager" />
     <figcaption class="caption">download manager</figcaption>
 </figure>
 </p>
 <div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr-lg rounded-br-lg doc-callout bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
         <div class="flex items-center ml-4 h-7">
             <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
                 <g fill="currentColor"><g>
@@ -364,8 +364,8 @@ The latest stable version may differ from the one shown below.</p>
 <doc-panel id="image-for-reference" collapsed>
     <template #title>Image for reference</template>
 <div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr-lg rounded-br-lg doc-callout bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
         <div class="flex items-center ml-4 h-7">
             <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
                 <g fill="currentColor"><g>
@@ -382,7 +382,7 @@ The latest stable version may differ from the one shown below.</p>
     </div>
 </div>
 <p><figure class="content-center">
-    <img src="https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/010-download_GmsCore.jpg?raw=true" alt="download GmsCore">
+    <img src="https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/010-download_GmsCore.jpg?raw=true" alt="download GmsCore" />
     <figcaption class="caption">download GmsCore</figcaption>
 </figure>
 </p>
@@ -391,8 +391,8 @@ The latest stable version may differ from the one shown below.</p>
 <li>Visit <a href="https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-43-41-release/youtube-19-43-41-android-apk-download/">APK mirror for YouTube APK</a></li>
 </ol>
 <div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-yellow-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr-lg rounded-br-lg doc-callout bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
         <div class="flex items-center ml-4 h-7">
             <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
                 <g fill="currentColor"><g>
@@ -407,8 +407,8 @@ The latest stable version may differ from the one shown below.</p>
     </div>
 </div>
 <div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-yellow-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr-lg rounded-br-lg doc-callout bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
         <div class="flex items-center ml-4 h-7">
             <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
                 <g fill="currentColor"><g>
@@ -429,8 +429,8 @@ The latest stable version may differ from the one shown below.</p>
 <doc-panel id="image-for-reference">
     <template #title>Image for reference</template>
 <p><figure class="content-center">
-    <img src="https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/021-verify-apk-not-bundle.jpg?raw=true" alt="The one marked with a blue  is the correct one">
-    <figcaption class="caption">The one marked with a blue <svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M21.03 5.72a.75.75 0 0 1 0 1.06l-11.5 11.5a.747.747 0 0 1-1.072-.012l-5.5-5.75a.75.75 0 1 1 1.084-1.036l4.97 5.195L19.97 5.72a.75.75 0 0 1 1.06 0Z"/></g></g></svg> is the correct one</figcaption>
+    <img src="https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/021-verify-apk-not-bundle.jpg?raw=true" alt="The one marked with a blue  is the correct one" />
+    <figcaption class="caption">The one marked with a blue  is the correct one</figcaption>
 </figure>
 </p>
 </doc-panel>
@@ -449,7 +449,7 @@ The latest stable version may differ from the one shown below.</p>
 <doc-panel id="image-for-reference" collapsed>
     <template #title>Image for reference</template>
 <p><figure class="content-center">
-    <img src="https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/060-select_application.jpg?raw=true" alt="select app">
+    <img src="https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/060-select_application.jpg?raw=true" alt="select app" />
     <figcaption class="caption">select app</figcaption>
 </figure>
 </p>
@@ -460,14 +460,14 @@ The latest stable version may differ from the one shown below.</p>
 <doc-panel id="image-for-reference" collapsed>
     <template #title>Image for reference</template>
 <p><figure class="content-center">
-    <img src="https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/081-select_from_storage.jpg?raw=true" alt="select YT">
+    <img src="https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/081-select_from_storage.jpg?raw=true" alt="select YT" />
     <figcaption class="caption">select YT</figcaption>
 </figure>
 </p>
 </doc-panel>
 <div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-yellow-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr-lg rounded-br-lg doc-callout bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
         <div class="flex items-center ml-4 h-7">
             <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
                 <g fill="currentColor"><g>
@@ -487,7 +487,7 @@ The latest stable version may differ from the one shown below.</p>
 <doc-panel id="image-for-reference" collapsed>
     <template #title>Image for reference</template>
 <p><figure class="content-center">
-    <img src="https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/090-select_YT_apk.jpg?raw=true" alt="storage view">
+    <img src="https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/090-select_YT_apk.jpg?raw=true" alt="storage view" />
     <figcaption class="caption">storage view</figcaption>
 </figure>
 </p>
@@ -499,7 +499,7 @@ The latest stable version may differ from the one shown below.</p>
 <doc-panel id="image-for-reference" collapsed>
     <template #title>Image for reference</template>
 <p><figure class="content-center">
-    <img src="https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/100-check_version.jpg?raw=true" alt="check ver">
+    <img src="https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/100-check_version.jpg?raw=true" alt="check ver" />
     <figcaption class="caption">check ver</figcaption>
 </figure>
 </p>
@@ -516,8 +516,8 @@ The latest stable version may differ from the one shown below.</p>
 </doc-anchor-target>
 <p>The manager now automatically select patches for first time users. Go to the next section IF you are patching for the first time.</p>
 <div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-red-500"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-red-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr-lg rounded-br-lg doc-callout bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
         <div class="flex items-center ml-4 h-7">
             <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-red-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
                 <g fill="currentColor"><g>
@@ -531,20 +531,20 @@ The latest stable version may differ from the one shown below.</p>
         </div>
     </div>
 </div>
-<doc-panel id="last-time-i-patched-un-successfully-re-patching-not-patching-for-the-first-time" collapsed>
+<doc-panel id="last-time-i-patched-un-successfully--re-patching--not-patching-for-the-first-time" collapsed>
     <template #title>Last time I patched un-successfully / Re-patching / not patching for the first time</template>
 <ol>
 <li>Click &quot;Select patches&quot; or &quot;Selected patches&quot;</li>
 <li>In the select patches view, choose &quot;Default&quot; or &quot;Recommended&quot;
 <figure class="content-center">
-    <img src="https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/110-select_default.jpg?raw=true" alt="default">
+    <img src="https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/110-select_default.jpg?raw=true" alt="default" />
     <figcaption class="caption">default</figcaption>
 </figure>
 </li>
 </ol>
 <div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-red-500"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-red-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr-lg rounded-br-lg doc-callout bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
         <div class="flex items-center ml-4 h-7">
             <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-red-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
                 <g fill="currentColor"><g>
@@ -563,8 +563,8 @@ The latest stable version may differ from the one shown below.</p>
     </div>
 </div>
 <div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-yellow-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr-lg rounded-br-lg doc-callout bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
         <div class="flex items-center ml-4 h-7">
             <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
                 <g fill="currentColor"><g>
@@ -586,8 +586,8 @@ Do <strong>NOT</strong> try to change them unless you know what you are doing.</
 <doc-panel id="i-want-to-change-the-default-selection" collapsed>
     <template #title>I want to change the default selection</template>
 <div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-yellow-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr-lg rounded-br-lg doc-callout bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
         <div class="flex items-center ml-4 h-7">
             <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
                 <g fill="currentColor"><g>
@@ -605,14 +605,14 @@ Do <strong>NOT</strong> try to change them unless you know what you are doing.</
 <li>Click &quot;Select patches&quot;</li>
 <li>In the select patches view, choose &quot;Default&quot; or &quot;Recommended&quot;
 <figure class="content-center">
-    <img src="https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/110-select_default.jpg?raw=true" alt="default">
+    <img src="https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/110-select_default.jpg?raw=true" alt="default" />
     <figcaption class="caption">default</figcaption>
 </figure>
 </li>
 </ol>
 <div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-red-500"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-red-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr-lg rounded-br-lg doc-callout bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
         <div class="flex items-center ml-4 h-7">
             <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-red-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
                 <g fill="currentColor"><g>
@@ -663,7 +663,7 @@ Do <strong>NOT</strong> try to change them unless you know what you are doing.</
 </li>
 <li>When you have finished, click &quot;Done&quot; on the bottom right
 <figure class="content-center">
-    <img src="https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/120-click_done.jpg?raw=true" alt="click done">
+    <img src="https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/120-click_done.jpg?raw=true" alt="click done" />
     <figcaption class="caption">click done</figcaption>
 </figure>
 </li>
@@ -681,7 +681,7 @@ Do <strong>NOT</strong> try to change them unless you know what you are doing.</
 <doc-panel id="image-for-reference" collapsed>
     <template #title>Image for reference</template>
 <p><figure class="content-center">
-    <img src="https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/130-go_patch.jpg?raw=true" alt="click patch">
+    <img src="https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/130-go_patch.jpg?raw=true" alt="click patch" />
     <figcaption class="caption">click patch</figcaption>
 </figure>
 </p>
@@ -692,7 +692,7 @@ Do <strong>NOT</strong> try to change them unless you know what you are doing.</
 <doc-panel id="image-for-reference" collapsed>
     <template #title>Image for reference</template>
 <p><figure class="content-center">
-    <img src="https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/140-dont_exit.jpg?raw=true" alt="dont exit">
+    <img src="https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/140-dont_exit.jpg?raw=true" alt="dont exit" />
     <figcaption class="caption">dont exit</figcaption>
 </figure>
 </p>
@@ -701,8 +701,8 @@ Do <strong>NOT</strong> try to change them unless you know what you are doing.</
 <li>The process should take about 5 ~ 10 minutes</li>
 </ol>
 <div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr-lg rounded-br-lg doc-callout bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
         <div class="flex items-center ml-4 h-7">
             <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
                 <g fill="currentColor"><g>
@@ -732,7 +732,7 @@ Do <strong>NOT</strong> try to change them unless you know what you are doing.</
 <doc-panel id="image-for-reference" collapsed>
     <template #title>Image for reference</template>
 <p><figure class="content-center">
-    <img src="https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/150-export_install.jpg?raw=true" alt="export and install">
+    <img src="https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/150-export_install.jpg?raw=true" alt="export and install" />
     <figcaption class="caption">export and install</figcaption>
 </figure>
 </p>
@@ -741,8 +741,8 @@ Do <strong>NOT</strong> try to change them unless you know what you are doing.</
 <li>Install the patched APK</li>
 </ol>
 <div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr-lg rounded-br-lg doc-callout bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
         <div class="flex items-center ml-4 h-7">
             <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
                 <g fill="currentColor"><g>
@@ -763,7 +763,7 @@ Do <strong>NOT</strong> try to change them unless you know what you are doing.</
 </ol>
 <p><figure class="content-center">
     <a href="https://github.com/SodaWithoutSparkles/revanced-troubleshooting-guide">
-        <img src="https://img.shields.io/github/stars/SodaWithoutSparkles/revanced-troubleshooting-guide?style=for-the-badge&amp;logo=github" alt="Star this repo if it helps you!">
+        <img src="https://img.shields.io/github/stars/SodaWithoutSparkles/revanced-troubleshooting-guide?style=for-the-badge&amp;logo=github" alt="Star this repo if it helps you!" />
     </a>
     <figcaption class="caption">Star this repo if it helps you!</figcaption>
 </figure>
@@ -778,13 +778,13 @@ Do <strong>NOT</strong> try to change them unless you know what you are doing.</
                             </footer>
                         </main>
                 
-                        <div class="border-t dark:border-dark-650 pt-6 mb-8">
-                            <footer class="flex flex-wrap items-center justify-between">
-                                <div>
+                        <div class="print:border-none border-t dark:border-dark-650 pt-6 mb-8">
+                            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                                <div class="print:hidden">
                                     <ul class="flex flex-wrap items-center text-sm">
                                     </ul>
                                 </div>
-                                <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© 2024 by SodaWithoutSparkles. GPLv3.</p></div>
+                                <div class="print:justify-center docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© 2024 by SodaWithoutSparkles. GPLv3.</p></div>
                             </footer>
                         </div>
                     </div>
