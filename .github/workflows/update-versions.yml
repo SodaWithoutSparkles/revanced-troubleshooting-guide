@@ -1,10 +1,5 @@
-# Modern ReVanced Version Update Workflow
-# This replaces the old version-and-lastCheck-bump.yml with the new Python-based updater
-# 
-# ⚠️  IMPORTANT: This workflow should ONLY run on the main branch!
-# The docs-base branch contains placeholder templates and should not be modified by automation.
-
-name: Update ReVanced Versions (New)
+# ReVanced Version Update Workflow
+name: Update ReVanced Versions
 
 on:
   workflow_dispatch:
@@ -15,12 +10,12 @@ on:
         default: false
         type: boolean
   schedule:
-    # Run every 30 minutes to match existing workflow
+    # Run every 30 minutes
     - cron: '*/30 * * * *'
 
 jobs:
   update-versions:
-    # Only run on main branch (for scheduled runs) or manual dispatch from main branch
+    # Only run on main branch to prevent duplicate runs
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
@@ -31,7 +26,7 @@ jobs:
       modified: ${{ steps.update.outputs.modified }}
       youtube_version: ${{ steps.update.outputs.youtube_version }}
       last_update: ${{ steps.update.outputs.last_update }}
-      needs_rebuild: ${{ steps.check_rebuild.outputs.needs_rebuild }}
+      needs_rebuild: ${{ steps.update.outputs.modified }}
     
     steps:
     - name: Checkout repository
@@ -40,20 +35,6 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         fetch-depth: 0
     
-    - name: Safety check - prevent running on docs-base
-      run: |
-        current_branch=$(git rev-parse --abbrev-ref HEAD)
-        echo "Current branch: $current_branch"
-        
-        if [ "$current_branch" = "docs-base" ]; then
-          echo "❌ ERROR: This workflow should not run on docs-base branch!"
-          echo "The docs-base branch is for placeholder templates only."
-          echo "This workflow should only run on main branch."
-          exit 1
-        fi
-        
-        echo "✅ Branch check passed: $current_branch"
-    
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
@@ -61,59 +42,17 @@ jobs:
         cache: 'pip'
     
     - name: Install dependencies
-      run: |
-        pip install -r python/requirements.txt
+      run: pip install -r python/requirements.txt
     
     - name: Configure Git
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
     
-    - name: Ensure docs-base branch exists and is synchronized
-      run: |
-        echo "Fetching latest remote information..."
-        git fetch origin
-        
-        # Check if remote docs-base exists
-        if git ls-remote --exit-code --heads origin docs-base; then
-          echo "Remote docs-base branch exists"
-          
-          # Check if local docs-base exists
-          if git show-ref --verify --quiet refs/heads/docs-base; then
-            echo "Local docs-base branch exists, syncing with remote"
-            git checkout docs-base
-            git reset --hard origin/docs-base
-          else
-            echo "Creating local docs-base from remote"
-            git checkout -b docs-base origin/docs-base
-          fi
-        else
-          echo "Remote docs-base doesn't exist"
-          
-          # Check if local docs-base exists
-          if git show-ref --verify --quiet refs/heads/docs-base; then
-            echo "Local docs-base exists, pushing to create remote"
-            git checkout docs-base
-            git push -u origin docs-base
-          else
-            echo "Creating new docs-base branch from main"
-            git checkout -b docs-base main
-            git push -u origin docs-base
-          fi
-        fi
-        
-        echo "docs-base branch setup complete"
-    
-    - name: Run Python version updater
+    - name: Run version updater
       id: update
       run: |
-        echo "Current branch: $(git rev-parse --abbrev-ref HEAD)"
-        echo "Current commit: $(git rev-parse HEAD)"
-        echo "Remote status:"
-        git remote -v
-        
         if [ "${{ github.event.inputs.force_update }}" = "true" ]; then
-          echo "Force update requested"
           FORCE=1 python3 python/new_update_versions.py
         else
           python3 python/new_update_versions.py
@@ -122,86 +61,24 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         EVENT: ${{ github.event_name }}
     
-    - name: Verify docs-base has placeholders
-      run: |
-        echo "Verifying docs-base branch contains placeholders..."
-        
-        # Check that we're on docs-base
-        current_branch=$(git rev-parse --abbrev-ref HEAD)
-        if [ "$current_branch" != "docs-base" ]; then
-          echo "ERROR: Not on docs-base branch! Currently on: $current_branch"
-          exit 1
-        fi
-        
-        # Check for placeholder presence in key files
-        placeholder_count=$(grep -r '\${YT_VERSION}\|\${LAST_UPDATE}' --include="*.md" . | wc -l)
-        if [ "$placeholder_count" -eq 0 ]; then
-          echo "WARNING: No placeholders found in docs-base branch!"
-          echo "This might indicate the restoration process failed."
-          
-          # List files that might have actual values instead of placeholders
-          echo "Files with potential issues:"
-          grep -r -l '[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\} [0-9]\{2\}:[0-9]\{2\}:[0-9]\{2\} UTC' --include="*.md" . || true
-          grep -r -l 'Latest%20Supported%20Version-[0-9]' --include="*.md" . || true
-        else
-          echo "✓ Found $placeholder_count placeholder references in docs-base branch"
-        fi
-        
-        # Always show current status for debugging
-        echo "Current placeholder status:"
-        grep -r '\${YT_VERSION}\|\${LAST_UPDATE}' --include="*.md" . | head -5 || echo "No placeholders found"
-    
-    - name: Check rebuild requirements
-      id: check_rebuild
-      run: |
-        if [ "${{ steps.update.outputs.modified }}" = "true" ]; then
-          echo "needs_rebuild=true" >> "$GITHUB_OUTPUT"
-          echo "Version was updated, rebuild needed"
-        else
-          echo "needs_rebuild=false" >> "$GITHUB_OUTPUT"
-          echo "No version changes, no rebuild needed"
-        fi
-    
     - name: Summary
       run: |
         echo "### Update Summary" >> $GITHUB_STEP_SUMMARY
         echo "- **Modified:** ${{ steps.update.outputs.modified }}" >> $GITHUB_STEP_SUMMARY
         echo "- **YouTube Version:** ${{ steps.update.outputs.youtube_version }}" >> $GITHUB_STEP_SUMMARY
         echo "- **Last Update:** ${{ steps.update.outputs.last_update }}" >> $GITHUB_STEP_SUMMARY
-        echo "- **Needs Rebuild:** ${{ steps.check_rebuild.outputs.needs_rebuild }}" >> $GITHUB_STEP_SUMMARY
 
   # Trigger website rebuild if changes were made
   trigger-rebuild:
     needs: update-versions
-    if: needs.update-versions.outputs.needs_rebuild == 'true'
+    if: needs.update-versions.outputs.modified == 'true'
     permissions:
       contents: write
     uses: ./.github/workflows/retype-action.yml
     secrets: inherit
 
-  # Legacy compatibility: Also call rebuild-overview if it exists
-  trigger-overview-rebuild:
-    needs: update-versions
-    if: needs.update-versions.outputs.needs_rebuild == 'true'
-    runs-on: ubuntu-latest
-    steps:
-    - name: Trigger overview rebuild
-      uses: actions/github-script@v7
-      with:
-        script: |
-          try {
-            await github.rest.actions.createWorkflowDispatch({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              workflow_id: 'rebuild-overview.yml'
-            });
-            console.log('Triggered overview rebuild');
-          } catch (error) {
-            console.log('Overview rebuild workflow not found or failed:', error.message);
-          }
-
-  # Notify on success using existing Discord workflows
-  notify-success-owner:
+  # Notify on success
+  notify-success:
     needs: [update-versions, trigger-rebuild]
     if: needs.update-versions.outputs.modified == 'true' && !failure()
     uses: ./.github/workflows/discord-update-owner.yml
@@ -212,17 +89,6 @@ jobs:
       url: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
       message: "ReVanced version update completed successfully!"
 
-  # notify-success-announcement:
-  #   needs: [update-versions, trigger-rebuild]
-  #   if: needs.update-versions.outputs.modified == 'true' && !failure()
-  #   uses: ./.github/workflows/discord-update-announcement.yml
-  #   secrets: inherit
-  #   with:
-  #     title: "📱 ReVanced Update Available"
-  #     content: "New YouTube version **${{ needs.update-versions.outputs.youtube_version }}** is now supported by ReVanced patches. Check the troubleshooting guide for updated instructions!"
-  #     url: "https://sodawithoutsparkles.github.io/ReVanced-troubleshooting-guide/"
-  #     message: "🎉 Latest ReVanced compatibility update is live!"
-
   # Handle failures
   handle-failure:
     needs: update-versions
@@ -231,7 +97,7 @@ jobs:
     permissions:
       issues: write
     steps:
-    - name: Create or update failure issue
+    - name: Create failure issue
       uses: actions/github-script@v7
       with:
         script: |
@@ -239,23 +105,12 @@ jobs:
           const body = `The automated ReVanced version update workflow failed.
           
           **Details:**
-          - Workflow: ${{ github.workflow }}
           - Run ID: [${{ github.run_id }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
           - Event: ${{ github.event_name }}
           - Branch: ${{ github.ref_name }}
-          - Commit: [${{ github.sha }}](${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }})
-          - Timestamp: ${{ github.event.head_commit.timestamp }}
+          - Timestamp: ${new Date().toISOString()}
           
-          **Possible causes:**
-          - API endpoint changes
-          - Network connectivity issues
-          - Git permission problems
-          - Python script errors
-          
-          Please check the workflow logs for detailed error information.
-          
-          ---
-          *This issue was automatically created by GitHub Actions on ${new Date().toISOString()}*`;
+          Please check the workflow logs for detailed error information.`;
           
           // Look for existing open failure issues
           const issues = await github.rest.issues.listForRepo({
@@ -266,47 +121,20 @@ jobs:
           });
           
           if (issues.data.length === 0) {
-            // Create new issue
             await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
               title: title,
               body: body,
-              labels: ['bug', 'automation', 'version-update-failed', 'high-priority']
+              labels: ['bug', 'automation', 'version-update-failed']
             });
-            console.log('Created new failure issue');
-          } else {
-            // Update existing issue
-            const issue = issues.data[0];
-            const updateBody = `${issue.body}\n\n---\n\n**New failure:** ${new Date().toISOString()}\n- Run: [${{ github.run_id }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})`;
-            
-            await github.rest.issues.update({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: issue.number,
-              body: updateBody
-            });
-            console.log(`Updated existing failure issue #${issue.number}`);
           }
     
-    - name: Notify Discord on failure using existing workflow
-      uses: actions/github-script@v7
+    - name: Notify Discord on failure
+      uses: ./.github/workflows/discord-update-owner.yml
+      secrets: inherit
       with:
-        script: |
-          // Trigger Discord notification for failure
-          try {
-            await github.rest.actions.createWorkflowDispatch({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              workflow_id: 'discord-update-owner.yml',
-              inputs: {
-                title: '🚨 ReVanced Update Failed',
-                content: `The version update workflow encountered an error in run #${{ github.run_id }}. Please check the logs for details.`,
-                url: '${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}',
-                message: 'ReVanced version update workflow failed - please investigate!'
-              }
-            });
-            console.log('Triggered Discord notification for failure');
-          } catch (error) {
-            console.log('Failed to trigger Discord notification:', error.message);
-          }
+        title: "🚨 ReVanced Update Failed"
+        content: "The version update workflow encountered an error in run #${{ github.run_id }}. Please check the logs for details."
+        url: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+        message: "ReVanced version update workflow failed - please investigate!"
