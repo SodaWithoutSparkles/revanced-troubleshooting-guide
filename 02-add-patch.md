@@ -31,7 +31,7 @@ The latest supported YT version is:
 ${YT_VERSION}
 ```
 
-[![It is ${YT_VERSION}](https://img.shields.io/badge/Latest%20Supported%20Version-${YT_VERSION}-ff0000?style=for-the-badge&logo=youtube)](https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-43-41-release/youtube-19-43-41-2-android-apk-download/)
+[![It is ${YT_VERSION}](https://img.shields.io/badge/Latest%20Supported%20Version-${YT_VERSION}-ff0000?style=for-the-badge&logo=youtube)](https://www.apkmirror.com/apk/google-inc/youtube/youtube-${YT_VERSION_DASHED}-release/youtube-${YT_VERSION_DASHED}-2-android-apk-download/)
 
 as of ${LAST_UPDATE} . Remember that, as we will use it very soon.
 
@@ -58,7 +58,7 @@ The latest stable version may differ from the one shown below.
 !!!
 ![download GmsCore](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/010-download_GmsCore.jpg?raw=true)
 ===
-3. Visit [APK mirror for YouTube APK](https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-43-41-release/youtube-19-43-41-2-android-apk-download/)
+3. Visit [APK mirror for YouTube APK](https://www.apkmirror.com/apk/google-inc/youtube/youtube-${YT_VERSION_DASHED}-release/youtube-${YT_VERSION_DASHED}-2-android-apk-download/)
 !!!warning Warning
 **Do NOT install the downloaded YouTube APK.**
 !!!
