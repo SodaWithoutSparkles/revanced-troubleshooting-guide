@@ -309,27 +309,33 @@ class ReVancedVersionUpdater:
         }
         
         files_updated = 0
+        total_replacements = 0
+        
         for file_path in file_paths:
             try:
                 with open(file_path, 'r', encoding='utf-8') as f:
                     content = f.read()
                 
                 original_content = content
+                file_replacements = 0
                 
                 # Handle placeholder replacements
                 for placeholder, replacement in replacements.items():
+                    count = content.count(placeholder)
                     content = content.replace(placeholder, replacement)
+                    file_replacements += count
+                    total_replacements += count
                 
                 if content != original_content:
                     with open(file_path, 'w', encoding='utf-8') as f:
                         f.write(content)
                     files_updated += 1
-                    logging.debug(f'Updated placeholders in: {file_path}')
+                    logging.debug(f'Updated {file_replacements} placeholders in: {file_path}')
                     
             except Exception as e:
                 logging.warning(f'Failed to update {file_path}: {e}')
         
-        logging.info(f'Updated placeholders in {files_updated} files')
+        logging.info(f'Updated {total_replacements} placeholders in {files_updated} files')
     
     def cleanup_on_error(self):
         """Clean up backup files in case of error"""
@@ -390,23 +396,30 @@ class ReVancedVersionUpdater:
             
             self.backup_files(markdown_files)
             
-            # Step 4: Replace placeholders and force push to main
+            # Step 4: Update state file and commit to docs-base
+            self.update_state_file(package_versions)
+            
             if not os.getenv('DRY_RUN'):
+                # Commit state file to docs-base for persistence
+                state_commit_message = f"Update state: YouTube {youtube_version} ({last_update})"
+                GitManager.force_push_files([STATE_FILE], DOCS_BRANCH, state_commit_message)
+                logging.info(f"Updated state file on {DOCS_BRANCH}")
+                
+                # Step 5: Replace placeholders and push to main with state file
                 self.replace_placeholders_in_files(markdown_files, youtube_version, last_update)
                 
+                # Include both markdown files and state file in main branch commit
+                files_to_commit = markdown_files + [STATE_FILE]
                 commit_message = f"Update versions: YouTube {youtube_version} ({last_update})"
-                changes_made = GitManager.force_push_files(markdown_files, MAIN_BRANCH, commit_message)
+                changes_made = GitManager.force_push_files(files_to_commit, MAIN_BRANCH, commit_message)
                 
                 if changes_made:
                     logging.info(f"Successfully pushed updated files to {MAIN_BRANCH}")
                 else:
                     logging.info("No changes were made to push")
                 
-                # Step 5: Restore backups
+                # Step 6: Restore backups
                 self.restore_backups()
-                
-                # Update state file
-                self.update_state_file(package_versions)
                 
             else:
                 logging.info("DRY_RUN mode: Skipping file updates and git operations")
