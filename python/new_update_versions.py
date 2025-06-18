@@ -124,7 +124,7 @@ class ReVancedVersionUpdater:
     """Main class for updating ReVanced versions"""
     
     def __init__(self):
-        self.backup_files = []
+        self.backup_file_paths = []
         
     def export_output(self, key: str, value: str):
         """Export key-value pair to GitHub Actions output"""
@@ -266,24 +266,24 @@ class ReVancedVersionUpdater:
         """Create .bak copies of files"""
         logging.info(f'Creating backups for {len(file_paths)} files...')
         
-        self.backup_files = []
+        self.backup_file_paths = []
         for file_path in file_paths:
             backup_path = file_path + '.bak'
             try:
                 shutil.copy2(file_path, backup_path)
-                self.backup_files.append(backup_path)
+                self.backup_file_paths.append(backup_path)
                 logging.debug(f'Backed up {file_path} to {backup_path}')
             except Exception as e:
                 logging.warning(f'Failed to backup {file_path}: {e}')
         
-        logging.info(f'Created {len(self.backup_files)} backup files')
+        logging.info(f'Created {len(self.backup_file_paths)} backup files')
     
     def restore_backups(self):
         """Restore files from .bak copies and clean up"""
-        logging.info(f'Restoring {len(self.backup_files)} files from backups...')
+        logging.info(f'Restoring {len(self.backup_file_paths)} files from backups...')
         
         restored = 0
-        for backup_path in self.backup_files:
+        for backup_path in self.backup_file_paths:
             original_path = backup_path[:-4]  # Remove .bak extension
             try:
                 shutil.move(backup_path, original_path)
@@ -293,7 +293,7 @@ class ReVancedVersionUpdater:
                 logging.warning(f'Failed to restore {original_path}: {e}')
         
         logging.info(f'Restored {restored} files from backups')
-        self.backup_files = []
+        self.backup_file_paths = []
     
     def replace_placeholders_in_files(self, file_paths, youtube_version, last_update):
         """Replace placeholders in specified files"""
@@ -333,16 +333,16 @@ class ReVancedVersionUpdater:
     
     def cleanup_on_error(self):
         """Clean up backup files in case of error"""
-        if self.backup_files:
+        if self.backup_file_paths:
             logging.info('Cleaning up backup files due to error...')
-            for backup_path in self.backup_files:
+            for backup_path in self.backup_file_paths:
                 try:
                     if os.path.exists(backup_path):
                         os.remove(backup_path)
                         logging.debug(f'Removed backup file: {backup_path}')
                 except Exception as e:
                     logging.warning(f'Failed to remove backup {backup_path}: {e}')
-            self.backup_files = []
+            self.backup_file_paths = []
     
     def run(self):
         """Main execution method"""
