@@ -1,5 +1,8 @@
 # Modern ReVanced Version Update Workflow
 # This replaces the old version-and-lastCheck-bump.yml with the new Python-based updater
+# 
+# ⚠️  IMPORTANT: This workflow should ONLY run on the main branch!
+# The docs-base branch contains placeholder templates and should not be modified by automation.
 
 name: Update ReVanced Versions (New)
 
@@ -17,6 +20,8 @@ on:
 
 jobs:
   update-versions:
+    # Only run on main branch (for scheduled runs) or manual dispatch from main branch
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -34,6 +39,20 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         fetch-depth: 0
+    
+    - name: Safety check - prevent running on docs-base
+      run: |
+        current_branch=$(git rev-parse --abbrev-ref HEAD)
+        echo "Current branch: $current_branch"
+        
+        if [ "$current_branch" = "docs-base" ]; then
+          echo "❌ ERROR: This workflow should not run on docs-base branch!"
+          echo "The docs-base branch is for placeholder templates only."
+          echo "This workflow should only run on main branch."
+          exit 1
+        fi
+        
+        echo "✅ Branch check passed: $current_branch"
     
     - name: Set up Python
       uses: actions/setup-python@v5
