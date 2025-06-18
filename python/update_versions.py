@@ -46,12 +46,22 @@ class GitManager:
     def run_git_command(command):
         """Execute git command and return output"""
         try:
-            result = subprocess.run(
-                command.split(),
-                capture_output=True,
-                text=True,
-                check=True
-            )
+            # Use shell=True for commands with quoted arguments, otherwise split normally
+            if '"' in command or "'" in command:
+                result = subprocess.run(
+                    command,
+                    capture_output=True,
+                    text=True,
+                    check=True,
+                    shell=True
+                )
+            else:
+                result = subprocess.run(
+                    command.split(),
+                    capture_output=True,
+                    text=True,
+                    check=True
+                )
             return result.stdout.strip()
         except subprocess.CalledProcessError as e:
             logging.error(f"Git command failed: {command}")
