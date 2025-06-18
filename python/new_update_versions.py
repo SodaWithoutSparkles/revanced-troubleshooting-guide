@@ -393,7 +393,7 @@ class ReVancedVersionUpdater:
             logging.info(f"Found YouTube version: {youtube_version}")
             
             # Step 2: Check if update is needed
-            _is_update_needed, update_reason = self.check_if_update_needed(package_versions)
+            _is_update_needed, update_reason = self.check_if_update_needed(patches_data)
             if not (_is_update_needed or FORCED):
                 logging.info('No update needed')
                 self.export_output('modified', 'false')
@@ -417,7 +417,7 @@ class ReVancedVersionUpdater:
             self.backup_files(markdown_files)
             
             # Step 4: Update state file and commit to docs-base
-            self.update_state_file(package_versions)
+            self.update_state_file(patches_data)
             
             if not os.getenv('DRY_RUN'):
                 # Commit state file to docs-base for persistence
