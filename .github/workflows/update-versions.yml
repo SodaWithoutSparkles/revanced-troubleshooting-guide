@@ -97,6 +97,8 @@ jobs:
   trigger-rebuild:
     needs: update-versions
     if: needs.update-versions.outputs.needs_rebuild == 'true'
+    permissions:
+      contents: write
     uses: ./.github/workflows/retype-action.yml
     secrets: inherit
 
