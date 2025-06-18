@@ -425,13 +425,12 @@ class ReVancedVersionUpdater:
                 GitManager.force_push_files([STATE_FILE], DOCS_BRANCH, state_commit_message)
                 logging.info(f"Updated state file on {DOCS_BRANCH}")
                 
-                # Step 5: Replace placeholders and push to main with state file
+                # Step 5: Replace placeholders and push to main (markdown files only)
                 files_updated, total_replacements = self.replace_placeholders_in_files(markdown_files, youtube_version, last_update)
                 
-                # Include both markdown files and state file in main branch commit
-                files_to_commit = markdown_files + [STATE_FILE]
+                # Only commit markdown files to main branch (state file stays on docs-base)
                 commit_message = f"Update versions: YouTube {youtube_version} ({last_update})"
-                changes_made = GitManager.force_push_files(files_to_commit, MAIN_BRANCH, commit_message)
+                changes_made = GitManager.force_push_files(markdown_files, MAIN_BRANCH, commit_message)
                 
                 if changes_made:
                     logging.info(f"Successfully pushed updated files to {MAIN_BRANCH}")
