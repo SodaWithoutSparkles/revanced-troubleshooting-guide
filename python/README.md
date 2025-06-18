@@ -10,6 +10,8 @@ This directory contains scripts for updating ReVanced version information using 
 - `test_dry_run.py` - Dry-run test that simulates the update process
 - `requirements.txt` - Python dependencies
 - `github-actions-template.yml` - Template for GitHub Actions workflow
+- `new-workflow.yml` - Complete replacement workflow for the old system
+- `MIGRATION.md` - Detailed migration guide from old to new system
 - `list.json` - Sample response from patches list API (for reference)
 - `version.json` - Sample response from patches version API (for reference)
 
@@ -102,3 +104,26 @@ The script uses the existing configuration structure:
 - `requests` - For API calls
 - `packaging` - For version comparison
 - `git` - Must be available in PATH for git operations
+
+## GitHub Actions Integration
+
+### Quick Setup
+1. Copy `new-workflow.yml` to `.github/workflows/update-versions.yml`
+2. Disable the old workflow (`version-and-lastCheck-bump.yml`)
+3. Ensure `docs-base` branch exists
+4. Configure secrets if using Discord notifications
+
+### Workflow Features
+- **Automatic scheduling**: Runs every 30 minutes (configurable)
+- **Manual triggering**: Can be triggered manually with force option
+- **Branch management**: Automatically handles `docs-base` ↔ `main` workflow
+- **Website rebuilding**: Triggers retype rebuild when versions change
+- **Notifications**: Discord webhook support for updates and failures
+- **Error handling**: Creates GitHub issues for failures
+
+### Required Secrets (Optional)
+- `DISCORD_WEBHOOK` - For Discord notifications
+
+## Migration from Old System
+
+See `MIGRATION.md` for detailed instructions on migrating from `checkReVancedVersion.py` to the new system.

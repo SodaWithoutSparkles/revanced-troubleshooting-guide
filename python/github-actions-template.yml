@@ -1,32 +1,51 @@
-# GitHub Actions Workflow Template for ReVanced Version Updater
+# GitHub Actions Workflow for ReVanced Version Updater
 # Save this as .github/workflows/update-versions.yml
 
 name: Update ReVanced Versions
 
 on:
-  schedule:
-    # Run daily at 12:00 UTC
-    - cron: '0 12 * * *'
   workflow_dispatch:
     # Allow manual triggering
+    inputs:
+      force_update:
+        description: 'Force update even if no changes detected'
+        required: false
+        default: false
+        type: boolean
+  schedule:
+    # Run every 30 minutes (same as existing workflow)
+    - cron: '*/30 * * * *'
 
 jobs:
   update-versions:
     runs-on: ubuntu-latest
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push
+      contents: write
+      # Allow creating issues on failure
+      issues: write
+    
+    outputs:
+      modified: ${{ steps.update.outputs.modified }}
+      youtube_version: ${{ steps.update.outputs.youtube_version }}
+      last_update: ${{ steps.update.outputs.last_update }}
+      needs_rebuild: ${{ steps.check_rebuild.outputs.needs_rebuild }}
     
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
+        # Use default GITHUB_TOKEN, fetch all branches
         token: ${{ secrets.GITHUB_TOKEN }}
         fetch-depth: 0
     
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.11'
+        cache: 'pip'
     
-    - name: Install dependencies
+    - name: Install Python dependencies
       run: |
         pip install -r python/requirements.txt
     
@@ -35,29 +54,113 @@ jobs:
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
     
+    - name: Ensure on docs-base branch
+      run: |
+        # Check if docs-base branch exists, create if not
+        if ! git show-ref --verify --quiet refs/heads/docs-base; then
+          echo "Creating docs-base branch from main"
+          git checkout -b docs-base main
+          git push origin docs-base
+        else
+          git checkout docs-base
+        fi
+    
     - name: Run version updater
       id: update
       run: |
-        python3 python/update_versions.py
+        if [ "${{ github.event.inputs.force_update }}" = "true" ]; then
+          FORCE=1 python3 python/update_versions.py
+        else
+          python3 python/update_versions.py
+        fi
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        EVENT: ${{ github.event_name }}
+    
+    - name: Check if rebuild needed
+      id: check_rebuild
+      run: |
+        if [ "${{ steps.update.outputs.modified }}" = "true" ]; then
+          echo "needs_rebuild=true" >> "$GITHUB_OUTPUT"
+          echo "Rebuild needed: Version updated to ${{ steps.update.outputs.youtube_version }}"
+        else
+          echo "needs_rebuild=false" >> "$GITHUB_OUTPUT"
+          echo "No rebuild needed: No version changes"
+        fi
     
     - name: Output results
       run: |
+        echo "::notice title=Update Results::Modified: ${{ steps.update.outputs.modified }}, YouTube Version: ${{ steps.update.outputs.youtube_version }}, Last Update: ${{ steps.update.outputs.last_update }}"
         echo "Modified: ${{ steps.update.outputs.modified }}"
         echo "YouTube Version: ${{ steps.update.outputs.youtube_version }}"
         echo "Last Update: ${{ steps.update.outputs.last_update }}"
-    
-    # Optional: Create an issue if the update fails
+        echo "Needs Rebuild: ${{ steps.check_rebuild.outputs.needs_rebuild }}"
+
+  # Call the existing retype workflow if changes were made
+  trigger-rebuild:
+    needs: update-versions
+    if: needs.update-versions.outputs.needs_rebuild == 'true'
+    uses: ./.github/workflows/retype-action.yml
+    secrets: inherit
+
+  # Notify on Discord if enabled and changes were made
+  notify-discord:
+    needs: [update-versions, trigger-rebuild]
+    if: needs.update-versions.outputs.modified == 'true' && !failure()
+    runs-on: ubuntu-latest
+    steps:
+    - name: Notify Discord
+      run: |
+        if [ -n "${{ secrets.DISCORD_WEBHOOK }}" ]; then
+          curl -H "Content-Type: application/json" \
+            -d "{\"content\":\"🔄 ReVanced versions updated! YouTube: ${{ needs.update-versions.outputs.youtube_version }} (Updated: ${{ needs.update-versions.outputs.last_update }})\"}" \
+            "${{ secrets.DISCORD_WEBHOOK }}"
+        else
+          echo "Discord webhook not configured, skipping notification"
+        fi
+
+  # Create an issue if the update fails
+  create-failure-issue:
+    needs: update-versions
+    if: failure()
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
     - name: Create issue on failure
-      if: failure()
       uses: actions/github-script@v7
       with:
         script: |
-          github.rest.issues.create({
+          const title = 'ReVanced Version Update Failed';
+          const body = `The automated ReVanced version update failed.
+          
+          **Workflow:** ${{ github.workflow }}
+          **Run ID:** ${{ github.run_id }}
+          **Event:** ${{ github.event_name }}
+          **Branch:** ${{ github.ref_name }}
+          **Commit:** ${{ github.sha }}
+          
+          Please check the [workflow logs](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) for more details.
+          
+          This issue was automatically created by GitHub Actions.`;
+          
+          // Check if there's already an open issue for this
+          const issues = await github.rest.issues.listForRepo({
             owner: context.repo.owner,
             repo: context.repo.repo,
-            title: 'ReVanced Version Update Failed',
-            body: 'The automated ReVanced version update failed. Please check the workflow logs.',
-            labels: ['bug', 'automation']
-          })
+            labels: 'automation,version-update-failed',
+            state: 'open'
+          });
+          
+          if (issues.data.length === 0) {
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: title,
+              body: body,
+              labels: ['bug', 'automation', 'version-update-failed']
+            });
+            console.log('Created new issue for failed update');
+          } else {
+            console.log('Issue already exists for failed updates');
+          }
