@@ -27,10 +27,10 @@ STATE_FILE = os.path.join(CACHE_DIR, 'update.state')
 # GitHub Actions environment
 if os.getenv('GITHUB_ACTIONS') == 'true':
     EXPORT = os.getenv('GITHUB_OUTPUT')
-    FORCED = os.getenv('EVENT') == 'workflow_dispatch'
 else:
     EXPORT = None
-    FORCED = os.getenv('FORCE') is not None
+
+FORCED = os.getenv('FORCE') is not None
 
 # Logging setup
 logging.basicConfig(
