@@ -77,7 +77,18 @@ class GitManager:
     def checkout_branch(branch):
         """Checkout to specified branch"""
         logging.info(f"Checking out to branch: {branch}")
-        GitManager.run_git_command(f"git checkout {branch}")
+        try:
+            # Try to checkout existing local branch first
+            GitManager.run_git_command(f"git checkout {branch}")
+        except subprocess.CalledProcessError:
+            # If local branch doesn't exist, try to checkout remote branch
+            try:
+                logging.info(f"Local branch {branch} doesn't exist, trying to checkout from origin/{branch}")
+                GitManager.run_git_command(f"git checkout -b {branch} origin/{branch}")
+            except subprocess.CalledProcessError:
+                # If remote branch doesn't exist either, create new branch from current HEAD
+                logging.info(f"Remote branch origin/{branch} doesn't exist, creating new branch from current HEAD")
+                GitManager.run_git_command(f"git checkout -b {branch}")
     
     @staticmethod
     def commit_and_push(message, branch=None):
@@ -101,9 +112,8 @@ class GitManager:
         GitManager.run_git_command(f'git commit -m "{message}"')
         logging.info(f"Committed changes: {message}")
         
-        # Push changes
-        GitManager.run_git_command(f"git push origin {GitManager.get_current_branch()}")
-        logging.info(f"Pushed to {GitManager.get_current_branch()}")
+        # Push changes using safe push method
+        GitManager.safe_push()
         return True
 
     @staticmethod
@@ -136,6 +146,91 @@ class GitManager:
             return has_timestamps > 0 or has_versions > 0
         except subprocess.CalledProcessError:
             return False
+
+    @staticmethod
+    def ensure_branch_exists(branch):
+        """Ensure branch exists and is properly synchronized with remote"""
+        logging.info(f"Ensuring branch {branch} exists and is synchronized")
+        
+        try:
+            # Fetch latest remote information
+            GitManager.run_git_command("git fetch origin")
+            
+            # Check if local branch exists
+            try:
+                GitManager.run_git_command(f"git rev-parse --verify {branch}")
+                local_exists = True
+            except subprocess.CalledProcessError:
+                local_exists = False
+            
+            # Check if remote branch exists
+            try:
+                GitManager.run_git_command(f"git rev-parse --verify origin/{branch}")
+                remote_exists = True
+            except subprocess.CalledProcessError:
+                remote_exists = False
+            
+            if remote_exists and not local_exists:
+                # Remote exists but local doesn't - checkout from remote
+                logging.info(f"Remote branch origin/{branch} exists, creating local branch")
+                GitManager.run_git_command(f"git checkout -b {branch} origin/{branch}")
+            elif remote_exists and local_exists:
+                # Both exist - checkout local and sync with remote
+                logging.info(f"Both local and remote {branch} exist, syncing")
+                GitManager.run_git_command(f"git checkout {branch}")
+                # Reset local branch to match remote (force sync)
+                GitManager.run_git_command(f"git reset --hard origin/{branch}")
+            elif not remote_exists and local_exists:
+                # Local exists but remote doesn't - checkout local and push to create remote
+                logging.info(f"Local branch {branch} exists, creating remote")
+                GitManager.run_git_command(f"git checkout {branch}")
+                GitManager.run_git_command(f"git push -u origin {branch}")
+            else:
+                # Neither exists - create new branch
+                logging.info(f"Creating new branch {branch}")
+                GitManager.run_git_command(f"git checkout -b {branch}")
+                GitManager.run_git_command(f"git push -u origin {branch}")
+                
+        except subprocess.CalledProcessError as e:
+            logging.error(f"Failed to ensure branch {branch} exists: {e}")
+            raise
+
+    @staticmethod
+    def safe_push(branch=None):
+        """Safely push to remote, handling non-fast-forward situations"""
+        if branch:
+            current_branch = GitManager.get_current_branch()
+            if current_branch != branch:
+                GitManager.checkout_branch(branch)
+        
+        current_branch = GitManager.get_current_branch()
+        
+        try:
+            # Try normal push first
+            GitManager.run_git_command(f"git push origin {current_branch}")
+            logging.info(f"Successfully pushed to {current_branch}")
+        except subprocess.CalledProcessError as e:
+            if "non-fast-forward" in str(e.stderr) or "rejected" in str(e.stderr):
+                logging.warning(f"Non-fast-forward push detected for {current_branch}")
+                
+                # For docs-base branch, we can force push since it's a template branch
+                if current_branch == 'docs-base':
+                    logging.info("Force pushing docs-base branch (template branch)")
+                    GitManager.run_git_command(f"git push --force-with-lease origin {current_branch}")
+                else:
+                    # For other branches, fetch and try to merge
+                    logging.info(f"Attempting to resolve conflicts for {current_branch}")
+                    GitManager.run_git_command("git fetch origin")
+                    try:
+                        GitManager.run_git_command(f"git merge origin/{current_branch}")
+                        GitManager.run_git_command(f"git push origin {current_branch}")
+                        logging.info(f"Resolved conflicts and pushed to {current_branch}")
+                    except subprocess.CalledProcessError:
+                        logging.error(f"Failed to resolve conflicts for {current_branch}")
+                        raise
+            else:
+                # Re-raise if it's not a non-fast-forward issue
+                raise
 
 class ReVancedVersionUpdater:
     """Main class for updating ReVanced versions"""
@@ -395,9 +490,14 @@ class ReVancedVersionUpdater:
             try:
                 GitManager.run_git_command("git add .")
                 GitManager.run_git_command('git commit -m "Restore placeholders in docs-base branch"')
-                logging.info('Committed placeholder restoration to docs-base')
-            except subprocess.CalledProcessError:
-                logging.info('No changes to commit for placeholder restoration')
+                # Push the restored placeholders using safe push
+                GitManager.safe_push()
+                logging.info('Committed and pushed placeholder restoration to docs-base')
+            except subprocess.CalledProcessError as e:
+                if "nothing to commit" in str(e.stderr) or "working tree clean" in str(e.stderr):
+                    logging.info('No changes to commit for placeholder restoration')
+                else:
+                    logging.warning(f'Failed to commit placeholder restoration: {e}')
         else:
             logging.info('No files needed placeholder restoration')
 
@@ -410,16 +510,34 @@ class ReVancedVersionUpdater:
                 self.export_output('modified', 'false')
                 return
             
-            # Ensure we're on the docs-base branch
+            # Ensure we're on the docs-base branch and it's properly set up
             current_branch = GitManager.get_current_branch()
             if current_branch != DOCS_BRANCH:
-                logging.info(f"Currently on {current_branch}, switching to {DOCS_BRANCH}")
+                logging.info(f"Currently on {current_branch}, ensuring {DOCS_BRANCH} branch exists")
                 try:
-                    GitManager.checkout_branch(DOCS_BRANCH)
+                    GitManager.ensure_branch_exists(DOCS_BRANCH)
                 except subprocess.CalledProcessError:
-                    logging.error(f"Failed to checkout {DOCS_BRANCH} branch")
+                    logging.error(f"Failed to ensure {DOCS_BRANCH} branch exists")
                     self.export_output('modified', 'false')
                     return
+            else:
+                # Already on docs-base, but ensure it's synced with remote
+                logging.info(f"Already on {DOCS_BRANCH}, ensuring it's synchronized")
+                try:
+                    GitManager.run_git_command("git fetch origin")
+                    # Check if remote branch exists and sync if needed
+                    try:
+                        GitManager.run_git_command(f"git rev-parse --verify origin/{DOCS_BRANCH}")
+                        # Remote exists, sync with it
+                        GitManager.run_git_command(f"git reset --hard origin/{DOCS_BRANCH}")
+                        logging.info(f"Synchronized {DOCS_BRANCH} with remote")
+                    except subprocess.CalledProcessError:
+                        # Remote doesn't exist, push current branch to create it
+                        GitManager.run_git_command(f"git push -u origin {DOCS_BRANCH}")
+                        logging.info(f"Created remote {DOCS_BRANCH} branch")
+                except subprocess.CalledProcessError as e:
+                    logging.warning(f"Failed to synchronize {DOCS_BRANCH}: {e}")
+                    # Continue anyway, might still work
             
             # Verify docs-base has placeholders (as it should)
             if not GitManager.verify_branch_has_placeholders(DOCS_BRANCH):

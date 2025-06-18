@@ -69,20 +69,49 @@ jobs:
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
     
-    - name: Ensure docs-base branch exists
+    - name: Ensure docs-base branch exists and is synchronized
       run: |
-        if ! git show-ref --verify --quiet refs/heads/docs-base; then
-          echo "Creating docs-base branch from main"
-          git checkout -b docs-base main
-          git push origin docs-base
+        echo "Fetching latest remote information..."
+        git fetch origin
+        
+        # Check if remote docs-base exists
+        if git ls-remote --exit-code --heads origin docs-base; then
+          echo "Remote docs-base branch exists"
+          
+          # Check if local docs-base exists
+          if git show-ref --verify --quiet refs/heads/docs-base; then
+            echo "Local docs-base branch exists, syncing with remote"
+            git checkout docs-base
+            git reset --hard origin/docs-base
+          else
+            echo "Creating local docs-base from remote"
+            git checkout -b docs-base origin/docs-base
+          fi
         else
-          echo "docs-base branch exists"
-          git checkout docs-base
+          echo "Remote docs-base doesn't exist"
+          
+          # Check if local docs-base exists
+          if git show-ref --verify --quiet refs/heads/docs-base; then
+            echo "Local docs-base exists, pushing to create remote"
+            git checkout docs-base
+            git push -u origin docs-base
+          else
+            echo "Creating new docs-base branch from main"
+            git checkout -b docs-base main
+            git push -u origin docs-base
+          fi
         fi
+        
+        echo "docs-base branch setup complete"
     
     - name: Run Python version updater
       id: update
       run: |
+        echo "Current branch: $(git rev-parse --abbrev-ref HEAD)"
+        echo "Current commit: $(git rev-parse HEAD)"
+        echo "Remote status:"
+        git remote -v
+        
         if [ "${{ github.event.inputs.force_update }}" = "true" ]; then
           echo "Force update requested"
           FORCE=1 python3 python/update_versions.py
