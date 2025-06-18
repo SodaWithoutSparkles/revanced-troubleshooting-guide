@@ -6,6 +6,7 @@ import os
 import logging
 import subprocess
 import glob
+import re
 from datetime import datetime, timezone
 from packaging import version
 
@@ -233,6 +234,9 @@ class ReVancedVersionUpdater:
         # Find all markdown files
         md_files = glob.glob('**/*.md', recursive=True)
         
+        # Convert version to dashed format for APKMirror URLs
+        youtube_version_dashed = youtube_version.replace('.', '-')
+        
         replacements = {
             '${YT_VERSION}': youtube_version,
             '${LAST_UPDATE}': last_update
@@ -245,8 +249,26 @@ class ReVancedVersionUpdater:
                     content = f.read()
                 
                 original_content = content
+                
+                # Handle placeholder replacements
                 for placeholder, replacement in replacements.items():
                     content = content.replace(placeholder, replacement)
+                
+                # Handle APKMirror URL updates - find and replace hardcoded dashed versions
+                # Pattern: youtube-XX-XX-XX-release and youtube-XX-XX-XX-android variants
+                
+                # Find existing dashed versions in APKMirror URLs and replace them
+                apkmirror_patterns = [
+                    # youtube-19-43-41-release
+                    (r'youtube-\d+-\d+-\d+-release', f'youtube-{youtube_version_dashed}-release'),
+                    # youtube-19-43-41-android-apk-download
+                    (r'youtube-\d+-\d+-\d+-android', f'youtube-{youtube_version_dashed}-android'),
+                    # youtube-19-43-41-2-android-apk-download (some have -2- suffix)
+                    (r'youtube-\d+-\d+-\d+-\d+-android', f'youtube-{youtube_version_dashed}-2-android')
+                ]
+                
+                for pattern, replacement in apkmirror_patterns:
+                    content = re.sub(pattern, replacement, content)
                 
                 if content != original_content:
                     with open(file_path, 'w', encoding='utf-8') as f:
@@ -258,6 +280,7 @@ class ReVancedVersionUpdater:
                 logging.warning(f'Failed to update {file_path}: {e}')
         
         logging.info(f'Updated placeholders in {files_updated} files')
+        logging.info(f'YouTube version: {youtube_version} (dashed: {youtube_version_dashed})')
     
     def run(self):
         """Main execution method"""

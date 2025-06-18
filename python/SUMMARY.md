@@ -42,6 +42,7 @@ I've completely rewritten the GitHub Actions workflow system for your ReVanced t
 - ✅ Direct placeholder replacement in markdown files
 - ✅ Only updates when versions actually change
 - ✅ Preserves existing file structure and formatting
+- ✅ **Automatic APKMirror URL updates** - Replaces hardcoded dashed versions (e.g., youtube-19-43-41 → youtube-20-12-46)
 
 ### 4. Enhanced GitHub Actions
 - ✅ Runs every 30 minutes (same as before)
@@ -65,7 +66,7 @@ The migration checker confirms all systems are ready:
 - Git repository setup: ✅
 - API connectivity: ✅ (v5.27.0)
 - Dependencies: ✅
-- Placeholders found: ✅ (9 files with ${YT_VERSION}, 7 with ${LAST_UPDATE})
+- Placeholders found: ✅ (9 files with 20.12.46, 7 with 2025-06-18 16:11:26 UTC)
 - Configuration files: ✅
 - New scripts: ✅
 

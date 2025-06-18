@@ -97,8 +97,8 @@ Used template files with `{table}`, `{date}`, `{footnote}` placeholders that wer
 
 ### New System
 Direct replacement of placeholders in existing markdown files:
-- `${YT_VERSION}` → Latest YouTube version (e.g., "20.12.46")
-- `${LAST_UPDATE}` → Timestamp (e.g., "2025-06-18 15:37:15 UTC")
+- `20.12.46` → Latest YouTube version (e.g., "20.12.46")
+- `2025-06-18 16:11:26 UTC` → Timestamp (e.g., "2025-06-18 15:37:15 UTC")
 
 ## Workflow Differences
 

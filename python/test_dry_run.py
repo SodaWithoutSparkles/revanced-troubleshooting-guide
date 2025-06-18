@@ -30,6 +30,10 @@ class DryRunUpdater(ReVancedVersionUpdater):
         logging.info(f'Would replace ${{YT_VERSION}} with: {youtube_version}')
         logging.info(f'Would replace ${{LAST_UPDATE}} with: {last_update}')
         
+        # Show dashed version handling
+        youtube_version_dashed = youtube_version.replace('.', '-')
+        logging.info(f'Would replace APKMirror dashed versions with: {youtube_version_dashed}')
+        
         # Count files that would be updated
         import glob
         md_files = glob.glob('../**/*.md', recursive=True)

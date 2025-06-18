@@ -23,8 +23,9 @@ This directory contains scripts for updating ReVanced version information using 
 - Parses patch compatibility information
 - Finds the latest supported YouTube version
 - Replaces placeholders in markdown files:
-  - `${YT_VERSION}` → Latest YouTube version
-  - `${LAST_UPDATE} ` → Timestamp of last update
+  - `${YT_VERSION}` → Latest YouTube version (e.g., "20.12.46")
+  - `${LAST_UPDATE}` → Timestamp of last update (e.g., "2025-06-18 16:11:26 UTC")
+  - APKMirror URLs → Automatically updates hardcoded dashed versions (e.g., "youtube-19-43-41-release" → "youtube-20-12-46-release")
 - Manages git branches (works on `docs-base`, commits to `main`)
 - Exports outputs for GitHub Actions
 
