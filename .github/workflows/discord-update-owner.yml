@@ -1,4 +1,4 @@
-name: Notify owner on Discord
+name: "[Discord] Notify Owner"
 
 on: 
   workflow_dispatch:

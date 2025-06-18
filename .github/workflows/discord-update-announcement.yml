@@ -1,4 +1,4 @@
-name: Send Discord Update Announcement
+name: "[Discord] Announcement"
 
 on: 
   workflow_dispatch:
