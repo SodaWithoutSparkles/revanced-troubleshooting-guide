@@ -34,7 +34,7 @@ FORCED = os.getenv('FORCE') is not None
 
 # Logging setup
 logging.basicConfig(
-    level=logging.DEBUG,
+    level=logging.INFO,
     format='%(asctime)s.%(msecs)03d: [%(levelname)s] %(message)s',
     datefmt='%d-%b-%y %H:%M:%S'
 )
@@ -379,6 +379,9 @@ class ReVancedVersionUpdater:
             
             # Fetch API data
             patches_data, version_data = self.fetch_api_data()
+            patches_version = version_data.get('version', 'unknown') if isinstance(version_data, dict) else 'unknown'
+            logging.info(f"patches v{patches_version} fetched from API")
+            self.export_output('patches_version', patches_version)
             
             # Parse data
             package_versions = self.parse_patches_data(patches_data)

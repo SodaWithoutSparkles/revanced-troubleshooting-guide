@@ -1,0 +1,36 @@
+name: Notify YouTube Version Update
+
+on:
+  workflow_call:
+    inputs:
+      youtube_version:
+        description: 'Latest supported YouTube version'
+        required: true
+        type: string
+
+jobs:
+  notify-owner:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Discord Owner
+        uses: ./.github/workflows/discord-update-owner.yml
+        with:
+          title: "🔄 ReVanced YouTube Supported Versions Updated"
+          content: |
+            ReVanced Supported YouTube version updated to **${{ inputs.youtube_version }}**
+          url: "https://github.com/revanced/revanced-patches/releases/latest"
+          message: "ReVanced YouTube version update completed successfully!"
+        secrets: inherit
+
+  announce:
+    runs-on: ubuntu-latest
+    needs: notify-owner
+    steps:
+      - name: Announce on Discord
+        uses: ./.github/workflows/discord-update-announcement.yml
+        with:
+          title: "🔄 ReVanced YouTube Supported Versions Updated"
+          content: |
+            A new supported YouTube version (**${{ inputs.youtube_version }}**) is now available!
+          url: "https://github.com/revanced/revanced-patches/releases/latest"
+          message: "ReVanced YouTube version updated."

@@ -30,6 +30,8 @@ jobs:
       files_updated: ${{ steps.update.outputs.files_updated }}
       total_replacements: ${{ steps.update.outputs.total_replacements }}
       needs_rebuild: ${{ steps.update.outputs.modified }}
+      patches_version: ${{ steps.update.outputs.patches_version }}
+
     
     steps:
     - name: Checkout repository
@@ -67,6 +69,7 @@ jobs:
     - name: Summary
       run: |
         echo "### Update Summary" >> $GITHUB_STEP_SUMMARY
+        echo "- **Patches Version:** ${{ steps.update.outputs.patches_version }}" >> $GITHUB_STEP_SUMMARY
         echo "- **Modified:** ${{ steps.update.outputs.modified }}" >> $GITHUB_STEP_SUMMARY
         echo "- **YouTube Version:** ${{ steps.update.outputs.youtube_version }}" >> $GITHUB_STEP_SUMMARY
         echo "- **Last Update:** ${{ steps.update.outputs.last_update }}" >> $GITHUB_STEP_SUMMARY
@@ -88,16 +91,13 @@ jobs:
     secrets: inherit
 
   # Notify on success
-  notify-success:
+  notify-patches-update:
     needs: [update-versions, trigger-rebuild]
-    if: needs.update-versions.outputs.modified == 'true' && !failure()
-    uses: ./.github/workflows/discord-update-owner.yml
+    if: needs.update-versions.outputs.update_reason == 'patches_updated' && !failure()
+    uses: ./.github/workflows/notify-patches-update.yml
     secrets: inherit
     with:
-      title: "🔄 ReVanced Versions Updated"
-      content: "YouTube version updated to **${{ needs.update-versions.outputs.youtube_version }}** at ${{ needs.update-versions.outputs.last_update }}\n\n**Details:**\n- Files updated: ${{ needs.update-versions.outputs.files_updated }}\n- Total replacements: ${{ needs.update-versions.outputs.total_replacements }}\n- Reason: ${{ needs.update-versions.outputs.update_reason }}"
-      url: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-      message: "ReVanced version update completed successfully!"
+      patches_version: ${{ needs.update-versions.outputs.patches_version }}
 
   # Handle failures
   handle-failure:
