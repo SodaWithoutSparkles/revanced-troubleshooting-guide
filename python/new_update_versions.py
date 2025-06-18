@@ -88,6 +88,23 @@ class GitManager:
             raise
     
     @staticmethod
+    def has_staged_changes():
+        """Check if there are staged changes"""
+        try:
+            result = subprocess.run(
+                ["git", "diff", "--cached", "--exit-code"],
+                capture_output=True,
+                text=True,
+                check=False  # Don't raise exception on non-zero exit
+            )
+            # Exit code 0 means no differences (no staged changes)
+            # Exit code 1 means there are differences (staged changes exist)
+            return result.returncode != 0
+        except subprocess.CalledProcessError:
+            # Fallback: assume there are changes if command fails
+            return True
+    
+    @staticmethod
     def force_push_files(files, branch, commit_message):
         """Force push specific files to a branch"""
         logging.info(f"Force pushing {len(files)} files to {branch}")
@@ -98,13 +115,9 @@ class GitManager:
                 GitManager.run_git_command(f"git add {file_path}")
             
             # Check if there are changes to commit
-            try:
-                GitManager.run_git_command("git diff --cached --exit-code")
+            if not GitManager.has_staged_changes():
                 logging.info("No changes to commit")
                 return False
-            except subprocess.CalledProcessError:
-                # There are changes to commit
-                pass
             
             # Commit changes
             GitManager.run_git_command(f'git commit -m "{commit_message}"')
