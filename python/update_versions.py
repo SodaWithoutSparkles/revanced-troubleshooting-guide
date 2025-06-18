@@ -106,6 +106,37 @@ class GitManager:
         logging.info(f"Pushed to {GitManager.get_current_branch()}")
         return True
 
+    @staticmethod
+    def verify_branch_has_placeholders(branch_name):
+        """Verify that the current branch contains placeholder variables"""
+        try:
+            # Count placeholder occurrences
+            result = GitManager.run_git_command('grep -r "${YT_VERSION}\\|${LAST_UPDATE}" --include="*.md" .')
+            placeholder_count = len(result.split('\n')) if result.strip() else 0
+            
+            logging.info(f"Found {placeholder_count} placeholder references in {branch_name} branch")
+            return placeholder_count > 0
+        except subprocess.CalledProcessError:
+            # grep returns non-zero when no matches found
+            logging.warning(f"No placeholders found in {branch_name} branch")
+            return False
+    
+    @staticmethod
+    def verify_branch_has_actual_values(branch_name):
+        """Verify that the current branch contains actual values instead of placeholders"""
+        try:
+            # Look for patterns that indicate actual values
+            timestamp_result = GitManager.run_git_command('grep -r "[0-9]\\{4\\}-[0-9]\\{2\\}-[0-9]\\{2\\} [0-9]\\{2\\}:[0-9]\\{2\\}:[0-9]\\{2\\} UTC" --include="*.md" .')
+            version_result = GitManager.run_git_command('grep -r "Latest%20Supported%20Version-[0-9]" --include="*.md" .')
+            
+            has_timestamps = len(timestamp_result.split('\n')) if timestamp_result.strip() else 0
+            has_versions = len(version_result.split('\n')) if version_result.strip() else 0
+            
+            logging.info(f"Found {has_timestamps} timestamp and {has_versions} version references in {branch_name} branch")
+            return has_timestamps > 0 or has_versions > 0
+        except subprocess.CalledProcessError:
+            return False
+
 class ReVancedVersionUpdater:
     """Main class for updating ReVanced versions"""
     
@@ -292,6 +323,84 @@ class ReVancedVersionUpdater:
         logging.info(f'Updated placeholders in {files_updated} files')
         logging.info(f'YouTube version: {youtube_version} (dashed: {youtube_version_dashed})')
     
+    def restore_placeholders_to_docs_base(self):
+        """Restore placeholder variables in docs-base branch after committing actual values to main"""
+        logging.info('Restoring placeholders in docs-base branch...')
+        
+        # Find all markdown files
+        md_files = glob.glob('**/*.md', recursive=True)
+        
+        files_restored = 0
+        for file_path in md_files:
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                
+                original_content = content
+                
+                # Restore placeholders - reverse the replacement process
+                # This finds actual values and replaces them back with placeholders
+                
+                # Restore timestamp placeholders (look for UTC timestamps)
+                timestamp_pattern = r'\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2} UTC'
+                content = re.sub(timestamp_pattern, '${LAST_UPDATE}', content)
+                
+                # Restore version placeholders (look for version numbers in specific contexts)
+                # Be very specific to avoid false positives
+                version_patterns = [
+                    # In version badges and similar contexts
+                    (r'Latest%20Supported%20Version-\d+\.\d+\.\d+', 'Latest%20Supported%20Version-${YT_VERSION}'),
+                    (r'It is \d+\.\d+\.\d+', 'It is ${YT_VERSION}'),
+                    # In code blocks and direct version references
+                    (r'```\n\d+\.\d+\.\d+\n```', '```\n${YT_VERSION}\n```'),
+                    # In APK names and file references
+                    (r'youtube-revanced_v\d+\.\d+\.\d+\.apk', 'youtube-revanced_v${YT_VERSION}.apk'),
+                    # In version tables (| YouTube | VERSION |)
+                    (r'\| YouTube \| \d+\.\d+\.\d+ \|', '| YouTube | ${YT_VERSION} |'),
+                    # Version verification text
+                    (r'version \d+\.\d+\.\d+', 'version ${YT_VERSION}'),
+                    (r'version \*\*\d+\.\d+\.\d+\*\*', 'version **${YT_VERSION}**'),
+                ]
+                
+                for pattern, replacement in version_patterns:
+                    content = re.sub(pattern, replacement, content)
+                
+                # Restore APKMirror URL placeholders - convert back to old hardcoded version
+                # This is more complex since we need to detect the current pattern and replace with old one
+                apkmirror_restore_patterns = [
+                    # Restore release URLs back to 19-43-41 (the original hardcoded version)
+                    (r'youtube-\d+-\d+-\d+-release', 'youtube-19-43-41-release'),
+                    # Restore android URLs back to 19-43-41
+                    (r'youtube-\d+-\d+-\d+-android', 'youtube-19-43-41-android'),
+                    # Restore 2-android URLs back to 19-43-41-2
+                    (r'youtube-\d+-\d+-\d+-\d+-android', 'youtube-19-43-41-2-android')
+                ]
+                
+                for pattern, replacement in apkmirror_restore_patterns:
+                    content = re.sub(pattern, replacement, content)
+                
+                if content != original_content:
+                    with open(file_path, 'w', encoding='utf-8') as f:
+                        f.write(content)
+                    files_restored += 1
+                    logging.debug(f'Restored placeholders in: {file_path}')
+                    
+            except Exception as e:
+                logging.warning(f'Failed to restore placeholders in {file_path}: {e}')
+        
+        if files_restored > 0:
+            logging.info(f'Restored placeholders in {files_restored} files')
+            
+            # Commit the restored placeholders to docs-base
+            try:
+                GitManager.run_git_command("git add .")
+                GitManager.run_git_command('git commit -m "Restore placeholders in docs-base branch"')
+                logging.info('Committed placeholder restoration to docs-base')
+            except subprocess.CalledProcessError:
+                logging.info('No changes to commit for placeholder restoration')
+        else:
+            logging.info('No files needed placeholder restoration')
+
     def run(self):
         """Main execution method"""
         try:
@@ -311,6 +420,12 @@ class ReVancedVersionUpdater:
                     logging.error(f"Failed to checkout {DOCS_BRANCH} branch")
                     self.export_output('modified', 'false')
                     return
+            
+            # Verify docs-base has placeholders (as it should)
+            if not GitManager.verify_branch_has_placeholders(DOCS_BRANCH):
+                logging.warning("docs-base branch doesn't contain expected placeholders!")
+                # This might indicate a previous run failed to restore placeholders
+                # Continue anyway, but log the issue
             
             # Fetch API data
             patches_data, version_data = self.fetch_api_data()
@@ -348,8 +463,34 @@ class ReVancedVersionUpdater:
                 commit_message = f"Update versions: YouTube {youtube_version} ({last_update})"
                 changes_made = GitManager.commit_and_push(commit_message, MAIN_BRANCH)
                 
-                # Return to docs-base branch
+                # Return to docs-base branch and restore placeholders
                 GitManager.checkout_branch(DOCS_BRANCH)
+                
+                # Reset docs-base to its original state with placeholders
+                self.restore_placeholders_to_docs_base()
+                
+                # Verify restoration was successful
+                if GitManager.verify_branch_has_placeholders(DOCS_BRANCH):
+                    logging.info("✓ Successfully restored placeholders in docs-base branch")
+                else:
+                    logging.error("✗ Failed to restore placeholders in docs-base branch")
+                    # This is a serious issue but don't fail the whole process
+                    
+                # Verify main branch has actual values (quick check)
+                try:
+                    GitManager.checkout_branch(MAIN_BRANCH)
+                    if GitManager.verify_branch_has_actual_values(MAIN_BRANCH):
+                        logging.info("✓ main branch contains actual values as expected")
+                    else:
+                        logging.warning("main branch might not have been updated properly")
+                    GitManager.checkout_branch(DOCS_BRANCH)  # Return to docs-base
+                except Exception as e:
+                    logging.warning(f"Could not verify main branch: {e}")
+                    # Ensure we're back on docs-base
+                    try:
+                        GitManager.checkout_branch(DOCS_BRANCH)
+                    except:
+                        pass
             else:
                 logging.info("DRY_RUN mode: Skipping git operations")
                 changes_made = True

@@ -74,6 +74,35 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         EVENT: ${{ github.event_name }}
     
+    - name: Verify docs-base has placeholders
+      run: |
+        echo "Verifying docs-base branch contains placeholders..."
+        
+        # Check that we're on docs-base
+        current_branch=$(git rev-parse --abbrev-ref HEAD)
+        if [ "$current_branch" != "docs-base" ]; then
+          echo "ERROR: Not on docs-base branch! Currently on: $current_branch"
+          exit 1
+        fi
+        
+        # Check for placeholder presence in key files
+        placeholder_count=$(grep -r '\${YT_VERSION}\|\${LAST_UPDATE}' --include="*.md" . | wc -l)
+        if [ "$placeholder_count" -eq 0 ]; then
+          echo "WARNING: No placeholders found in docs-base branch!"
+          echo "This might indicate the restoration process failed."
+          
+          # List files that might have actual values instead of placeholders
+          echo "Files with potential issues:"
+          grep -r -l '[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\} [0-9]\{2\}:[0-9]\{2\}:[0-9]\{2\} UTC' --include="*.md" . || true
+          grep -r -l 'Latest%20Supported%20Version-[0-9]' --include="*.md" . || true
+        else
+          echo "✓ Found $placeholder_count placeholder references in docs-base branch"
+        fi
+        
+        # Always show current status for debugging
+        echo "Current placeholder status:"
+        grep -r '\${YT_VERSION}\|\${LAST_UPDATE}' --include="*.md" . | head -5 || echo "No placeholders found"
+    
     - name: Check rebuild requirements
       id: check_rebuild
       run: |
