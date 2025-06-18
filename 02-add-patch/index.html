@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/revanced-troubleshooting-guide">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.803389364205">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.1.803579257460">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.10.0">
+    <meta name="generator" content="Retype 3.10.1">
 
     <!-- Primary Meta Tags -->
     <title>Add Patches Guide</title>
@@ -33,11 +33,13 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../resources/css/retype.css?v=3.10.0.803389364205" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.10.1.803579257460" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.10.0.803389364205" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../resources/js/retype.js?v=3.10.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.10.0.803389364205" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.10.1.803579257460" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/retype.js?v=3.10.1" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.10.1.803579257460" data-turbo-eval="false" defer></script>
+    <link href="../resources/css/katex.css?v=3.10.1" rel="stylesheet">
+    <script id="katex-js" data-cfasync="false" src="../resources/js/katex.js?v=3.10.1" defer></script>
 
     <style>
         a.border-gray-300 {
@@ -60,7 +62,7 @@
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
-        <div class="absolute bottom-0 left-0 bg-gray-100 dark:bg-dark-800" style="top: 5rem; right: 50%"></div>
+        <div class="absolute bottom-0 left-0 dark:bg-dark-800" style="top: 5rem; right: 50%"></div>
     
         <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-white border-b border-gray-200 md:h-20 dark:bg-dark-850 dark:border-dark-650">
             <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
@@ -231,16 +233,14 @@
 <p>We are going to start patching now, but first we need to check supported version of YouTube.</p>
 <p>The latest supported YT version is:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-none"><code v-pre class="language-none">19.43.41</code></pre>
+<pre translate="no" class="language-none"><code v-pre class="language-none">${YT_VERSION}</code></pre>
 </doc-codeblock></div>
-<p><figure class="content-center">
-    <a href="https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-43-41-release/youtube-19-43-41-2-android-apk-download/">
-        <img src="https://img.shields.io/badge/Latest%20Supported%20Version-19.43.41-ff0000?style=for-the-badge&amp;logo=youtube" alt="It is 19.43.41" />
-    </a>
-    <figcaption class="caption">It is 19.43.41</figcaption>
+<p>[<figure class="content-center">
+    <img src="https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-43-41-release/youtube-19-43-41-2-android-apk-download/" alt="It is {YT_VERSION}](https://img.shields.io/badge/Latest%20Supported%20Version--ff0000?style=for-the-badge&amp;logo=youtube)" />
+    <figcaption class="caption">It is {YT_VERSION}](https://img.shields.io/badge/Latest%20Supported%20Version--ff0000?style=for-the-badge&amp;logo=youtube)</figcaption>
 </figure>
 </p>
-<p>as of 2025-06-09T11:37 UTC. Remember that, as we will use it very soon.</p>
+<p LAST_UPDATE="">as of $ . Remember that, as we will use it very soon.</p>
 <doc-anchor-target id="3-getting-the-files-ready">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#3-getting-the-files-ready">#</doc-anchor-trigger>
@@ -361,7 +361,7 @@ The latest stable version may differ from the one shown below.</p>
     </div>
 </div>
 <ol start="4">
-<li>Verify that the link actually links to <strong>version 19.43.41</strong></li>
+<li YT_VERSION="">Verify that the link actually links to <strong>version $</strong></li>
 </ol>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-yellow-500"></div>
@@ -724,6 +724,6 @@ The latest stable version may differ from the one shown below.</p>
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Add Patches Guide", level: 1, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Add Patches Guide", level: 1, icon: "file", hasPrism: false, hasMermaid: false, hasMath: true, tocDepth: 23 }</script>
 </body>
 </html>

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbo-root" content="/revanced-troubleshooting-guide">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.1.803579257460">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 3.10.1">
+
+    <!-- Primary Meta Tags -->
+    <title>GitHub Actions Workflow Rewrite - Complete Package</title>
+    <meta name="title" content="GitHub Actions Workflow Rewrite - Complete Package">
+    <meta name="description" content="I've completely rewritten the GitHub Actions workflow system for your ReVanced troubleshooting guide.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/python/summary/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/python/summary/">
+    <meta property="og:title" content="GitHub Actions Workflow Rewrite - Complete Package">
+    <meta property="og:description" content="I've completely rewritten the GitHub Actions workflow system for your ReVanced troubleshooting guide.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sodawithoutsparkles.github.io/revanced-troubleshooting-guide/python/summary/">
+    <meta property="twitter:title" content="GitHub Actions Workflow Rewrite - Complete Package">
+    <meta property="twitter:description" content="I've completely rewritten the GitHub Actions workflow system for your ReVanced troubleshooting guide.">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link href="../../resources/css/retype.css?v=3.10.1.803579257460" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.10.1.803579257460" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.10.1" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.10.1.803579257460" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.10.1.803579257460" defer></script>
+
+    <style>
+        a.border-gray-300 {
+            border-color: #1F7AFF;
+        }
+
+        a.border-gray-300:hover {
+            border-color: #1f5cff;
+        }
+
+        .dark a.dark\:border-dark-650:hover {
+            border-color: #1f5cff;
+        }
+
+        .dark a.dark\:border-dark-650 {
+            border-color: #1F7AFF;
+        }
+    </style>
+    <meta content="#1F7AFF" data-react-helmet="true" name="theme-color" />
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
+        <div class="absolute bottom-0 left-0 dark:bg-dark-800" style="top: 5rem; right: 50%"></div>
+    
+        <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-white border-b border-gray-200 md:h-20 dark:bg-dark-850 dark:border-dark-650">
+            <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+                <!-- Mobile menu button skeleton -->
+                <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+                <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+        
+                <!-- Logo -->
+                <div class="flex items-center justify-between h-full py-2 md:w-75">
+                    <div class="flex items-center px-2 md:px-6">
+                        <a id="retype-branding-logo" href="../../" class="flex items-center leading-snug text-xl">
+                            <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">ReVanced troubleshooting</span>
+                        </a><span id="retype-branding-label" class="hidden mt-1 px-2 py-1 ml-4 text-xs font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-md md:inline-block">Guide</span>
+                    </div>
+        
+                    <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
+                </div>
+        
+                <div class="flex justify-between md:grow">
+                    <!-- Top Nav -->
+                    <nav id="retype-header-nav" class="hidden md:flex">
+                        <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://revanced.app">Get ReVanced</a>
+                            </li>
+        
+                        </ul>
+                    </nav>
+        
+                    <!-- Header Right Skeleton -->
+                    <div v-cloak class="flex justify-end grow skeleton">
+        
+                        <!-- Search input mock -->
+                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                            </div>
+                            <input class="w-full h-10 placeholder-gray-400 transition-colors duration-200 ease-in bg-gray-200 border border-transparent rounded md:text-sm hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-dark-600 dark:border-dark-600 dark:placeholder-dark-400" style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search">
+                        </div>
+        
+                        <!-- Mobile search button -->
+                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                        </div>
+        
+                        <!-- Dark mode switch placeholder -->
+                        <div class="w-10 h-10 lg:ml-2"></div>
+        
+                        <!-- History button -->
+                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                        </div>
+                    </div>
+        
+                    <div v-cloak class="flex justify-end grow">
+                        <div id="retype-mobile-search-button"></div>
+                        <doc-search-desktop></doc-search-desktop>
+        
+                        <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                        <doc-history></doc-history>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <div id="retype-container" class="container relative flex bg-white">
+            <!-- Sidebar Skeleton -->
+            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-white border-gray-200 sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton dark:bg-dark-800 dark:border-dark-650">
+            
+                <div class="flex items-center h-16 px-6">
+                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-white border border-gray-200 rounded shadow-none text-sm focus:outline-none focus:border-gray-600 dark:bg-dark-600 dark:border-dark-600" type="text" placeholder="Filter">
+                </div>
+            
+                <div class="pl-6 mt-1 mb-4">
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                </div>
+            
+                <div class="shrink-0 mt-auto bg-transparent dark:border-dark-650">
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Sidebar component -->
+            <doc-sidebar v-cloak>
+                <template #sidebar-footer>
+                    <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-dark-650">
+            
+                        <div class="py-3 px-6 md:hidden border-b dark:border-dark-650">
+                            <nav>
+                                <ul class="flex flex-wrap justify-center items-center">
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://revanced.app">Get ReVanced</a>
+                                    </li>
+            
+                                </ul>
+                            </nav>
+                        </div>
+            
+                        <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                            <span class="text-xs whitespace-nowrap">Powered by</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                        </a>
+                    </div>
+                </template>
+            </doc-sidebar>
+    
+            <div class="grow min-w-0 dark:bg-dark-850">
+                <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+                <div class="flex">
+                    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+                        <main class="relative pb-12 lg:pt-2">
+                            <div class="retype-markdown" id="retype-content">
+                                <!-- Rendered if sidebar right is enabled -->
+                                <div id="retype-sidebar-right-toggle"></div>
+                                <!-- Page content  -->
+<doc-anchor-target id="github-actions-workflow-rewrite---complete-package" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#github-actions-workflow-rewrite---complete-package">#</doc-anchor-trigger>
+        <span>GitHub Actions Workflow Rewrite - Complete Package</span>
+    </h1>
+</doc-anchor-target>
+<doc-anchor-target id="-summary">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#-summary">#</doc-anchor-trigger>
+        <span><span class="docs-emoji">&#x1F3AF;</span> Summary</span>
+    </h2>
+</doc-anchor-target>
+<p>I&#x27;ve completely rewritten the GitHub Actions workflow system for your ReVanced troubleshooting guide. The new system modernizes the version update process with better reliability, maintainability, and features.</p>
+<doc-anchor-target id="-whats-included">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#-whats-included">#</doc-anchor-trigger>
+        <span><span class="docs-emoji">&#x1F4E6;</span> What&#x27;s Included</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="core-scripts">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#core-scripts">#</doc-anchor-trigger>
+        <span>Core Scripts</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><strong><code v-pre>update_versions.py</code></strong> - Modern Python script using ReVanced API v4</li>
+<li><strong><code v-pre>run_updater.sh</code></strong> - Convenient bash wrapper with dry-run and force options</li>
+<li><strong><code v-pre>requirements.txt</code></strong> - Python dependencies</li>
+</ul>
+<doc-anchor-target id="testing--validation">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#testing--validation">#</doc-anchor-trigger>
+        <span>Testing &amp; Validation</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><strong><code v-pre>test_api.py</code></strong> - API connectivity and parsing tests</li>
+<li><strong><code v-pre>test_dry_run.py</code></strong> - Complete workflow simulation without changes</li>
+<li><strong><code v-pre>check_migration.py</code></strong> - Migration readiness validation</li>
+</ul>
+<doc-anchor-target id="github-actions-workflows">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#github-actions-workflows">#</doc-anchor-trigger>
+        <span>GitHub Actions Workflows</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><strong><code v-pre>github-actions-template.yml</code></strong> - Basic workflow template</li>
+<li><strong><code v-pre>new-workflow.yml</code></strong> - Complete replacement for the old system</li>
+<li><strong>Enhanced features</strong>: Discord notifications, failure handling, auto-rebuilds</li>
+</ul>
+<doc-anchor-target id="documentation">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#documentation">#</doc-anchor-trigger>
+        <span>Documentation</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><strong><code v-pre>README.md</code></strong> - Comprehensive usage guide (updated)</li>
+<li><strong><code v-pre>MIGRATION.md</code></strong> - Step-by-step migration instructions</li>
+<li><strong><code v-pre>SUMMARY.md</code></strong> - This overview document</li>
+</ul>
+<doc-anchor-target id="-key-improvements">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#-key-improvements">#</doc-anchor-trigger>
+        <span><span class="docs-emoji">&#x1F680;</span> Key Improvements</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="1-modern-api-integration">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-modern-api-integration">#</doc-anchor-trigger>
+        <span>1. Modern API Integration</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><span class="docs-emoji">&#x2705;</span> Uses ReVanced API v4 (current) instead of deprecated v2</li>
+<li><span class="docs-emoji">&#x2705;</span> Handles API changes gracefully</li>
+<li><span class="docs-emoji">&#x2705;</span> Better error handling and retry logic</li>
+</ul>
+<doc-anchor-target id="2-automated-git-workflow">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-automated-git-workflow">#</doc-anchor-trigger>
+        <span>2. Automated Git Workflow</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><span class="docs-emoji">&#x2705;</span> Works on <code v-pre>docs-base</code> branch, commits to <code v-pre>main</code></li>
+<li><span class="docs-emoji">&#x2705;</span> Automatic branch switching and management</li>
+<li><span class="docs-emoji">&#x2705;</span> No manual git operations needed</li>
+</ul>
+<doc-anchor-target id="3-smart-update-logic">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-smart-update-logic">#</doc-anchor-trigger>
+        <span>3. Smart Update Logic</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><span class="docs-emoji">&#x2705;</span> Direct placeholder replacement in markdown files</li>
+<li><span class="docs-emoji">&#x2705;</span> Only updates when versions actually change</li>
+<li><span class="docs-emoji">&#x2705;</span> Preserves existing file structure and formatting</li>
+<li><span class="docs-emoji">&#x2705;</span> <strong>Automatic APKMirror URL updates</strong> - Replaces hardcoded dashed versions (e.g., youtube-19-43-41 → youtube-20-12-46)</li>
+</ul>
+<doc-anchor-target id="4-enhanced-github-actions">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4-enhanced-github-actions">#</doc-anchor-trigger>
+        <span>4. Enhanced GitHub Actions</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><span class="docs-emoji">&#x2705;</span> Runs every 30 minutes (same as before)</li>
+<li><span class="docs-emoji">&#x2705;</span> Manual triggering with force option</li>
+<li><span class="docs-emoji">&#x2705;</span> Automatic website rebuild when versions change</li>
+<li><span class="docs-emoji">&#x2705;</span> Discord notifications for updates and failures</li>
+<li><span class="docs-emoji">&#x2705;</span> GitHub issue creation on failures</li>
+<li><span class="docs-emoji">&#x2705;</span> Comprehensive logging and debugging</li>
+</ul>
+<doc-anchor-target id="5-better-testing--validation">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#5-better-testing--validation">#</doc-anchor-trigger>
+        <span>5. Better Testing &amp; Validation</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><span class="docs-emoji">&#x2705;</span> Multiple test scripts for different scenarios</li>
+<li><span class="docs-emoji">&#x2705;</span> Dry-run mode for safe testing</li>
+<li><span class="docs-emoji">&#x2705;</span> Migration readiness checker</li>
+<li><span class="docs-emoji">&#x2705;</span> API connectivity validation</li>
+</ul>
+<doc-anchor-target id="-current-status">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#-current-status">#</doc-anchor-trigger>
+        <span><span class="docs-emoji">&#x1F527;</span> Current Status</span>
+    </h2>
+</doc-anchor-target>
+<p><strong><span class="docs-emoji">&#x2705;</span> Migration Ready!</strong></p>
+<p>The migration checker confirms all systems are ready:</p>
+<ul>
+<li>Git repository setup: <span class="docs-emoji">&#x2705;</span></li>
+<li>API connectivity: <span class="docs-emoji">&#x2705;</span> (v5.27.0)</li>
+<li>Dependencies: <span class="docs-emoji">&#x2705;</span></li>
+<li>Placeholders found: <span class="docs-emoji">&#x2705;</span> (9 files with 20.12.46, 7 with 2025-06-18 16:11:26 UTC)</li>
+<li>Configuration files: <span class="docs-emoji">&#x2705;</span></li>
+<li>New scripts: <span class="docs-emoji">&#x2705;</span></li>
+</ul>
+<p><strong>Current YouTube Version Detected: 20.12.46</strong></p>
+<doc-anchor-target id="-quick-migration-checklist">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#-quick-migration-checklist">#</doc-anchor-trigger>
+        <span><span class="docs-emoji">&#x1F4CB;</span> Quick Migration Checklist</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="phase-1-testing-safe">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#phase-1-testing-safe">#</doc-anchor-trigger>
+        <span>Phase 1: Testing (Safe)</span>
+    </h3>
+</doc-anchor-target>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> Run <code v-pre>python3 python/check_migration.py</code> <span class="docs-emoji">&#x2705;</span> (Done)</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> Test API: <code v-pre>python3 python/test_api.py</code> <span class="docs-emoji">&#x2705;</span> (Done)</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> Dry run: <code v-pre>./python/run_updater.sh --dry-run</code> <span class="docs-emoji">&#x2705;</span> (Done)</li>
+</ul>
+<doc-anchor-target id="phase-2-workflow-setup">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#phase-2-workflow-setup">#</doc-anchor-trigger>
+        <span>Phase 2: Workflow Setup</span>
+    </h3>
+</doc-anchor-target>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> Copy <code v-pre>python/new-workflow.yml</code> to <code v-pre>.github/workflows/update-versions.yml</code></li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> Test manual trigger in GitHub Actions</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> Verify website rebuild triggers correctly</li>
+</ul>
+<doc-anchor-target id="phase-3-go-live">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#phase-3-go-live">#</doc-anchor-trigger>
+        <span>Phase 3: Go Live</span>
+    </h3>
+</doc-anchor-target>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> Disable old workflow (comment out or rename)</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> Monitor first few automatic runs</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> Configure Discord webhook (optional)</li>
+</ul>
+<doc-anchor-target id="phase-4-cleanup-later">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#phase-4-cleanup-later">#</doc-anchor-trigger>
+        <span>Phase 4: Cleanup (Later)</span>
+    </h3>
+</doc-anchor-target>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> Remove old <code v-pre>checkReVancedVersion.py</code> after confirming new system works</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> Archive old configuration files</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> Update any documentation references</li>
+</ul>
+<doc-anchor-target id="-usage-examples">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#-usage-examples">#</doc-anchor-trigger>
+        <span><span class="docs-emoji">&#x1F39B;&#xFE0F;</span> Usage Examples</span>
+    </h2>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash"># Test everything
+python3 python/check_migration.py
+
+# Dry run (safe testing)
+./python/run_updater.sh --dry-run
+
+# Force update (useful for testing)
+./python/run_updater.sh --force
+
+# Normal operation
+./python/run_updater.sh</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="-monitoring--troubleshooting">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#-monitoring--troubleshooting">#</doc-anchor-trigger>
+        <span><span class="docs-emoji">&#x1F50D;</span> Monitoring &amp; Troubleshooting</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="github-actions">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#github-actions">#</doc-anchor-trigger>
+        <span>GitHub Actions</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>Check workflow runs in Actions tab</li>
+<li>Manual trigger available with force option</li>
+<li>Outputs show: modified status, YouTube version, timestamp</li>
+</ul>
+<doc-anchor-target id="discord-notifications-optional">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#discord-notifications-optional">#</doc-anchor-trigger>
+        <span>Discord Notifications (Optional)</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>Success: Version update notifications with embed</li>
+<li>Failure: Error alerts with workflow links</li>
+<li>Requires <code v-pre>DISCORD_WEBHOOK</code> secret</li>
+</ul>
+<doc-anchor-target id="issue-creation">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#issue-creation">#</doc-anchor-trigger>
+        <span>Issue Creation</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>Automatic GitHub issues created on workflow failures</li>
+<li>Includes links to failed runs and error details</li>
+<li>Prevents duplicate issues</li>
+</ul>
+<doc-anchor-target id="-comparison-old-vs-new">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#-comparison-old-vs-new">#</doc-anchor-trigger>
+        <span><span class="docs-emoji">&#x1F4CA;</span> Comparison: Old vs New</span>
+    </h2>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Feature</th>
+<th>Old System</th>
+<th>New System</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>API Version</td>
+<td>v2 (deprecated)</td>
+<td>v4 (current)</td>
+</tr>
+<tr>
+<td>Configuration</td>
+<td>Complex templates</td>
+<td>Simple placeholders</td>
+</tr>
+<tr>
+<td>Git Handling</td>
+<td>Manual</td>
+<td>Automatic</td>
+</tr>
+<tr>
+<td>Error Handling</td>
+<td>Basic</td>
+<td>Comprehensive</td>
+</tr>
+<tr>
+<td>Testing</td>
+<td>Limited</td>
+<td>Multiple test modes</td>
+</tr>
+<tr>
+<td>Notifications</td>
+<td>None</td>
+<td>Discord integration</td>
+</tr>
+<tr>
+<td>Failure Recovery</td>
+<td>Manual</td>
+<td>Automatic issues</td>
+</tr>
+<tr>
+<td>Branch Management</td>
+<td>Manual</td>
+<td>Automatic</td>
+</tr>
+<tr>
+<td>Website Rebuild</td>
+<td>Manual trigger</td>
+<td>Auto-trigger</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="-benefits-achieved">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#-benefits-achieved">#</doc-anchor-trigger>
+        <span><span class="docs-emoji">&#x1F389;</span> Benefits Achieved</span>
+    </h2>
+</doc-anchor-target>
+<ol>
+<li><strong>Future-Proof</strong>: Uses current API, won&#x27;t break when v2 is removed</li>
+<li><strong>Reliable</strong>: Better error handling and recovery mechanisms</li>
+<li><strong>Automated</strong>: No manual intervention needed for normal operations</li>
+<li><strong>Maintainable</strong>: Cleaner code, better documentation</li>
+<li><strong>Testable</strong>: Multiple testing modes and validation tools</li>
+<li><strong>Integrated</strong>: Seamless GitHub Actions and Discord integration</li>
+<li><strong>Safe</strong>: Dry-run testing and gradual migration path</li>
+</ol>
+<doc-anchor-target id="-support">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#-support">#</doc-anchor-trigger>
+        <span><span class="docs-emoji">&#x1F198;</span> Support</span>
+    </h2>
+</doc-anchor-target>
+<p>If you encounter any issues:</p>
+<ol>
+<li><strong>Check logs</strong>: GitHub Actions workflow logs are detailed</li>
+<li><strong>Use dry-run</strong>: <code v-pre>./python/run_updater.sh --dry-run</code> for testing</li>
+<li><strong>Validate setup</strong>: <code v-pre>python3 python/check_migration.py</code></li>
+<li><strong>Check API</strong>: <code v-pre>python3 python/test_api.py</code></li>
+<li><strong>Review docs</strong>: <code v-pre>MIGRATION.md</code> has detailed troubleshooting</li>
+</ol>
+<p>The new system is production-ready and significantly more robust than the original. You can migrate with confidence! <span class="docs-emoji">&#x1F680;</span></p>
+
+                                
+                                <!-- Required only on API pages -->
+                                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+                            </div>
+                            <footer id="retype-content-footer" class="clear-both">
+                            
+                                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../python/git_setup/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
+                                                <span class="block mt-1">Git Configuration</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                            
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../python/migration/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                                                <span class="block mt-1">Migration Guide: From check​Re​Vanced​Version.​py to update_​versions.​py</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
+                                    </div>
+                                </nav>
+                            </footer>
+                        </main>
+                
+                        <div id="retype-page-footer" class="print:border-none border-t dark:border-dark-650 pt-6 mb-8">
+                            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                                <div id="retype-footer-links" class="print:hidden">
+                                    <ul class="flex flex-wrap items-center text-sm">
+                                    </ul>
+                                </div>
+                                <div id="retype-copyright" class="print:justify-center docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© 2024 by SodaWithoutSparkles. GPLv3.</p></div>
+                            </footer>
+                        </div>
+                    </div>
+                
+                    <!-- Rendered if sidebar right is enabled -->
+                    <!-- Sidebar right skeleton-->
+                    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-white border-gray-200 lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:transform-none sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton dark:bg-dark-850 dark:border-dark-650">
+                        <div class="pl-5">
+                            <div class="w-32 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-48 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-40 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                        </div>
+                    </div>
+                
+                    <!-- User should be able to hide sidebar right -->
+                    <doc-sidebar-right v-cloak></doc-sidebar-right>
+                </div>
+
+            </div>
+        </div>
+    
+        <doc-search-mobile></doc-search-mobile>
+        <doc-back-to-top></doc-back-to-top>
+    </div>
+
+
+    <div id="retype-overlay-target"></div>
+
+    <script data-cfasync="false">window.__DOCS__ = { "title": "GitHub Actions Workflow Rewrite - Complete Package", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+</body>
+</html>
