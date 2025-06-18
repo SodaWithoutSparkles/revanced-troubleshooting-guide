@@ -233,6 +233,7 @@ class ReVancedVersionUpdater:
         
         # Check if data changed
         if current_result != last_result:
+            logging.debug(f"Data difference:\nOld: {last_result}\nNew: {current_result}")
             logging.info('Patches data changed, update needed')
             return True, "patches_updated"
         
