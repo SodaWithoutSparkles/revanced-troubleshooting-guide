@@ -34,7 +34,7 @@ else:
 
 # Logging setup
 logging.basicConfig(
-    level=logging.INFO,
+    level=logging.DEBUG,
     format='%(asctime)s.%(msecs)03d: [%(levelname)s] %(message)s',
     datefmt='%d-%b-%y %H:%M:%S'
 )
@@ -226,7 +226,7 @@ class ReVancedVersionUpdater:
                 last_result = f.read().strip()
         except FileNotFoundError:
             logging.info("State file not found, forcing update")
-            return True
+            return True, "state_file_missing"
         
         current_result = json.dumps(current_data, sort_keys=True)
         time_now = int(datetime.now(timezone.utc).timestamp())
@@ -234,15 +234,15 @@ class ReVancedVersionUpdater:
         # Check if data changed
         if current_result != last_result:
             logging.info('Patches data changed, update needed')
-            return True
+            return True, "patches_updated"
         
         # Check if more than 1 month has passed (30 days * 24 hours * 3600 seconds)
         if (time_now - last_updated) > 2592000:
             logging.info('More than 1 month since last update, forcing update')
-            return True
+            return True, "time_threshold_exceeded"
         
-        logging.info('No update needed')
-        return False
+        logging.info('Read state file, No update needed')
+        return False, "no_update_needed"
     
     def update_state_file(self, data):
         """Update state file with current data"""
@@ -349,6 +349,7 @@ class ReVancedVersionUpdater:
                 logging.warning(f'Failed to update {file_path}: {e}')
         
         logging.info(f'Updated {total_replacements} placeholders in {files_updated} files')
+        return files_updated, total_replacements
     
     def cleanup_on_error(self):
         """Clean up backup files in case of error"""
@@ -391,12 +392,17 @@ class ReVancedVersionUpdater:
             logging.info(f"Found YouTube version: {youtube_version}")
             
             # Step 2: Check if update is needed
-            if not (self.check_if_update_needed(package_versions) or FORCED):
+            _is_update_needed, update_reason = self.check_if_update_needed(package_versions)
+            if not (_is_update_needed or FORCED):
                 logging.info('No update needed')
                 self.export_output('modified', 'false')
                 self.export_output('youtube_version', youtube_version)
+                self.export_output('update_reason', update_reason)
                 return
             
+            # Determine final update reason
+            final_update_reason = "forced_update" if FORCED else update_reason
+            logging.debug(f"Reason: {_is_update_needed=}, {FORCED=}, final_reason={final_update_reason}")
             # Generate timestamp
             last_update = datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
             
@@ -419,7 +425,7 @@ class ReVancedVersionUpdater:
                 logging.info(f"Updated state file on {DOCS_BRANCH}")
                 
                 # Step 5: Replace placeholders and push to main with state file
-                self.replace_placeholders_in_files(markdown_files, youtube_version, last_update)
+                files_updated, total_replacements = self.replace_placeholders_in_files(markdown_files, youtube_version, last_update)
                 
                 # Include both markdown files and state file in main branch commit
                 files_to_commit = markdown_files + [STATE_FILE]
@@ -437,6 +443,8 @@ class ReVancedVersionUpdater:
             else:
                 logging.info("DRY_RUN mode: Skipping file updates and git operations")
                 changes_made = True
+                files_updated = len(markdown_files)
+                total_replacements = 0
                 # Still restore backups in dry run mode
                 self.restore_backups()
             
@@ -444,8 +452,22 @@ class ReVancedVersionUpdater:
             self.export_output('modified', 'true' if changes_made else 'false')
             self.export_output('youtube_version', youtube_version)
             self.export_output('last_update', last_update)
+            self.export_output('update_reason', final_update_reason)
+            self.export_output('files_updated', str(files_updated))
+            self.export_output('total_replacements', str(total_replacements))
+            
+            # Create user-friendly reason message
+            reason_messages = {
+                "state_file_missing": "State file not found (first run)",
+                "patches_updated": "ReVanced patches data updated",
+                "time_threshold_exceeded": "More than 30 days since last update",
+                "forced_update": "Manual workflow dispatch"
+            }
+            reason_message = reason_messages.get(final_update_reason, final_update_reason)
             
             logging.info(f'Update completed successfully. YouTube version: {youtube_version}')
+            logging.info(f'Files updated: {files_updated}, Total replacements: {total_replacements}')
+            logging.info(f'Update reason: {reason_message}')
             
         except Exception as e:
             logging.error(f'Update failed: {e}')

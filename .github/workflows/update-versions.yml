@@ -26,6 +26,9 @@ jobs:
       modified: ${{ steps.update.outputs.modified }}
       youtube_version: ${{ steps.update.outputs.youtube_version }}
       last_update: ${{ steps.update.outputs.last_update }}
+      update_reason: ${{ steps.update.outputs.update_reason }}
+      files_updated: ${{ steps.update.outputs.files_updated }}
+      total_replacements: ${{ steps.update.outputs.total_replacements }}
       needs_rebuild: ${{ steps.update.outputs.modified }}
     
     steps:
@@ -67,6 +70,13 @@ jobs:
         echo "- **Modified:** ${{ steps.update.outputs.modified }}" >> $GITHUB_STEP_SUMMARY
         echo "- **YouTube Version:** ${{ steps.update.outputs.youtube_version }}" >> $GITHUB_STEP_SUMMARY
         echo "- **Last Update:** ${{ steps.update.outputs.last_update }}" >> $GITHUB_STEP_SUMMARY
+        if [ "${{ steps.update.outputs.modified }}" = "true" ]; then
+          echo "- **Update Reason:** ${{ steps.update.outputs.update_reason }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Files Updated:** ${{ steps.update.outputs.files_updated }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Total Replacements:** ${{ steps.update.outputs.total_replacements }}" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "- **Reason:** ${{ steps.update.outputs.update_reason }}" >> $GITHUB_STEP_SUMMARY
+        fi
 
   # Trigger website rebuild if changes were made
   trigger-rebuild:
@@ -85,7 +95,7 @@ jobs:
     secrets: inherit
     with:
       title: "🔄 ReVanced Versions Updated"
-      content: "YouTube version updated to **${{ needs.update-versions.outputs.youtube_version }}** at ${{ needs.update-versions.outputs.last_update }}"
+      content: "YouTube version updated to **${{ needs.update-versions.outputs.youtube_version }}** at ${{ needs.update-versions.outputs.last_update }}\n\n**Details:**\n- Files updated: ${{ needs.update-versions.outputs.files_updated }}\n- Total replacements: ${{ needs.update-versions.outputs.total_replacements }}\n- Reason: ${{ needs.update-versions.outputs.update_reason }}"
       url: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
       message: "ReVanced version update completed successfully!"
 
