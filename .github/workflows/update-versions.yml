@@ -132,9 +132,9 @@ jobs:
     
     - name: Notify Discord on failure
       uses: ./.github/workflows/discord-update-owner.yml
-      secrets: inherit
       with:
         title: "🚨 ReVanced Update Failed"
         content: "The version update workflow encountered an error in run #${{ github.run_id }}. Please check the logs for details."
         url: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
         message: "ReVanced version update workflow failed - please investigate!"
+      secrets: inherit
