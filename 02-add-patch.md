@@ -28,12 +28,12 @@ We are going to start patching now, but first we need to check supported version
 The latest supported YT version is:
 
 ```
-${YT_VERSION}
+20.12.46
 ```
 
-[![It is ${YT_VERSION}](https://img.shields.io/badge/Latest%20Supported%20Version-${YT_VERSION}-ff0000?style=for-the-badge&logo=youtube)](https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-43-41-release/youtube-19-43-41-2-android-apk-download/)
+[![It is 20.12.46](https://img.shields.io/badge/Latest%20Supported%20Version-20.12.46-ff0000?style=for-the-badge&logo=youtube)](https://www.apkmirror.com/apk/google-inc/youtube/youtube-20-12-46-release/youtube-20-12-46-2-android-apk-download/)
 
-as of ${LAST_UPDATE} . Remember that, as we will use it very soon.
+as of 2025-06-18 16:45:27 UTC . Remember that, as we will use it very soon.
 
 ## 3. Getting the files ready
 
@@ -58,14 +58,14 @@ The latest stable version may differ from the one shown below.
 !!!
 ![download GmsCore](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/010-download_GmsCore.jpg?raw=true)
 ===
-3. Visit [APK mirror for YouTube APK](https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-43-41-release/youtube-19-43-41-2-android-apk-download/)
+3. Visit [APK mirror for YouTube APK](https://www.apkmirror.com/apk/google-inc/youtube/youtube-20-12-46-release/youtube-20-12-46-2-android-apk-download/)
 !!!warning Warning
 **Do NOT install the downloaded YouTube APK.**
 !!!
 !!!warning Warning
 **The YouTube from Google Play will NOT work.** You CANNOT patch the one from Google Play. Download the one from APK mirror.
 !!!
-4. Verify that the link actually links to **version ${YT_VERSION}**
+4. Verify that the link actually links to **version 20.12.46**
 !!!warning Warning
 **Do NOT install the downloaded YouTube APK.**
 !!!
