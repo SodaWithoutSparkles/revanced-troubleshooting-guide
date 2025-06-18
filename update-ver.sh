@@ -5,7 +5,7 @@
 #currVer=$(curl --no-progress-meter -X 'GET' -H 'accept: application/json' 'https://api.revanced.app/v2/patches/latest' |
 #    jq -r '.[] | .[] | .compatiblePackages | .[]? | select(.name=="com.google.android.youtube") | .versions | .[-1] | select( . != null )' |
 #    sort | uniq | head -1)
-currVer='19.43.41'
+currVer='${YT_VERSION}'
 now=$(date -u +"%Y-%m-%dT%H:%M")
 nowUnix=$(date +%s)
 
@@ -58,7 +58,7 @@ echo "ver=$currVer" >>"$GITHUB_OUTPUT"
 # 1 week
 keepAliveTime=604800
 
-if (( "$(($nowUnix - $lastUnix))" > "$keepAliveTime" )) || [[ "$EVENT" == 'workflow_dispatch' ]]; then
+if (("$(($nowUnix - $lastUnix))" > "$keepAliveTime")) || [[ "$EVENT" == 'workflow_dispatch' ]]; then
     if [[ "$EVENT" == 'workflow_dispatch' ]]; then
         echo "Updating timestamp forcefully because of manual dispatch"
     else

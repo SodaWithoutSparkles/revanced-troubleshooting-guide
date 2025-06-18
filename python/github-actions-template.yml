@@ -1,0 +1,63 @@
+# GitHub Actions Workflow Template for ReVanced Version Updater
+# Save this as .github/workflows/update-versions.yml
+
+name: Update ReVanced Versions
+
+on:
+  schedule:
+    # Run daily at 12:00 UTC
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+    # Allow manual triggering
+
+jobs:
+  update-versions:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        pip install -r python/requirements.txt
+    
+    - name: Configure Git
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+    
+    - name: Run version updater
+      id: update
+      run: |
+        python3 python/update_versions.py
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Output results
+      run: |
+        echo "Modified: ${{ steps.update.outputs.modified }}"
+        echo "YouTube Version: ${{ steps.update.outputs.youtube_version }}"
+        echo "Last Update: ${{ steps.update.outputs.last_update }}"
+    
+    # Optional: Create an issue if the update fails
+    - name: Create issue on failure
+      if: failure()
+      uses: actions/github-script@v7
+      with:
+        script: |
+          github.rest.issues.create({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            title: 'ReVanced Version Update Failed',
+            body: 'The automated ReVanced version update failed. Please check the workflow logs.',
+            labels: ['bug', 'automation']
+          })

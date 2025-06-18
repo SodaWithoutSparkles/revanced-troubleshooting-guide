@@ -29,7 +29,7 @@ Use the **Default** one. Only use the "Huawei" one if you can't login on the oth
 !!!warning
 **The YouTube from Google Play will NOT work.** You CANNOT patch the one from Google Play. Download the one from APK mirror.
 !!!
-4. Verify that the link actually links to **version 19.43.41**
+4. Verify that the link actually links to **version ${YT_VERSION}**
 5. Verify that it said "DOWNLOAD APK" not "DOWNLOAD APK BUNDLE"
 === Image for reference
 ![The one marked with a blue :icon-check: is the correct one](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/021-verify-apk-not-bundle.jpg?raw=true)
