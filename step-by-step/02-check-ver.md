@@ -12,7 +12,7 @@ The suggested YT version is:
 ${YT_VERSION}
 ```
 
-[![It is ${YT_VERSION}](https://img.shields.io/badge/Suggested%20Version-${YT_VERSION}-ff0000?style=for-the-badge&logo=youtube)](https://www.apkmirror.com/apk/google-inc/youtube/youtube-${YT_VERSION_DASHED}-release/youtube-${YT_VERSION_DASHED}-android-apk-download/)
+[![It is ${YT_VERSION}](https://img.shields.io/badge/Suggested%20Version-${YT_VERSION}-ff0000?style=for-the-badge&logo=youtube)](https://www.apkmirror.com/apk/google-inc/youtube/youtube-${YT_VERSION_DASHED}-release/youtube-${YT_VERSION_DASHED}-2-android-apk-download/)
 
 as of ${LAST_UPDATE} . Remember that, as we will use it very soon.
 

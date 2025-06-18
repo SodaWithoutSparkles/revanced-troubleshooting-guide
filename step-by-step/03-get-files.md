@@ -22,7 +22,7 @@ Use the **Default** one. Only use the "Huawei" one if you can't login on the oth
 !!!
 ![download GmsCore](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/010-download_GmsCore.jpg?raw=true)
 ===
-3. Visit [APK mirror for YouTube APK](https://www.apkmirror.com/apk/google-inc/youtube/youtube-${YT_VERSION_DASHED}-release/youtube-${YT_VERSION_DASHED}-android-apk-download/)
+3. Visit [APK mirror for YouTube APK](https://www.apkmirror.com/apk/google-inc/youtube/youtube-${YT_VERSION_DASHED}-release/youtube-${YT_VERSION_DASHED}-2-android-apk-download/)
 !!!warning
 **Do NOT install the downloaded YouTube APK.**
 !!!
