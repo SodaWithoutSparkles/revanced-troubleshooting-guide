@@ -57,12 +57,12 @@ We are going to start patching now, but first we need to check supported version
 The latest supported YT version is:
 
 ```
-19.43.41
+${YT_VERSION}
 ```
 
-[![It is 19.43.41](https://img.shields.io/badge/Latest%20Supported%20Version-19.43.41-ff0000?style=for-the-badge&logo=youtube)](https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-43-41-release/youtube-19-43-41-android-apk-download/)
+[![It is ${YT_VERSION}](https://img.shields.io/badge/Latest%20Supported%20Version-${YT_VERSION}-ff0000?style=for-the-badge&logo=youtube)](https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-43-41-release/youtube-19-43-41-android-apk-download/)
 
-as of 2025-06-16T11:37 UTC. Remember that, as we will use it very soon.
+as of ${LAST_UPDATE}. Remember that, as we will use it very soon.
 
 ==- How to check manually
 1. Go to the official [ReVanced patches website](https://revanced.app/patches?pkg=com.google.android.youtube)
@@ -101,7 +101,7 @@ The latest stable version may differ from the one shown below.
 !!!warning
 **The YouTube from Google Play will NOT work.** You CANNOT patch the one from Google Play. Download the one from APK mirror.
 !!!
-4. Verify that the link actually links to **version 19.43.41**
+4. Verify that the link actually links to **version ${YT_VERSION}**
 5. Verify that it said "DOWNLOAD APK" not "DOWNLOAD APK BUNDLE"
 === Image for reference
 ![The one marked with a blue :icon-check: is the correct one](https://github.com/SodaWithoutSparkles/ReVanced-troubleshooting-guide/blob/main/screenshots/021-verify-apk-not-bundle.jpg?raw=true)

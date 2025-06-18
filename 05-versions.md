@@ -4,7 +4,7 @@ This is a list of versions to use with ReVanced patches:
 
 | Common Name | Version | Package Name |
 |---|---|---|
-| YouTube | 19.43.41 | com.google.android.youtube |
+| YouTube | ${YT_VERSION} | com.google.android.youtube |
 | YouTube Music | 7.03.52 | com.google.android.apps.youtube.music |
 | TikTok | 32.5.3 | com.ss.android.ugc.trill |
 | Twitter | ANY | com.twitter.android |
@@ -62,6 +62,6 @@ This is a list of versions to use with ReVanced patches:
 | Solid Explorer | ANY | pl.solidexplorer2 |
 | Trakt | 1.1.1 | tv.trakt.trakt |
 
-Last Update: 2024-06-23 11:09:19 UTC
+Last Update: ${LAST_UPDATE} 
 
 [^1]: Version override is used
