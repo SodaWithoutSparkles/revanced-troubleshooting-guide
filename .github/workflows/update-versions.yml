@@ -121,29 +121,28 @@ jobs:
             console.log('Overview rebuild workflow not found or failed:', error.message);
           }
 
-  # Notify on success
-  notify-success:
+  # Notify on success using existing Discord workflows
+  notify-success-owner:
     needs: [update-versions, trigger-rebuild]
     if: needs.update-versions.outputs.modified == 'true' && !failure()
-    runs-on: ubuntu-latest
-    steps:
-    - name: Notify on Discord (if configured)
-      run: |
-        if [ -n "${{ secrets.DISCORD_WEBHOOK }}" ]; then
-          curl -H "Content-Type: application/json" \
-            -d "{
-              \"embeds\": [{
-                \"title\": \"🔄 ReVanced Versions Updated\",
-                \"description\": \"YouTube version updated to **${{ needs.update-versions.outputs.youtube_version }}**\",
-                \"color\": 3066993,
-                \"fields\": [
-                  {\"name\": \"Updated\", \"value\": \"${{ needs.update-versions.outputs.last_update }}\", \"inline\": true},
-                  {\"name\": \"Workflow\", \"value\": \"[${{ github.workflow }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})\", \"inline\": true}
-                ]
-              }]
-            }" \
-            "${{ secrets.DISCORD_WEBHOOK }}"
-        fi
+    uses: ./.github/workflows/discord-update-owner.yml
+    secrets: inherit
+    with:
+      title: "🔄 ReVanced Versions Updated"
+      content: "YouTube version updated to **${{ needs.update-versions.outputs.youtube_version }}** at ${{ needs.update-versions.outputs.last_update }}"
+      url: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+      message: "ReVanced version update completed successfully!"
+
+  notify-success-announcement:
+    needs: [update-versions, trigger-rebuild]
+    if: needs.update-versions.outputs.modified == 'true' && !failure()
+    uses: ./.github/workflows/discord-update-announcement.yml
+    secrets: inherit
+    with:
+      title: "📱 ReVanced Update Available"
+      content: "New YouTube version **${{ needs.update-versions.outputs.youtube_version }}** is now supported by ReVanced patches. Check the troubleshooting guide for updated instructions!"
+      url: "https://sodawithoutsparkles.github.io/ReVanced-troubleshooting-guide/"
+      message: "🎉 Latest ReVanced compatibility update is live!"
 
   # Handle failures
   handle-failure:
@@ -211,20 +210,24 @@ jobs:
             console.log(`Updated existing failure issue #${issue.number}`);
           }
     
-    - name: Notify Discord on failure (if configured)
-      run: |
-        if [ -n "${{ secrets.DISCORD_WEBHOOK }}" ]; then
-          curl -H "Content-Type: application/json" \
-            -d "{
-              \"embeds\": [{
-                \"title\": \"🚨 ReVanced Update Failed\",
-                \"description\": \"The version update workflow encountered an error\",
-                \"color\": 15158332,
-                \"fields\": [
-                  {\"name\": \"Workflow\", \"value\": \"[${{ github.workflow }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})\", \"inline\": true},
-                  {\"name\": \"Event\", \"value\": \"${{ github.event_name }}\", \"inline\": true}
-                ]
-              }]
-            }" \
-            "${{ secrets.DISCORD_WEBHOOK }}"
-        fi
+    - name: Notify Discord on failure using existing workflow
+      uses: actions/github-script@v7
+      with:
+        script: |
+          // Trigger Discord notification for failure
+          try {
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'discord-update-owner.yml',
+              inputs: {
+                title: '🚨 ReVanced Update Failed',
+                content: `The version update workflow encountered an error in run #${{ github.run_id }}. Please check the logs for details.`,
+                url: '${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}',
+                message: 'ReVanced version update workflow failed - please investigate!'
+              }
+            });
+            console.log('Triggered Discord notification for failure');
+          } catch (error) {
+            console.log('Failed to trigger Discord notification:', error.message);
+          }
