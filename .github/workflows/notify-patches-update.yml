@@ -11,26 +11,19 @@ on:
 
 jobs:
   notify-owner:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Notify Discord Owner
-        uses: ./.github/workflows/discord-update-owner.yml
-        with:
-          title: "🛠️ ReVanced Patches Updated"
-          content: "Patches version updated to **${{ inputs.patches_version }}**."
-          url: "https://github.com/revanced/revanced-patches/releases/latest"
-          message: "ReVanced patches update completed successfully!"
-        secrets: inherit
+    uses: ./.github/workflows/discord-update-owner.yml
+    with:
+      title: "🛠️ ReVanced Patches Updated"
+      content: "Patches version updated to **${{ inputs.patches_version }}**."
+      url: "https://github.com/revanced/revanced-patches/releases/latest"
+      message: "ReVanced patches update completed successfully!"
+    secrets: inherit
 
   announce:
-    runs-on: ubuntu-latest
-    needs: notify-owner
-    steps:
-      - name: Announce on Discord
-        uses: ./.github/workflows/discord-update-announcement.yml
-        with:
-          title: "🛠️ ReVanced Patches Updated"
-          content: "A new ReVanced patches stable version (**${{ inputs.patches_version }}**) is now available!"
-          url: "https://github.com/revanced/revanced-patches/releases/latest"
-          message: "ReVanced patches update announcement."
-        secrets: inherit
+    uses: ./.github/workflows/discord-update-announcement.yml
+    with:
+      title: "🛠️ ReVanced Patches Updated"
+      content: "A new ReVanced patches stable version (**${{ inputs.patches_version }}**) is now available!"
+      url: "https://github.com/revanced/revanced-patches/releases/latest"
+      message: "ReVanced patches update announcement."
+    secrets: inherit
