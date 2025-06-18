@@ -133,16 +133,16 @@ jobs:
       url: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
       message: "ReVanced version update completed successfully!"
 
-  notify-success-announcement:
-    needs: [update-versions, trigger-rebuild]
-    if: needs.update-versions.outputs.modified == 'true' && !failure()
-    uses: ./.github/workflows/discord-update-announcement.yml
-    secrets: inherit
-    with:
-      title: "📱 ReVanced Update Available"
-      content: "New YouTube version **${{ needs.update-versions.outputs.youtube_version }}** is now supported by ReVanced patches. Check the troubleshooting guide for updated instructions!"
-      url: "https://sodawithoutsparkles.github.io/ReVanced-troubleshooting-guide/"
-      message: "🎉 Latest ReVanced compatibility update is live!"
+  # notify-success-announcement:
+  #   needs: [update-versions, trigger-rebuild]
+  #   if: needs.update-versions.outputs.modified == 'true' && !failure()
+  #   uses: ./.github/workflows/discord-update-announcement.yml
+  #   secrets: inherit
+  #   with:
+  #     title: "📱 ReVanced Update Available"
+  #     content: "New YouTube version **${{ needs.update-versions.outputs.youtube_version }}** is now supported by ReVanced patches. Check the troubleshooting guide for updated instructions!"
+  #     url: "https://sodawithoutsparkles.github.io/ReVanced-troubleshooting-guide/"
+  #     message: "🎉 Latest ReVanced compatibility update is live!"
 
   # Handle failures
   handle-failure:
