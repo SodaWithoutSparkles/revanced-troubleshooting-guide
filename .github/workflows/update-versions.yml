@@ -31,6 +31,7 @@ jobs:
       total_replacements: ${{ steps.update.outputs.total_replacements }}
       needs_rebuild: ${{ steps.update.outputs.modified }}
       patches_version: ${{ steps.update.outputs.patches_version }}
+      yt_updated: ${{ steps.update.outputs.yt_updated }}
 
     
     steps:
@@ -98,6 +99,14 @@ jobs:
     secrets: inherit
     with:
       patches_version: ${{ needs.update-versions.outputs.patches_version }}
+  
+  notify-youtube-update:
+    needs: [update-versions, trigger-rebuild]
+    if: needs.update-versions.outputs.yt_updated == 'true' && !failure()
+    uses: ./.github/workflows/notify-youtube-update.yml
+    secrets: inherit
+    with:
+      youtube_version: ${{ needs.update-versions.outputs.youtube_version }}
 
   # Handle failures
   handle-failure:

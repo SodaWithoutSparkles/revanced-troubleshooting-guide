@@ -19,11 +19,11 @@ jobs:
       message: "ReVanced YouTube version update completed successfully!"
     secrets: inherit
 
-  announce:
-    uses: ./.github/workflows/discord-update-announcement.yml
-    with:
-      title: "🔄 ReVanced YouTube Supported Versions Updated"
-      content: |
-        A new supported YouTube version (**${{ inputs.youtube_version }}**) is now available!
-      url: "https://github.com/revanced/revanced-patches/releases/latest"
-      message: "ReVanced YouTube version updated."
+  # announce:
+  #   uses: ./.github/workflows/discord-update-announcement.yml
+  #   with:
+  #     title: "🔄 ReVanced YouTube Supported Versions Updated"
+  #     content: |
+  #       A new supported YouTube version (**${{ inputs.youtube_version }}**) is now available!
+  #     url: "https://github.com/revanced/revanced-patches/releases/latest"
+  #     message: "ReVanced YouTube version updated."

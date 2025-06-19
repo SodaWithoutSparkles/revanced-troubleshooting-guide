@@ -19,11 +19,11 @@ jobs:
       message: "ReVanced patches update completed successfully!"
     secrets: inherit
 
-  announce:
-    uses: ./.github/workflows/discord-update-announcement.yml
-    with:
-      title: "🛠️ ReVanced Patches Updated"
-      content: "A new ReVanced patches stable version (**${{ inputs.patches_version }}**) is now available!"
-      url: "https://github.com/revanced/revanced-patches/releases/latest"
-      message: "ReVanced patches update announcement."
-    secrets: inherit
+  # announce:
+  #   uses: ./.github/workflows/discord-update-announcement.yml
+  #   with:
+  #     title: "🛠️ ReVanced Patches Updated"
+  #     content: "A new ReVanced patches stable version (**${{ inputs.patches_version }}**) is now available!"
+  #     url: "https://github.com/revanced/revanced-patches/releases/latest"
+  #     message: "ReVanced patches updatd."
+  #   secrets: inherit
