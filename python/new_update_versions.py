@@ -442,6 +442,12 @@ class ReVancedVersionUpdater:
                 patches_data, last_yt_version=youtube_version)
 
             if not os.getenv('DRY_RUN'):
+                # Commit state file to docs-base for persistence
+                state_commit_message = f"Update state: YouTube {youtube_version} ({last_update})"
+                GitManager.force_push_files(
+                    [STATE_FILE], DOCS_BRANCH, state_commit_message)
+                logging.info(f"Updated state file on {DOCS_BRANCH}")
+
                 # Step 5: Replace placeholders and push to main (markdown files only)
                 files_updated, total_replacements = self.replace_placeholders_in_files(
                     markdown_files, youtube_version, last_update)
@@ -450,12 +456,6 @@ class ReVancedVersionUpdater:
                 commit_message = f"Update versions: YouTube {youtube_version} ({last_update})"
                 changes_made = GitManager.force_push_files(
                     markdown_files, MAIN_BRANCH, commit_message)
-
-                # Commit state file to docs-base for persistence
-                state_commit_message = f"Update state: YouTube {youtube_version} ({last_update})"
-                GitManager.force_push_files(
-                    [STATE_FILE], DOCS_BRANCH, state_commit_message)
-                logging.info(f"Updated state file on {DOCS_BRANCH}")
 
                 if changes_made:
                     logging.info(
