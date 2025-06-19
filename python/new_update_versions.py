@@ -252,7 +252,7 @@ class ReVancedVersionUpdater:
         logging.info('Read state file, No update needed')
         return False, "no_update_needed", last_yt_version
 
-    def update_state_file(self, data):
+    def update_state_file(self, data, last_yt_version=None):
         """Update state file with current data"""
         time_now = int(datetime.now(timezone.utc).timestamp())
         data_str = json.dumps(data, sort_keys=True)
@@ -260,6 +260,7 @@ class ReVancedVersionUpdater:
         os.makedirs(os.path.dirname(STATE_FILE), exist_ok=True)
         with open(STATE_FILE, 'w') as f:
             f.write(f"{time_now}\n")
+            f.write(f"{last_yt_version}\n" if last_yt_version else "\n")
             f.write(data_str)
 
     def find_markdown_files_with_placeholders(self):
@@ -436,24 +437,25 @@ class ReVancedVersionUpdater:
 
             self.backup_files(markdown_files)
 
-            # Step 4: Update state file and commit to docs-base
-            self.update_state_file(patches_data)
+            # Step 4: Update state file
+            self.update_state_file(
+                patches_data, last_yt_version=youtube_version)
 
             if not os.getenv('DRY_RUN'):
+                # Step 5: Replace placeholders and push to main (markdown files only)
+                files_updated, total_replacements = self.replace_placeholders_in_files(
+                    markdown_files, youtube_version, last_update)
+
+                # Commit markdown files to main branch
+                commit_message = f"Update versions: YouTube {youtube_version} ({last_update})"
+                changes_made = GitManager.force_push_files(
+                    markdown_files, MAIN_BRANCH, commit_message)
+
                 # Commit state file to docs-base for persistence
                 state_commit_message = f"Update state: YouTube {youtube_version} ({last_update})"
                 GitManager.force_push_files(
                     [STATE_FILE], DOCS_BRANCH, state_commit_message)
                 logging.info(f"Updated state file on {DOCS_BRANCH}")
-
-                # Step 5: Replace placeholders and push to main (markdown files only)
-                files_updated, total_replacements = self.replace_placeholders_in_files(
-                    markdown_files, youtube_version, last_update)
-
-                # Only commit markdown files to main branch (state file stays on docs-base)
-                commit_message = f"Update versions: YouTube {youtube_version} ({last_update})"
-                changes_made = GitManager.force_push_files(
-                    markdown_files, MAIN_BRANCH, commit_message)
 
                 if changes_made:
                     logging.info(
