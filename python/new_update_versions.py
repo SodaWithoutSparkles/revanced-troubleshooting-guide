@@ -232,7 +232,7 @@ class ReVancedVersionUpdater:
                 last_result = f.read().strip()
         except FileNotFoundError:
             logging.info("State file not found, forcing update")
-            return True, "state_file_missing"
+            return True, "state_file_missing", None
 
         current_result = json.dumps(current_data, sort_keys=True)
         time_now = int(datetime.now(timezone.utc).timestamp())
@@ -242,12 +242,12 @@ class ReVancedVersionUpdater:
             logging.debug(
                 f"Data difference:\nOld: {last_result}\nNew: {current_result}")
             logging.info('Patches data changed, update needed')
-            return True, "patches_updated"
+            return True, "patches_updated", last_yt_version
 
         # Check if more than 1 month has passed (30 days * 24 hours * 3600 seconds)
         if (time_now - last_updated) > 2592000:
             logging.info('More than 1 month since last update, forcing update')
-            return True, "time_threshold_exceeded"
+            return True, "time_threshold_exceeded", last_yt_version
 
         logging.info('Read state file, No update needed')
         return False, "no_update_needed", last_yt_version
