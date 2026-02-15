@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/revanced-troubleshooting-guide">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.822131732886">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.12.0.824500000767">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.11.0">
+    <meta name="generator" content="Retype 3.12.0">
 
     <!-- Primary Meta Tags -->
     <title>ADB install guide</title>
@@ -31,11 +31,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../resources/css/retype.css?v=3.11.0.822131732886" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.12.0.824500000767" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.11.0.822131732886" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.11.0.822131732886" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.12.0.824500000767" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/retype.js?v=3.12.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.12.0.824500000767" data-turbo-eval="false" defer></script>
 
     <style>
         a.border-gray-300 {
@@ -82,36 +82,11 @@
                     <nav id="retype-header-nav" class="hidden md:flex">
                         <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
                             <li class="mr-6">
-                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text-weight hover:text-header-text-hover" href="https://revanced.app">Get ReVanced</a>
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://revanced.app">Get ReVanced</a>
                             </li>
         
                         </ul>
                     </nav>
-        
-                    <!-- Header Right Skeleton -->
-                    <div v-cloak class="flex justify-end grow skeleton">
-        
-                        <!-- Search input mock -->
-                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
-                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
-                            </div>
-                            <input class="w-full h-10 placeholder-search-placeholder transition-colors duration-200 ease-in bg-search-bg border border-transparent rounded md:text-sm hover:border-search-border-hover focus:outline-none focus:border-search-border-focus" style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search">
-                        </div>
-        
-                        <!-- Mobile search button -->
-                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
-                        </div>
-        
-                        <!-- Dark mode switch placeholder -->
-                        <div class="w-10 h-10 lg:ml-2"></div>
-        
-                        <!-- History button -->
-                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
-                        </div>
-                    </div>
         
                     <div v-cloak class="flex justify-end grow">
                         <div id="retype-mobile-search-button"></div>
@@ -130,7 +105,7 @@
             <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
             
                 <div class="flex items-center h-16 px-6">
-                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded shadow-none text-sm focus:outline-none focus:border-filter-border-focus" type="text" placeholder="Filter">
+                    <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-none focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
                 </div>
             
                 <div class="pl-6 mt-1 mb-4">
@@ -159,7 +134,7 @@
                             <nav>
                                 <ul class="flex flex-wrap justify-center items-center">
                                     <li class="mr-6">
-                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text-weight hover:text-header-text-hover" href="https://revanced.app">Get ReVanced</a>
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://revanced.app">Get ReVanced</a>
                                     </li>
             
                                 </ul>
@@ -217,7 +192,7 @@
 <doc-anchor-target id="adb-setup">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#adb-setup">#</doc-anchor-trigger>
-        <span><code v-pre>adb setup</code></span>
+        <span><code translate="no" v-pre>adb setup</code></span>
     </h3>
 </doc-anchor-target>
 <ol>
@@ -227,7 +202,7 @@
 </li>
 <li><p>Right-click on the empty area next to it, select something like &quot;open in powershell&quot; or &quot;open in windows terminal&quot; or &quot;open in cmd&quot;.</p>
 </li>
-<li><p>A command window (shell) would pop up. In that window, type <code v-pre>adb devices</code>. Press enter. You may need to prepend <code v-pre>./</code> or <code v-pre>.\</code> in front of it, like <code v-pre>./adb devices</code>. Remember the one used, and prepend it before all <code v-pre>adb</code> commands from now on. Something like &quot;List of devices attached&quot; should appear. Something containing &quot;daemon&quot; might also appear, but you can safely ignore them.</p>
+<li><p>A command window (shell) would pop up. In that window, type <code translate="no" v-pre>adb devices</code>. Press enter. You may need to prepend <code translate="no" v-pre>./</code> or <code translate="no" v-pre>.\</code> in front of it, like <code translate="no" v-pre>./adb devices</code>. Remember the one used, and prepend it before all <code translate="no" v-pre>adb</code> commands from now on. Something like &quot;List of devices attached&quot; should appear. Something containing &quot;daemon&quot; might also appear, but you can safely ignore them.</p>
 </li>
 <li><p>Connect your phone which USB debugging enabled to your computer with a USB cable.</p>
 </li>
@@ -243,15 +218,15 @@
 </li>
 </ul>
 </li>
-<li><p>Then, on the shell, enter <code v-pre>adb devices</code> again. There should be a new entry.</p>
+<li><p>Then, on the shell, enter <code translate="no" v-pre>adb devices</code> again. There should be a new entry.</p>
 </li>
 <li><p>Copy the apk to your phone&#x27;s Download folder</p>
 </li>
-<li><p>On the shell, enter <code v-pre>adb shell</code></p>
+<li><p>On the shell, enter <code translate="no" v-pre>adb shell</code></p>
 </li>
 <li><p>You are now using the shell in your device</p>
 </li>
-<li><p>Enter <code v-pre>whoami</code>. It should output <code v-pre>shell</code>. Note: you need to hit the &lt;Enter&gt; key.</p>
+<li><p>Enter <code translate="no" v-pre>whoami</code>. It should output <code translate="no" v-pre>shell</code>. Note: you need to hit the &lt;Enter&gt; key.</p>
 </li>
 </ol>
 <doc-anchor-target id="install-via-adb">
@@ -261,13 +236,13 @@
     </h3>
 </doc-anchor-target>
 <ol>
-<li><p>Enter <code v-pre>cd /storage/emulated/0/Download</code>.</p>
+<li><p>Enter <code translate="no" v-pre>cd /storage/emulated/0/Download</code>.</p>
 </li>
-<li><p>Enter <code v-pre>ls *.apk</code>. This would list all apks in Download</p>
+<li><p>Enter <code translate="no" v-pre>ls *.apk</code>. This would list all apks in Download</p>
 </li>
 <li><p>Find the name of the apk you want to install from the list</p>
 </li>
-<li><p>Enter <code v-pre>pm install name_of_apk.apk</code>. Example: <code v-pre>pm install youtube-revanced_v20.14.43.apk</code></p>
+<li><p>Enter <code translate="no" v-pre>pm install name_of_apk.apk</code>. Example: <code translate="no" v-pre>pm install youtube-revanced_v20.14.43.apk</code></p>
 </li>
 <li><p>If it said Success or showed nothing, check your phone to see if it actually insalled</p>
 <ul>
@@ -275,23 +250,23 @@
 <li>If no, ask for help</li>
 </ul>
 </li>
-<li><p>If it said something like <code v-pre>Error: Unable to open file</code></p>
+<li><p>If it said something like <code translate="no" v-pre>Error: Unable to open file</code></p>
 <ul>
-<li>It should&#x27;ve shown you a suggestion, Example: Consider using a file under <code v-pre>/data/local/tmp</code></li>
+<li>It should&#x27;ve shown you a suggestion, Example: Consider using a file under <code translate="no" v-pre>/data/local/tmp</code></li>
 <li>Remember that path, we are going to use that later</li>
 </ul>
 </li>
 <li><p>We are going to copy the APK to that path</p>
 </li>
-<li><p>Enter <code v-pre>cp name_of_apk.apk /data/local/tmp/</code>, obviously replacing <code v-pre>name_of_apk.apk</code> with the actual name</p>
+<li><p>Enter <code translate="no" v-pre>cp name_of_apk.apk /data/local/tmp/</code>, obviously replacing <code translate="no" v-pre>name_of_apk.apk</code> with the actual name</p>
 </li>
-<li><p>Now hit the arrow_up key on your keyboard (↑) until you see the command you entered in step 4 (<code v-pre>pm install ...</code>. Don&#x27;t hit enter yet.</p>
+<li><p>Now hit the arrow_up key on your keyboard (↑) until you see the command you entered in step 4 (<code translate="no" v-pre>pm install ...</code>. Don&#x27;t hit enter yet.</p>
 </li>
 <li><p>Use arrow keys (← →) to move the cursor.</p>
 </li>
-<li><p>Add <code v-pre>/data/local/tmp/</code> before the APK name such that it looked like this:</p>
+<li><p>Add <code translate="no" v-pre>/data/local/tmp/</code> before the APK name such that it looked like this:</p>
 <ul>
-<li><code v-pre>pm install /data/local/tmp/youtube-revanced_v20.14.43.apk</code></li>
+<li><code translate="no" v-pre>pm install /data/local/tmp/youtube-revanced_v20.14.43.apk</code></li>
 </ul>
 </li>
 <li><p>Hit enter</p>
@@ -319,7 +294,7 @@
 </doc-anchor-target>
 <ol>
 <li>This section is only needed of you have done step 18</li>
-<li>Enter <code v-pre>rm /data/local/tmp/*.apk</code></li>
+<li>Enter <code translate="no" v-pre>rm /data/local/tmp/*.apk</code></li>
 <li>pre-cleanup done. Now go to cleanup section</li>
 </ol>
 <doc-anchor-target id="cleanup">
@@ -329,7 +304,7 @@
     </h2>
 </doc-anchor-target>
 <ol>
-<li><p>Then you can disconnect the phone, disable USB debugging and disable developer options on your phone. Close the shell by typing <code v-pre>exit</code> or the X button as usual.</p>
+<li><p>Then you can disconnect the phone, disable USB debugging and disable developer options on your phone. Close the shell by typing <code translate="no" v-pre>exit</code> or the X button as usual.</p>
 </li>
 <li><p>Delete the zip file and the extracted files download at the first step.</p>
 </li>
@@ -371,7 +346,7 @@
                                     <ul class="flex flex-wrap items-center text-sm">
                                     </ul>
                                 </div>
-                                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link-weight text-sm leading-relaxed"><p>© 2024 by SodaWithoutSparkles. GPLv3.</p></div>
+                                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>© 2024 by SodaWithoutSparkles. GPLv3.</p></div>
                             </footer>
                         </div>
                     </div>
