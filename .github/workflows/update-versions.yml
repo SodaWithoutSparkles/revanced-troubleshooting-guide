@@ -9,9 +9,9 @@ on:
         required: false
         default: false
         type: boolean
-  schedule:
+  # schedule:
     # Run every 30 minutes
-    - cron: '*/30 * * * *'
+    # - cron: '*/30 * * * *'
 
 jobs:
   update-versions:
